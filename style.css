@@ -2,7 +2,7 @@
 
 body{
     max-width: 90%;
-    margin: 2em auto;
+    margin: auto;
     width: 400px;
     background-color: rgb(239, 165, 165);
 }
@@ -12,10 +12,17 @@ a{
 }
 
 .header{
+    width: 376px;
+    height: 110px;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding:0 10px;
+    position: fixed;
+    top: 0px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
+    background-color: rgb(31, 247, 229);}
 
 .cartoon{
     justify-content: center;
@@ -37,10 +44,12 @@ a{
 
 
 .slider{
+    margin-top: 123px;
     height: 100px;
     overflow: hidden;
     margin-bottom: 10px;
 }
+
 .slider figure{
     position: relative;
     width: 500%;
@@ -65,12 +74,13 @@ a{
     80%{left:-400%;}
     90%{left:-400%;}
     100%{left:-400%;}
-
-
-
 }
 
+
+
+
 .container{
+    top: 230px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 3px;
