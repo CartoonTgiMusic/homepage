@@ -12,10 +12,10 @@ a{
 }
 
 .header{
-    width: 340px;
+    width: 400px;
     height: 110px;
-    border-radius: 10px;
     position: fixed;
+    box-shadow: 0 0 10px black;
     top: 0px;
     display: flex;
     flex-direction: row;
@@ -30,9 +30,11 @@ a{
 .logo img{
     width: 50px;
     border-radius: 50%;
+    box-shadow: 0 0 10px black;
 }
 .eng{
     font-size: large;
+    box-shadow: 0 0 10px black;
 }
 .bama{
     font-size: small;
@@ -46,6 +48,7 @@ a{
     height: 100px;
     overflow: hidden;
     margin-bottom: 10px;
+    box-shadow: 0 0 10px black;
 }
 
 .slider figure{
