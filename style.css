@@ -13,12 +13,14 @@ a{
     width: 100%;
     height: 100px;
     position: fixed;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
     box-shadow: 0 0 10px black;
     top: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color:rgb(26, 241, 248);
+    background-color:rgb(255, 255, 255);
 }
 
 .cartoon{
@@ -40,20 +42,24 @@ a{
 }
 .eng{
     font-size: large;
+    color: black;
+    font-weight: 600;
 }
 .bama{
     font-size: small;
+    color: black;
 }
 
     
 
 
 .slider{
-    margin-top: 120px;
+    margin-top: 123px;
     height: 100px;
     overflow: hidden;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
     margin-bottom: 10px;
-    box-shadow: 0 0 10px black;
 }
 
 .slider figure{
@@ -61,7 +67,7 @@ a{
     height: 100%;
     width: 500%;
     margin: 0;
-    animation: slide 10s infinite;
+    animation: slide 15s infinite;
 }
 
 .slider figure img{
@@ -99,10 +105,14 @@ a{
     background-color: rgb(159, 157, 141);
     padding: 5px;
     text-align: center;
+    border: 3px solid black;
 }
 
-img{
+ img{
     width: 100%;
     height: 100%;
-    
 }
+.container div img{
+    border-radius: 10px;
+}
+    
