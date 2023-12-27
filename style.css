@@ -12,7 +12,7 @@ a{
 }
 
 .header{
-    width: 400px;
+    width: 303px;
     height: 100px;
     position: fixed;
     box-shadow: 0 0 10px black;
@@ -20,7 +20,8 @@ a{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color:rgb(229, 248, 26)}
+    background-color:rgb(229, 248, 26);
+}
 
 .cartoon{
     justify-content: center;
