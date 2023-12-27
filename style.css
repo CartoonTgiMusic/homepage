@@ -11,6 +11,9 @@ body{
     flex-direction: row;
     justify-content: space-between;
 }
+a{
+    text-decoration:none;
+}
 .cartoon{
     justify-content: center;
     text-align: center;
