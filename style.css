@@ -109,13 +109,13 @@ a{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
     gap: 4px;
-    grid-auto-rows: minmax(0%,15%);
+    grid-auto-rows: minmax(0%,17%);
     
 }
 .container div{
     border-radius: 10px;
     background-color: rgb(159, 157, 141);
-    padding: 10px;
+    padding: 3px;
     text-align: center;
     border: 3px solid black;
     transition: all 100ms ease-in-out;
