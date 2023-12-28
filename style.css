@@ -1,31 +1,45 @@
-
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
 body{
-    margin: auto;
     background-color: white;
 }
 a{
     text-decoration: none;
     color: black;
 }
+.nav{
+    top: 0;
+    position: fixed;
+    width: 100%;
+}
 
 .header{
+    margin-top: 5px;
     width: 100%;
-    height: 100px;
-    position: fixed;
+    height: 70px;
     border-top: 3px solid black;
     border-bottom: 3px solid black;
     box-shadow: 0 0 10px black;
-    top: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color:rgb(255, 255, 255);
+    align-items: center;
+    background-color:lightgray;
+    margin-bottom: 10px;
 }
 
 .cartoon{
+    padding-top: 10px;
+    width: 50%;
+    height: 100%;
     justify-content: center;
     text-align: center;
+    background-image: url(assets/images/headcover.png);
+    background-position: center;
 }
 
 .logo{
@@ -41,25 +55,25 @@ a{
     box-shadow: 0 0 10px black;
 }
 .eng{
+    text-align: center;
     font-size: large;
-    color: black;
+    color:white;
     font-weight: 600;
 }
 .bama{
     font-size: small;
-    color: black;
+    color:white;
 }
 
     
 
 
 .slider{
-    margin-top: 123px;
     height: 100px;
-    overflow: hidden;
-    border-top: 3px solid black;
-    border-bottom: 3px solid black;
     margin-bottom: 10px;
+    overflow: hidden;
+    border-top: 3px solid red;
+    border-bottom: 3px solid red;
 }
 
 .slider figure{
@@ -72,6 +86,7 @@ a{
 
 .slider figure img{
     width: 20%;
+    height: 100%;
     float: left;
 }
 
@@ -90,17 +105,19 @@ a{
 }
 
 .container{
-    top: 220px;
+    position: absolute;
+    width: 100%;
+    top: 194px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
     gap: 4px;
-    grid-auto-rows: minmax(25%,auto);
+    grid-auto-rows: minmax(20%,auto);
     
 }
 .container div{
     border-radius: 10px;
     background-color: rgb(159, 157, 141);
-    padding: 5px;
+    padding: 10px;
     text-align: center;
     border: 3px solid black;
     transition: all 100ms ease-in-out;
