@@ -1,22 +1,21 @@
-const search = document.querySelector('.search-box input')
-const images = document.querySelectorAll('.image-box')
+const search = () =>{
+    const searchBox = document.getElementById('search-item').value.toUpperCase();
+    const storeItem = document.getElementById('product-list')
+    const product = document.querySelectorAll('.product')
+    const pname = document.getElementsByTagName('h6')
 
-search.addEventListener("keyup", e =>{
-    if(e.key == "Enter"){
-        let searchValue = search.value,
-        value = searchValue.toLowerCase();
-        images.forEach(image =>{
-            if(value === image.dataset.name){
-                return image.style.display = "block"
+    for(var i=0;  i < pname.length; i++){
+        let match = product[i].getElementsByTagName('h6')[0];
+        if(match){
+            let textvalue = match.textContent || match.innerHTML
+
+            if(textvalue.toUpperCase().indexOf(searchBox) > -1){
+                product[i].style.display = ''
+            }else{
+                product[i].style.display = 'none'
             }
-            image.style.display = "none"
-        })
+        }
     }
-})
-search.addEventListener('keyup',()=>{
-    if(search.value != "") return;
+}
 
-    images.forEach(image =>{
-        image.style.display = "block"
-    })
-})
+
