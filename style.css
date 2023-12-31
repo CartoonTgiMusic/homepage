@@ -78,6 +78,8 @@ input{
     background: none;
     outline: none;
     width: 100%;
+    font-size: 20px;
+    height: 100%;
 }
 .search-box i{
     font-size: 1.5rem;
