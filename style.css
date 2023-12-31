@@ -126,15 +126,13 @@ input{
     top: 221px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
-    gap: 4px;
-    grid-auto-rows: minmax(0%,18%);
     
 }
 .container .image-box{
     position: relative;
     border-radius: 10px;
     background-color: rgb(159, 157, 141);
-    margin: 10px;
+    margin: 5px;
     overflow: hidden;
 }
 
