@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: black;
+    background-color: rgb(251, 251, 251);
 }
 a{
     text-decoration: none;
@@ -64,14 +64,14 @@ a{
     color:white;
 }
 
-.searchBar{
+.search-box{
     width: 100%;
     background-color: white;
-    border-radius: 3px;
-    padding: 3px;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    height: 30px;
+    margin-bottom: 5px;
 }
 input{
     border:none;
@@ -79,9 +79,8 @@ input{
     outline: none;
     width: 100%;
 }
-.glass:hover{
-    color: red;
-    cursor: pointer;
+.search-box i{
+    font-size: 1.5rem;
 }
     
 
@@ -124,32 +123,34 @@ input{
 .container{
     position: absolute;
     width: 100%;
-    top: 189px;
+    top: 221px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
     gap: 4px;
-    grid-auto-rows: minmax(0%,17%);
+    grid-auto-rows: minmax(0%,18%);
     
 }
-.container div{
+.container .image-box{
+    position: relative;
     border-radius: 10px;
     background-color: rgb(159, 157, 141);
-    padding: 3px;
-    text-align: center;
-    border: 3px solid black;
-    transition: all 100ms ease-in-out;
+    margin: 10px;
+    overflow: hidden;
 }
 
-.container div:hover{
-    transform: scale(0.7);
+.container .image-box img{
+    width: 100%;
+    height: 100%;
+    transition: transform 0.2s linear;
+    border-radius: inherit;
 }
-img{
-   width: 100%;
-   height: 100%;
+.image-box:hover img{
+    transform: scale(1.05);
 }
-.container div img{
-   border-radius: 10px;
-}
+
+
+
+
 
 
     
