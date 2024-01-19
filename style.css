@@ -18,6 +18,7 @@ a{
 }
 
 .header{
+    margin-top: 5px;
     width: 100%;
     border-top: 3px solid black;
     border-bottom: 3px solid black;
@@ -29,9 +30,7 @@ a{
 }
 
 .cartoon{
-    padding-top: 10px;
-    width: 39%;
-    height: 100%;
+    width: 60%;
     justify-content: center;
     text-align: center;
     background-image: url(assets/images/mimgs/headcover.png);
@@ -52,12 +51,10 @@ a{
 }
 .eng{
     text-align: center;
-    font-size: large;
     color:white;
     font-weight: 600;
 }
 .bama{
-    font-size: small;
     color:white;
 }
 
