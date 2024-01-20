@@ -18,9 +18,7 @@ a{
 }
 
 .header{
-    margin-top: 5px;
     width: 100%;
-    height: 70px;
     border-top: 3px solid black;
     border-bottom: 3px solid black;
     display: flex;
@@ -28,13 +26,10 @@ a{
     justify-content: space-between;
     align-items: center;
     background-color:lightgray;
-    margin-bottom: 5px;
 }
 
 .cartoon{
-    padding-top: 10px;
-    width: 39%;
-    height: 100%;
+    width: 60%;
     justify-content: center;
     text-align: center;
     background-image: url(assets/images/mimgs/headcover.png);
@@ -55,12 +50,10 @@ a{
 }
 .eng{
     text-align: center;
-    font-size: large;
     color:white;
     font-weight: 600;
 }
 .bama{
-    font-size: small;
     color:white;
 }
 
@@ -71,7 +64,6 @@ a{
     align-items: center;
     justify-content: space-around;
     height: 30px;
-    margin-bottom: 5px;
 }
 input{
     border:none;
@@ -127,7 +119,7 @@ input{
     width: 100%;
     top: 221px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
     
 }
 .container .product{
