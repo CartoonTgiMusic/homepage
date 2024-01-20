@@ -82,8 +82,8 @@ input{
 .slider{
     height: 100px;
     overflow: hidden;
-    border-top: 3px solid red;
-    border-bottom: 3px solid red;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
 }
 
 .slider figure{
@@ -117,7 +117,7 @@ input{
 .container{
     position: absolute;
     width: 100%;
-    top: 221px;
+    top: 210px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
     
@@ -139,10 +139,3 @@ input{
 .product:hover img{
     transform: scale(1.05);
 }
-
-
-
-
-
-
-    
