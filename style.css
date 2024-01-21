@@ -26,15 +26,17 @@ a{
     justify-content: space-between;
     align-items: center;
     background-color:lightgray;
+    background-image: url(assets/images/mimgs/headcover.png);
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .cartoon{
     width: 60%;
     justify-content: center;
     text-align: center;
-    background-image: url(assets/images/mimgs/headcover.png);
-    background-position: center;
 }
+    
 
 .logo{
     padding-left: 10px;
@@ -117,7 +119,7 @@ input{
 .container{
     position: absolute;
     width: 100%;
-    top: 210px;
+    top: 200px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
     
