@@ -11,8 +11,8 @@
   </head>
   <style>
     body{
-      background-color: #2d2d2d;
-      color: #ffc266;
+      background-color: rgb(85, 67, 67);
+      color: rgb(138, 160, 138);
       font-family: 'Roboto', sans-serif;
       margin: auto;
     }
@@ -21,7 +21,7 @@
       position: fixed;  
       width: 100%;
       margin: auto;
-      background-color: #2d2d2d;
+      background-color: rgb(85, 67, 67);
       justify-content: center;
       align-items: center;
       display: flex;
@@ -32,18 +32,20 @@
       display: flex;
       justify-content: space-between;
       width: 95%;
-      margin: auto;
       align-items: center;
-      background-color:#2d2d2d ;
+      height: 50px;
     }
-    
     .fa-house:hover,
     .fa-close:hover{
       transform: scale(1.2);
     }
+    .fa-house,
+    .fa-close{
+      color: rgb(138, 160, 138);
+    }
     #myProgress {
       width: 80%;
-       background-color: #d9d9f2; 
+       background-color: rgb(138, 160, 138); 
       cursor: pointer;
       border-radius: 10px;
       margin: auto;
@@ -52,7 +54,7 @@
     #myBar {
       width: 0%;
       height: 5px;
-      background-color: #ffc266;
+      background-color: #46694a;
       border-radius: 10px;
     }
     
@@ -67,13 +69,8 @@
       align-items: center;
       justify-content: space-between;
     }
-    .infos-ctn{
-    padding-top: 10px;
-    
-    }
     
     .btn-ctn > div {
-     z
      margin-top: 10px;
      margin-bottom: 10px;
     }
@@ -83,13 +80,8 @@
     
     .infos-ctn > div {
      margin-bottom: 10px;
-     color: #ffc266;
+     color: rgb(138, 160, 138);
     }
-    
-    .first-btn{
-      margin-left: 0px;
-    }
-    
     .duration{
       margin-left: 10px;
     }
@@ -104,23 +96,23 @@
       border-radius: 15px;
       width: 95%;
       padding: 10px;
-      background-color: #373737;
+      background-color: rgb(85, 67, 67);
       margin:auto;
-      margin-top: 10px;
+      margin-top: 180px;
       justify-content: center;
       margin-bottom: 10px;
     }
     
     .playlist-track-ctn{
       display: flex;
-      background-color: #464646;
+      background-color: rgb(138, 160, 138);
       margin-top: 10px;
       border-radius: 5px;
       cursor: pointer;
     }
     
     .playlist-track-ctn > div{
-      margin:5px;
+      margin:2px;
     }
     .playlist-track-ctn:hover{
       transform: scale(1.05);
@@ -131,24 +123,25 @@
     .playlist-info-track,.playlist-duration{
       padding-top: 7px;
       padding-bottom: 7px;
-      color: #e9cc95;
+      color: rgb(85, 67, 67);
       font-size: .9rem;
       pointer-events: none;
     }
     .playlist-ctn{
-       padding-bottom: 10px;
-       margin-top: 260px;
+       padding-bottom: 20px;
     
     }
+
     .active-track{
-      background: #4d4d4d;
-      color: #ffc266 !important;
+      background:rgb(138, 160, 138);
+      color: rgb(85, 67, 67)!important;
       font-weight: bold;
       
     }
     
-    .active-track > .playlist-info-track,.active-track >.playlist-duration,.active-track > .playlist-btn-play{
-      color: #ffc266 !important;
+    .active-track > .playlist-info-track,
+    .active-track >.playlist-duration,.active-track > .playlist-btn-play{
+      color: rgb(85, 67, 67) !important;
     }
 
     .playlist-btn-play{
@@ -156,9 +149,14 @@
       padding-top: 7px;
       padding-bottom: 7px;
     }
+    .btn-ctn .fas{
+      color: rgb(138, 160, 138);
+    }
     .fas{
-      color: #ffc266;
       font-size: 1.5rem;
+    }
+    .playlist-btn-play i{
+      color: rgb(85, 67, 67);
     }
   </style>
   <body>
