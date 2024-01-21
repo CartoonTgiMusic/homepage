@@ -128,7 +128,7 @@ input{
     position: relative;
     border-radius: 10px;
     background-color: rgb(159, 157, 141);
-    margin: 10px;
+    margin: 5px;
     overflow: hidden;
     box-shadow: 5px 0px 5px rgb(0, 0, 0, 0.5);
 }
