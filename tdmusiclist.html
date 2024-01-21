@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <script src="https://kit.fontawesome.com/a062562745.js" crossorigin="anonymous"></script>
     <title>SongsList</title>
-    <link rel=stylesheet href="style.css" media=all> 
+    <link rel=stylesheet href="" media=all> 
   </head>
   <style>
     body{
-      background-color: #2d2d2d;
-      color: #ffc266;
+      background-color: rgb(6, 121, 41);
+      color: #ffffff;
       font-family: 'Roboto', sans-serif;
       margin: auto;
     }
@@ -21,7 +21,7 @@
       position: fixed;  
       width: 100%;
       margin: auto;
-      background-color: #2d2d2d;
+      background-color: rgb(6, 121, 41);
       justify-content: center;
       align-items: center;
       display: flex;
@@ -32,18 +32,21 @@
       display: flex;
       justify-content: space-between;
       width: 95%;
-      margin: auto;
       align-items: center;
-      background-color:#2d2d2d ;
+      background-color:rgb(6, 121, 41);
+      height: 50px;
     }
-    
     .fa-house:hover,
     .fa-close:hover{
       transform: scale(1.2);
     }
+    .fa-house,
+    .fa-close{
+      color: #ffffff;
+    }
     #myProgress {
       width: 80%;
-       background-color: #d9d9f2; 
+      background-color: #ffffff; 
       cursor: pointer;
       border-radius: 10px;
       margin: auto;
@@ -52,7 +55,7 @@
     #myBar {
       width: 0%;
       height: 5px;
-      background-color: #ffc266;
+      background-color: #000000;
       border-radius: 10px;
     }
     
@@ -67,14 +70,8 @@
       align-items: center;
       justify-content: space-between;
     }
-    .infos-ctn{
-    padding-top: 10px;
-    
-    }
     
     .btn-ctn > div {
-     padding-left: 20px;
-     padding-right: 20px;
      margin-top: 10px;
      margin-bottom: 10px;
     }
@@ -84,13 +81,8 @@
     
     .infos-ctn > div {
      margin-bottom: 10px;
-     color: #ffc266;
+     color: #ffffff;
     }
-    
-    .first-btn{
-      margin-left: 0px;
-    }
-    
     .duration{
       margin-left: 10px;
     }
@@ -105,23 +97,22 @@
       border-radius: 15px;
       width: 95%;
       padding: 10px;
-      background-color: #373737;
       margin:auto;
-      margin-top: 10px;
+      margin-top: 180px;
       justify-content: center;
       margin-bottom: 10px;
     }
     
     .playlist-track-ctn{
       display: flex;
-      background-color: #464646;
+      background-color: #ffffff;
       margin-top: 10px;
       border-radius: 5px;
       cursor: pointer;
     }
     
     .playlist-track-ctn > div{
-      margin:5px;
+      margin:2px;
     }
     .playlist-track-ctn:hover{
       transform: scale(1.05);
@@ -132,35 +123,40 @@
     .playlist-info-track,.playlist-duration{
       padding-top: 7px;
       padding-bottom: 7px;
-      color: #e9cc95;
+      color: rgb(6, 121, 41);
       font-size: .9rem;
       pointer-events: none;
     }
     .playlist-ctn{
-       padding-bottom: 10px;
-       margin-top: 220px;
+       padding-bottom: 20px;
     
     }
+
     .active-track{
-      background: #4d4d4d;
-      color: #ffc266 !important;
+      background: #ffffff;
+      color: rgb(6, 121, 41)!important;
       font-weight: bold;
       
     }
     
-    .active-track > .playlist-info-track,.active-track >.playlist-duration,.active-track > .playlist-btn-play{
-      color: #ffc266 !important;
+    .active-track > .playlist-info-track,
+    .active-track >.playlist-duration,.active-track > .playlist-btn-play{
+      color:rgb(6, 121, 41)!important;
     }
-    
-    
+
     .playlist-btn-play{
       pointer-events: none;
       padding-top: 7px;
       padding-bottom: 7px;
     }
+    .btn-ctn .fas{
+      color: #ffffff;
+    }
     .fas{
-      color: #ffc266;
       font-size: 1.5rem;
+    }
+    .playlist-btn-play i{
+      color: rgb(6, 121, 41);
     }
   </style>
   <body>
@@ -172,9 +168,9 @@
   
   <div class="container">
       <div class="header">
-        <div><a href="index.html"><i class="fas fa-house" style="color:#ffc266 ;" ></i></a></div>
+        <div><a href="index.html"><i class="fas fa-house" ></i></a></div>
         <h2>တဒွီ</h2>
-        <div ><a href="td.html"><i class="fas fa-close" style="color:#ffc266 ;" ></i></a></div>
+        <div ><a href="td.html"><i class="fas fa-close"></i></a></div>
       </div>
 
 <div class="infos-ctn">
@@ -186,7 +182,7 @@
   <div id="myBar"></div>
 </div>
 <div class="btn-ctn">
-   <div class="btn-action first-btn" onclick="previous()">
+   <div class="btn-action" onclick="previous()">
       <div id="btn-faws-back">
         <i class='fas fa-step-backward'></i>
       </div>
