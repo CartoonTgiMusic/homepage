@@ -40,16 +40,13 @@ a{
 
 .logo{
     padding-left: 10px;
-   
 }
-.logo:hover{
-    transform: scale(1.2);
-}
-.header i{
+.close{
     padding-right: 10px;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
-.header i:hover{
+.logo:hover,
+.close:hover{
     transform: scale(1.2);
     color: white;
 }
