@@ -40,9 +40,18 @@ a{
 
 .logo{
     padding-left: 10px;
+   
 }
-.about{
+.logo:hover{
+    transform: scale(1.2);
+}
+.header i{
     padding-right: 10px;
+    font-size: 2rem;
+}
+.header i:hover{
+    transform: scale(1.2);
+    color: white;
 }
 
 .logo img{

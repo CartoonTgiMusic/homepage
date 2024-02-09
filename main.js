@@ -18,4 +18,8 @@ const search = () =>{
     }
 }
 
+function Close(){
+    window.close()
+}
+
 
