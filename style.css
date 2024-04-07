@@ -125,9 +125,9 @@ input{
 .container{
     position: absolute;
     width: 100%;
-    top: 200px;
+    top: 100px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
     
 }
 .container .product{
@@ -147,4 +147,7 @@ input{
 }
 .product:hover img{
     transform: scale(1.05);
+}
+h6{
+    display: none;
 }
