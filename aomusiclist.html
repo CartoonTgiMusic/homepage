@@ -11,13 +11,15 @@
   </head>
   <style>
     body{
-      background-color: #2d2d2d;
+      background-color: #000000;
       color: #ffffff;
       font-family: 'Roboto', sans-serif;
       margin: auto;
+      display: flex;
+      justify-content: center;
     }
     .container{
-      top: 0;
+      bottom: 0;
       position: fixed;  
       width: 100%;
       margin: auto;
@@ -35,6 +37,7 @@
       align-items: center;
       background-color:#000000 ;
       height: 50px;
+      position: fixed;
     }
     .fa-house:hover,
     .fa-close:hover{
@@ -42,7 +45,7 @@
     }
     #myProgress {
       width: 80%;
-       background-color: #d9d9f2; 
+       background-color: gray; 
       cursor: pointer;
       border-radius: 10px;
       margin: auto;
@@ -51,7 +54,7 @@
     #myBar {
       width: 0%;
       height: 5px;
-      background-color: #46694a;
+      background-color: #ffffff;
       border-radius: 10px;
     }
     
@@ -93,11 +96,10 @@
       border-radius: 15px;
       width: 95%;
       padding: 10px;
-      background-color: #000000;
       margin:auto;
-      margin-top: 180px;
+      margin-top: 50px;
       justify-content: center;
-      margin-bottom: 10px;
+      margin-bottom: 200px;
     }
     
     .playlist-track-ctn{
@@ -161,12 +163,12 @@
     Your browser does not support the audio element.
 </audio>
 
+<div class="header">
+  <div><a href="index.html"><i class="fas fa-house" style="color:#ffffff ;" ></i></a></div>
+  <h2 style="color: #ffffff ;" >အောဝ်း</h2>
+  <div ><a href="ao.html"><i class="fas fa-close" style="color:#ffffff ;" ></i></a></div>
+</div>
 <div class="container">
-    <div class="header">
-      <div><a href="index.html"><i class="fas fa-house" style="color:#ffffff ;" ></i></a></div>
-      <h2 style="color: #ffffff ;" >အောဝ်း</h2>
-      <div ><a href="ao.html"><i class="fas fa-close" style="color:#ffffff ;" ></i></a></div>
-    </div>
 
 <div class="infos-ctn">
   <div class="timer">00:00</div>
@@ -203,7 +205,7 @@
         <i class='fas fa-step-forward'></i>
       </div>
    </div>
-   <div class="btn-mute" id="toggleMute" onclick="toggleMute()">
+   <div class="btn-mute btn-action" id="toggleMute" onclick="toggleMute()">
       <div id="btn-faws-volume">
         <i id="icon-vol-up" class='fas fa-volume-up'></i>
         <i id="icon-vol-mute" class='fas fa-volume-mute' style="display: none"></i>
@@ -249,7 +251,7 @@
 
   var listAudio = [
     {
-      name:"မဂ်လာႏဒျာႏဗွေႏဩ",
+      name:"မင်္ဂလာႏဒျာႏဗွေႏဩ",
       file:"assets/musics/aoaudios/music1.mp3",
       duration:"ကာတွန်းစွိုꩻ"
     },
