@@ -1,6 +1,6 @@
 const search = () =>{
     const searchBox = document.getElementById('search-item').value.toUpperCase();
-    const storeItem = document.getElementById('product-list')
+    const main  = document.querySelector('.main')
     const product = document.querySelectorAll('.product')
     const pname = document.getElementsByTagName('h6')
 
@@ -17,6 +17,10 @@ const search = () =>{
         }
     }
 }
+
+document.querySelector('.albums-see').addEventListener('click', ()=>{
+    document.querySelector('.albums-ctn').classList.add('al-active')
+})
 
 function Close(){
     window.close()
