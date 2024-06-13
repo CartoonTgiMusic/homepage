@@ -97,13 +97,10 @@ input{
 }
 .main .product{
     position: relative;
-    display: flex;
-    flex-direction: column;
     border-radius: 10px;
-    margin: 20px;
+    margin: 10px;
     overflow: hidden;
     text-align: center;
-    justify-content: space-between;
 }
 
 .main .product img{
@@ -118,6 +115,9 @@ input{
 #img img{
     width: 70%;
    border-radius: 50%;
+}
+h5{
+    user-select: none;
 }
 
 h6{
