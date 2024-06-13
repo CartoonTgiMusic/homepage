@@ -18,10 +18,6 @@ const search = () =>{
     }
 }
 
-document.querySelector('.albums-see').addEventListener('click', ()=>{
-    document.querySelector('.albums-ctn').classList.add('al-active')
-})
-
 function Close(){
     window.close()
 }
