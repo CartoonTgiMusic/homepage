@@ -96,14 +96,13 @@ input{
 
 
 .albums-ctn{
-    background-color: skyblue;
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
-    height: 230px;
+    height: 200px;
     margin-bottom: 10px;
         .product{
-            width: 170px;
+            width: 150px;
             margin: 10px;
             overflow: hidden;
             text-align: center;
@@ -114,14 +113,13 @@ input{
             }
         }
 .artists-ctn{
-    background-color: rgb(7, 167, 231);
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
-    height: 160px;
+    height: 140px;
     margin-bottom: 10px;
         .product{
-            width: 110px;
+            width: 90px;
             margin: 10px;
             overflow: hidden;
             text-align: center;
