@@ -22,4 +22,18 @@ function Close(){
     window.close()
 }
 
+const tabs = document.querySelectorAll('.tab-btn')
+        const allContents = document.querySelectorAll('.content')
+        
+        tabs.forEach((tab, index)=>{
+            tab.addEventListener('click', (e)=>{
+                tabs.forEach(tab=>{tab.classList.remove('active')})
+                tab.classList.add('active')
+                
+                allContents.forEach(content=>{content.classList.remove('active')})
+                allContents[index].classList.add('active')
+            })
+        })
+
+
 
