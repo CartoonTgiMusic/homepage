@@ -84,7 +84,7 @@ input{
 .tabs-ctn{
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: 5px;
     background-color: white;
     border-bottom: 2px solid black;
 }
@@ -94,7 +94,6 @@ input{
     font-weight: 600;
     cursor: pointer;
     user-select: none;
-    font-size: 1rem;
 }
 .tab-btn.active{
     color: blue;
@@ -112,7 +111,7 @@ input{
         position: relative;
         width: 100px;
         height: 120px;
-        margin: 5px;
+        margin:3px;
         overflow: hidden;
         text-align: center;
         user-select: none;
@@ -121,6 +120,7 @@ input{
         box-shadow: 5px 5px rgb(156, 153, 153);
         .title{
             height: 20px;
+            margin-bottom: 5px;
             font-size: small;
         }
         img{
@@ -143,6 +143,8 @@ input{
         overflow: hidden;
         text-align: center;
         user-select: none;
+        background-color: rgb(228, 227, 227);
+        border-radius: 10px;
         .title{
             height: 20px;
             font-size: small;
@@ -151,36 +153,90 @@ input{
             width: 70%;
             transition: transform 0.2s linear;
             border-radius: 50%;
+            padding: 5px;
         }
         
     }
         
 
 }
-
 .albums-ctn{
-    width: 100%;
-    height: 160px;
-    justify-content: center;
     .product{
         display: flex;
+        align-items: center;
         width: 100%;
+        padding: 5px;
         margin-bottom: 10px;
-        overflow: hidden;
-        .texts{
-            text-align: center;
-        }
+        background-color: rgb(142, 106, 106);
         img{
-            width: 160px;
-            margin: 0 5px;
+            width: 100px;
             border-radius: 20px;
+            margin-right: 20px;
+        }
+        .texts{
+            font-size: small;
+            color: rgb(255, 255, 255);
+            .singers-name{
+                text-align: left;
+            }
         }
     }
+}
+.albums-ctn .product:nth-child(odd){
+
+            background-color: rgb(5, 37, 106);
+}
+@media (min-width:475px) {
+    .albums-ctn{
+        .product{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+            background-color: rgb(142, 106, 106);
+            img{
+                width: 130px;
+                border-radius: 20px;
+                margin-right: 100px;
+            }
+            .texts{
+                font-size: medium;
+                .singers-name{
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:640px) {
+    .albums-ctn{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .product{
+            display: flex;
+            align-items: center;
+            margin: 10px;
+            img{
+                width: 150px;
+                margin-right: 200px;
+                border-radius: 20px;
+            }
+            .texts{
+                font-size: large;
+                .singers-name{
+                    text-align: left;
+                }
+            }
+        }
+    }
+    
 }
 .product:hover img{
     transform: scale(1.05);
 }
-
 
 h6{
     display: none;
