@@ -173,9 +173,9 @@ a{
         margin: 5px;
         overflow: hidden;
         text-align: center;
-        user-select: none;
         background-color: rgb(228, 227, 227);
         border-radius: 10px;
+        cursor: pointer;
         .title{
             height: 20px;
             font-size: small;
