@@ -72,8 +72,7 @@ a{
     .tit-logo{
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        width: 100px;
+        width: 120px;
         position: absolute;
         img{
             width: 30px;
@@ -91,7 +90,7 @@ a{
         border:none;
         background: none;
         outline: none;
-        left: 110px;
+        left: 125px;
         width: 100%;
     }
     i{
