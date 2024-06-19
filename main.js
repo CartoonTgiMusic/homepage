@@ -295,7 +295,15 @@ const tabs = document.querySelectorAll('.tab-btn')
             ele.classList.remove("fa-pause");
             ele.classList.add("fa-play");
           }
-        
+          
+  function forward(){
+    this.currentAudio.currentTime = this.currentAudio.currentTime + 5
+    this.setBarProgress();
+  }
+          function rewind(){
+            this.currentAudio.currentTime = this.currentAudio.currentTime - 5
+            this.setBarProgress();
+          }
         
           function toggleMute(){
             var btnMute = document.querySelector('#toggleMute');
