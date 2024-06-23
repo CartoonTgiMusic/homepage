@@ -15,9 +15,12 @@
       color: #000000;
       font-family: 'Roboto', sans-serif;
       margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     .container{
-      top: 0;
+      bottom: 0;
       position: fixed;  
       width: 100%;
       margin: auto;
@@ -35,6 +38,8 @@
       align-items: center;
       background-color:#ffffff ;
       height: 50px;
+      top: 0;
+      position: fixed;
     }
     .fa-house:hover,
     .fa-close:hover{
@@ -55,7 +60,7 @@
     #myBar {
       width: 0%;
       height: 5px;
-      background-color: #46694a;
+      background-color: grey;
       border-radius: 10px;
     }
     
@@ -99,9 +104,9 @@
       padding: 10px;
       background-color: #ffffff;
       margin:auto;
-      margin-top: 180px;
+      margin-top: 50px;
       justify-content: center;
-      margin-bottom: 10px;
+      margin-bottom: 110px;
     }
     
     .playlist-track-ctn{
@@ -165,13 +170,13 @@
       <source id="source-audio" src="" type="audio/mpeg">
       Your browser does not support the audio element.
   </audio>
+  <div class="header">
+    <div class="home"><a href="index.html"><i class="fas fa-house"></i></a></div>
+    <h2>ထွားနုဲင်းရုဲင်းတဝ်း</h2>
+    <div class="home"><a href="hnrt.html"><i class="fas fa-close"></i></a></div>
+  </div>
   
   <div class="container">
-      <div class="header">
-        <div class="home"><a href="index.html"><i class="fas fa-house"></i></a></div>
-        <h2>ထွားနုဲင်းရုဲင်းတဝ်း</h2>
-        <div class="home"><a href="hnrt.html"><i class="fas fa-close"></i></a></div>
-      </div>
 
 <div class="infos-ctn">
   <div class="timer">00:00</div>

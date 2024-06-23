@@ -11,13 +11,16 @@
   </head>
   <style>
     body{
+      display: flex;
       background-color: #ffffff;
       color: #000000;
       font-family: 'Roboto', sans-serif;
       margin: auto;
+      justify-content: center;
+      align-items: center;
     }
     .container{
-      top: 0;
+      bottom: 0;
       position: fixed;  
       width: 100%;
       margin: auto;
@@ -26,9 +29,12 @@
       align-items: center;
       display: flex;
       flex-direction: column;
+      
     }
       
     .header{
+      top: 0;
+      position: fixed;
       display: flex;
       justify-content: space-between;
       width: 95%;
@@ -99,9 +105,9 @@
       padding: 10px;
       background-color: #ffffff;
       margin:auto;
-      margin-top: 180px;
+      margin-top: 50px;
+      margin-bottom: 110px;
       justify-content: center;
-      margin-bottom: 10px;
     }
     
     .playlist-track-ctn{
@@ -165,13 +171,13 @@
       <source id="source-audio" src="" type="audio/mpeg">
       Your browser does not support the audio element.
   </audio>
+  <div class="header">
+    <div class="home"><a href="index.html"><i class="fas fa-house"></i></a></div>
+    <h3>အပျော်ႏသွတ်ꩻအခိန်ႏ အပျော်ႏသွတ်ꩻဖꩻဝ</h3>
+    <div class="home"><a href="happytime.html"><i class="fas fa-close"></i></a></div>
+  </div>
   
   <div class="container">
-      <div class="header">
-        <div class="home"><a href="index.html"><i class="fas fa-house"></i></a></div>
-        <h3>အပျော်ႏသွတ်ꩻအခိန်ႏ အပျော်ႏသွတ်ꩻဖꩻဝ</h3>
-        <div class="home"><a href="happytime.html"><i class="fas fa-close"></i></a></div>
-      </div>
 
 <div class="infos-ctn">
   <div class="timer">00:00</div>
@@ -265,7 +271,7 @@
     {
       name:"ဗွိုးဟိုင်း",
       file:"assets/musics/happytime/music3.mp3",
-      duration:"ခွန်တကီးတဘဲ"
+      duration:"ခွန်တကီးတဘဲ+ခွန်ထင်အောင်လင်း"
     },
     {
       name:"လွေꩻညာꩻဆောင်းတဆင်ႏလွုမ်",

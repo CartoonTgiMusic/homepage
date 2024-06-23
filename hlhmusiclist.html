@@ -15,9 +15,12 @@
       color: rgb(138, 160, 138);
       font-family: 'Roboto', sans-serif;
       margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     .container{
-      top: 0;
+      bottom: 0;
       position: fixed;  
       width: 100%;
       margin: auto;
@@ -34,6 +37,9 @@
       width: 95%;
       align-items: center;
       height: 50px;
+      top: 0;
+      position: fixed;
+      background-color: rgb(85, 67, 67)
     }
     .fa-house:hover,
     .fa-close:hover{
@@ -54,7 +60,7 @@
     #myBar {
       width: 0%;
       height: 5px;
-      background-color: #46694a;
+      background-color: #232823;
       border-radius: 10px;
     }
     
@@ -98,9 +104,9 @@
       padding: 10px;
       background-color: rgb(85, 67, 67);
       margin:auto;
-      margin-top: 180px;
+      margin-top: 60px;
       justify-content: center;
-      margin-bottom: 10px;
+      margin-bottom: 110px;
     }
     
     .playlist-track-ctn{
@@ -123,7 +129,7 @@
     .playlist-info-track,.playlist-duration{
       padding-top: 7px;
       padding-bottom: 7px;
-      color: rgb(85, 67, 67);
+      color: rgb(0, 0, 0);
       font-size: .9rem;
       pointer-events: none;
     }
@@ -164,13 +170,13 @@
       <source id="source-audio" src="" type="audio/mpeg">
       Your browser does not support the audio element.
   </audio>
+  <div class="header">
+    <div><a href="index.html"><i class="fas fa-house"></i></a></div>
+    <h2>ထောင်လွေꩻထဲင်း</h2>
+    <div><a href="hlh.html"><i class="fas fa-close"></i></a></div>
+  </div>
   
   <div class="container">
-      <div class="header">
-        <div><a href="index.html"><i class="fas fa-house"></i></a></div>
-        <h2>ထောင်လွေꩻထဲင်း</h2>
-        <div><a href="hlh.html"><i class="fas fa-close"></i></a></div>
-      </div>
 
 <div class="infos-ctn">
   <div class="timer">00:00</div>
