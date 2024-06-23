@@ -241,7 +241,7 @@ a{
     }
 }
 
-@media (min-width:640px) {
+@media (min-width:768px) {
     .nav{
         display: block;
     }
@@ -387,7 +387,7 @@ h6{
     }
   
   .active-track{
-    background: #c1b2b2;
+    background: #b5b3b3;
     color: #000000 !important;
     font-weight: bold;
   }

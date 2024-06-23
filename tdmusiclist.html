@@ -14,9 +14,13 @@
       color: #ffffff;
       font-family: 'Roboto', sans-serif;
       margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
     .container{
-      top: 0;
+      bottom: 0;
       position: fixed;  
       width: 100%;
       margin: auto;
@@ -28,12 +32,14 @@
     }
       
     .header{
+      top: 0;
       display: flex;
       justify-content: space-between;
       width: 95%;
       align-items: center;
       background-color:rgb(6, 121, 41);
       height: 50px;
+      position: fixed;
     }
     .fa-house:hover,
     .fa-close:hover{
@@ -97,9 +103,9 @@
       width: 95%;
       padding: 10px;
       margin:auto;
-      margin-top: 180px;
+      margin-top: 50px;
       justify-content: center;
-      margin-bottom: 10px;
+      margin-bottom: 110px;
     }
     
     .playlist-track-ctn{
@@ -163,12 +169,12 @@
       Your browser does not support the audio element.
   </audio>
   
+  <div class="header">
+    <div class="home"><a href="index.html"><i class="fas fa-house"></i></a></div>
+    <h2>တဒွီ</h2>
+    <div class="home"><a href="td.html"><i class="fas fa-close"></i></a></div>
+  </div>
   <div class="container">
-      <div class="header">
-        <div class="home"><a href="index.html"><i class="fas fa-house"></i></a></div>
-        <h2>တဒွီ</h2>
-        <div class="home"><a href="td.html"><i class="fas fa-close"></i></a></div>
-      </div>
 
       <div class="infos-ctn">
         <div class="timer">00:00</div>
@@ -250,71 +256,19 @@
   }
 
   var listAudio = [
-    {
-      name:"အရက်ꩻသွတ်ꩻ",
-      file:"assets/musics/tdaudios/music1.mp3",
-      duration:"ခွန်ပဒဲကော"
-    },
-    {
-      name:'မွိုးသောက',
-      file:"assets/musics/tdaudios/music2.mp3",
-      duration:"ခွန်ချို"
-    },
-    {
-      name:'ဆာႏပေႏ',
-      file:"assets/musics/tdaudios/music3.mp3",
-      duration:"ခွန်ပျူ"
-    },
-    {
-      name:'နင်ႏလိင်ႏလဲဥ်',
-      file:"assets/musics/tdaudios/music4.mp3",
-      duration:"ခွန်ခွန်ကျော်ဦး"
-    },
-    {
-      name:'ယူႏငါႏမွုန်းဒွုမ်',
-      file:"assets/musics/tdaudios/music5.mp3",
-      duration:"ခွန်ချို"
-    },
-    {
-      name:'ဝါးပေꩻဗွါ',
-      file:"assets/musics/tdaudios/music6.mp3",
-      duration:"ခွန်ပျူ"
-    },
-    {
-      name:'တဒွီ',
-      file:"assets/musics/tdaudios/music7.mp3",
-      duration:"ခွန်ခွန်ကျော်ဦး"
-    },
-    {
-      name:'သꩻရာႏတꩻခါꩻ',
-      file:"assets/musics/tdaudios/music8.mp3",
-      duration:"ခွန်ပဒဲကော"
-    },
-    {
-      name:'သွꩻမူႏ',
-      file:"assets/musics/tdaudios/music9.mp3",
-      duration:"ခွန်ချိူ"
-    },
-    {
-      name:'ဒေါ့ꩻနွောဝ်ꩻမွုန်းခွေꩻ',
-      file:"assets/musics/tdaudios/music10.mp3",
-      duration:"ခွန်ခွန်ကျော်ဦး"
-    },
-    {
-      name:'ယူႏလꩻခွင်ꩻ',
-      file:"assets/musics/tdaudios/music11.mp3",
-      duration:"ခွန်ပဒဲကော"
-    },
-    {
-      name:'ဝေးမူႏ',
-      file:"assets/musics/tdaudios/music12.mp3",
-      duration:"ခွန်ပျူ"
-    },
-    {
-      name:'ဖေႏမွုန်းအသွုမ်ꩻ',
-      file:"assets/musics/tdaudios/music13.mp3",
-      duration:"ကာတွန်းစွိုꩻ"
-    },
+    {name:"အရက်ꩻသွတ်ꩻ",file:"assets/musics/tdaudios/music1.mp3",duration:"ခွန်ပဒဲကော"},
+    {name:'မွိုးသောက',file:"assets/musics/tdaudios/music2.mp3",duration:"ခွန်ချို" },
+    {name:'ဆာႏပေႏ',file:"assets/musics/tdaudios/music3.mp3",duration:"ခွန်ပျူ"},
+    {name:'နင်ႏလိင်ႏလဲဥ်',file:"assets/musics/tdaudios/music4.mp3",duration:"ခွန်ခွန်ကျော်ဦး" },
+    {name:'ယူႏငါႏမွုန်းဒွုမ်',file:"assets/musics/tdaudios/music5.mp3",duration:"ခွန်ချို"},
+    {name:'ဝါးပေꩻဗွါ',file:"assets/musics/tdaudios/music6.mp3",duration:"ခွန်ပျူ"},
+    {name:'တဒွီ',file:"assets/musics/tdaudios/music7.mp3",duration:"ခွန်ခွန်ကျော်ဦး"},
+    {name:'သꩻရာႏတꩻခါꩻ',file:"assets/musics/tdaudios/music8.mp3",duration:"ခွန်ပဒဲကော"},
+    {name:'သွꩻမူႏ',file:"assets/musics/tdaudios/music9.mp3",duration:"ခွန်ချိူ"},
+    {name:'ဒေါ့ꩻနွောဝ်ꩻမွုန်းခွေꩻ',file:"assets/musics/tdaudios/music10.mp3",duration:"ခွန်ခွန်ကျော်ဦး"},
+    {name:'ယူႏလꩻခွင်ꩻ',file:"assets/musics/tdaudios/music11.mp3",duration:"ခွန်ပဒဲကော"},
+    {name:'ဝေးမူႏ',file:"assets/musics/tdaudios/music12.mp3",duration:"ခွန်ပျူ"},
+    {name:'ဖေႏမွုန်းအသွုမ်ꩻ',file:"assets/musics/tdaudios/music13.mp3",duration:"ကာတွန်းစွိုꩻ"},
     
   ]
 
