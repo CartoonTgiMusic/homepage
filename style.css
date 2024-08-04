@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: rgb(255,250,250);
+    background-color: rgb(3, 30, 30);
 }
 
 a{
@@ -28,7 +28,6 @@ a{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color:lightgray;
     background-image: url(assets/images/mimgs/headcover.png);
     background-position: center;
 }
@@ -107,8 +106,8 @@ a{
     display: flex;
     justify-content: space-between;
     padding: 5px;
-    background-color: white;
-    border-bottom: 2px solid black;
+    background-color:rgb(30,30,30);
+    border-bottom: 1px solid white;
 }
 .tab-btn{
     border: none;
@@ -116,6 +115,7 @@ a{
     font-weight: 600;
     cursor: pointer;
     user-select: none;
+    color:white;
 }
 .tab-btn.active{
     color: blue;
@@ -130,8 +130,12 @@ a{
 .main{
     width: 100%;
     margin-top: 70px;
-    
 }
+h3{
+    color: white;
+    margin: 5px;
+}
+ 
 .all-ctn .albums-div{
     display: flex;
     flex-wrap: wrap;
@@ -144,21 +148,60 @@ a{
         overflow: hidden;
         text-align: center;
         user-select: none;
-        border: 1px solid black;
-        border-radius: 10px;
-        box-shadow: 5px 5px rgb(156, 153, 153);
+        background-color: green;
+        /* border: 1px solid black; */
+        border-radius: 20px 0px;
+        box-shadow: 5px -3px 5px rgb(255, 209, 4);
         .title{
             height: 20px;
             margin-bottom: 5px;
             font-size: small;
         }
         img{
-            width: 100%;
+            width: 90%;
             transition: transform 0.2s linear;
-            border-radius: 10%;
+            border-radius: 0 0 20% 0;
         }
-        
     }
+}
+.all-ctn .albums-div .product::before{
+   content: '';
+   width: 100px;
+   height: 120px;
+   background:linear-gradient(60deg,transparent,blue,blue);
+   position: absolute;
+   top: -50%;
+   left: -50%;
+   animation: animate 2s linear infinite;
+   transform-origin: bottom right;
+}
+.all-ctn .albums-div .product::after{
+   content: '';
+   width: 100px;
+   height: 120px;
+   background:linear-gradient(60deg,transparent,red,red);
+   position: absolute;
+   top: -50%;
+   left: -50%;
+   animation: animate 2s linear infinite;
+   animation-delay: 1s;
+   transform-origin: bottom right;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.ani{
+    position: absolute;
+    offset: 2px;
+    z-index: 1;
+    background-color: white;
+    border-radius: 20px 0px;
+    margin: 3px;
 }
 
 .all-ctn .artists-div{
@@ -169,27 +212,24 @@ a{
         position: relative;
         width: 100px;
         height: 100px;
-        margin: 5px;
+        margin: 10px 5px;
         overflow: hidden;
         text-align: center;
-        background-color: rgb(228, 227, 227);
-        border-radius: 10px;
         cursor: pointer;
-        .title{
-            height: 20px;
-            font-size: small;
+        h5{
+            font-size: x-small;
+            color: white;
         }
         img{
-            width: 70%;
+            width: 80px;
             transition: transform 0.2s linear;
             border-radius: 50%;
+            border: 1px solid white;
             padding: 5px;
         }
-        
     }
-        
-
 }
+
 .albums-ctn{
     margin-bottom: 150px;
     .product{

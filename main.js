@@ -22,7 +22,7 @@ function Close(){
     window.close()
 }
 
-const tabs = document.querySelectorAll('.tab-btn')
+        const tabs = document.querySelectorAll('.tab-btn')
         const allContents = document.querySelectorAll('.content')
         
         tabs.forEach((tab, index)=>{
