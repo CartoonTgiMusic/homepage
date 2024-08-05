@@ -12,12 +12,11 @@
   <style>
     body{
       background-color: #2d2d2d;
-      color: #ffffff;
       font-family: 'Roboto', sans-serif;
       margin: auto;
     }
     .container{
-      top: 0;
+      bottom: 0;
       position: fixed;  
       width: 100%;
       margin: auto;
@@ -26,6 +25,7 @@
       align-items: center;
       display: flex;
       flex-direction: column;
+      border: 2px solid white;
     }
       
     .header{
@@ -35,6 +35,12 @@
       align-items: center;
       background-color:#000000 ;
       height: 50px;
+      border-bottom: 2px solid white;
+      padding: 5px 10px;
+      margin: auto;
+      h2{
+        user-select: none;
+      }
     }
     .fa-house:hover,
     .fa-facebook:hover{
@@ -45,7 +51,7 @@
     }
     #myProgress {
       width: 80%;
-       background-color: #d9d9f2; 
+       background-color:gray; 
       cursor: pointer;
       border-radius: 10px;
       margin: auto;
@@ -54,7 +60,7 @@
     #myBar {
       width: 0%;
       height: 5px;
-      background-color: gray;
+      background-color:white;
       border-radius: 10px;
     }
     
@@ -71,16 +77,17 @@
     }
     
     .btn-ctn > div {
-     margin-top: 10px;
-     margin-bottom: 10px;
+     margin: 10px 0px;
     }
     .btn-ctn i:hover{
       transform: scale(1.2);
+      color: silver;
     }
     
     .infos-ctn > div {
-     margin-bottom: 10px;
+     margin:10px 0;
      color: #ffffff;
+     user-select: none;
     }
     .duration,.timer{
       margin-top: 30px;
@@ -98,9 +105,10 @@
       padding: 10px;
       background-color: #000000;
       margin:auto;
-      margin-top: 180px;
+      margin-top: 10px;
       justify-content: center;
       margin-bottom: 10px;
+      border: 2px solid white;
     }
     
     .playlist-track-ctn{
@@ -109,13 +117,14 @@
       margin-top: 10px;
       border-radius: 5px;
       cursor: pointer;
+      text-align: center;
     }
     
     .playlist-track-ctn > div{
       margin:2px;
     }
     .playlist-track-ctn:hover{
-      transform: scale(1.05);
+      transform: scaleY(1.2);
     }
     .playlist-info-track{
       width: 50%;
@@ -132,20 +141,16 @@
       }
     
     .active-track{
-      background: #ffffff;
-      color: #000000 !important;
+      background:silver;
       font-weight: bold;
+      transform: scaleY(1.2);
     }
-      
-    .active-track > .playlist-info-track,
-    .active-track >.playlist-duration,.active-track > .playlist-btn-play{
-      color: #000000 !important;
-    }
+
 
     .playlist-btn-play{
       pointer-events: none;
-      padding-top: 7px;
-      padding-bottom: 7px;
+      padding: 7px;
+      text-align: center;
     }
     .btn-ctn .fas{
       color: #ffffff;
@@ -164,12 +169,13 @@
     Your browser does not support the audio element.
 </audio>
 
+<div class="header">
+  <div><a href="index.html"><i class="fas fa-house" style="color:#ffffff ;" ></i></a></div>
+  <h2 style="color: #ffffff ;" >ခွန်အောင်သိုက်</h2>
+  <div ><a href="https://www.facebook.com/cartoontgimusicband"><i class="fa-brands fa-facebook" style="color: white;"></i></a></div>
+</div>
+
 <div class="container">
-    <div class="header">
-      <div><a href="index.html"><i class="fas fa-house" style="color:#ffffff ;" ></i></a></div>
-      <h2 style="color: #ffffff ;" >ခွန်အောင်သိုက်</h2>
-      <div ><a href="https://www.facebook.com/cartoontgimusicband"><i class="fa-brands fa-facebook" style="color: white;"></i></a></div>
-    </div>
 
 <div class="infos-ctn">
   <div class="timer">00:00</div>
@@ -206,7 +212,7 @@
         <i class='fas fa-step-forward'></i>
       </div>
    </div>
-   <div class="btn-mute" id="toggleMute" onclick="toggleMute()">
+   <div class="btn-mute btn-action" id="toggleMute" onclick="toggleMute()">
       <div id="btn-faws-volume">
         <i id="icon-vol-up" class='fas fa-volume-up'></i>
         <i id="icon-vol-mute" class='fas fa-volume-mute' style="display: none"></i>
@@ -433,7 +439,7 @@
   function playToPause(index){
     var ele = document.querySelector('#p-img-'+index)
     ele.classList.remove("fa-play");
-    ele.classList.add("fa-music");
+    ele.classList.add("fa-pause");
   }
 
   function pauseToPlay(index){
