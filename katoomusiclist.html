@@ -19,10 +19,9 @@
   </head>
   <style>
     body {
-      background-color: rgb(6, 121, 41);
+      background: linear-gradient(-75deg,rgb(0, 0, 0),rgb(6, 121, 41));
       color: #ffffff;
       font-family: "Roboto", sans-serif;
-      margin: auto;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -31,17 +30,19 @@
     .container {
       bottom: 0;
       position: fixed;
-      width: 100%;
-      margin: auto;
+      width: 95%;
       background-color: rgb(6, 121, 41);
       justify-content: center;
       align-items: center;
       display: flex;
       flex-direction: column;
       border: 2px solid white;
+      border-radius: 50px 0px;
     }
 
     .header {
+      top: 0;
+      position: fixed;
       display: flex;
       justify-content: space-between;
       width: 95%;
@@ -49,6 +50,7 @@
       background-color: rgb(6, 121, 41);
       height: 50px;
       border-bottom: 2px solid white;
+      border-radius: 10px;
       h3 {
         user-select: none;
       }
@@ -117,10 +119,9 @@
       border-radius: 15px;
       width: 95%;
       padding: 10px;
-      margin: auto;
-      margin-top: 10px;
+      margin-top: 60px;
       justify-content: center;
-      margin-bottom: 10px;
+      margin-bottom: 150px;
       border: 2px solid white;
     }
 

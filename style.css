@@ -372,22 +372,20 @@ h6{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    user-select: none;
   }
   
   .btn-ctn > div {
-   margin-top: 10px;
-   margin-bottom: 10px;
+   margin: 10px 0xp;
   }
   .btn-ctn i:hover{
     transform: scale(1.2);
+    color: gray;
   }
   
   .infos-ctn > div {
    margin-bottom: 10px;
    color: #ffffff;
-  }
-  .duration{
-    margin-left: 10px;
   }
   
   .titles{
@@ -401,28 +399,34 @@ h6{
     border-radius: 15px;
     width: 95%;
     margin:auto;
+    display: flex;
     justify-content: center;
+    align-items: center;
   }
   
   .playlist-track-ctn{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #eae7e7;
+    background-color: #ffffff;
     margin-top: 10px;
     border-radius: 5px;
     cursor: pointer;
+    user-select: none;
   }
   
 
   .playlist-track-ctn:hover{
-    transform: scale(1.05);
+    transform: scaleY(1.2);
+    background-color: #b5b3b3;
   }
 
   .playlist-info-track,.playlist-duration{
     color: #000000;
     font-size: .9rem;
     pointer-events: none;
+    text-align: center;
+    padding: 0px 5px;
   }
   .playlist-ctn{
      padding-bottom: 20px;
@@ -430,19 +434,12 @@ h6{
   
   .active-track{
     background: #b5b3b3;
-    color: #000000 !important;
     font-weight: bold;
   }
     
-  .active-track > .playlist-info-track,
-  .active-track >.playlist-duration,.active-track > .playlist-btn-play{
-    color: #000000 !important;
-  }
-
   .playlist-btn-play{
     pointer-events: none;
-    padding-top: 7px;
-    padding-bottom: 7px;
+    margin: 5px;
   }
   .btn-ctn .fas{
     color: #ffffff;

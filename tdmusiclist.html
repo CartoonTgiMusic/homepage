@@ -9,158 +9,158 @@
     <title>tdSongsList</title>
   </head>
   <style>
-    body{
-      background-color: rgb(6, 121, 41);
+    body {
+      background: linear-gradient(-75deg,rgb(0, 0, 0),rgb(6, 121, 41));
       color: #ffffff;
-      font-family: 'Roboto', sans-serif;
-      margin: auto;
+      font-family: "Roboto", sans-serif;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
     }
-    .container{
+    .container {
       bottom: 0;
-      position: fixed;  
-      width: 100%;
-      margin: auto;
+      position: fixed;
+      width: 95%;
       background-color: rgb(6, 121, 41);
       justify-content: center;
       align-items: center;
       display: flex;
       flex-direction: column;
       border: 2px solid white;
+      border-radius: 50px 0px;
     }
-      
-    .header{
+
+    .header {
       top: 0;
+      position: fixed;
       display: flex;
       justify-content: space-between;
       width: 95%;
       align-items: center;
-      background-color:rgb(6, 121, 41);
+      background-color: rgb(6, 121, 41);
       height: 50px;
-      position: fixed;
       border-bottom: 2px solid white;
+      border-radius: 10px;
+      h3 {
+        user-select: none;
+      }
     }
     .fa-house:hover,
-    .fa-close:hover{
+    .fa-close:hover {
       transform: scale(1.2);
+      color: gray;
     }
     .fa-house,
-    .fa-close{
+    .fa-close {
       color: #ffffff;
     }
     #myProgress {
       width: 80%;
-      background-color: #ffffff; 
+      background-color: gray;
       cursor: pointer;
       border-radius: 10px;
       margin: auto;
     }
-    
+
     #myBar {
       width: 0%;
       height: 5px;
-      background-color: #000000;
+      background-color: white;
       border-radius: 10px;
     }
-    
-    .btn-action{
+
+    .btn-action {
       cursor: pointer;
       padding-top: 10px;
     }
-    
-    .btn-ctn, .infos-ctn{
+
+    .btn-ctn,
+    .infos-ctn {
       width: 80%;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
-    
+
     .btn-ctn > div {
-     margin-top: 10px;
-     margin-bottom: 10px;
+      margin: 10px 0px;
     }
-    .btn-ctn i:hover{
+    .btn-ctn i:hover {
       transform: scale(1.2);
+      color: silver;
     }
-    
+
     .infos-ctn > div {
-     margin-bottom: 10px;
-     color: #ffffff;
+      margin-bottom: 10px;
+      color: #ffffff;
+      user-select: none;
     }
-    .duration{
+    .duration {
       margin-left: 10px;
     }
-    
-    .title{
+
+    .title {
       margin-left: 10px;
       width: 67%;
       text-align: center;
     }
-    
-    .player-ctn{
+
+    .player-ctn {
       border-radius: 15px;
       width: 95%;
       padding: 10px;
-      margin:auto;
-      margin-top: 50px;
+      margin-top: 60px;
       justify-content: center;
-      margin-bottom: 110px;
+      margin-bottom: 150px;
+      border: 2px solid white;
     }
-    
-    .playlist-track-ctn{
+
+    .playlist-track-ctn {
       display: flex;
       background-color: #ffffff;
-      margin-top: 10px;
+      margin: 10px 0px;
       border-radius: 5px;
       cursor: pointer;
     }
-    
-    .playlist-track-ctn > div{
-      margin:2px;
+
+    .playlist-track-ctn > div {
+      margin: 2px;
     }
-    .playlist-track-ctn:hover{
-      transform: scale(1.05);
+    .playlist-track-ctn:hover {
+      transform: scaleY(1.2);
+      background-color: silver;
     }
-    .playlist-info-track{
+    .playlist-info-track {
       width: 50%;
     }
-    .playlist-info-track,.playlist-duration{
+    .playlist-info-track,
+    .playlist-duration {
       padding-top: 7px;
       padding-bottom: 7px;
       color: rgb(6, 121, 41);
-      font-size: .9rem;
+      font-size: 0.9rem;
       pointer-events: none;
     }
-    .playlist-ctn{
-       padding-bottom: 20px;
-      }
 
-    .active-track{
-      background: #ffffff;
-      color: rgb(6, 121, 41)!important;
+    .active-track {
+      background: silver;
+      color: rgb(6, 121, 41) !important;
       font-weight: bold;
-    }
-      
-    .active-track > .playlist-info-track,
-    .active-track >.playlist-duration,.active-track > .playlist-btn-play{
-      color:rgb(6, 121, 41)!important;
+      transform: scaleY(1.2);
     }
 
-    .playlist-btn-play{
+    .playlist-btn-play {
       pointer-events: none;
-      padding-top: 7px;
-      padding-bottom: 7px;
+      padding: 7px;
     }
-    .btn-ctn .fas{
+    .btn-ctn .fas {
       color: #ffffff;
     }
-    .fas{
+    .fas {
       font-size: 1.5rem;
     }
-    .playlist-btn-play i{
+    .playlist-btn-play i {
       color: rgb(6, 121, 41);
     }
   </style>

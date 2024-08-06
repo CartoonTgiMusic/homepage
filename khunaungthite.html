@@ -10,155 +10,164 @@
     <title>khunaungthite</title>
   </head>
   <style>
-    body{
+    body {
       background-color: #2d2d2d;
-      font-family: 'Roboto', sans-serif;
-      margin: auto;
+      color: #ffffff;
+      font-family: "Roboto", sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
-    .container{
+    .container {
       bottom: 0;
-      position: fixed;  
-      width: 100%;
-      margin: auto;
+      position: fixed;
+      width: 95%;
       background-color: #000000;
       justify-content: center;
       align-items: center;
       display: flex;
       flex-direction: column;
       border: 2px solid white;
+      border-radius: 50px 0px;
     }
-      
-    .header{
+
+    .header {
+      position:fixed;
+      width: 95%;
+      top: 0px;
       display: flex;
       justify-content: space-between;
-      width: 95%;
       align-items: center;
-      background-color:#000000 ;
+      background-color: #000000;
       height: 50px;
+      padding: 5px;
+      border-radius: 5px;
       border-bottom: 2px solid white;
-      padding: 5px 10px;
-      margin: auto;
-      h2{
+      h2 {
         user-select: none;
       }
     }
     .fa-house:hover,
-    .fa-facebook:hover{
+    .fa-facebook:hover {
       transform: scale(1.2);
+      color: gray;
     }
-    .fa-facebook{
-        font-size: 1.5rem;
+    .fa-facebook {
+      font-size: 1.5rem;
     }
     #myProgress {
       width: 80%;
-       background-color:gray; 
+      background-color: gray;
       cursor: pointer;
       border-radius: 10px;
-      margin: auto;
     }
-    
+
     #myBar {
       width: 0%;
       height: 5px;
-      background-color:white;
+      background-color: white;
       border-radius: 10px;
     }
-    
-    .btn-action{
+
+    .btn-action {
       cursor: pointer;
       padding-top: 10px;
     }
-    
-    .btn-ctn, .infos-ctn{
+
+    .btn-ctn,
+    .infos-ctn {
       width: 80%;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
-    
+
     .btn-ctn > div {
-     margin: 10px 0px;
+      margin: 10px 0px;
     }
-    .btn-ctn i:hover{
+    .btn-ctn i:hover {
       transform: scale(1.2);
-      color: silver;
+      color: gray;
     }
-    
+
     .infos-ctn > div {
-     margin:10px 0;
-     color: #ffffff;
-     user-select: none;
+      margin-bottom: 10px;
+      color: #ffffff;
+      user-select: none;
     }
-    .duration,.timer{
+    .duration,
+    .timer {
       margin-top: 30px;
     }
-    
-    .title{
+
+    .title {
       margin-left: 10px;
       width: 67%;
       text-align: center;
     }
-    
-    .player-ctn{
+
+    .player-ctn {
       border-radius: 15px;
       width: 95%;
       padding: 10px;
       background-color: #000000;
-      margin:auto;
-      margin-top: 10px;
+      margin-top: 60px;
       justify-content: center;
-      margin-bottom: 10px;
+      margin-bottom: 140px;
       border: 2px solid white;
     }
-    
-    .playlist-track-ctn{
+
+    .playlist-track-ctn {
       display: flex;
       background-color: #ffffff;
       margin-top: 10px;
       border-radius: 5px;
       cursor: pointer;
-      text-align: center;
+      user-select: none;
     }
-    
-    .playlist-track-ctn > div{
-      margin:2px;
+
+    .playlist-track-ctn > div {
+      margin: 2px;
     }
-    .playlist-track-ctn:hover{
+    .playlist-track-ctn:hover {
       transform: scaleY(1.2);
+      background-color: rgb(223, 220, 220);
     }
-    .playlist-info-track{
+    .playlist-info-track {
       width: 50%;
     }
-    .playlist-info-track,.playlist-duration{
+    .playlist-info-track,
+    .playlist-duration {
       padding-top: 7px;
       padding-bottom: 7px;
       color: #000000;
-      font-size: .9rem;
+      font-size: 0.9rem;
       pointer-events: none;
     }
-    .playlist-ctn{
-       padding-bottom: 10px;
-      }
-    
-    .active-track{
-      background:silver;
+    .playlist-ctn {
+      padding-bottom: 10px;
+    }
+
+    .active-track {
+      background-color: rgb(223, 220, 220);
+      color: #000000 !important;
       font-weight: bold;
       transform: scaleY(1.2);
     }
 
-
-    .playlist-btn-play{
+    .playlist-btn-play {
       pointer-events: none;
-      padding: 7px;
-      text-align: center;
+      padding-top: 7px;
+      padding-bottom: 7px;
     }
-    .btn-ctn .fas{
+    .btn-ctn .fas {
       color: #ffffff;
     }
-    .fas{
+    .fas {
       font-size: 1.5rem;
     }
-    .playlist-btn-play i{
+    .playlist-btn-play i {
       color: #000000;
     }
   </style>
