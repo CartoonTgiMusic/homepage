@@ -21,14 +21,12 @@
     .container {
       bottom: 0;
       position: fixed;
-      width: 95%;
-      background-color: rgb(6, 121, 41);
+      width: 100vw;
+      background: linear-gradient(-75deg,rgb(0, 0, 0),rgb(6, 121, 41));
       justify-content: center;
       align-items: center;
       display: flex;
       flex-direction: column;
-      border: 2px solid white;
-      border-radius: 50px 0px;
     }
 
     .header {
@@ -36,12 +34,11 @@
       position: fixed;
       display: flex;
       justify-content: space-between;
-      width: 95%;
       align-items: center;
-      background-color: rgb(6, 121, 41);
+      width: 95%;
+      background: linear-gradient(-75deg,rgb(0, 0, 0),rgb(6, 121, 41));
       height: 50px;
-      border-bottom: 2px solid white;
-      border-radius: 10px;
+
       h3 {
         user-select: none;
       }
@@ -113,12 +110,12 @@
       margin-top: 60px;
       justify-content: center;
       margin-bottom: 150px;
-      border: 2px solid white;
+
     }
 
     .playlist-track-ctn {
       display: flex;
-      background-color: #ffffff;
+
       margin: 10px 0px;
       border-radius: 5px;
       cursor: pointer;
@@ -129,7 +126,7 @@
     }
     .playlist-track-ctn:hover {
       transform: scaleY(1.2);
-      background-color: silver;
+      background-color: rgb(30, 30, 30);
     }
     .playlist-info-track {
       width: 50%;
@@ -138,16 +135,14 @@
     .playlist-duration {
       padding-top: 7px;
       padding-bottom: 7px;
-      color: rgb(6, 121, 41);
+      color: rgb(255, 255, 255);
       font-size: 0.9rem;
       pointer-events: none;
     }
 
     .active-track {
-      background: silver;
-      color: rgb(6, 121, 41) !important;
+      background: rgb(30, 30, 30);
       font-weight: bold;
-      transform: scaleY(1.2);
     }
 
     .playlist-btn-play {
@@ -434,7 +429,7 @@
   function playToPause(index){
     var ele = document.querySelector('#p-img-'+index)
     ele.classList.remove("fa-play");
-    ele.classList.add("fa-music");
+    ele.classList.add("fa-pause");
   }
 
   function pauseToPlay(index){

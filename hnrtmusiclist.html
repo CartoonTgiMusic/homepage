@@ -20,7 +20,7 @@
   </head>
   <style>
     body {
-      background-color: #ffffff;
+      background: linear-gradient(-75deg,rgb(7, 100, 231),rgb(255, 255, 255));
       color: #000000;
       font-family: "Roboto", sans-serif;
       display: flex;
@@ -31,27 +31,28 @@
     .container {
       bottom: 0;
       position: fixed;
-      width: 95%;
-      background-color: #ffffff;
+      width: 100%;
+      background: linear-gradient(-75deg,rgb(7, 100, 231),rgb(255, 255, 255));
       justify-content: center;
       align-items: center;
       display: flex;
       flex-direction: column;
-      border: 2px solid black;
-      border-radius: 50px 0px;
     }
-
-    .header {
+    .hader-div{
       top: 0;
       position: fixed;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(-75deg,rgb(7, 100, 231),rgb(255, 255, 255));
+    }
+    .header {
       display: flex;
       justify-content: space-between;
       width: 95%;
       height: 50px;
       align-items: center;
-      background-color: #ffffff;
-      border-bottom: 2px solid black;
-      border-radius: 10px;
       h2 {
         user-select: none;
       }
@@ -117,32 +118,24 @@
     }
 
     .player-ctn {
-      border-radius: 15px;
       width: 95%;
-      padding: 10px;
-      background-color: #ffffff;
-      margin: auto;
       margin-top: 60px;
       justify-content: center;
       margin-bottom: 150px;
-      border: 2px solid black;
     }
 
     .playlist-track-ctn {
       display: flex;
-      background-color: #000000;
-      margin: 10px 0px;
-      border-radius: 5px;
+      margin: 5px 0px;
       cursor: pointer;
       text-align: center;
+      align-items: center;
+
     }
 
-    .playlist-track-ctn > div {
-      margin: 2px;
-    }
     .playlist-track-ctn:hover {
       transform: scaleY(1.2);
-      background-color: gray;
+      background: linear-gradient(-75deg,rgb(7, 100, 231),rgb(255, 255, 255));
     }
     .playlist-info-track {
       width: 50%;
@@ -150,19 +143,19 @@
     .playlist-info-track,
     .playlist-duration {
       padding: 7px 0;
-      color: #ffffff;
+      color: #000000;
       font-size: 0.9rem;
       pointer-events: none;
     }
     .active-track {
-      background: gray;
-      color: #ffffff !important;
+      background: linear-gradient(-75deg,rgb(7, 100, 231),rgb(255, 255, 255));
       font-weight: bold;
     }
 
     .playlist-btn-play {
       pointer-events: none;
       padding: 7px;
+      color: #656565;
     }
     .btn-ctn .fas {
       color: #000000;
@@ -170,9 +163,7 @@
     .fas {
       font-size: 1.5rem;
     }
-    .playlist-btn-play i {
-      color: #ffffff;
-    }
+
   </style>
 
   <body>
@@ -181,13 +172,15 @@
       <source id="source-audio" src="" type="audio/mpeg" />
       Your browser does not support the audio element.
     </audio>
-    <div class="header">
-      <div class="home">
-        <a href="index.html"><i class="fas fa-house"></i></a>
-      </div>
-      <h2>ထွားနုဲင်းရုဲင်းတဝ်း</h2>
-      <div class="home">
-        <a href="hnrt.html"><i class="fas fa-close"></i></a>
+    <div class="hader-div">
+      <div class="header">
+        <div class="home">
+          <a href="index.html"><i class="fas fa-house"></i></a>
+        </div>
+        <h2>ထွားနုဲင်းရုဲင်းတဝ်း</h2>
+        <div class="home">
+          <a href="hnrt.html"><i class="fas fa-close"></i></a>
+        </div>
       </div>
     </div>
 
