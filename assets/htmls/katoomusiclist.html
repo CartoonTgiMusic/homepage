@@ -15,24 +15,23 @@
       src="https://kit.fontawesome.com/a062562745.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" media="all" />
-    <title>Khunhtinaunglinn</title>
+    <title>katooSongsList</title>
   </head>
   <style>
     body {
-      background-color: #2d2d2d;
+      background: linear-gradient(-75deg,rgb(0, 0, 0),rgb(6, 121, 41));
       color: #ffffff;
       font-family: "Roboto", sans-serif;
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
     .container {
       bottom: 0;
       position: fixed;
       width: 95%;
-      background-color: #000000;
+      background-color: rgb(6, 121, 41);
       justify-content: center;
       align-items: center;
       display: flex;
@@ -42,34 +41,35 @@
     }
 
     .header {
-      position:fixed;
-      width: 95%;
-      top: 0px;
+      top: 0;
+      position: fixed;
       display: flex;
       justify-content: space-between;
+      width: 95%;
       align-items: center;
-      background-color: #000000;
+      background-color: rgb(6, 121, 41);
       height: 50px;
-      padding: 5px;
-      border-radius: 5px;
       border-bottom: 2px solid white;
-      h2 {
+      border-radius: 10px;
+      h3 {
         user-select: none;
       }
     }
     .fa-house:hover,
-    .fa-facebook:hover {
+    .fa-close:hover {
       transform: scale(1.2);
       color: gray;
     }
-    .fa-facebook {
-      font-size: 1.5rem;
+    .fa-house,
+    .fa-close {
+      color: #ffffff;
     }
     #myProgress {
       width: 80%;
       background-color: gray;
       cursor: pointer;
       border-radius: 10px;
+      margin: auto;
     }
 
     #myBar {
@@ -97,7 +97,7 @@
     }
     .btn-ctn i:hover {
       transform: scale(1.2);
-      color: gray;
+      color: silver;
     }
 
     .infos-ctn > div {
@@ -105,9 +105,8 @@
       color: #ffffff;
       user-select: none;
     }
-    .duration,
-    .timer {
-      margin-top: 30px;
+    .duration {
+      margin-left: 10px;
     }
 
     .title {
@@ -120,20 +119,18 @@
       border-radius: 15px;
       width: 95%;
       padding: 10px;
-      background-color: #000000;
       margin-top: 60px;
       justify-content: center;
-      margin-bottom: 140px;
+      margin-bottom: 150px;
       border: 2px solid white;
     }
 
     .playlist-track-ctn {
       display: flex;
       background-color: #ffffff;
-      margin-top: 10px;
+      margin: 10px 0px;
       border-radius: 5px;
       cursor: pointer;
-      user-select: none;
     }
 
     .playlist-track-ctn > div {
@@ -141,7 +138,7 @@
     }
     .playlist-track-ctn:hover {
       transform: scaleY(1.2);
-      background-color: rgb(223, 220, 220);
+      background-color: silver;
     }
     .playlist-info-track {
       width: 50%;
@@ -150,25 +147,21 @@
     .playlist-duration {
       padding-top: 7px;
       padding-bottom: 7px;
-      color: #000000;
+      color: rgb(6, 121, 41);
       font-size: 0.9rem;
       pointer-events: none;
     }
-    .playlist-ctn {
-      padding-bottom: 10px;
-    }
 
     .active-track {
-      background-color: rgb(223, 220, 220);
-      color: #000000 !important;
+      background: silver;
+      color: rgb(6, 121, 41) !important;
       font-weight: bold;
       transform: scaleY(1.2);
     }
 
     .playlist-btn-play {
       pointer-events: none;
-      padding-top: 7px;
-      padding-bottom: 7px;
+      padding: 7px;
     }
     .btn-ctn .fas {
       color: #ffffff;
@@ -177,7 +170,7 @@
       font-size: 1.5rem;
     }
     .playlist-btn-play i {
-      color: #000000;
+      color: rgb(6, 121, 41);
     }
   </style>
   <body>
@@ -187,16 +180,12 @@
       Your browser does not support the audio element.
     </audio>
     <div class="header">
-      <div>
-        <a href="index.html"
-          ><i class="fas fa-house" style="color: #ffffff"></i
-        ></a>
+      <div class="home">
+        <a href="https://cartoontgimusic.github.io/homepage/"><i class="fas fa-house"></i></a>
       </div>
-      <h2 style="color: #ffffff">ခွန်ထင်အောင်လင်း</h2>
-      <div>
-        <a href="#"
-          ><i class="fa-brands fa-facebook" style="color: white"></i
-        ></a>
+      <h3>ကတွူဆော့မွုန်းဒွုမ်နင်</h3>
+      <div class="home">
+        <a href="katoo.html"><i class="fas fa-close"></i></a>
       </div>
     </div>
 
@@ -209,6 +198,7 @@
       <div id="myProgress">
         <div id="myBar"></div>
       </div>
+
       <div class="btn-ctn">
         <div class="btn-action first-btn" onclick="previous()">
           <div id="btn-faws-back">
@@ -236,11 +226,7 @@
             <i class="fas fa-step-forward"></i>
           </div>
         </div>
-        <div
-          class="btn-mute btn btn-action"
-          id="toggleMute"
-          onclick="toggleMute()"
-        >
+        <div class="btn-mute" id="toggleMute" onclick="toggleMute()">
           <div id="btn-faws-volume">
             <i id="icon-vol-up" class="fas fa-volume-up"></i>
             <i
@@ -252,7 +238,6 @@
         </div>
       </div>
     </div>
-
     <div class="player-ctn">
       <div class="playlist-ctn"></div>
     </div>
@@ -290,9 +275,19 @@
 
       var listAudio = [
         {
-          name: "ဗွိုးဟိုင်း",
-          file: "assets/musics/happytime/music3.mp3",
-          duration: "ခွန်ထင်အောင်လင်း+ခွန်တကီးတဘဲ",
+          name: "Track-1",
+          file: "assets/musics/katochock/music1.mp3",
+          duration: "Group",
+        },
+        {
+          name: "Track-2",
+          file: "assets/musics/katochock/music2.mp3",
+          duration: "ခွန်ကော်လီ",
+        },
+        {
+          name: "Track-3",
+          file: "assets/musics/katochock/music3.mp3",
+          duration: "ခွန်ဂျိမ်း",
         },
         {
           name: "Track-4",
@@ -300,9 +295,24 @@
           duration: "ခွန်ထင်အောင်လင်း+ခွန်ရှိန်း",
         },
         {
-          name: "ရက်ꩻချာꩻဗဲင်းခွေꩻမွိုင်ꩻနင်ႏ",
-          file: "assets/musics/happytime/music9.mp3",
-          duration: "ခွန်ရှိန်း+ခွန်ထင်အောင်လင်း",
+          name: "Track-5",
+          file: "assets/musics/katochock/music7.mp3",
+          duration: "Group",
+        },
+        {
+          name: "Track-6",
+          file: "assets/musics/katochock/music8.mp3",
+          duration: "Group",
+        },
+        {
+          name: "Track-7",
+          file: "assets/musics/katochock/music9.mp3",
+          duration: "ခွန်ရှိန်း",
+        },
+        {
+          name: "Track-8",
+          file: "assets/musics/katochock/music13.mp3",
+          duration: "ခွန်ခွန်ကျော်ဦး",
         },
       ];
 

@@ -16,54 +16,49 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" media="all" />
-    <title>KhunKyawSoe</title>
+    <title>AoSongsList</title>
   </head>
   <style>
     body {
-      background-color: #2d2d2d;
+      background-color: #000000;
       color: #ffffff;
       font-family: "Roboto", sans-serif;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
+      align-items: center;
     }
     .container {
       bottom: 0;
       position: fixed;
       width: 95%;
-      background-color: #000000;
+      display: flex;
       justify-content: center;
       align-items: center;
-      display: flex;
       flex-direction: column;
+      background-color: rgb(0, 0, 0);
       border: 2px solid white;
       border-radius: 50px 0px;
     }
 
     .header {
-      position:fixed;
-      width: 95%;
-      top: 0px;
+      top: 0;
       display: flex;
       justify-content: space-between;
+      width: 95%;
       align-items: center;
       background-color: #000000;
-      height: 50px;
-      padding: 5px;
-      border-radius: 5px;
       border-bottom: 2px solid white;
+      border-radius: 10px;
+      height: 50px;
+      position: fixed;
       h2 {
         user-select: none;
       }
     }
     .fa-house:hover,
-    .fa-facebook:hover {
+    .fa-close:hover {
       transform: scale(1.2);
-      color: gray;
-    }
-    .fa-facebook {
-      font-size: 1.5rem;
     }
     #myProgress {
       width: 80%;
@@ -75,7 +70,7 @@
     #myBar {
       width: 0%;
       height: 5px;
-      background-color: white;
+      background-color: #ffffff;
       border-radius: 10px;
     }
 
@@ -90,24 +85,23 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      user-select: none;
     }
 
     .btn-ctn > div {
-      margin: 10px 0px;
+      margin-top: 10px;
+      margin-bottom: 10px;
     }
     .btn-ctn i:hover {
       transform: scale(1.2);
-      color: gray;
     }
 
     .infos-ctn > div {
       margin-bottom: 10px;
       color: #ffffff;
-      user-select: none;
     }
-    .duration,
-    .timer {
-      margin-top: 30px;
+    .duration {
+      margin-left: 10px;
     }
 
     .title {
@@ -120,10 +114,9 @@
       border-radius: 15px;
       width: 95%;
       padding: 10px;
-      background-color: #000000;
       margin-top: 60px;
       justify-content: center;
-      margin-bottom: 140px;
+      margin-bottom: 150px;
       border: 2px solid white;
     }
 
@@ -133,7 +126,6 @@
       margin-top: 10px;
       border-radius: 5px;
       cursor: pointer;
-      user-select: none;
     }
 
     .playlist-track-ctn > div {
@@ -141,7 +133,7 @@
     }
     .playlist-track-ctn:hover {
       transform: scaleY(1.2);
-      background-color: rgb(223, 220, 220);
+      background: #cdcdcd;
     }
     .playlist-info-track {
       width: 50%;
@@ -154,17 +146,12 @@
       font-size: 0.9rem;
       pointer-events: none;
     }
-    .playlist-ctn {
-      padding-bottom: 10px;
-    }
 
     .active-track {
-      background-color: rgb(223, 220, 220);
-      color: #000000 !important;
+      background: #cdcdcd;
       font-weight: bold;
-      transform: scaleY(1.2);
+      align-items: center;
     }
-
     .playlist-btn-play {
       pointer-events: none;
       padding-top: 7px;
@@ -189,14 +176,14 @@
 
     <div class="header">
       <div>
-        <a href="index.html"
+        <a href="https://cartoontgimusic.github.io/homepage/"
           ><i class="fas fa-house" style="color: #ffffff"></i
         ></a>
       </div>
-      <h2 style="color: #ffffff">ခွန်ကျော်စိုး</h2>
+      <h2 style="color: #ffffff">အောဝ်း</h2>
       <div>
-        <a href="https://www.facebook.com/profile.php?id=100009976381803"
-          ><i class="fa-brands fa-facebook" style="color: white"></i
+        <a href="ao.html"
+          ><i class="fas fa-close" style="color: #ffffff"></i
         ></a>
       </div>
     </div>
@@ -285,26 +272,19 @@
       }
 
       var listAudio = [
-        {
-          name: "မွိုက်လွေꩻဟိုင်း",
-          file: "assets/musics/aoaudios/music10.mp3",
-          duration: "တဲမ်း-ခွန်ခွန်ကျော်ဦး",
-        },
-        {
-          name: "ထွူလဲဥ်း",
-          file: "assets/musics/hlhaudios/music3.mp3",
-          duration: "တဲမ်း-ခွန်ကျော်စိုး",
-        },
-        {
-          name: "နာꩻဖေႏကသေ",
-          file: "assets/musics/hlhaudios/music8.mp3",
-          duration: "တဲမ်း-ခွန်ပဒဲကော",
-        },
-        {
-          name: "အပဲစ်ꩻကင်ꩻထာꩻရက်ꩻ",
-          file: "assets/musics/hnrtaudios/music12.mp3",
-          duration: "တဲမ်း-ခွန်ကျော်စိုး",
-        },
+        {name: "မင်္ဂလာႏဒျာႏဗွေႏဩ",file: "assets/musics/aoaudios/music1.mp3",duration: "ကာတွန်းစွိုꩻ",},
+        {name: "ဆုတောင်ꩻနော",file: "assets/musics/aoaudios/music2.mp3",duration: "ခွန်ချို",},
+        {name: "တဖြာꩻတွမ်ႏတဖြာꩻ",file: "assets/musics/aoaudios/music3.mp3",duration: "ခွန်ခွန်ကျော်ဦး",},
+        {name: "အောဝ်ႏကော့ꩻမွောင်ꩻ",file: "assets/musics/aoaudios/music4.mp3",duration: "ခွန်ပျူ",},
+        {name: "သေနာႏလဲဥ်း", file: "assets/musics/aoaudios/music5.mp3",duration: "ခွန်ပဒဲကော",},
+        {name: "အောဝ်ႏ", file: "assets/musics/aoaudios/music6.mp3",duration: "ခွန်ခွန်ကျော်ဦး",},
+        {name: "လဲဥ်ꩻထိုႏမွန်းခွေꩻ", file: "assets/musics/aoaudios/music7.mp3",duration: "ခွန်ကော်လီ",},
+        {name: "တဥ်ႏခွေါင်ဒျာႏနော်", file: "assets/musics/aoaudios/music8.mp3",duration: "ခွန်ဝဒုတ်",},
+        {name: "အွဥ်ႏဖိင်ꩻခန်း ", file: "assets/musics/aoaudios/music9.mp3",duration: "ခွန်ချိူ",},
+        {name: "မွိုက်လွေꩻဟိုင်း", file: "assets/musics/aoaudios/music10.mp3",duration: "ခွန်ကျော်စိုး",},
+        {name: "ကမ်းဒျာႏနာꩻသꩻ", file: "assets/musics/aoaudios/music11.mp3",duration: "ခွန်ခွန်ကျော်ဦး",},
+        {name: "မဲ့ꩻခွေꩻလွဥ်ꩻယန်း", file: "assets/musics/aoaudios/music12.mp3",duration: "ခွန်ပဒဲကော",},
+        {name: "နာꩻထန်ႏထိုꩻ", file: "assets/musics/aoaudios/music13.mp3",duration: "ခွန်ဇော်ခက်",},
       ];
 
       for (var i = 0; i < listAudio.length; i++) {
@@ -316,7 +296,7 @@
         var player = document.querySelector("#source-audio");
         player.src = listAudio[index].file;
         document.querySelector(".title").innerHTML =
-          listAudio[index].name + "<br>" + listAudio[index].duration;
+          listAudio[index].name + " - " + listAudio[index].duration;
         this.currentAudio = document.getElementById("myAudio");
         this.currentAudio.load();
         this.toggleAudio();
@@ -366,9 +346,7 @@
         if (this.currentAudio.paused) {
           document.querySelector("#icon-play").style.display = "none";
           document.querySelector("#icon-pause").style.display = "block";
-          document
-            .querySelector("#ptc-" + this.indexAudio)
-            .classList.add("active-track");
+          document.querySelector("#ptc-" + this.indexAudio).classList.add("active-track");
           this.playToPause(this.indexAudio);
           this.currentAudio.play();
         } else {
@@ -461,13 +439,9 @@
       }
 
       function updateStylePlaylist(oldIndex, newIndex) {
-        document
-          .querySelector("#ptc-" + oldIndex)
-          .classList.remove("active-track");
+        document.querySelector("#ptc-" + oldIndex).classList.remove("active-track");
         this.pauseToPlay(oldIndex);
-        document
-          .querySelector("#ptc-" + newIndex)
-          .classList.add("active-track");
+        document.querySelector("#ptc-" + newIndex).classList.add("active-track");
         this.playToPause(newIndex);
       }
 

@@ -16,58 +16,58 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" media="all" />
-    <title>khunpadecholl</title>
+    <title>HlhSongsList</title>
   </head>
   <style>
     body {
-      background-color: #2d2d2d;
-      color: #ffffff;
+      background-color: rgb(85, 67, 67);
+      color: rgb(138, 160, 138);
       font-family: "Roboto", sans-serif;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
+      align-items: center;
     }
     .container {
       bottom: 0;
       position: fixed;
       width: 95%;
-      background-color: #000000;
+      background-color: rgb(85, 67, 67);
       justify-content: center;
       align-items: center;
       display: flex;
       flex-direction: column;
-      border: 2px solid white;
-      border-radius: 50px 0px;
+      border: 2px solid rgb(180, 202, 180);
+      border-radius: 50px 0;
     }
 
     .header {
-      position:fixed;
-      width: 95%;
-      top: 0px;
+      top: 0;
+      position: fixed;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: #000000;
+      width: 95%;
       height: 50px;
-      padding: 5px;
-      border-radius: 5px;
-      border-bottom: 2px solid white;
+      background-color: rgb(85, 67, 67);
+      border-bottom: 2px solid rgb(138, 160, 138);
+      border-radius: 10px;
       h2 {
         user-select: none;
       }
     }
     .fa-house:hover,
-    .fa-facebook:hover {
+    .fa-close:hover {
       transform: scale(1.2);
-      color: gray;
+      color: rgb(180, 202, 180);
     }
-    .fa-facebook {
-      font-size: 1.5rem;
+    .fa-house,
+    .fa-close {
+      color: rgb(138, 160, 138);
     }
     #myProgress {
       width: 80%;
-      background-color: gray;
+      background-color: rgb(53, 51, 51);
       cursor: pointer;
       border-radius: 10px;
     }
@@ -75,7 +75,7 @@
     #myBar {
       width: 0%;
       height: 5px;
-      background-color: white;
+      background-color: rgb(138, 160, 138);
       border-radius: 10px;
     }
 
@@ -90,6 +90,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      user-select: none;
     }
 
     .btn-ctn > div {
@@ -97,17 +98,15 @@
     }
     .btn-ctn i:hover {
       transform: scale(1.2);
-      color: gray;
+      color: rgb(180, 202, 180);
     }
 
     .infos-ctn > div {
       margin-bottom: 10px;
-      color: #ffffff;
-      user-select: none;
+      color: rgb(138, 160, 138);
     }
-    .duration,
-    .timer {
-      margin-top: 30px;
+    .duration {
+      margin-left: 10px;
     }
 
     .title {
@@ -120,28 +119,27 @@
       border-radius: 15px;
       width: 95%;
       padding: 10px;
-      background-color: #000000;
+      background-color: rgb(85, 67, 67);
       margin-top: 60px;
       justify-content: center;
-      margin-bottom: 140px;
-      border: 2px solid white;
+      border: 2px solid rgb(180, 202, 180);
+      margin-bottom: 150px;
     }
 
     .playlist-track-ctn {
       display: flex;
-      background-color: #ffffff;
+      background-color: rgb(138, 160, 138);
       margin-top: 10px;
       border-radius: 5px;
       cursor: pointer;
-      user-select: none;
     }
 
     .playlist-track-ctn > div {
       margin: 2px;
     }
     .playlist-track-ctn:hover {
+      background: rgb(180, 202, 180);
       transform: scaleY(1.2);
-      background-color: rgb(223, 220, 220);
     }
     .playlist-info-track {
       width: 50%;
@@ -150,34 +148,30 @@
     .playlist-duration {
       padding-top: 7px;
       padding-bottom: 7px;
-      color: #000000;
+      color: rgb(0, 0, 0);
       font-size: 0.9rem;
       pointer-events: none;
     }
-    .playlist-ctn {
-      padding-bottom: 10px;
-    }
-
     .active-track {
-      background-color: rgb(223, 220, 220);
-      color: #000000 !important;
+      background: rgb(180, 202, 180);
+      color: rgb(85, 67, 67) !important;
       font-weight: bold;
-      transform: scaleY(1.2);
+      align-items: center;
     }
 
     .playlist-btn-play {
       pointer-events: none;
-      padding-top: 7px;
-      padding-bottom: 7px;
+      padding: 7px;
+      align-items: center;
     }
     .btn-ctn .fas {
-      color: #ffffff;
+      color: rgb(138, 160, 138);
     }
     .fas {
       font-size: 1.5rem;
     }
     .playlist-btn-play i {
-      color: #000000;
+      color: rgb(85, 67, 67);
     }
   </style>
   <body>
@@ -186,20 +180,16 @@
       <source id="source-audio" src="" type="audio/mpeg" />
       Your browser does not support the audio element.
     </audio>
-
     <div class="header">
       <div>
-        <a href="index.html"
-          ><i class="fas fa-house" style="color: #ffffff"></i
-        ></a>
+        <a href="https://cartoontgimusic.github.io/homepage/"><i class="fas fa-house"></i></a>
       </div>
-      <h2 style="color: #ffffff">ခွန်ပဒဲကော</h2>
+      <h2>ထောင်လွေꩻထဲင်း</h2>
       <div>
-        <a href="https://www.facebook.com/pade.choll.3"
-          ><i class="fa-brands fa-facebook" style="color: white"></i
-        ></a>
+        <a href="hlh.html"><i class="fas fa-close"></i></a>
       </div>
     </div>
+
     <div class="container">
       <div class="infos-ctn">
         <div class="timer">00:00</div>
@@ -252,7 +242,6 @@
     <div class="player-ctn">
       <div class="playlist-ctn"></div>
     </div>
-
     <script>
       function createTrackItem(index, name, duration) {
         var trackItem = document.createElement("div");
@@ -286,44 +275,64 @@
 
       var listAudio = [
         {
-          name: "သေနာႏလဲဥ်း",
-          file: "assets/musics/aoaudios/music5.mp3",
-          duration: "တဲမ်း-ခွန်ခွန်ကျော်ဦး",
-        },
-        {
-          name: "မဲ့ꩻခွေꩻလွဥ်ꩻယန်း",
-          file: "assets/musics/aoaudios/music12.mp3",
-          duration: "တဲမ်း-ခွန်ပဒဲကော",
-        },
-        {
           name: "အွဥ်ႏဖိင်ꩻတꩻလꩻတဝ်း",
           file: "assets/musics/hlhaudios/music1.mp3",
-          duration: "တဲမ်း-ခွန်ပဒဲကော",
+          duration: "ခွန်ပဒဲကော",
+        },
+        {
+          name: "သဲင်ꩻလွဥ်ချာခမ်းမွိုင်",
+          file: "assets/musics/hlhaudios/music2.mp3",
+          duration: "ခွန်ခွန်ကျော်ဦး",
+        },
+        {
+          name: "ထွူလဲဥ်း",
+          file: "assets/musics/hlhaudios/music3.mp3",
+          duration: "ခွန်ကျော်စိုး",
+        },
+        {
+          name: "ခံႏလွို့အသွုမ်",
+          file: "assets/musics/hlhaudios/music4.mp3",
+          duration: "ခွန်အောင်သိုက်",
+        },
+        {
+          name: "ထောင်လွေꩻထဲင်း",
+          file: "assets/musics/hlhaudios/music5.mp3",
+          duration: "ခွန်တကီးတဘဲ",
+        },
+        {
+          name: "ဆွိုးခန်းမွိုင်",
+          file: "assets/musics/hlhaudios/music6.mp3",
+          duration: "ကာတွန်းစွိုꩻ",
         },
         {
           name: "ယူးတွမ်ႏညော်ႏ",
           file: "assets/musics/hlhaudios/music7.mp3",
-          duration: "တဲမ်း-ခွန်ပဒဲကော",
+          duration: "ခွန်ပဒဲကော",
         },
         {
-          name: "အုံဟဝ်နေႏမွိုး",
-          file: "assets/musics/hnrtaudios/music4.mp3",
-          duration: "တဲမ်း-ခွန်ပဒဲကော",
+          name: "နာꩻဖေႏကသေ",
+          file: "assets/musics/hlhaudios/music8.mp3",
+          duration: "ခွန်ကျော်စိုး",
         },
         {
-          name: "အရက်ꩻသွတ်ꩻ",
-          file: "assets/musics/tdaudios/music1.mp3",
+          name: "အွဥ်ႏဖိင်ꩻ",
+          file: "assets/musics/hlhaudios/music9.mp3",
+          duration: "ခွန်အောင်သိုက်",
+        },
+        {
+          name: "နီမွိုးပနမ်",
+          file: "assets/musics/hlhaudios/music10.mp3",
           duration: "ခွန်ခွန်ကျော်ဦး",
         },
         {
-          name: "သꩻရာႏတꩻခါꩻ",
-          file: "assets/musics/tdaudios/music8.mp3",
-          duration: "ခွန်ခွန်ကျော်ဦး",
+          name: "အတ္တ",
+          file: "assets/musics/hlhaudios/music11.mp3",
+          duration: "ခွန်တကီးတဘဲ",
         },
         {
-          name: "ယူႏလꩻခွင်ꩻ",
-          file: "assets/musics/tdaudios/music11.mp3",
-          duration: "တဲမ်း-ခွန်တင်ဦး",
+          name: "လောကတရာꩻ",
+          file: "assets/musics/hlhaudios/music12.mp3",
+          duration: "ခွန်ခွန်ကျော်ဦး",
         },
       ];
 

@@ -16,49 +16,54 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" media="all" />
-    <title>AoSongsList</title>
+    <title>khunpadecholl</title>
   </head>
   <style>
     body {
-      background-color: #000000;
+      background-color: #2d2d2d;
       color: #ffffff;
       font-family: "Roboto", sans-serif;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
     }
     .container {
       bottom: 0;
       position: fixed;
       width: 95%;
-      display: flex;
+      background-color: #000000;
       justify-content: center;
       align-items: center;
+      display: flex;
       flex-direction: column;
-      background-color: rgb(0, 0, 0);
       border: 2px solid white;
       border-radius: 50px 0px;
     }
 
     .header {
-      top: 0;
+      position:fixed;
+      width: 95%;
+      top: 0px;
       display: flex;
       justify-content: space-between;
-      width: 95%;
       align-items: center;
       background-color: #000000;
-      border-bottom: 2px solid white;
-      border-radius: 10px;
       height: 50px;
-      position: fixed;
+      padding: 5px;
+      border-radius: 5px;
+      border-bottom: 2px solid white;
       h2 {
         user-select: none;
       }
     }
     .fa-house:hover,
-    .fa-close:hover {
+    .fa-facebook:hover {
       transform: scale(1.2);
+      color: gray;
+    }
+    .fa-facebook {
+      font-size: 1.5rem;
     }
     #myProgress {
       width: 80%;
@@ -70,7 +75,7 @@
     #myBar {
       width: 0%;
       height: 5px;
-      background-color: #ffffff;
+      background-color: white;
       border-radius: 10px;
     }
 
@@ -85,23 +90,24 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      user-select: none;
     }
 
     .btn-ctn > div {
-      margin-top: 10px;
-      margin-bottom: 10px;
+      margin: 10px 0px;
     }
     .btn-ctn i:hover {
       transform: scale(1.2);
+      color: gray;
     }
 
     .infos-ctn > div {
       margin-bottom: 10px;
       color: #ffffff;
+      user-select: none;
     }
-    .duration {
-      margin-left: 10px;
+    .duration,
+    .timer {
+      margin-top: 30px;
     }
 
     .title {
@@ -114,9 +120,10 @@
       border-radius: 15px;
       width: 95%;
       padding: 10px;
+      background-color: #000000;
       margin-top: 60px;
       justify-content: center;
-      margin-bottom: 150px;
+      margin-bottom: 140px;
       border: 2px solid white;
     }
 
@@ -126,6 +133,7 @@
       margin-top: 10px;
       border-radius: 5px;
       cursor: pointer;
+      user-select: none;
     }
 
     .playlist-track-ctn > div {
@@ -133,7 +141,7 @@
     }
     .playlist-track-ctn:hover {
       transform: scaleY(1.2);
-      background: #cdcdcd;
+      background-color: rgb(223, 220, 220);
     }
     .playlist-info-track {
       width: 50%;
@@ -146,12 +154,17 @@
       font-size: 0.9rem;
       pointer-events: none;
     }
+    .playlist-ctn {
+      padding-bottom: 10px;
+    }
 
     .active-track {
-      background: #cdcdcd;
+      background-color: rgb(223, 220, 220);
+      color: #000000 !important;
       font-weight: bold;
-      align-items: center;
+      transform: scaleY(1.2);
     }
+
     .playlist-btn-play {
       pointer-events: none;
       padding-top: 7px;
@@ -176,14 +189,14 @@
 
     <div class="header">
       <div>
-        <a href="index.html"
+        <a href="https://cartoontgimusic.github.io/homepage/"
           ><i class="fas fa-house" style="color: #ffffff"></i
         ></a>
       </div>
-      <h2 style="color: #ffffff">အောဝ်း</h2>
+      <h2 style="color: #ffffff">ခွန်ပဒဲကော</h2>
       <div>
-        <a href="ao.html"
-          ><i class="fas fa-close" style="color: #ffffff"></i
+        <a href="https://www.facebook.com/pade.choll.3"
+          ><i class="fa-brands fa-facebook" style="color: white"></i
         ></a>
       </div>
     </div>
@@ -273,69 +286,44 @@
 
       var listAudio = [
         {
-          name: "မင်္ဂလာႏဒျာႏဗွေႏဩ",
-          file: "assets/musics/aoaudios/music1.mp3",
-          duration: "ကာတွန်းစွိုꩻ",
-        },
-        {
-          name: "ဆုတောင်ꩻနော",
-          file: "assets/musics/aoaudios/music2.mp3",
-          duration: "ခွန်ချို",
-        },
-        {
-          name: "တဖြာꩻတွမ်ႏတဖြာꩻ",
-          file: "assets/musics/aoaudios/music3.mp3",
-          duration: "ခွန်ခွန်ကျော်ဦး",
-        },
-        {
-          name: "အောဝ်ႏကော့ꩻမွောင်ꩻ",
-          file: "assets/musics/aoaudios/music4.mp3",
-          duration: "ခွန်ပျူ",
-        },
-        {
           name: "သေနာႏလဲဥ်း",
           file: "assets/musics/aoaudios/music5.mp3",
-          duration: "ခွန်ပဒဲကော",
-        },
-        {
-          name: "အောဝ်ႏ",
-          file: "assets/musics/aoaudios/music6.mp3",
-          duration: "ခွန်ခွန်ကျော်ဦး",
-        },
-        {
-          name: "လဲဥ်ꩻထိုႏမွန်းခွေꩻ",
-          file: "assets/musics/aoaudios/music7.mp3",
-          duration: "ခွန်ကော်လီ",
-        },
-        {
-          name: "တဥ်ႏခွေါင်ဒျာႏနော်",
-          file: "assets/musics/aoaudios/music8.mp3",
-          duration: "ခွန်ဝဒုတ်",
-        },
-        {
-          name: "အွဥ်ႏဖိင်ꩻခန်း ",
-          file: "assets/musics/aoaudios/music9.mp3",
-          duration: "ခွန်ချိူ",
-        },
-        {
-          name: "မွိုက်လွေꩻဟိုင်း",
-          file: "assets/musics/aoaudios/music10.mp3",
-          duration: "ခွန်ကျော်စိုး",
-        },
-        {
-          name: "ကမ်းဒျာႏနာꩻသꩻ",
-          file: "assets/musics/aoaudios/music11.mp3",
-          duration: "ခွန်ခွန်ကျော်ဦး",
+          duration: "တဲမ်း-ခွန်ခွန်ကျော်ဦး",
         },
         {
           name: "မဲ့ꩻခွေꩻလွဥ်ꩻယန်း",
           file: "assets/musics/aoaudios/music12.mp3",
-          duration: "ခွန်ပဒဲကော",
+          duration: "တဲမ်း-ခွန်ပဒဲကော",
         },
         {
-          name: "နာꩻထန်ႏထိုꩻ",
-          file: "assets/musics/aoaudios/music13.mp3",
-          duration: "ခွန်ဇော်ခက်",
+          name: "အွဥ်ႏဖိင်ꩻတꩻလꩻတဝ်း",
+          file: "assets/musics/hlhaudios/music1.mp3",
+          duration: "တဲမ်း-ခွန်ပဒဲကော",
+        },
+        {
+          name: "ယူးတွမ်ႏညော်ႏ",
+          file: "assets/musics/hlhaudios/music7.mp3",
+          duration: "တဲမ်း-ခွန်ပဒဲကော",
+        },
+        {
+          name: "အုံဟဝ်နေႏမွိုး",
+          file: "assets/musics/hnrtaudios/music4.mp3",
+          duration: "တဲမ်း-ခွန်ပဒဲကော",
+        },
+        {
+          name: "အရက်ꩻသွတ်ꩻ",
+          file: "assets/musics/tdaudios/music1.mp3",
+          duration: "ခွန်ခွန်ကျော်ဦး",
+        },
+        {
+          name: "သꩻရာႏတꩻခါꩻ",
+          file: "assets/musics/tdaudios/music8.mp3",
+          duration: "ခွန်ခွန်ကျော်ဦး",
+        },
+        {
+          name: "ယူႏလꩻခွင်ꩻ",
+          file: "assets/musics/tdaudios/music11.mp3",
+          duration: "တဲမ်း-ခွန်တင်ဦး",
         },
       ];
 

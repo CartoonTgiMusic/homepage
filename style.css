@@ -236,11 +236,12 @@ h3{
     }
 }
 
-.albums-ctn{
+.albums-ctn,.artists-ctn{
     margin-bottom: 150px;
     .product{
         display: flex;
         align-items: center;
+        justify-content: space-between;
         width: 100%;
         padding: 5px;
         margin-bottom: 10px;
@@ -251,7 +252,7 @@ h3{
             margin-right: 20px;
         }
         .texts{
-            font-size: small;
+            width: 50%;
             color: rgb(255, 255, 255);
             .singers-name{
                 text-align: left;
@@ -261,8 +262,9 @@ h3{
 }
 .albums-ctn .product:nth-child(odd){
 
-            background-color: rgb(5, 37, 106);
+            background-color: rgb(57, 59, 64);
 }
+
 @media (min-width:475px) {
     .albums-ctn{
         .product{
