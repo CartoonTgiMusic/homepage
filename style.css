@@ -118,14 +118,14 @@ a{
 .tab-btn{
     border: none;
     background: none;
-    font-weight: 600;
     cursor: pointer;
     user-select: none;
     color:white;
 }
 .tab-btn.active{
-    color: blue;
-    border-bottom: 3px solid blue;
+    color: rgb(255, 255, 255);
+    border-bottom: 3px solid rgb(255, 255, 255);
+    font-weight: bold;
 }
 
 .search-tabs{
@@ -377,7 +377,6 @@ h6{
   
   .btn-ctn i:hover{
     transform: scale(1.2);
-    color: gray;
   }
   
   .infos-ctn > div {
