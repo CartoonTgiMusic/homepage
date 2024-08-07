@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: rgb(3, 30, 30);
+    background:linear-gradient(-45deg,rgb(3, 30, 30),rgb(89, 89, 89));
 }
 
 a{
@@ -22,8 +22,7 @@ a{
 .header{
     width: 100%;
     height: 70px;
-    border-top: 3px solid black;
-    border-bottom: 3px solid black;
+    border-top: 1px solid black;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -35,14 +34,21 @@ a{
 .cartoon{
     justify-content: center;
     text-align: center;
+    user-select: none;
 }
 
 .logo{
     padding-left: 10px;
+    user-select: none;
 }
 .close{
     padding-right: 10px;
     font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+.close:hover{
+    transform: scale(1.2);
 }
 
 .logo img{
@@ -336,15 +342,13 @@ h6{
 .container{
     bottom: 0;
     position: fixed;  
-    width: 100%;
-    margin: auto;
-    background:linear-gradient(-45deg,transparent,black,black);
-    border: 1px solid white;
-    border-radius: 10px;
-    justify-content: center;
-    align-items: center;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    background:linear-gradient(-45deg,rgb(3, 30, 30),rgb(89, 89, 89));
   }
  
   #myProgress {
@@ -362,36 +366,30 @@ h6{
     border-radius: 10px;
   }
   
-  .btn-action{
-    cursor: pointer;
-    padding-top: 10px;
-  }
-  
   .btn-ctn, .infos-ctn{
     width: 80%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     user-select: none;
+    margin: 5px 0px;
   }
   
-  .btn-ctn > div {
-   margin: 10px 0xp;
-  }
   .btn-ctn i:hover{
     transform: scale(1.2);
     color: gray;
   }
   
   .infos-ctn > div {
-   margin-bottom: 10px;
    color: #ffffff;
   }
   
   .titles{
-    margin-left: 10px;
     width: 67%;
     text-align: center;
+    font-size: small;
+  }
+  .timer,.duration{
     font-size: small;
   }
   
@@ -428,10 +426,7 @@ h6{
     text-align: center;
     padding: 0px 5px;
   }
-  .playlist-ctn{
-     padding-bottom: 20px;
-    }
-  
+
   .active-track{
     background: #b5b3b3;
     font-weight: bold;

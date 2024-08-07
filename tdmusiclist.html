@@ -28,15 +28,21 @@
       display: flex;
       flex-direction: column;
     }
-
-    .header {
+    .header-div{
       top: 0;
       position: fixed;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(-75deg,rgb(0, 0, 0),rgb(6, 121, 41));
+
+    }
+    .header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       width: 95%;
-      background: linear-gradient(-75deg,rgb(0, 0, 0),rgb(6, 121, 41));
       height: 50px;
 
       h3 {
@@ -69,7 +75,6 @@
 
     .btn-action {
       cursor: pointer;
-      padding-top: 10px;
     }
 
     .btn-ctn,
@@ -78,10 +83,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-    }
-
-    .btn-ctn > div {
-      margin: 10px 0px;
+      margin: 5px 0px;
     }
     .btn-ctn i:hover {
       transform: scale(1.2);
@@ -89,37 +91,35 @@
     }
 
     .infos-ctn > div {
-      margin-bottom: 10px;
       color: #ffffff;
       user-select: none;
     }
-    .duration {
-      margin-left: 10px;
-    }
-
     .title {
-      margin-left: 10px;
       width: 67%;
       text-align: center;
+      font-size: small;
     }
-
+    .timer,.duration{
+    font-size: small;
+  }
     .player-ctn {
       border-radius: 15px;
       width: 95%;
       padding: 10px;
-      margin-top: 60px;
+      margin-top: 50px;
       justify-content: center;
       margin-bottom: 150px;
-
     }
+
 
     .playlist-track-ctn {
       display: flex;
-
+      align-items: center;
       margin: 10px 0px;
       border-radius: 5px;
       cursor: pointer;
     }
+
 
     .playlist-track-ctn > div {
       margin: 2px;
@@ -133,8 +133,6 @@
     }
     .playlist-info-track,
     .playlist-duration {
-      padding-top: 7px;
-      padding-bottom: 7px;
       color: rgb(255, 255, 255);
       font-size: 0.9rem;
       pointer-events: none;
@@ -165,12 +163,14 @@
       <source id="source-audio" src="" type="audio/mpeg">
       Your browser does not support the audio element.
   </audio>
-  
-  <div class="header">
-    <div class="home"><a href="index.html"><i class="fas fa-house"></i></a></div>
-    <h2>တဒွီ</h2>
-    <div class="home"><a href="td.html"><i class="fas fa-close"></i></a></div>
+  <div class="header-div">
+    <div class="header">
+      <div class="home"><a href="index.html"><i class="fas fa-house"></i></a></div>
+      <h2>တဒွီ</h2>
+      <div class="home"><a href="td.html"><i class="fas fa-close"></i></a></div>
+    </div>
   </div>
+
   <div class="container">
 
       <div class="infos-ctn">
@@ -277,7 +277,7 @@
   function loadNewTrack(index){
     var player = document.querySelector('#source-audio')
     player.src = listAudio[index].file
-    document.querySelector('.title').innerHTML = listAudio[index].name+"<br>"+listAudio[index].duration
+    document.querySelector('.title').innerHTML = listAudio[index].name+" - "+listAudio[index].duration
     this.currentAudio = document.getElementById("myAudio");
     this.currentAudio.load()
     this.toggleAudio()
@@ -305,7 +305,7 @@
   }
 
   document.querySelector('#source-audio').src = listAudio[indexAudio].file
-  document.querySelector('.title').innerHTML = listAudio[indexAudio].name+"<br>"+listAudio[indexAudio].duration
+  document.querySelector('.title').innerHTML = listAudio[indexAudio].name+" - "+listAudio[indexAudio].duration
 
 
   var currentAudio = document.getElementById("myAudio");

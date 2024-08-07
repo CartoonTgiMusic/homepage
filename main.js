@@ -460,7 +460,7 @@ function loadNewTrack(index) {
   var player = document.querySelector("#source-audio");
   player.src = listAudio[index].file;
   document.querySelector(".titles").innerHTML =
-    listAudio[index].name + "<br>" + listAudio[index].duration;
+    listAudio[index].name+ ' - ' + listAudio[indexAudio].duration ;
   this.currentAudio = document.getElementById("myAudio");
   this.currentAudio.load();
   this.toggleAudio();
@@ -490,7 +490,7 @@ function getClickedElement(event) {
 
 document.querySelector("#source-audio").src = listAudio[indexAudio].file;
 document.querySelector(".titles").innerHTML =
-  listAudio[indexAudio].name + "<br>" + listAudio[indexAudio].duration;
+  listAudio[indexAudio].name + ' - ' + listAudio[indexAudio].duration;
 
 var currentAudio = document.getElementById("myAudio");
 

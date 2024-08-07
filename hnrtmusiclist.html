@@ -83,7 +83,6 @@
 
     .btn-action {
       cursor: pointer;
-      padding-top: 10px;
     }
 
     .btn-ctn,
@@ -93,33 +92,29 @@
       align-items: center;
       justify-content: space-between;
       user-select: none;
+      margin: 5px 0px;
     }
 
-    .btn-ctn > div {
-      margin: 10px 0;
-    }
     .btn-ctn i:hover {
       transform: scale(1.2);
       color: gray;
-    }
-
-    .infos-ctn > div {
-      margin-bottom: 10px;
-      color: #000000;
     }
     .duration {
       margin-left: 10px;
     }
 
     .title {
-      margin-left: 10px;
       width: 67%;
       text-align: center;
+      font-size: small;
     }
+    .timer,.duration{
+    font-size: small;
+  }
 
     .player-ctn {
       width: 95%;
-      margin-top: 60px;
+      margin-top: 50px;
       justify-content: center;
       margin-bottom: 150px;
     }
@@ -142,7 +137,6 @@
     }
     .playlist-info-track,
     .playlist-duration {
-      padding: 7px 0;
       color: #000000;
       font-size: 0.9rem;
       pointer-events: none;
@@ -349,7 +343,7 @@
         var player = document.querySelector("#source-audio");
         player.src = listAudio[index].file;
         document.querySelector(".title").innerHTML =
-          listAudio[index].name + "<br>" + listAudio[index].duration;
+          listAudio[index].name + " - " + listAudio[index].duration;
         this.currentAudio = document.getElementById("myAudio");
         this.currentAudio.load();
         this.toggleAudio();
@@ -382,7 +376,7 @@
 
       document.querySelector("#source-audio").src = listAudio[indexAudio].file;
       document.querySelector(".title").innerHTML =
-        listAudio[indexAudio].name + "<br>" + listAudio[indexAudio].duration;
+        listAudio[indexAudio].name + " - " + listAudio[indexAudio].duration;
 
       var currentAudio = document.getElementById("myAudio");
 
