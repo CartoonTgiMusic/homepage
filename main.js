@@ -60,17 +60,17 @@ function createTrackItem(index, name, duration) {
 
   var trackInfoItem = document.createElement("div");
   trackInfoItem.setAttribute("class", "playlist-info-track");
-  var h4 = document.createElement("h4");
-  h4.innerHTML = name;
-  var h6 = document.createElement("h6");
-  h6.innerHTML = name;
-  trackInfoItem.append(h4, h6);
+  trackInfoItem.innerHTML = name;
   document.querySelector("#ptc-" + index).appendChild(trackInfoItem);
 
   var trackDurationItem = document.createElement("div");
   trackDurationItem.setAttribute("class", "playlist-duration");
   trackDurationItem.innerHTML = duration;
   document.querySelector("#ptc-" + index).appendChild(trackDurationItem);
+  
+  var h6 = document.createElement("h6");
+  h6.innerHTML = `${name}${duration}`;
+  document.querySelector("#ptc-" + index).appendChild(h6);
 }
 
 var listAudio = [

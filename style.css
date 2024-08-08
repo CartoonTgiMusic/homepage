@@ -10,7 +10,6 @@ body{
 
 a{
     text-decoration: none;
-    color: black;
 }
 .nav{
     top: 0;
@@ -236,7 +235,7 @@ h3{
     }
 }
 
-.albums-ctn,.artists-ctn{
+.albums-ctn{
     margin-bottom: 150px;
     .product{
         display: flex;
@@ -244,25 +243,17 @@ h3{
         justify-content: space-between;
         width: 100%;
         padding: 5px;
-        margin-bottom: 10px;
-        background-color: rgb(142, 106, 106);
+        margin: 5px;
+        border: 1px solid white;
         img{
-            width: 100px;
-            border-radius: 20px;
-            margin-right: 20px;
+            width: 110px;
         }
         .texts{
             width: 50%;
             color: rgb(255, 255, 255);
-            .singers-name{
-                text-align: left;
-            }
+            font-size: small;
         }
     }
-}
-.albums-ctn .product:nth-child(odd){
-
-            background-color: rgb(57, 59, 64);
 }
 
 @media (min-width:475px) {
@@ -270,20 +261,16 @@ h3{
         .product{
             display: flex;
             align-items: center;
+            justify-content: space-between;
             width: 100%;
             padding: 5px;
             margin-bottom: 10px;
-            background-color: rgb(142, 106, 106);
             img{
-                width: 130px;
-                border-radius: 20px;
-                margin-right: 100px;
+                width: 120px;
             }
             .texts{
-                font-size: medium;
-                .singers-name{
-                    text-align: left;
-                }
+                width: 50%;
+                font-size: small;
             }
         }
     }
@@ -306,21 +293,39 @@ h3{
         .product{
             display: flex;
             align-items: center;
+            justify-content: space-between;
             margin: 10px;
             img{
-                width: 150px;
-                margin-right: 200px;
-                border-radius: 20px;
+                width: 130px;
             }
             .texts{
-                font-size: large;
-                .singers-name{
-                    text-align: left;
-                }
+                width: 50%;
+                font-size: inherit;
             }
         }
     }
     
+}
+.artists-ctn{
+    margin-bottom: 150px;
+    .product{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 5px;
+        margin: 5px;
+        border: 1px solid white;
+        img{
+            width: 80px;
+            border-radius: 50%;
+        }
+        .texts{
+            width: 50%;
+            color: rgb(255, 255, 255);
+            font-size: small;
+        }
+    }
 }
 .product:hover img{
     transform: scale(1.05);
@@ -402,14 +407,15 @@ h6{
     justify-content: center;
     align-items: center;
   }
+  .playlist-ctn{
+    width: 100%;
+  }
   
   .playlist-track-ctn{
+    position: relative;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-color: #ffffff;
     margin-top: 10px;
-    border-radius: 5px;
     cursor: pointer;
     user-select: none;
   }
@@ -421,12 +427,21 @@ h6{
   }
 
   .playlist-info-track,.playlist-duration{
-    color: #000000;
+    color: #ffffff;
     font-size: .9rem;
     pointer-events: none;
-    text-align: center;
-    padding: 0px 5px;
   }
+  .playlist-info-track{
+    text-align: start;
+    width: 45%;
+  }
+  .playlist-duration{
+    position: absolute;
+      width: 45%;
+      text-align: end;
+      right: 0;
+    }
+
 
   .active-track{
     background: #b5b3b3;
@@ -435,16 +450,17 @@ h6{
     
   .playlist-btn-play{
     pointer-events: none;
-    margin: 5px;
-  }
-  .btn-ctn .fas{
-    color: #ffffff;
+    width: 10%;
   }
   .fas{
     font-size: 1.5rem;
   }
+  .btn-ctn .fas{
+    color: #ffffff;
+  }
   .playlist-btn-play i{
-    color: #000000;
+    color: #ffffff;
+    font-size: 1rem;
   }
   .songs-ctn{
     margin-bottom: 150px;
