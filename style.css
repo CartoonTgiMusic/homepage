@@ -443,8 +443,8 @@ h6{
 
 
   .active-track{
-    background: #b5b3b3;
-    font-weight: bold;
+    background: grey;
+    transform: scaleY(1.2);
   }
     
   .playlist-btn-play{
