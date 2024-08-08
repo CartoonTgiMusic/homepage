@@ -460,14 +460,13 @@ function loadNewTrack(index) {
   var player = document.querySelector("#source-audio");
   player.src = listAudio[index].file;
   document.querySelector(".titles").innerHTML =
-    listAudio[index].name+ ' - ' + listAudio[indexAudio].duration ;
+    listAudio[index].name+ ' - ' + listAudio[index].duration;
   this.currentAudio = document.getElementById("myAudio");
   this.currentAudio.load();
   this.toggleAudio();
   this.updateStylePlaylist(this.indexAudio, index);
   this.indexAudio = index;
 }
-
 var playListItems = document.querySelectorAll(".playlist-track-ctn");
 
 for (let i = 0; i < playListItems.length; i++) {
