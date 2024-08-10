@@ -17,26 +17,116 @@ const search = () => {
   }
 };
 
-function Close() {
-  window.close();
-}
-
 const tabs = document.querySelectorAll(".tab-btn");
 const allContents = document.querySelectorAll(".content");
 
 tabs.forEach((tab, index) => {
-  tab.addEventListener("click", (e) => {
-    tabs.forEach((tab) => {
-      tab.classList.remove("active");
-    });
-    tab.classList.add("active");
-
-    allContents.forEach((content) => {
-      content.classList.remove("active");
-    });
-    allContents[index].classList.add("active");
+tab.addEventListener("click", (e) => {
+  tabs.forEach((tab) => {
+    tab.classList.remove("active");
   });
+  tab.classList.add("active");
+
+  allContents.forEach((content) => {
+    content.classList.remove("active");
+  });
+  allContents[index].classList.add("active");
 });
+});
+
+var swiper = new Swiper(".slide-container", {
+  slidesPerView: 4,
+  spaceBetween: 20,
+  sliderPerGroup: 4,
+  loop: false,
+  centerSlide: "true",
+  fade: "true",
+  grabCursor: "true",
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  breakpoints: {
+    0: {
+      slidesPerView: 2,
+    },
+    520: {
+      slidesPerView: 3,
+    },
+    768: {
+      slidesPerView: 4,
+    },
+    1000: {
+      slidesPerView: 6,
+    },
+  },
+});
+
+var swiper = new Swiper(".slide-container2", {
+  slidesPerView: 4,
+  spaceBetween: 20,
+  sliderPerGroup: 4,
+  loop: false,
+  centerSlide: "true",
+  fade: "true",
+  grabCursor: "true",
+ 
+  navigation: {
+    nextEl: ".swiper-button-next2",
+    prevEl: ".swiper-button-prev2",
+  },
+
+  breakpoints: {
+    0: {
+      slidesPerView: 3,
+    },
+    520: {
+      slidesPerView: 5,
+    },
+    768: {
+      slidesPerView: 7,
+    },
+    1000: {
+      slidesPerView: 9,
+    },
+  },
+});
+var swiper = new Swiper(".slide-container3", {
+  slidesPerView: 4,
+  spaceBetween: 20,
+  sliderPerGroup: 4,
+  loop: false,
+  centerSlide: "true",
+  fade: "true",
+  grabCursor: "true",
+ 
+  navigation: {
+    nextEl: ".swiper-button-next2",
+    prevEl: ".swiper-button-prev2",
+  },
+
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    520: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1000: {
+      slidesPerView: 3,
+    },
+  },
+});
+
 
 function createTrackItem(index, name, duration) {
   var trackItem = document.createElement("div");
@@ -474,6 +564,7 @@ for (let i = 0; i < playListItems.length; i++) {
 
 function getClickedElement(event) {
   for (let i = 0; i < playListItems.length; i++) {
+    document.querySelector('.none-block').style.display = 'block'
     if (playListItems[i] == event.target) {
       var clickedIndex = event.target.getAttribute("data-index");
       if (clickedIndex == this.indexAudio) {
@@ -619,7 +710,6 @@ function rewind() {
 }
 
 function toggleMute() {
-  var btnMute = document.querySelector("#toggleMute");
   var volUp = document.querySelector("#icon-vol-up");
   var volMute = document.querySelector("#icon-vol-mute");
   if (this.currentAudio.muted == false) {
