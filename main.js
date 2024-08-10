@@ -1,6 +1,5 @@
 const search = () => {
   const searchBox = document.getElementById("search-item").value.toUpperCase();
-  const main = document.querySelector(".main");
   const product = document.querySelectorAll(".product");
   const pname = document.getElementsByTagName("h6");
 
