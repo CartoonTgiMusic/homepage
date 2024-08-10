@@ -93,7 +93,7 @@ var swiper = new Swiper(".slide-container2", {
       slidesPerView: 7,
     },
     1000: {
-      slidesPerView: 9,
+      slidesPerView: 10,
     },
   },
 });
@@ -106,11 +106,6 @@ var swiper = new Swiper(".slide-container3", {
   fade: "true",
   grabCursor: "true",
  
-  navigation: {
-    nextEl: ".swiper-button-next2",
-    prevEl: ".swiper-button-prev2",
-  },
-
   breakpoints: {
     0: {
       slidesPerView: 1,
@@ -122,7 +117,7 @@ var swiper = new Swiper(".slide-container3", {
       slidesPerView: 3,
     },
     1000: {
-      slidesPerView: 3,
+      slidesPerView: 4,
     },
   },
 });

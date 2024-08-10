@@ -22,7 +22,7 @@ img:hover{
 .main-ctn{
     width: 100%;
     height: 100vh;
-    margin: 70px 0px 50px;
+    margin: 70px 0px 120px;
     h3{
       color: white;
       margin: 0 10px;
@@ -128,6 +128,7 @@ img:hover{
                 color: rgb(255, 255, 255);
                 height: 30px;
                 padding: 5px 0px;
+                font-size: small;
                 h6{
                   display: none;
                 }
@@ -158,7 +159,7 @@ img:hover{
   }
 .container2 {
     width: 100%;
-    padding: 10px 0px 35px;
+    padding: 10px 0px 10px;
     .slide-container2{
       margin: 0 10px;
       overflow: hidden;
@@ -174,10 +175,11 @@ img:hover{
                 }
               }
               .profile-details {
-                height: 20px;
+                height: 30px;
                 text-align: center;
                 color: white;
                 padding: 5px 0px;
+                font-size: small;
                 h6{
                   display: none;
                 }
@@ -187,7 +189,7 @@ img:hover{
   }
 .container3 {
     width: 100%;
-    padding: 10px 0px 30px;
+    padding: 10px 0px 10px;
     .slide-container3{
       margin: 0 10px;
       overflow: hidden;
@@ -196,6 +198,7 @@ img:hover{
           user-select: none;
           .image-box {
               height: 160px;
+              padding: 0px 15px;
               img {
                   width: 100%;
                   height: 100%;
@@ -215,7 +218,8 @@ img:hover{
   }
 
 .albums-ctn{
-    padding-bottom: 100px;
+    margin: 0px 10px;
+    padding-bottom: 130px;
     a{
       text-decoration: none;
     }
@@ -225,7 +229,7 @@ img:hover{
         justify-content: space-between;
         width: 100%;
         padding: 5px;
-        margin: 5px;
+        margin: 5px 0px;
         border: 1px solid white;
         h6{
           display: none;
@@ -241,18 +245,18 @@ img:hover{
     }
 }
 .artists-ctn{
-  padding-bottom: 100px;
+  margin:0px 10px;
+  padding-bottom: 130px;
   a{
     text-decoration: none;
   }
-  margin-bottom: 150px;
   .product{
       display: flex;
       align-items: center;
       justify-content: space-between;
       width: 100%;
       padding: 5px;
-      margin: 5px;
+      margin: 5px 0px;
       border: 1px solid white;
       h6{
         display: none;
