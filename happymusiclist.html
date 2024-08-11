@@ -15,162 +15,155 @@
       src="https://kit.fontawesome.com/a062562745.js"
       crossorigin="anonymous"
     ></script>
-    <title>happySongsList</title>
+    <title>HappySonglist</title>
     <link rel="stylesheet" media="all" />
   </head>
   <style>
     body {
-      display: flex;
-      flex-direction: column;
-      background-color: #ffffff;
+      background: linear-gradient(-90deg,rgb(7, 100, 231),rgb(255, 255, 255));
       color: #000000;
       font-family: "Roboto", sans-serif;
-      justify-content: center;
+      display: flex;
+      flex-direction: column;
       align-items: center;
+      justify-content: center;
     }
-    .container {
-      bottom: 0;
+    
+    .nav{
+      top: 0;
       position: fixed;
-      width: 95%;
-      background-color: #ffffff;
+      width: 100%;
+      background: linear-gradient(-90deg,rgb(7, 100, 231),rgb(255, 255, 255));
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      border: 2px solid black;
-      border-radius: 50px 0px;
+      z-index: 1;
+      .search-box{
+        width: 95%;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        input{
+          width: 100%;
+          margin-left: 10px;
+          background: none;
+          border: none;
+          outline: none;
+        }
+        .glass{
+          margin: 0px 10px;
+        }
+        i{
+          font-size: 1.2rem;
+        }
+      }
+      .hader-div{
+        width: 95%;
+        display: flex;
+        margin: 5px 0px;
+        .img-box{
+          width: 150px;
+          height: 150px;
+        }
+        img{
+          width: 100%;
+          height: 100%;
+        }
+        .details-box{
+          margin-left: 10px;
+          width: 200px;
+        }
+      }
     }
-
-    .header {
-      top: 0;
-      position: fixed;
-      display: flex;
-      justify-content: space-between;
-      width: 95%;
-      align-items: center;
-      text-align: center;
-      background-color: #ffffff;
-      height: 50px;
-      border-bottom: 2px solid black;
-      border-radius: 10px;
-    }
-    .fa-house:hover,
-    .fa-close:hover {
-      transform: scale(1.2);
-      color: gray;
-    }
-    .fa-house,
-    .fa-close {
-      color: #000000;
-    }
-    #myProgress {
-      width: 80%;
-      background-color: gray;
-      cursor: pointer;
-      border-radius: 10px;
-    }
-
-    #myBar {
-      width: 0%;
-      height: 5px;
-      background-color: black;
-      border-radius: 10px;
-    }
-
-    .btn-action {
-      cursor: pointer;
-      padding-top: 10px;
-    }
-
-    .btn-ctn,
-    .infos-ctn {
-      width: 80%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      user-select: none;
-    }
-
-    .btn-ctn > div {
-      margin: 10px 0px;
-    }
-    .btn-ctn i:hover {
-      transform: scale(1.2);
-      color: gray;
-    }
-
-    .infos-ctn > div {
-      margin-bottom: 10px;
-      color: #000000;
-    }
-    .duration {
-      margin-left: 10px;
-    }
-
-    .title {
-      margin-left: 10px;
-      width: 67%;
-      text-align: center;
-    }
-
+  
     .player-ctn {
-      border-radius: 15px;
       width: 95%;
-      padding: 10px;
-      background-color: #ffffff;
-      margin-top: 60px;
-      margin-bottom: 150px;
-      justify-content: center;
-      border: 2px solid rgb(0, 0, 0);
+      margin: 200px 0px 100px;
+        .playlist-track-ctn {
+          display: flex;
+          margin: 5px 0px;
+          cursor: pointer;
+          align-items: center;
+                h6{
+                    display: none;
+                  }
+          .playlist-btn-play {
+                pointer-events: none;
+                padding: 7px 10px;
+                color: #656565;
+              }
+            .playlist-info-track,
+            .playlist-duration {
+                  color: #000000;
+                  font-size: 0.9rem;
+                  pointer-events: none;
+                  user-select: none;
+                }
+           .playlist-info-track {
+                  width: 50%;
+                }
+        }
     }
-
-    .playlist-track-ctn {
-      display: flex;
-      align-items: center;
-      background-color: #000000;
-      margin-top: 10px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .playlist-track-ctn > div {
-      margin: 2px;
-    }
+    
     .playlist-track-ctn:hover {
       transform: scaleY(1.2);
-      background-color: gray;
+      border: 1px solid rgb(0, 0, 0);
     }
-    .playlist-info-track {
-      width: 50%;
-    }
-    .playlist-info-track,
-    .playlist-duration {
-      padding-top: 7px;
-      padding-bottom: 7px;
-      color: #ffffff;
-      font-size: 0.9rem;
-      pointer-events: none;
-    }
-
     .active-track {
-      background: gray;
+      transform: scaleY(1.2);
+      border: 1px solid rgb(0, 0, 0);
       font-weight: bold;
-      align-items: center;
     }
 
-    .playlist-btn-play {
-      pointer-events: none;
-      padding: 7px;
-    }
-    .btn-ctn .fas {
-      color: #000000;
-    }
-    .fas {
-      font-size: 1.5rem;
-    }
-    .playlist-btn-play i {
-      color: #ffffff;
-    }
+    .controls-container {
+          bottom: 0;
+          position: fixed;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          background: linear-gradient(-90deg,rgb(7, 100, 231),rgb(255, 255, 255));
+          padding-bottom: 5px;
+          z-index: 1;
+
+          #myProgress {
+              width: 80%;
+              background-color: silver;
+              cursor: pointer;
+              border-radius: 10px;
+              margin: auto;
+                  #myBar {
+                    width: 0%;
+                    height: 5px;
+                    background-color: rgb(56, 56, 56);
+                    border-radius: 10px;
+                  }
+            }
+
+            .btn-ctn, .infos-ctn {
+                      width: 80%;
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                      user-select: none;
+                      padding: 5px 0px;
+                      text-align: center;
+                      font-size: small;
+                      .btn-action {
+                              cursor: pointer;
+                            }
+                      .fas {
+                             font-size: 1.5rem;
+                       }
+                  }
+        }
+    .btn-ctn i:hover {
+          transform: scale(1.2);
+        }
+        
   </style>
 
   <body>
@@ -179,17 +172,27 @@
       <source id="source-audio" src="" type="audio/mpeg" />
       Your browser does not support the audio element.
     </audio>
-    <div class="header">
-      <div class="home">
-        <a href="https://cartoontgimusic.github.io/homepage/"><i class="fas fa-house"></i></a>
-      </div>
-      <h3>အပျော်ႏသွတ်ꩻအခိန်ႏ အပျော်ႏသွတ်ꩻဖꩻဝ</h3>
-      <div class="home">
-        <a href="happytime.html"><i class="fas fa-close"></i></a>
+    <div class="nav">
+        <div class="search-box">
+          <a href="index.html"><div><i class="fa-solid fa-arrow-left"></i></div></a>
+          <input type="text" placeholder="Search...." id="search-item" onkeyup="search()" >
+          <div class="glass"><i class="fa-solid fa-magnifying-glass"></i></div>
+          <div><i class="fa-solid fa-list"></i></div>
+        </div>
+        
+        <div class="hader-div">
+          <div class="img-box">
+            <img src="assets/images/mimgs/logo.jpg" alt="">
+          </div>
+          <div class="details-box">
+            <h4>အပျော်ႏသွတ်ꩻအခိန်ႏ အပျော်ႏသွတ်ꩻဖꩻဝ</h4>
+            <h5>ကာတွန်းစွိုꩻ</h5>
+            <h5>14 songs</h5>
+        </div>
       </div>
     </div>
 
-    <div class="container">
+    <div class="controls-container">
       <div class="infos-ctn">
         <div class="timer">00:00</div>
         <div class="title"></div>
@@ -242,9 +245,29 @@
       <div class="playlist-ctn"></div>
     </div>
     <script>
+
+      const search = () => {
+              const searchBox = document.getElementById("search-item").value.toUpperCase();
+              const product = document.querySelectorAll(".product");
+              const pname = document.getElementsByTagName("h6");
+
+              for (var i = 0; i < pname.length; i++) {
+                let match = product[i].getElementsByTagName("h6")[0];
+                if (match) {
+                  let textvalue = match.textContent || match.innerHTML;
+
+                  if (textvalue.toUpperCase().indexOf(searchBox) > -1) {
+                    product[i].style.display = "";
+                  } else {
+                    product[i].style.display = "none";
+                  }
+                }
+              }
+            };
+
       function createTrackItem(index, name, duration) {
         var trackItem = document.createElement("div");
-        trackItem.setAttribute("class", "playlist-track-ctn");
+        trackItem.setAttribute("class", "playlist-track-ctn product");
         trackItem.setAttribute("id", "ptc-" + index);
         trackItem.setAttribute("data-index", index);
         document.querySelector(".playlist-ctn").appendChild(trackItem);
@@ -270,6 +293,10 @@
         trackDurationItem.setAttribute("class", "playlist-duration");
         trackDurationItem.innerHTML = duration;
         document.querySelector("#ptc-" + index).appendChild(trackDurationItem);
+
+        var h6 = document.createElement("h6");
+        h6.innerHTML = `${name}${duration}`;
+        document.querySelector("#ptc-" + index).appendChild(h6);
       }
 
       var listAudio = [
@@ -354,7 +381,7 @@
         var player = document.querySelector("#source-audio");
         player.src = listAudio[index].file;
         document.querySelector(".title").innerHTML =
-          listAudio[index].name + "<br>" + listAudio[index].duration;
+          listAudio[index].name + " - " + listAudio[index].duration;
         this.currentAudio = document.getElementById("myAudio");
         this.currentAudio.load();
         this.toggleAudio();
@@ -372,6 +399,7 @@
       }
 
       function getClickedElement(event) {
+        document.querySelector('#search-item').value = ''
         for (let i = 0; i < playListItems.length; i++) {
           if (playListItems[i] == event.target) {
             var clickedIndex = event.target.getAttribute("data-index");
@@ -387,7 +415,7 @@
 
       document.querySelector("#source-audio").src = listAudio[indexAudio].file;
       document.querySelector(".title").innerHTML =
-        listAudio[indexAudio].name + "<br>" + listAudio[indexAudio].duration;
+        listAudio[indexAudio].name + " - " + listAudio[indexAudio].duration;
 
       var currentAudio = document.getElementById("myAudio");
 

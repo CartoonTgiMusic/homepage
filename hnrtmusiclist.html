@@ -20,144 +20,150 @@
   </head>
   <style>
     body {
-      background: linear-gradient(-75deg,rgb(7, 100, 231),rgb(255, 255, 255));
+      background: linear-gradient(-90deg,rgb(7, 100, 231),rgb(255, 255, 255));
       color: #000000;
       font-family: "Roboto", sans-serif;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-    }
-    .container {
-      bottom: 0;
-      position: fixed;
-      width: 100%;
-      background: linear-gradient(-75deg,rgb(7, 100, 231),rgb(255, 255, 255));
       justify-content: center;
-      align-items: center;
-      display: flex;
-      flex-direction: column;
     }
-    .hader-div{
+    
+    .nav{
       top: 0;
       position: fixed;
-      width: 100vw;
+      width: 100%;
+      background: linear-gradient(-90deg,rgb(7, 100, 231),rgb(255, 255, 255));
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(-75deg,rgb(7, 100, 231),rgb(255, 255, 255));
-    }
-    .header {
-      display: flex;
-      justify-content: space-between;
-      width: 95%;
-      height: 50px;
-      align-items: center;
-      h2 {
-        user-select: none;
+      z-index: 1;
+      .search-box{
+        width: 95%;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        input{
+          width: 100%;
+          margin-left: 10px;
+          background: none;
+          border: none;
+          outline: none;
+        }
+        .glass{
+          margin: 0px 10px;
+        }
+        i{
+          font-size: 1.2rem;
+        }
+      }
+      .hader-div{
+        width: 95%;
+        display: flex;
+        margin: 5px 0px;
+        .img-box{
+          width: 150px;
+          height: 150px;
+        }
+        img{
+          width: 100%;
+          height: 100%;
+        }
+        .details-box{
+          margin-left: 10px;
+          width: 200px;
+        }
       }
     }
-    .fa-house:hover,
-    .fa-close:hover {
-      transform: scale(1.2);
-      color: gray;
-    }
-    .fa-house,
-    .fa-close {
-      color: #000000;
-    }
-    #myProgress {
-      width: 80%;
-      background-color: gray;
-      cursor: pointer;
-      border-radius: 10px;
-      margin: auto;
-    }
-
-    #myBar {
-      width: 0%;
-      height: 5px;
-      background-color: black;
-      border-radius: 10px;
-    }
-
-    .btn-action {
-      cursor: pointer;
-    }
-
-    .btn-ctn,
-    .infos-ctn {
-      width: 80%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      user-select: none;
-      margin: 5px 0px;
-    }
-
-    .btn-ctn i:hover {
-      transform: scale(1.2);
-      color: gray;
-    }
-    .duration {
-      margin-left: 10px;
-    }
-
-    .title {
-      width: 67%;
-      text-align: center;
-      font-size: small;
-    }
-    .timer,.duration{
-    font-size: small;
-  }
-
+  
     .player-ctn {
       width: 95%;
-      margin-top: 50px;
-      justify-content: center;
-      margin-bottom: 150px;
+      margin: 200px 0px 100px;
+        .playlist-track-ctn {
+          display: flex;
+          margin: 5px 0px;
+          cursor: pointer;
+          align-items: center;
+                h6{
+                    display: none;
+                  }
+          .playlist-btn-play {
+                pointer-events: none;
+                padding: 7px 10px;
+                color: #656565;
+              }
+            .playlist-info-track,
+            .playlist-duration {
+                  color: #000000;
+                  font-size: 0.9rem;
+                  pointer-events: none;
+                  user-select: none;
+                }
+           .playlist-info-track {
+                  width: 50%;
+                }
+        }
     }
-
-    .playlist-track-ctn {
-      display: flex;
-      margin: 5px 0px;
-      cursor: pointer;
-      text-align: center;
-      align-items: center;
-
-    }
-
+    
     .playlist-track-ctn:hover {
       transform: scaleY(1.2);
-      background: linear-gradient(-75deg,rgb(7, 100, 231),rgb(255, 255, 255));
-    }
-    .playlist-info-track {
-      width: 50%;
-    }
-    .playlist-info-track,
-    .playlist-duration {
-      color: #000000;
-      font-size: 0.9rem;
-      pointer-events: none;
+      border: 1px solid rgb(0, 0, 0);
     }
     .active-track {
-      background: linear-gradient(-75deg,rgb(7, 100, 231),rgb(255, 255, 255));
+      transform: scaleY(1.2);
+      border: 1px solid rgb(0, 0, 0);
       font-weight: bold;
     }
 
-    .playlist-btn-play {
-      pointer-events: none;
-      padding: 7px;
-      color: #656565;
-    }
-    .btn-ctn .fas {
-      color: #000000;
-    }
-    .fas {
-      font-size: 1.5rem;
-    }
+    .controls-container {
+          bottom: 0;
+          position: fixed;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          background: linear-gradient(-90deg,rgb(7, 100, 231),rgb(255, 255, 255));
+          padding-bottom: 5px;
+          z-index: 1;
 
+          #myProgress {
+              width: 80%;
+              background-color: silver;
+              cursor: pointer;
+              border-radius: 10px;
+              margin: auto;
+                  #myBar {
+                    width: 0%;
+                    height: 5px;
+                    background-color: rgb(56, 56, 56);
+                    border-radius: 10px;
+                  }
+            }
+
+            .btn-ctn, .infos-ctn {
+                      width: 80%;
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                      user-select: none;
+                      padding: 5px 0px;
+                      text-align: center;
+                      font-size: small;
+                      .btn-action {
+                              cursor: pointer;
+                            }
+                      .fas {
+                             font-size: 1.5rem;
+                       }
+                  }
+        }
+    .btn-ctn i:hover {
+          transform: scale(1.2);
+        }
+        
   </style>
 
   <body>
@@ -166,19 +172,27 @@
       <source id="source-audio" src="" type="audio/mpeg" />
       Your browser does not support the audio element.
     </audio>
-    <div class="hader-div">
-      <div class="header">
-        <div class="home">
-          <a href="https://cartoontgimusic.github.io/homepage/"><i class="fas fa-house"></i></a>
+    <div class="nav">
+        <div class="search-box">
+          <a href="index.html"><div><i class="fa-solid fa-arrow-left"></i></div></a>
+          <input type="text" placeholder="Search...." id="search-item" onkeyup="search()" >
+          <div class="glass"><i class="fa-solid fa-magnifying-glass"></i></div>
+          <div><i class="fa-solid fa-list"></i></div>
         </div>
-        <h2>ထွားနုဲင်းရုဲင်းတဝ်း</h2>
-        <div class="home">
-          <a href="hnrt.html"><i class="fas fa-close"></i></a>
+        
+        <div class="hader-div">
+          <div class="img-box">
+            <img src="assets/images/mimgs/cover1.jpg" alt="">
+          </div>
+          <div class="details-box">
+            <h4>ထွားနုဲင်းရုဲင်းတဝ်း</h4>
+            <h5>ကာတွန်းစွိုꩻ</h5>
+            <h5>14 songs</h5>
         </div>
       </div>
     </div>
 
-    <div class="container">
+    <div class="controls-container">
       <div class="infos-ctn">
         <div class="timer">00:00</div>
         <div class="title"></div>
@@ -231,9 +245,29 @@
       <div class="playlist-ctn"></div>
     </div>
     <script>
+
+      const search = () => {
+              const searchBox = document.getElementById("search-item").value.toUpperCase();
+              const product = document.querySelectorAll(".product");
+              const pname = document.getElementsByTagName("h6");
+
+              for (var i = 0; i < pname.length; i++) {
+                let match = product[i].getElementsByTagName("h6")[0];
+                if (match) {
+                  let textvalue = match.textContent || match.innerHTML;
+
+                  if (textvalue.toUpperCase().indexOf(searchBox) > -1) {
+                    product[i].style.display = "";
+                  } else {
+                    product[i].style.display = "none";
+                  }
+                }
+              }
+            };
+
       function createTrackItem(index, name, duration) {
         var trackItem = document.createElement("div");
-        trackItem.setAttribute("class", "playlist-track-ctn");
+        trackItem.setAttribute("class", "playlist-track-ctn product");
         trackItem.setAttribute("id", "ptc-" + index);
         trackItem.setAttribute("data-index", index);
         document.querySelector(".playlist-ctn").appendChild(trackItem);
@@ -259,6 +293,10 @@
         trackDurationItem.setAttribute("class", "playlist-duration");
         trackDurationItem.innerHTML = duration;
         document.querySelector("#ptc-" + index).appendChild(trackDurationItem);
+
+        var h6 = document.createElement("h6");
+        h6.innerHTML = `${name}${duration}`;
+        document.querySelector("#ptc-" + index).appendChild(h6);
       }
 
       var listAudio = [
@@ -361,6 +399,7 @@
       }
 
       function getClickedElement(event) {
+        document.querySelector('#search-item').value = ''
         for (let i = 0; i < playListItems.length; i++) {
           if (playListItems[i] == event.target) {
             var clickedIndex = event.target.getAttribute("data-index");
