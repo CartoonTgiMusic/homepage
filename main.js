@@ -124,11 +124,29 @@ var swiper = new Swiper(".slide-container3", {
 
 
 function createTrackItem(index, name, duration) {
+
+  var newDiv = document.createElement("div");
+  newDiv.setAttribute("class", "new-div");
+  newDiv.setAttribute("id", "nd-" + index);
+  document.querySelector(".playlist-ctn").appendChild(newDiv);
+
   var trackItem = document.createElement("div");
   trackItem.setAttribute("class", "playlist-track-ctn product");
   trackItem.setAttribute("id", "ptc-" + index);
   trackItem.setAttribute("data-index", index);
-  document.querySelector(".playlist-ctn").appendChild(trackItem);
+  document.querySelector("#nd-"+index).appendChild(trackItem);
+
+  let barBox = document.createElement('div')
+    barBox.setAttribute('class','bar-box')
+    barBox.setAttribute('id','bb-'+index)
+    document.querySelector('#nd-'+index).appendChild(barBox)
+
+    let barImg = document.createElement('i')
+    barImg.setAttribute('class','fas fa-bars bar-btn')
+    barImg.setAttribute('width', '40')
+    barImg.setAttribute('height', '40')
+    barImg.setAttribute('id', 'bi-'+index)
+    document.querySelector('#bb-'+index).appendChild(barImg)
 
   var playBtnItem = document.createElement("div");
   playBtnItem.setAttribute("class", "playlist-btn-play");
@@ -593,7 +611,7 @@ function toggleAudio() {
     document.querySelector("#icon-play").style.display = "none";
     document.querySelector("#icon-pause").style.display = "block";
     document
-      .querySelector("#ptc-" + this.indexAudio)
+      .querySelector("#nd-" + this.indexAudio)
       .classList.add("active-track");
     this.playToPause(this.indexAudio);
     this.currentAudio.play();
@@ -677,9 +695,9 @@ function previous() {
 }
 
 function updateStylePlaylist(oldIndex, newIndex) {
-  document.querySelector("#ptc-" + oldIndex).classList.remove("active-track");
+  document.querySelector("#nd-" + oldIndex).classList.remove("active-track");
   this.pauseToPlay(oldIndex);
-  document.querySelector("#ptc-" + newIndex).classList.add("active-track");
+  document.querySelector("#nd-" + newIndex).classList.add("active-track");
   this.playToPause(newIndex);
 }
 

@@ -13,7 +13,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background:linear-gradient(-45deg,rgb(3, 30, 30),rgb(89, 89, 89));
+  background:linear-gradient(-90deg,rgb(3, 30, 30),rgb(89, 89, 89));
 }
 img:hover{
   transform: scaleX(1.05);
@@ -279,129 +279,123 @@ img:hover{
 
 .none-block{
   display: none;
-}
-.controls-container{
-  bottom: 0;
-  position: fixed;  
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin: auto;
-  background:linear-gradient(-45deg,rgb(3, 30, 30),rgb(89, 89, 89));
-  z-index: 1;
-}
+  .controls-container{
+    bottom: 0;
+    position: fixed;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    padding-bottom: 10px;
+    background:linear-gradient(-90deg,rgb(3, 30, 30),rgb(89, 89, 89));
+    z-index: 1;
+    .infos-ctn{
+      font-size: small;
+      .titles{
+        width: 100%;
+        text-align: center;
+      }
+    }
 
-#myProgress {
-  width: 80%;
-   background-color: gray; 
-  cursor: pointer;
-  border-radius: 10px;
-  margin: auto;
+    .btn-ctn, .infos-ctn{
+      width: 80%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      user-select: none;
+      margin: 5px 0px;
+      color: #ffffff;
+    }
+    
+    #myProgress {
+      width: 80%;
+       background-color: gray; 
+      cursor: pointer;
+      border-radius: 10px;
+      margin: auto;
+      #myBar {
+        width: 0%;
+        height: 5px;
+        background-color: #ffffff;
+        border-radius: 10px;
+      }
+    }
+  }
 }
-
-#myBar {
-  width: 0%;
-  height: 5px;
-  background-color: #ffffff;
-  border-radius: 10px;
-}
-
-.btn-ctn, .infos-ctn{
-  width: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  user-select: none;
-  margin: 5px 0px;
-}
-
 .btn-ctn i:hover{
   transform: scale(1.2);
 }
-
-.infos-ctn > div {
- color: #ffffff;
-}
-
-.titles{
-  width: 67%;
-  text-align: center;
-  font-size: small;
-}
-.timer,.duration{
-  font-size: small;
-}
-
-.player-ctn{
-  border-radius: 15px;
-  width: 95%;
-  margin:auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.playlist-ctn{
+.songs-ctn{
   width: 100%;
-}
+  margin-bottom: 150px;
+  .player-ctn{
+    .playlist-ctn{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      .new-div{
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 10px;
+        .playlist-track-ctn{
+          width: 100%;
+          display: flex;
+          align-items: center;
+          margin: 5px 0px;
+          cursor: pointer;
+          user-select: none;
+            .playlist-btn-play{
+              pointer-events: none;
+              margin-right:10px;
+                i{
+                  color: #ffffff;
+                  font-size: 1rem;
+                }
+            }
+            .playlist-info-track,
+            .playlist-duration{
+              color: #ffffff;
+              font-size: .9rem;
+              pointer-events: none;
+              text-align: start;
+              width: 50%;
+            }
+          h6{
+            display: none;
+          }
+        }
+        .bar-box i{
+          color: white;
+          padding-left: 10px;
+        }
+      }
+    }
 
-.playlist-track-ctn{
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-  cursor: pointer;
-  user-select: none;
-  h6{
-    display: none;
   }
 }
-
-
-.playlist-track-ctn:hover{
+.new-div:hover{
   transform: scaleY(1.2);
-  background-color: #b5b3b3;
+  border: 1px solid rgb(255, 255, 255);
 }
-
-.playlist-info-track,.playlist-duration{
-  color: #ffffff;
-  font-size: .9rem;
-  pointer-events: none;
-}
-.playlist-info-track{
-  text-align: start;
-  width: 45%;
-}
-.playlist-duration{
-    width: 45%;
-    text-align: end;
-    right: 0;
-  }
-
 
 .active-track{
-  background: grey;
   transform: scaleY(1.2);
-}
-  
-.playlist-btn-play{
-  pointer-events: none;
-  width: 10%;
+  border: 1px solid rgb(255, 255, 255);
 }
 .fas{
   font-size: 1.5rem;
 }
-.btn-ctn .fas{
-  color: #ffffff;
-}
-.playlist-btn-play i{
-  color: #ffffff;
-  font-size: 1rem;
-}
-.songs-ctn{
-  margin-bottom: 150px;
-}
+  
+
+
+
+
 
 
 
