@@ -187,319 +187,128 @@
        }
     }
   }
-  .inactive{
-      display: none;
-  }
-  
+
   .new-div:hover {
     transform: scaleY(1.2);
     border: 1px solid rgb(0, 0, 0);
   }
-  .active-track {
-    transform: scaleY(1.2);
-    border: 1px solid rgb(0, 0, 0);
-  }
-  .controls-container {
-        bottom: 0;
-        position: fixed;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        background: linear-gradient(-90deg,rgb(7, 100, 231),rgb(255, 255, 255));
-        padding-bottom: 10px;
-        z-index: 1;
-  
-        #myProgress {
-            width: 80%;
-            background-color: silver;
-            cursor: pointer;
-            border-radius: 10px;
-            margin: auto;
-                #myBar {
-                  width: 0%;
-                  height: 5px;
-                  background-color: rgb(56, 56, 56);
-                  border-radius: 10px;
-                }
-          }
-  
-          .btn-ctn, .timer-duration {
-                    width: 80%;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    user-select: none;
-                    padding: 5px 0px;
-                    text-align: center;
-                    .timer,.duration{
-                      font-size: small;
-                    }
-                    .btn-action {
-                            cursor: pointer;
-                          }
-                }
-      }
-  .btn-ctn i:hover {
-        transform: scale(1.2);
-      }
-  .fas{
-        font-size: 1.5rem;
-        }
 }
-.inactive{
+
+.btn-action i{
+  font-size: 1.5rem;
+     }
+.active-track {
+  transform: scaleY(1.2);
+  border: 1px solid rgb(0, 0, 0);
+   }
+.btn-ctn i:hover {
+    transform: scale(1.2);
+      }
+
+.replace{
+  max-width: 400px;
+  position: absolute;
+  top: 360px;
+  height: 100px;
+  .title{
+    font-size: 1.5rem;
+  }
+}
+.controls-container {
   width: 100%;
+  bottom: 0;
+  position: absolute;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  .nav{
-    width: 100%;
-    background: linear-gradient(-90deg,rgb(7, 100, 231),rgb(255, 255, 255));
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    .search-box{
-      top: 0;
-      position: fixed;
-      width: 95%;
-      height: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      input{
-        width: 100%;
-        padding:0px 10px;
-        background: none;
-        border: none;
-        outline: none;
-      }
-      .glass{
-        padding-right:10px;
-      }
-      .arrow{
-        padding-left: 10px;
-      }
-      i{
-        font-size: 1.2rem;
-      }
-    }
-    .hader-div{
-      width: 95%;
-      margin-top: 25px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      .img-box{
-        min-width: 400px;
-        min-height: 400px;
-      }
-      img{
-       width: 100%;
-       height: 100%;
-      }
-      .details-box{
-        margin-left: 10px;
-        width: 150px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        .name-box{
-           user-select: none;
-           width: 100%;
-           text-align: center;
-           justify-content: center;
-            .title-text{
-                 font-size: 1.2rem;
-                 display: none;
-              }
-              .totalsongs-text{
-                font-size: 12px;
-                display: none;
-              }
-            }
-            .social-box{
-              bottom: 0;
-              width: 50%;
-              position: absolute;
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              padding-bottom: 5px;
-              div{
-                background-color: rgb(255, 255, 255);
-                border-radius: 20%;
-              }
-              i{
-                font-size: 1.5rem;
-                cursor: pointer;
-                padding: 2px;
-              }
-
-            }      
-        
-      }
-    }
-  }
+  flex-direction: column;
+  /* background: linear-gradient(-90deg,rgb(7, 100, 231),rgb(255, 255, 255)); */
+  padding-bottom: 10px;
+  z-index: 1;
   
-  /* @media screen and (min-width:800px) {
-    .hader-div{
-      width: 95%;
-      display: flex;
-      justify-content: space-around;
-      margin: 5px 0px;
-      .img-box{
-        width: 200px;
-        height: 200px;
-      }
-      img{
-        width: 100%;
-        height: 100%;
-      }
-      .details-box{
-        margin-left: 10px;
-        width: 150px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-         .name-box{
-           user-select: none;
-            .title-text{
-                 font-size: 1.2rem;
-              }
-              .totalsongs-text{
-                font-size: 12px;
-              }
-            }
-            .social-box{
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              i{
-                font-size: 1.5rem;
-                cursor: pointer;
-              }
-
-            }      
-        
-      }
-    }
-  } */
- 
-  .songslist-ctn {
-    display: none;
+  #myProgress {
     width: 95%;
-    margin-top: 10px;
-    .new-div{
-      display: flex;
-      justify-content: space-between;
-       align-items: center;
-       .playlist-track-ctn {
-         width: 100%;
-         display: flex;
-         margin: 7px 10px;
-         cursor: pointer;
-         align-items: center;
-               h6{
-                   display: none;
-                 }
-         .playlist-btn-play {
-               pointer-events: none;
-               padding-right:10px;
-               color: #656565;
-             }
-           .playlist-info-track,
-           .playlist-duration {
-                 color: #000000;
-                 font-size: 0.9rem;
-                 pointer-events: none;
-                 user-select: none;
-                 width: 50%;
-               }
-       }
-       .bar-box{
-        margin-right: 10px;
-        cursor: pointer;
-       }
+    background-color: silver;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: auto;
+              #myBar {
+                width: 0;
+                height: 5px;
+                background-color: rgb(56, 56, 56);
+                border-radius: 10px;
+              }
+        }
+
+        .btn-ctn, .timer-duration {
+          width: 95%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+                  user-select: none;
+                  padding: 5px 0px;
+                  text-align: center;
+                  .timer,.duration{
+                    font-size: small;
+                  }
+                  .btn-action {
+                          cursor: pointer;
+                        }
+                      }
+                    }
+                    
+.inactive{
+  display: none;
+}
+
+.fas{
+  font-size: 1.5rem;
+}
+.replace-ctn{
+  max-width: 500px;
+  .arrow-home{
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 5px;
+    font-size: 1.2rem;
+  }
+  .replace-imagebox{
+    width: 400px;
+    height: 300px;
+    margin: auto;
+    .image{
+      background-image: url(assets/images/mimgs/kat.JPG);
+      background-size: cover;
+      width: 100%;
+      height: 100%;
     }
   }
+}
+ </style>
 
-  .controls-container {
-    position: fixed;
-    bottom: 40px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        background: linear-gradient(-90deg,rgb(7, 100, 231),rgb(255, 255, 255));
-        padding-bottom: 10px;
-        #myProgress {
-            width: 80%;
-            background-color: silver;
-            cursor: pointer;
-            border-radius: 10px;
-            margin: auto;
-                #myBar {
-                  width: 0%;
-                  height: 5px;
-                  background-color: rgb(56, 56, 56);
-                  border-radius: 10px;
-                }
-          }
-  
-          .btn-ctn, .timer-duration {
-                    width: 80%;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    user-select: none;
-                    padding: 5px 0px;
-                    text-align: center;
-                    .timer,.duration{
-                      font-size: small;
-                    }
-                    .btn-action {
-                            cursor: pointer;
-                          }
-                }
-      }
-  .btn-ctn i:hover {
-        transform: scale(1.2);
-      }
-  .fas{
-        font-size: 1.5rem;
-        }
-  }
-
-  </style>
-
-  <body>
-    <audio id="myAudio" ontimeupdate="onTimeUpdate()">
-      <!-- <source src="audio.ogg" type="audio/ogg"> -->
+<body>
+  <audio id="myAudio" ontimeupdate="onTimeUpdate()">
+    <!-- <source src="audio.ogg" type="audio/ogg"> -->
       <source id="source-audio" src="" type="audio/mpeg" />
       Your browser does not support the audio element.
     </audio>
-<div class="main-ctn">
+    <div class="main-ctn">
       <div class="nav ">
-          <div class="search-box">
-            <a href="index.html"><div class="arrow"><i class="fa-solid fa-arrow-left"></i></div></a>
-            <input type="text" placeholder="Search...." id="search-item" onkeyup="search()" >
-            <div class="glass"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <div class="search-box">
+          <a href="index.html"><div class="arrow"><i class="fa-solid fa-arrow-left"></i></div></a>
+          <input type="text" placeholder="Search...." id="search-item" onkeyup="search()" >
+          <div class="glass"><i class="fa-solid fa-magnifying-glass"></i></div>
+        </div>
+        
+        <div class="hader-div">
+          <div class="img-box">
+            <img src="assets/images/mimgs/kat.JPG" alt="">
           </div>
-          
-          <div class="hader-div">
-            <div class="img-box">
-              <img src="assets/images/mimgs/kat.JPG" alt="">
-            </div>
-            <div class="details-box">
-              <div class="name-box">
-                <div class="title-text">ခွန်အောင်သိုက်</div>
+          <div class="details-box">
+            <div class="name-box">
+              <div class="title-text">ခွန်အောင်သိုက်</div>
                 <div class="totalsongs-text">4 songs</div>
               </div>
               <div class="social-box">
@@ -523,55 +332,75 @@
       <div class="songslist-ctn ">
         <div class="playlist-ctn"></div>
       </div>
-      <div class="controls-container">
-        <div class="timer-duration">
-          <div class="timer">00:00</div>
-          <div class="title"></div>
-          <div class="duration">00:00</div>
+    </div>
+
+    
+
+    <div class="replace-ctn inactive">
+        <div class="arrow-home">
+          <div class="replace-arrow"><i class="fa-solid fa-arrow-left"></i></div>
+          <div class="replace-home"><i class="fa-solid fa-house"></i></div>
         </div>
-        <div id="myProgress">
-          <div id="myBar"></div>
-        </div>
-        <div class="btn-ctn">
-          <div class="btn-action first-btn" onclick="previous()">
-            <div id="btn-faws-back">
-              <i class="fas fa-step-backward"></i>
-            </div>
-          </div>
-          <div class="btn-action" onclick="rewind()">
-            <div id="btn-faws-rewind">
-              <i class="fas fa-backward"></i>
-            </div>
-          </div>
-          <div class="btn-action" onclick="toggleAudio()">
-            <div id="btn-faws-play-pause">
-              <i class="fas fa-play" id="icon-play"></i>
-              <i class="fas fa-pause" id="icon-pause" style="display: none"></i>
-            </div>
-          </div>
-          <div class="btn-action" onclick="forward()">
-            <div id="btn-faws-forward">
-              <i class="fas fa-forward"></i>
-            </div>
-          </div>
-          <div class="btn-action" onclick="next()">
-            <div id="btn-faws-next">
-              <i class="fas fa-step-forward"></i>
-            </div>
-          </div>
-          <div class=" btn-action" id="toggleMute" onclick="toggleMute()">
-            <div id="btn-faws-volume">
-              <i id="icon-vol-up" class="fas fa-volume-up"></i>
-              <i
-                id="icon-vol-mute"
-                class="fas fa-volume-mute"
-                style="display: none"
-              ></i>
-            </div>
+        <div class="replace-imagebox">
+          <div class="image">
+
           </div>
         </div>
       </div>
- </div>
+
+
+    <div class="controls-container">
+      <div class="timer-duration">
+        <div class="timer">00:00</div>
+        <div class="title"></div>
+        <div class="duration">00:00</div>
+      </div>
+      <div id="myProgress">
+        <div id="myBar"></div>
+      </div>
+      <div class="btn-ctn">
+        <div class="btn-action first-btn" onclick="previous()">
+          <div id="btn-faws-back">
+            <i class="fas fa-step-backward"></i>
+          </div>
+        </div>
+        <div class="btn-action" onclick="rewind()">
+          <div id="btn-faws-rewind">
+            <i class="fas fa-backward "></i>
+            <i class="fa-solid fa-shuffle inactive" ></i>
+          </div>
+        </div>
+        <div class="btn-action" onclick="toggleAudio()">
+          <div id="btn-faws-play-pause">
+            <i class="fas fa-play" id="icon-play"></i>
+            <i class="fas fa-pause" id="icon-pause" style="display: none"></i>
+          </div>
+        </div>
+        <div class="btn-action" onclick="forward()">
+          <div id="btn-faws-forward">
+            <i class="fas fa-forward "></i>
+            <i class="fa-solid fa-repeat inactive"></i>
+          </div>
+        </div>
+        <div class="btn-action" onclick="next()">
+          <div id="btn-faws-next">
+            <i class="fas fa-step-forward"></i>
+          </div>
+        </div>
+        <div class=" btn-action" id="toggleMute" onclick="toggleMute()">
+          <div id="btn-faws-volume">
+            <i id="icon-vol-up" class="fas fa-volume-up"></i>
+            <i
+              id="icon-vol-mute"
+              class="fas fa-volume-mute"
+              style="display: none"
+            ></i>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
 
     <script>
 
@@ -713,8 +542,20 @@ function createTrackItem(index, name, writer) {
       for(let i=0; i<barsBtn.length; i++){
           barsBtn[i].addEventListener('click',()=>{
             document.querySelector('.main-ctn').classList.add('inactive')
+            document.querySelector('.replace-ctn').classList.remove('inactive')
+            document.querySelector('.controls-container').classList.add('replace')
+            document.querySelector('.fa-backward').classList.add('inactive')
+            document.querySelector('.fa-forward').classList.add('inactive')
+            document.querySelector('.fa-shuffle').classList.remove('inactive')
+            document.querySelector('.fa-repeat').classList.remove('inactive')
           })
       }
+
+      document.querySelector('.replace-arrow').addEventListener('click',()=>{
+        document.querySelector('.replace-ctn').classList.add('inactive')
+        document.querySelector('.main-ctn').classList.remove('inactive')
+        document.querySelector('.controls-container').classList.remove('replace')
+      })
 
       document.querySelector("#source-audio").src = listAudio[indexAudio].file;
       document.querySelector(".title").innerHTML = listAudio[indexAudio].name 
