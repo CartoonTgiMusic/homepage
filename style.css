@@ -196,6 +196,7 @@ img:hover{
       .card {
           height: 200px;
           user-select: none;
+          background-color: green;
           .image-box {
               height: 160px;
               padding: 0px 15px;
