@@ -34,8 +34,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
   .nav{
-    
     width: 100%;
     background: linear-gradient(-90deg,rgb(7, 100, 231),rgb(255, 255, 255));
     display: flex;
@@ -51,35 +51,32 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       input{
         width: 100%;
-        margin-left: 10px;
         background: none;
         border: none;
         outline: none;
-      }
-      .glass{
-        margin-left:10px;
+        height: 25px;
       }
       i{
         font-size: 1.2rem;
+        margin:0px 15px;
       }
     }
-    .hader-div{
-      width: 95%;
-      margin-top: 30px;
-      display: flex;
+
+
       .img-box{
-        width: 150px;
-        height: 150px;
-      }
-      img{
         width: 100%;
-        height: 100%;
+        height: 230px;
+        background-image: url(assets/images/mimgs/kat.JPG);
+        background-position: center;
+        background-size: cover;
       }
       .details-box{
-        margin-left: 10px;
-        width: 150px;
+        margin: 5px 0px;
+        width: 200px;
+        height: 100px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -104,7 +101,7 @@
             }      
         
       }
-    }
+    
   }
   
   /* @media screen and (min-width:800px) {
@@ -172,13 +169,13 @@
                padding-right:10px;
                color: #656565;
              }
-           .playlist-info-track,
-           .playlist-duration {
+           .playlist-info-track
+            {
                  color: #000000;
-                 font-size: 0.9rem;
+                 font-size: 1rem;
                  pointer-events: none;
                  user-select: none;
-                 width: 50%;
+                 width: 100%;
                }
        }
        .bar-box{
@@ -206,9 +203,7 @@
       }
 
 .replace{
-  max-width: 400px;
-  position: absolute;
-  top: 360px;
+
   height: 100px;
   .title{
     font-size: 1.5rem;
@@ -217,17 +212,17 @@
 .controls-container {
   width: 100%;
   bottom: 0;
-  position: absolute;
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* background: linear-gradient(-90deg,rgb(7, 100, 231),rgb(255, 255, 255)); */
+  background: linear-gradient(-90deg,rgb(7, 100, 231),rgb(255, 255, 255));
   padding-bottom: 10px;
   z-index: 1;
   
   #myProgress {
-    width: 95%;
+    width: 80%;
     background-color: silver;
     cursor: pointer;
     border-radius: 10px;
@@ -241,7 +236,7 @@
         }
 
         .btn-ctn, .timer-duration {
-          width: 95%;
+          width: 80%;
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -260,13 +255,16 @@
 .inactive{
   display: none;
 }
-
+.play-icon{
+  display: none;
+}
 .fas{
   font-size: 1.5rem;
 }
 .replace-ctn{
-  max-width: 500px;
+  width: 100%;
   .arrow-home{
+    width: 95%;
     height: 30px;
     display: flex;
     justify-content: space-between;
@@ -275,17 +273,16 @@
     font-size: 1.2rem;
   }
   .replace-imagebox{
-    width: 400px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     margin: auto;
-    .image{
-      background-image: url(assets/images/mimgs/kat.JPG);
-      background-size: cover;
+    img{
       width: 100%;
       height: 100%;
     }
   }
 }
+
  </style>
 
 <body>
@@ -301,11 +298,11 @@
           <input type="text" placeholder="Search...." id="search-item" onkeyup="search()" >
           <div class="glass"><i class="fa-solid fa-magnifying-glass"></i></div>
         </div>
+        <div class="img-box">
+          
+        </div>
         
-        <div class="hader-div">
-          <div class="img-box">
-            <img src="assets/images/mimgs/kat.JPG" alt="">
-          </div>
+
           <div class="details-box">
             <div class="name-box">
               <div class="title-text">ခွန်အောင်သိုက်</div>
@@ -326,7 +323,7 @@
                 </div>
               </div>
           </div>
-        </div>
+
       </div>
   
       <div class="songslist-ctn ">
@@ -343,7 +340,7 @@
         </div>
         <div class="replace-imagebox">
           <div class="image">
-
+               <img src="assets/images/mimgs/kat.JPG" alt="">
           </div>
         </div>
       </div>
@@ -426,12 +423,12 @@
 function createTrackItem(index, name, writer) {
 
       var newDiv = document.createElement("div");
-      newDiv.setAttribute("class", "new-div");
+      newDiv.setAttribute("class", "new-div product");
       newDiv.setAttribute("id", "nd-" + index);
       document.querySelector(".playlist-ctn").appendChild(newDiv);
 
       var trackItem = document.createElement("div");
-      trackItem.setAttribute("class", "playlist-track-ctn product");
+      trackItem.setAttribute("class", "playlist-track-ctn ");
       trackItem.setAttribute("id", "ptc-" + index);
       trackItem.setAttribute("data-index", index);
       document.querySelector("#nd-"+index).appendChild(trackItem);
@@ -454,11 +451,24 @@ function createTrackItem(index, name, writer) {
       document.querySelector("#ptc-" + index).appendChild(playBtnItem);
 
       var btnImg = document.createElement("i");
-      btnImg.setAttribute("class", "fas fa-play");
+      btnImg.setAttribute("class", "fas fa-play play-icon");
       btnImg.setAttribute("height", "40");
       btnImg.setAttribute("width", "40");
       btnImg.setAttribute("id", "p-img-" + index);
       document.querySelector("#pbp-" + index).appendChild(btnImg);
+
+      var numBox = document.createElement("div");
+      numBox.setAttribute("class", "num-box");
+      numBox.setAttribute("id", "nb-" + index);
+      document.querySelector("#ptc-" + index).appendChild(numBox);
+
+      var songNum = document.createElement("i");
+      songNum.setAttribute("class", "song-num");
+      songNum.setAttribute("height", "40");
+      songNum.setAttribute("width", "40");
+      songNum.setAttribute("id", "s-num-" + index);
+      songNum.innerHTML = (index + 1)+ '.'
+      document.querySelector("#pbp-" + index).appendChild(songNum);
 
       var trackInfoItem = document.createElement("div");
       trackInfoItem.setAttribute("class", "playlist-info-track");
@@ -466,7 +476,7 @@ function createTrackItem(index, name, writer) {
       document.querySelector("#ptc-" + index).appendChild(trackInfoItem);
 
       var trackDurationItem = document.createElement("div");
-      trackDurationItem.setAttribute("class", "playlist-duration");
+      trackDurationItem.setAttribute("class", "playlist-writer inactive");
       trackDurationItem.innerHTML = writer;
       document.querySelector("#ptc-" + index).appendChild(trackDurationItem);
 
@@ -682,14 +692,16 @@ function createTrackItem(index, name, writer) {
 
       function playToPause(index) {
         var ele = document.querySelector("#p-img-" + index);
-        ele.classList.remove("fa-play");
-        ele.classList.add("fa-pause");
+        var songNum = document.querySelector("#s-num-" + index);
+        ele.style.display = 'block'
+        songNum.style.display = 'none'
       }
 
       function pauseToPlay(index) {
         var ele = document.querySelector("#p-img-" + index);
-        ele.classList.remove("fa-pause");
-        ele.classList.add("fa-play");
+        var songNum = document.querySelector("#s-num-" + index);
+        ele.style.display = 'none'
+        songNum.style.display = 'block'
       }
 
       function toggleMute() {
