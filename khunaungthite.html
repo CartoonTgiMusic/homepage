@@ -83,6 +83,7 @@
         flex-direction: column;
         justify-content: space-between;
         .name-box{
+          margin-top: 180px;
            user-select: none;
             .title-text{
                  font-size: 1.2rem;
@@ -152,7 +153,7 @@
  
   .songslist-ctn {
     width: 95%;
-    margin-top: 70px;
+    margin-top: 190px;
     z-index: 1;
     .new-div{
       display: flex;
@@ -311,7 +312,7 @@
           <input type="text" placeholder="Search...." id="search-item" onkeyup="search()" >
           <div class="glass"><i class="fa-solid fa-magnifying-glass"></i></div>
         </div>
-        <div class="img-box">
+        <div class="img-box section">
         </div>
         <div class="details-box">
           <div class="name-box">
@@ -334,7 +335,7 @@
             </div>
         </div>
       </div>
-      <div class="songslist-ctn ">
+      <div class="songslist-ctn section ">
         <div class="playlist-ctn"></div>
       </div>
     </div>
@@ -777,6 +778,19 @@ function createTrackItem(index, name, writer) {
           volMute.style.display = "none";
           volUp.style.display = "block";
         }
+      }
+      
+      const sections = document.querySelectorAll('.section')
+      window.onscroll = () =>{
+        sections.forEach(sec=>{
+          let top = window.scrollY
+          let offSet = sec.offsetTop
+          let height = sec.offsetHeight
+          if(top >= offSet && top < offSet + height){
+            document.querySelector('.img-box').style.opacity = .5
+          }
+          
+        })
       }
     </script>
   </body>
