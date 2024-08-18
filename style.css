@@ -196,7 +196,6 @@ img:hover{
       .card {
           height: 200px;
           user-select: none;
-          background-color: green;
           .image-box {
               height: 160px;
               padding: 0px 15px;
@@ -308,6 +307,9 @@ img:hover{
       user-select: none;
       margin: 5px 0px;
       color: #ffffff;
+      i{
+        font-size: 1.3rem;
+      }
     }
     
     #myProgress {
@@ -328,6 +330,7 @@ img:hover{
 .btn-ctn i:hover{
   transform: scale(1.2);
 }
+
 .songs-ctn{
   width: 100%;
   margin-bottom: 150px;
@@ -351,7 +354,12 @@ img:hover{
           margin: 5px 0px;
           cursor: pointer;
           user-select: none;
+          .num-box{
+            color: white;
+            padding-right: 10px;
+          }
             .playlist-btn-play{
+              display: none;
               pointer-events: none;
               margin-right:10px;
                 i{
@@ -380,6 +388,49 @@ img:hover{
 
   }
 }
+.replace-ctn{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .arrow-home{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    i{
+      font-size: 1.3rem;
+      margin: 0px 10px;
+      color: black;
+    }
+  }
+  .replace-imagebox{
+        width: 100%;
+        height: 300px;
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        z-index:-1;
+  }
+  .replace-details{
+    margin-top: 310px;
+    width: 100%;
+    margin-left: 10px;
+    font-size: small;
+    color: white;
+    a{
+      color: white;
+    }
+    .song-header{
+      font-size: large;
+    }
+  }
+}
+.inactive{
+  display: none;
+}
+
 .new-div:hover{
   transform: scaleY(1.2);
   border: 1px solid rgb(255, 255, 255);
