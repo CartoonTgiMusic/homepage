@@ -28,21 +28,20 @@
       align-items: center;
       justify-content: center;
     }
+    .fixed{
+      position: fixed;
+      top: 0px;
+      background: linear-gradient(-90deg,rgb(7, 100, 231),rgb(255, 255, 255));
+      z-index: 1;
+    }
+
 .main-ctn{
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding-bottom: 100px;
-  .nav{
-    width: 100%;
-    background: linear-gradient(-90deg,rgb(7, 100, 231),rgb(255, 255, 255));
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
+  margin-bottom: 100px;
+  background: linear-gradient(-90deg,rgb(7, 100, 231),rgb(255, 255, 255));
     .search-box{
       top: 5px;
       position: fixed;
@@ -51,7 +50,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      z-index: 1;
+      z-index: 2;
       input{
         width: 100%;
         background: none;
@@ -65,26 +64,19 @@
         color: black;
       }
     }
-
-
       .img-box{
         width: 100%;
         height: 230px;
-        position:fixed;
+        top: 0;
         background-image: url(assets/images/mimgs/kat.JPG);
         background-position: center;
         background-size: cover;
+
       }
-      .details-box{
-        margin: 5px 0px;
-        width: 200px;
-        height: 100px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
         .name-box{
-          margin-top: 180px;
            user-select: none;
+           width: 100%;
+           text-align: center;
             .title-text{
                  font-size: 1.2rem;
               }
@@ -92,20 +84,17 @@
                 font-size: 12px;
               }
             }
-            .social-box{
+        .social-box{
               display: flex;
               justify-content: space-between;
               align-items: center;
+              width: 150px;
               i{
                 font-size: 1.5rem;
                 cursor: pointer;
               }
 
             }      
-        
-      }
-    
-  }
   
   /* @media screen and (min-width:800px) {
     .hader-div{
@@ -153,8 +142,6 @@
  
   .songslist-ctn {
     width: 95%;
-    margin-top: 190px;
-    z-index: 1;
     .new-div{
       display: flex;
       justify-content: space-between;
@@ -306,7 +293,6 @@
       Your browser does not support the audio element.
     </audio>
     <div class="main-ctn ">
-      <div class="nav ">
         <div class="search-box">
           <a href="index.html"><div class="arrow"><i class="fa-solid fa-arrow-left"></i></div></a>
           <input type="text" placeholder="Search...." id="search-item" onkeyup="search()" >
@@ -314,27 +300,23 @@
         </div>
         <div class="img-box section">
         </div>
-        <div class="details-box">
           <div class="name-box">
             <div class="title-text">ခွန်အောင်သိုက်</div>
-              <div class="totalsongs-text">4 songs</div>
             </div>
             <div class="social-box">
-              <div class="spotify">
-                <i class="fa-brands fa-spotify" style="color: rgb(29, 185, 84);"></i>
-              </div>
-              <div class="facebook">
-                <i class="fa-brands fa-square-facebook" style="color: rgb(24, 119, 242);"></i>
-              </div>
-              <div class="instagram">
-                <i class="fa-brands fa-instagram" style="color: rgb(243, 58, 58);"></i>
-              </div>
-              <div class="tiktok">
-                <i class="fa-brands fa-tiktok" style="color: rgb(1, 1, 1);"></i>
-              </div>
+                <div class="spotify">
+                  <i class="fa-brands fa-spotify" style="color: rgb(29, 185, 84);"></i>
+                </div>
+                <div class="facebook">
+                  <i class="fa-brands fa-square-facebook" style="color: rgb(24, 119, 242);"></i>
+                </div>
+                <div class="instagram">
+                  <i class="fa-brands fa-instagram" style="color: rgb(243, 58, 58);"></i>
+                </div>
+                <div class="tiktok">
+                  <i class="fa-brands fa-tiktok" style="color: rgb(1, 1, 1);"></i>
+                </div>
             </div>
-        </div>
-      </div>
       <div class="songslist-ctn section ">
         <div class="playlist-ctn"></div>
       </div>
@@ -356,11 +338,6 @@
         </div>
       </div>
           
-
-
-          
-
-
     <div class="controls-container">
       <div class="timer-duration">
         <div class="timer">00:00</div>
@@ -425,6 +402,17 @@
 
 
     <script>
+      const nameBOx = document.querySelector('.name-box')
+      const imageBox = document.querySelector('.img-box')
+
+      window.onscroll = () => {
+        let top = window.scrollY 
+        if(top > 238){
+           nameBOx.classList.add('fixed')
+        }else{
+          nameBOx.classList.remove('fixed')
+        }
+      }
 
       const search = () => {
               const searchBox = document.getElementById("search-item").value.toUpperCase();
@@ -555,6 +543,7 @@ function createTrackItem(index, name, writer) {
       band_url:"cartoonTgi.html",
       date:"Released - 2022"
     },
+   
   ]
 
       for (var i = 0; i < listAudio.length; i++) {
@@ -780,18 +769,27 @@ function createTrackItem(index, name, writer) {
         }
       }
       
-      const sections = document.querySelectorAll('.section')
-      window.onscroll = () =>{
-        sections.forEach(sec=>{
-          let top = window.scrollY
-          let offSet = sec.offsetTop
-          let height = sec.offsetHeight
-          if(top >= offSet && top < offSet + height){
-            document.querySelector('.img-box').style.opacity = .5
-          }
+      // const sections = document.querySelectorAll('.section')
+      // let wt = 100
+      // let ht = 230
+      // let op = 1
+      // window.onscroll = () =>{
+      //   sections.forEach(sec=>{
+      //     let top = window.scrollY
+      //     let offSet = sec.offsetTop
+      //     let height = sec.offsetHeight
           
-        })
-      }
+      //     if(top >= offSet && top < offSet + height){
+      //       wt -= 2
+      //       ht -= 1
+      //       op -= 0.1
+      //       document.querySelector('.img-box').style.width = wt +'%'
+      //       document.querySelector('.img-box').style.height = ht +'px'
+      //     }
+          
+      //   })
+      // }
+
     </script>
   </body>
 </html>
