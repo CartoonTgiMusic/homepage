@@ -126,12 +126,12 @@ var swiper = new Swiper(".slide-container3", {
 function createTrackItem(index, name, duration) {
 
   var newDiv = document.createElement("div");
-  newDiv.setAttribute("class", "new-div");
+  newDiv.setAttribute("class", "new-div product");
   newDiv.setAttribute("id", "nd-" + index);
   document.querySelector(".playlist-ctn").appendChild(newDiv);
 
   var trackItem = document.createElement("div");
-  trackItem.setAttribute("class", "playlist-track-ctn product");
+  trackItem.setAttribute("class", "playlist-track-ctn ");
   trackItem.setAttribute("id", "ptc-" + index);
   trackItem.setAttribute("data-index", index);
   document.querySelector("#nd-"+index).appendChild(trackItem);
