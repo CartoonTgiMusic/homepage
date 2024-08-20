@@ -382,7 +382,22 @@
         </div>
         <div class="btn-action repeat-box inactive" onclick="repeat() ">
           <div id="btn-faws-repeat">
-            <i class="fa-solid fa-repeat"></i>
+            <i class="fa-solid fa-repeat re-icon"></i>
+            <i class="once-icon" style="display: none"
+                ><svg
+                  width="30"
+                  height="30"
+                  viewBox="-2 -2 24 24"
+                  stroke-width="2.3"
+                  stroke="black"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M4 12v-3a3 0 0 0 0 3 -3h13m-3 -3l3 3l-3 3" />
+                  <path d="M20 12v3a3 0 0 0 0 -3 3h-13m3 3l-3 -3l3 -3" />
+                  <path d="M11 11l1 -1v4" /></svg></i>
           </div>
         </div>
         <div class=" btn-action" id="toggleMute" onclick="toggleMute()">
@@ -700,6 +715,35 @@ var listAudio = [
       function rewind() {
         this.currentAudio.currentTime = this.currentAudio.currentTime - 5;
         this.setBarProgress();
+      }
+
+      let isRandom = false
+      function shullfe() {
+        isRandom ? pauseRandom() : playRandom();
+      }
+      function playRandom() {
+        isRandom = true;
+        document.querySelector('#btn-shuffle').style.color = 'red'
+      }
+      function pauseRandom() {
+        isRandom = false;
+        document.querySelector('#btn-shuffle').style.color = 'black'
+      }
+      
+      let isLoop = false;
+      let isPlaying = false;
+      function repeat() {
+        pauseRandom();
+        if (this.currentAudio.loop != true && this.currentAudio.play()) {
+          this.currentAudio.loop = true;
+          this.currentAudio.play();
+          document.querySelector(".re-icon").style.display = "none";
+          document.querySelector(".once-icon").style.display = "block";
+        } else {
+          this.currentAudio.loop = false;
+          document.querySelector(".re-icon").style.display = "block";
+          document.querySelector(".once-icon").style.display = "none";
+        }
       }
 
       function next() {

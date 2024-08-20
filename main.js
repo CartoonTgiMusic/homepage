@@ -1277,6 +1277,33 @@ function rewind() {
   this.currentAudio.currentTime = this.currentAudio.currentTime - 5;
   this.setBarProgress();
 }
+let isRandom = false
+      function shullfe() {
+        isRandom ? pauseRandom() : playRandom();
+      }
+      function playRandom() {
+        isRandom = true;
+        document.querySelector('#btn-shuffle').style.color = 'red'
+      }
+      function pauseRandom() {
+        isRandom = false;
+        document.querySelector('#btn-shuffle').style.color = 'black'
+      }
+      
+      let isLoop = false;
+      function repeat() {
+        pauseRandom();
+        if (this.currentAudio.loop != true && this.currentAudio.play()) {
+          this.currentAudio.loop = true;
+          this.currentAudio.play();
+          document.querySelector(".re-icon").style.display = "none";
+          document.querySelector(".once-icon").style.display = "block";
+        } else {
+          this.currentAudio.loop = false;
+          document.querySelector(".re-icon").style.display = "block";
+          document.querySelector(".once-icon").style.display = "none";
+        }
+      }
 
 function toggleMute() {
   var volUp = document.querySelector("#icon-vol-up");

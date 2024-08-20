@@ -382,7 +382,22 @@
         </div>
         <div class="btn-action repeat-box inactive" onclick="repeat() ">
           <div id="btn-faws-repeat">
-            <i class="fa-solid fa-repeat"></i>
+            <i class="fa-solid fa-repeat re-icon"></i>
+            <i class="once-icon" style="display: none"
+                ><svg
+                  width="30"
+                  height="30"
+                  viewBox="-2 -2 24 24"
+                  stroke-width="2.3"
+                  stroke="black"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M4 12v-3a3 0 0 0 0 3 -3h13m-3 -3l3 3l-3 3" />
+                  <path d="M20 12v3a3 0 0 0 0 -3 3h-13m3 3l-3 -3l3 -3" />
+                  <path d="M11 11l1 -1v4" /></svg></i>
           </div>
         </div>
         <div class=" btn-action" id="toggleMute" onclick="toggleMute()">
@@ -710,6 +725,33 @@ function createTrackItem(index, name, writer) {
         this.currentAudio.currentTime = this.currentAudio.currentTime - 5;
         this.setBarProgress();
       }
+      let isRandom = false
+      function shullfe() {
+        isRandom ? pauseRandom() : playRandom();
+      }
+      function playRandom() {
+        isRandom = true;
+        document.querySelector('#btn-shuffle').style.color = 'red'
+      }
+      function pauseRandom() {
+        isRandom = false;
+        document.querySelector('#btn-shuffle').style.color = 'black'
+      }
+      
+      let isLoop = false;
+      function repeat() {
+        pauseRandom();
+        if (this.currentAudio.loop != true && this.currentAudio.play()) {
+          this.currentAudio.loop = true;
+          this.currentAudio.play();
+          document.querySelector(".re-icon").style.display = "none";
+          document.querySelector(".once-icon").style.display = "block";
+        } else {
+          this.currentAudio.loop = false;
+          document.querySelector(".re-icon").style.display = "block";
+          document.querySelector(".once-icon").style.display = "none";
+        }
+      }
 
       function next() {
         if (this.indexAudio < listAudio.length - 1) {
@@ -768,27 +810,7 @@ function createTrackItem(index, name, writer) {
           volUp.style.display = "block";
         }
       }
-      
-      // const sections = document.querySelectorAll('.section')
-      // let wt = 100
-      // let ht = 230
-      // let op = 1
-      // window.onscroll = () =>{
-      //   sections.forEach(sec=>{
-      //     let top = window.scrollY
-      //     let offSet = sec.offsetTop
-      //     let height = sec.offsetHeight
-          
-      //     if(top >= offSet && top < offSet + height){
-      //       wt -= 2
-      //       ht -= 1
-      //       op -= 0.1
-      //       document.querySelector('.img-box').style.width = wt +'%'
-      //       document.querySelector('.img-box').style.height = ht +'px'
-      //     }
-          
-      //   })
-      // }
+
 
     </script>
   </body>
