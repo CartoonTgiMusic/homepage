@@ -306,7 +306,7 @@ var listAudio = [
     name: "ကမ်းဒျာႏနာꩻသꩻ",
     file: "assets/musics/aoaudios/music11.mp3",
     singer: "ခွန်ခွန်ကျော်ဦး",
-    profile:"assets/images/mimgs/kks.jpg",
+    profile:"assets/images/mimgs/kko.jpg",
     writer:"Composer - ခွန်ခွန်ကျော်ဦး ",
     album:"Album - အောဝ်ႏ",
     albuml_url:"ao.html",
