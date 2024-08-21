@@ -194,8 +194,9 @@ img:hover{
       margin: 0 10px;
       overflow: hidden;
       .card {
-          height: 200px;
+          height: 220px;
           user-select: none;
+          cursor: pointer;
           .image-box {
               height: 160px;
               padding: 0px 15px;

@@ -21,7 +21,7 @@ const tabs = document.querySelectorAll(".tab-btn");
 const allContents = document.querySelectorAll(".content");
 
 tabs.forEach((tab, index) => {
-tab.addEventListener("click", (e) => {
+tab.addEventListener("click", () => {
   tabs.forEach((tab) => {
     tab.classList.remove("active");
   });
@@ -428,7 +428,7 @@ var listAudio = [
     file: "assets/musics/happytime/music8.mp3",
     singer: "အစွိုꩻ",
     profile:"assets/images/mimgs/logo.jpg",
-    writer:"Composer - အစွိ",
+    writer:"Composer - အစွိုꩻ",
     album:"Album - အပျော်ႏသွတ်ꩻအခိန်ႏ အပျော်ႏသွတ်ꩻဖꩻဝ",
     albuml_url:"happytime.html",
     band:"Band - ကာတွန်းစွိုꩻ",
