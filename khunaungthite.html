@@ -19,6 +19,11 @@
     <link rel="stylesheet" media="all" />
   </head>
   <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
       background: linear-gradient(-90deg,rgb(7, 100, 231),rgb(255, 255, 255));
       color: #000000;
@@ -43,7 +48,6 @@
   margin-bottom: 100px;
   background: linear-gradient(-90deg,rgb(7, 100, 231),rgb(255, 255, 255));
     .search-box{
-      top: 5px;
       position: fixed;
       width: 100%;
       height: 30px;
@@ -57,10 +61,11 @@
         border: none;
         outline: none;
         height: 25px;
+        font-size: 1rem;
       }
       i{
-        font-size: 1.3rem;
-        margin:0px 10px;
+        font-size: 1.2rem;
+        margin:0px 5px;
         color: black;
       }
     }
@@ -71,6 +76,7 @@
         background-image: url(assets/images/mimgs/kat.jpg);
         background-position: center;
         background-size: cover;
+        margin-bottom: 10px;
 
       }
         .name-box{
@@ -249,7 +255,6 @@
   flex-direction: column;
   align-items: center;
   .arrow-home{
-    top: 5px;
     position: fixed;
     width: 100%;
     height: 30px;
@@ -257,8 +262,8 @@
     justify-content: space-between;
     align-items: center;
     i{
-      font-size: 1.3rem;
-      margin: 0px 10px;
+      font-size: 1.2rem;
+      margin: 0px 5px;
       color: black;
     }
   }

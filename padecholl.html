@@ -61,7 +61,7 @@
       i{
         font-size: 1.3rem;
         margin:0px 10px;
-        color: black;
+        color: rgb(255, 255, 255);
       }
     }
       .img-box{
@@ -71,7 +71,7 @@
         background-image: url(assets/images/mimgs/kpd.jpg);
         background-position: center;
         background-size: cover;
-
+        margin-bottom: 5px;
       }
         .name-box{
            user-select: none;
@@ -178,7 +178,7 @@
 
   .new-div:hover {
     transform: scaleY(1.2);
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, .5);
   }
 }
 
@@ -259,22 +259,26 @@
     i{
       font-size: 1.3rem;
       margin: 0px 10px;
-      color: black;
+      color: rgb(255, 255, 255);
     }
   }
   .replace-imagebox{
         width: 100%;
-        height: 300px;
+        height: 350px;
         background-position: center;
         background-size: cover;
         position: absolute;
         z-index:-1;
   }
   .replace-details{
-    margin-top: 310px;
+    margin-top: 360px;
     width: 100%;
     margin-left: 10px;
+    text-align: center;
     font-size: small;
+    a{
+      color: black;
+    }
     .song-header{
       font-size: large;
     }
@@ -465,6 +469,7 @@ function createTrackItem(index, name, writer) {
         barBox.setAttribute('class','bar-box')
         barBox.setAttribute('id','bb-'+index)
         document.querySelector('#nd-'+index).appendChild(barBox)
+        document.querySelector('#nd-'+index).appendChild(barBox)
 
         let barImg = document.createElement('i')
         barImg.setAttribute('class','fas fa-bars bar-btn')
@@ -653,8 +658,9 @@ var listAudio = [
       }
 
       var barsBtn = document.querySelectorAll('.bar-box');
+      let isPlay = true
       for(let i=0; i<barsBtn.length; i++){
-          barsBtn[i].addEventListener('click',()=>{
+          barsBtn[i].addEventListener('click',(index)=>{
             document.querySelector('.main-ctn').classList.add('inactive')
             document.querySelector('.replace-ctn').classList.remove('inactive')
             document.querySelector('.prev-box').classList.add('inactive')

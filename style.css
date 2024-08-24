@@ -16,13 +16,13 @@ body {
   background:linear-gradient(-90deg,rgb(3, 30, 30),rgb(89, 89, 89));
 }
 img:hover{
-  transform: scaleX(1.05);
+  transform: scale(0.8);
 }
 
 .main-ctn{
     width: 100%;
     height: 100vh;
-    margin: 70px 0px 120px;
+    margin: 63px 0px 120px;
     h3{
       color: white;
       margin: 0 10px;
@@ -70,14 +70,13 @@ img:hover{
               border:none;
               background: none;
               outline: none;
-              left: 140px;
+              left: 110px;
               width: 100%;
           }
           i{
               font-size: 1.5rem;
-              padding-right: 5px;
               position: absolute;
-              right: 5px;
+              right: 10px;
           }
           
       }
@@ -394,16 +393,26 @@ img:hover{
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: fixed;
   .arrow-home{
     width: 100%;
     height: 30px;
     display: flex;
+    position: fixed;
     justify-content: space-between;
     align-items: center;
+    .replace-arrow,.replace-home{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      background-color: white;
+      border-radius: 50%;
+    }
     i{
       font-size: 1.3rem;
-      margin: 0px 10px;
-      color: black;
+      color: rgb(0, 0, 0);
     }
   }
   .replace-imagebox{
@@ -417,7 +426,7 @@ img:hover{
   .replace-details{
     margin-top: 310px;
     width: 100%;
-    margin-left: 10px;
+    text-align: center;
     font-size: small;
     color: white;
     a{
