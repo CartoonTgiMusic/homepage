@@ -470,9 +470,8 @@ function createTrackItem(index, name, writer) {
       document.querySelector("#nd-"+index).appendChild(trackItem);
 
       let barBox = document.createElement('div')
-        barBox.setAttribute('class','bar-box')
+        barBox.setAttribute('class','bar-box inactive')
         barBox.setAttribute('id','bb-'+index)
-        document.querySelector('#nd-'+index).appendChild(barBox)
         document.querySelector('#nd-'+index).appendChild(barBox)
 
         let barImg = document.createElement('i')
@@ -651,6 +650,8 @@ var listAudio = [
         for (let i = 0; i < playListItems.length; i++) {
           if (playListItems[i] == event.target) {
             var clickedIndex = event.target.getAttribute("data-index");
+           var barBoxs = document.querySelectorAll('.bar-box')
+           barBoxs[i].classList.remove('inactive')
             if (clickedIndex == this.indexAudio) {
               // alert('Same audio');
               this.toggleAudio();
@@ -662,7 +663,6 @@ var listAudio = [
       }
 
       var barsBtn = document.querySelectorAll('.bar-box');
-      let isPlay = true
       for(let i=0; i<barsBtn.length; i++){
           barsBtn[i].addEventListener('click',(index)=>{
             document.querySelector('.main-ctn').classList.add('inactive')
@@ -834,13 +834,11 @@ var listAudio = [
       }
 
       function updateStylePlaylist(oldIndex, newIndex) {
-        document
-          .querySelector("#nd-" + oldIndex)
-          .classList.remove("active-track");
+        document.querySelector("#nd-" + oldIndex).classList.remove("active-track");
+        document.querySelector("#bb-" + oldIndex).classList.add("inactive");
         this.pauseToPlay(oldIndex);
-        document
-          .querySelector("#nd-" + newIndex)
-          .classList.add("active-track");
+        document.querySelector("#nd-" + newIndex).classList.add("active-track");
+        document.querySelector("#bb-" + newIndex).classList.remove("inactive");
         this.playToPause(newIndex);
       }
 

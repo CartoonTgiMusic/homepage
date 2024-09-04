@@ -278,7 +278,7 @@
   .replace-details{
     margin-top: 310px;
     width: 100%;
-    margin-left: 10px;
+    text-align: center;
     font-size: small;
     .song-header{
       font-size: large;
@@ -467,7 +467,7 @@ function createTrackItem(index, name, writer) {
       document.querySelector("#nd-"+index).appendChild(trackItem);
 
       let barBox = document.createElement('div')
-        barBox.setAttribute('class','bar-box')
+        barBox.setAttribute('class','bar-box inactive')
         barBox.setAttribute('id','bb-'+index)
         document.querySelector('#nd-'+index).appendChild(barBox)
 
@@ -596,6 +596,8 @@ function createTrackItem(index, name, writer) {
         for (let i = 0; i < playListItems.length; i++) {
           if (playListItems[i] == event.target) {
             var clickedIndex = event.target.getAttribute("data-index");
+            var barBtns = document.querySelectorAll('.bar-box')
+            barBtns[i].classList.remove('inactive')
             if (clickedIndex == this.indexAudio) {
               // alert('Same audio');
               this.toggleAudio();
@@ -777,6 +779,8 @@ function createTrackItem(index, name, writer) {
       }
 
       function updateStylePlaylist(oldIndex, newIndex) {
+        document.querySelector("#bb-" + oldIndex).classList.add("inactive");
+        document.querySelector("#bb-" + newIndex).classList.remove("inactive");
         document
           .querySelector("#nd-" + oldIndex)
           .classList.remove("active-track");
