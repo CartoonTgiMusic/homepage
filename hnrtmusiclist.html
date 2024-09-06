@@ -74,10 +74,14 @@
         .details-box{
           margin-left: 10px;
           width: 200px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
           .title-text{
             font-size: 16px;
           }
-          .bandname-text{
+          .bandname-text,
+          .date-box{
             font-size: 12px;
           }
         }
@@ -167,7 +171,9 @@
     .btn-ctn i:hover {
           transform: scale(1.2);
         }
-        
+  a{
+    color: inherit;
+  }
   </style>
 
   <body>
@@ -181,7 +187,7 @@
           <a href="index.html"><div><i class="fa-solid fa-arrow-left"></i></div></a>
           <input type="text" placeholder="Search...." id="search-item" onkeyup="search()" >
           <div class="glass"><i class="fa-solid fa-magnifying-glass"></i></div>
-          <div><i class="fa-solid fa-list"></i></div>
+          <a href="hnrt.html"><div><i class="fa-solid fa-arrow-right"></i></div></a>
         </div>
         
         <div class="hader-div">
@@ -189,9 +195,15 @@
             <img src="assets/images/mimgs/cover1.jpg" alt="">
           </div>
           <div class="details-box">
-            <div class="title-text">ထွားနုဲင်းရုဲင်းတဝ်း</div>
-            <div class="bandname-text">ကာတွန်းစွိုꩻ</div>
-            <div class="bandname-text">14 songs</div>
+            <div>
+              <div class="title-text">ထွားနုဲင်းရုဲင်းတဝ်း</div>
+              <div class="bandname-text">ကာတွန်းစွိုꩻ</div>
+              <div class="bandname-text">14 songs</div>
+
+            </div>
+            <div class="date-box">
+              <div>Released - 2022</div>
+            </div>
         </div>
       </div>
     </div>

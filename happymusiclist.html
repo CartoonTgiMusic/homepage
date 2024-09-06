@@ -28,7 +28,9 @@
       align-items: center;
       justify-content: center;
     }
-    
+    a{
+      color: inherit;
+    }
     .nav{
       top: 0;
       position: fixed;
@@ -74,10 +76,14 @@
         .details-box{
           margin-left: 10px;
           width: 300px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
           .title-text{
             font-size: 14px;
           }
-          .bandname-text{
+          .bandname-text,
+          .date-box{
             font-size: 12px;
           }
         }
@@ -181,7 +187,7 @@
           <a href="index.html"><div><i class="fa-solid fa-arrow-left"></i></div></a>
           <input type="text" placeholder="Search...." id="search-item" onkeyup="search()" >
           <div class="glass"><i class="fa-solid fa-magnifying-glass"></i></div>
-          <div><i class="fa-solid fa-list"></i></div>
+          <a href="happytime.html"><div><i class="fa-solid fa-arrow-right"></i></div></a>
         </div>
         
         <div class="hader-div">
@@ -189,9 +195,14 @@
             <img src="assets/images/mimgs/logo.jpg" alt="">
           </div>
           <div class="details-box">
-            <div class="title-text">အပျော်ႏသွတ်ꩻအခိန်ႏ အပျော်ႏသွတ်ꩻဖꩻဝ</div>
-            <div class="bandname-text">ကာတွန်းစွိုꩻ</div>
-            <div class="bandname-text">14 songs</div>
+            <div class="text-box">
+              <div class="title-text">အပျော်ႏသွတ်ꩻအခိန်ႏ အပျော်ႏသွတ်ꩻဖꩻဝ</div>
+              <div class="bandname-text">ကာတွန်းစွိုꩻ</div>
+              <div class="bandname-text">14 songs</div>
+            </div>
+              <div class="date-box">
+              <div>Released-2009</div>
+            </div>
         </div>
       </div>
     </div>
@@ -385,7 +396,7 @@
         var player = document.querySelector("#source-audio");
         player.src = listAudio[index].file;
         document.querySelector(".title").innerHTML =
-          listAudio[index].name + " - " + listAudio[index].duration;
+          listAudio[index].name ;
         this.currentAudio = document.getElementById("myAudio");
         this.currentAudio.load();
         this.toggleAudio();
@@ -419,7 +430,7 @@
 
       document.querySelector("#source-audio").src = listAudio[indexAudio].file;
       document.querySelector(".title").innerHTML =
-        listAudio[indexAudio].name + " - " + listAudio[indexAudio].duration;
+        listAudio[indexAudio].name ;
 
       var currentAudio = document.getElementById("myAudio");
 

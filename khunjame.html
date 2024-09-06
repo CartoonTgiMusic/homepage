@@ -288,6 +288,17 @@
 .inactive{
   display: none;
 }
+.rotate {
+      animation: rotation 2s infinite linear;
+    }
+    @keyframes rotation {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
 
  </style>
 
@@ -484,7 +495,7 @@ function createTrackItem(index, name, writer) {
       document.querySelector("#ptc-" + index).appendChild(playBtnItem);
 
       var btnImg = document.createElement("i");
-      btnImg.setAttribute("class", "fas fa-play play-icon");
+      btnImg.setAttribute("class", "fas fa-compact-disc inactive rotate");
       btnImg.setAttribute("height", "40");
       btnImg.setAttribute("width", "40");
       btnImg.setAttribute("id", "p-img-" + index);
@@ -563,6 +574,12 @@ var listAudio = [
         for (let i = 0; i < playListItems.length; i++) {
           if (playListItems[i] == event.target) {
             var clickedIndex = event.target.getAttribute("data-index");
+            var barBoxs = document.querySelectorAll('.bar-box')
+                barBoxs[i].classList.remove('inactive')
+            var circle = document.querySelectorAll('.fa-compact-disc');
+                circle[i].classList.remove('inactive')
+            var songNum = document.querySelectorAll('.song-num');
+                songNum[i].classList.add('inactive')
             if (clickedIndex == this.indexAudio) {
               // alert('Same audio');
               this.toggleAudio();
@@ -712,7 +729,6 @@ var listAudio = [
       }
       
       let isLoop = false;
-      let isPlaying = false;
       function repeat() {
         pauseRandom();
         if (this.currentAudio.loop != true && this.currentAudio.play()) {
@@ -746,28 +762,25 @@ var listAudio = [
       }
 
       function updateStylePlaylist(oldIndex, newIndex) {
-        document
-          .querySelector("#nd-" + oldIndex)
-          .classList.remove("active-track");
+        document.querySelector("#p-img-" + oldIndex).classList.add('inactive');
+        document.querySelector("#p-img-" + newIndex).classList.remove('inactive');
+        document.querySelector("#s-num-" + oldIndex).classList.remove('inactive');
+        document.querySelector("#s-num-" + newIndex).classList.add('inactive');
+        document.querySelector("#bb-" + oldIndex).classList.add("inactive");
+        document.querySelector("#bb-" + newIndex).classList.remove("inactive");
+        document.querySelector("#nd-" + oldIndex).classList.remove("active-track");
         this.pauseToPlay(oldIndex);
-        document
-          .querySelector("#nd-" + newIndex)
-          .classList.add("active-track");
+        document.querySelector("#nd-" + newIndex).classList.add("active-track");
         this.playToPause(newIndex);
       }
 
       function playToPause(index) {
-        var ele = document.querySelector("#p-img-" + index);
-        var songNum = document.querySelector("#s-num-" + index);
-        ele.style.display = 'block'
-        songNum.style.display = 'none'
+        document.querySelector("#p-img-" + index).classList.add('rotate');
       }
-
+      
       function pauseToPlay(index) {
-        var ele = document.querySelector("#p-img-" + index);
-        var songNum = document.querySelector("#s-num-" + index);
-        ele.style.display = 'none'
-        songNum.style.display = 'block'
+        document.querySelector("#p-img-" + index).classList.remove('rotate');
+
       }
 
       function toggleMute() {

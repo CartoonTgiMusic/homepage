@@ -74,10 +74,14 @@
         .details-box{
           margin-left: 10px;
           width: 200px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
           .title-text{
             font-size: 14px;
           }
-          .bandname-text{
+          .bandname-text,
+          .text-box{
             font-size: 12px;
           }
         }
@@ -167,7 +171,9 @@
     .btn-ctn i:hover {
           transform: scale(1.2);
         }
-        
+    a{
+      color: inherit;
+    }
   </style>
 
   <body>
@@ -181,7 +187,7 @@
           <a href="index.html"><div><i class="fa-solid fa-arrow-left"></i></div></a>
           <input type="text" placeholder="Search...." id="search-item" onkeyup="search()" >
           <div class="glass"><i class="fa-solid fa-magnifying-glass"></i></div>
-          <div><i class="fa-solid fa-list"></i></div>
+          <a href="katoo.html"><div><i class="fa-solid fa-arrow-right"></i></div></a>
         </div>
         
         <div class="hader-div">
@@ -189,9 +195,13 @@
             <img src="assets/images/mimgs/cover6.jpg" alt="">
           </div>
           <div class="details-box">
-            <div class="title-text">ကတွူႏဆွော့ꩻမွုန်းဒွုမ်ꩻနင်ꩻ</div>
-            <div class="bandname-text">ကာတွန်းစွိုꩻ</div>
-            <div class="bandname-text">8 songs</div>
+            <div>
+              <div class="title-text">ကတွူႏဆွော့ꩻမွုန်းဒွုမ်ꩻနင်ꩻ</div>
+              <div class="bandname-text">ကာတွန်းစွိုꩻ</div>
+              <div class="bandname-text">8 songs</div>
+            </div>
+            <div class="text-box">Released - 2005</div>
+
         </div>
       </div>
     </div>

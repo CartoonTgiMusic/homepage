@@ -1,6 +1,7 @@
 const search = () => {
   const searchBox = document.getElementById("search-item").value.toUpperCase();
   const product = document.querySelectorAll(".product");
+  const H3 = document.querySelectorAll(".h3");
   const pname = document.getElementsByTagName("h6");
 
   for (var i = 0; i < pname.length; i++) {
@@ -9,9 +10,16 @@ const search = () => {
       let textvalue = match.textContent || match.innerHTML;
 
       if (textvalue.toUpperCase().indexOf(searchBox) > -1) {
+        H3.forEach((h)=>{
+          h.style.display = ''
+        })
         product[i].style.display = "";
       } else {
         product[i].style.display = "none";
+        H3.forEach((h)=>{
+          h.style.display = 'none'
+        })
+
       }
     }
   }
@@ -160,7 +168,7 @@ function createTrackItem(index, name, duration) {
   document.querySelector("#ptc-" + index).appendChild(playBtnItem);
 
   var btnImg = document.createElement("i");
-  btnImg.setAttribute("class", "fas fa-play");
+  btnImg.setAttribute("class", "fas fa-compact-disc inactive rotate");
   btnImg.setAttribute("height", "40");
   btnImg.setAttribute("width", "40");
   btnImg.setAttribute("id", "p-img-" + index);

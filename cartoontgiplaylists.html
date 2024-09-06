@@ -89,52 +89,7 @@
                 font-size: 12px;
               }
             }
-      
-  
-  /* @media screen and (min-width:800px) {
-    .hader-div{
-      width: 95%;
-      display: flex;
-      justify-content: space-around;
-      margin: 5px 0px;
-      .img-box{
-        width: 200px;
-        height: 200px;
-      }
-      img{
-        width: 100%;
-        height: 100%;
-      }
-      .details-box{
-        margin-left: 10px;
-        width: 150px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-         .name-box{
-           user-select: none;
-            .title-text{
-                 font-size: 1.2rem;
-              }
-              .totalsongs-text{
-                font-size: 12px;
-              }
-            }
-            .social-box{
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              i{
-                font-size: 1.5rem;
-                cursor: pointer;
-              }
 
-            }      
-        
-      }
-    }
-  } */
- 
   .songslist-ctn {
     width: 95%;
     .new-div{
@@ -153,9 +108,10 @@
          .playlist-btn-play {
                pointer-events: none;
                padding-right:10px;
-               color: #656565;
+               color: rgb(0, 0, 0);
              }
-           .playlist-info-track
+           .playlist-info-track,
+           .playlist-singer
             {
                  color: #000000;
                  font-size: 1rem;
@@ -172,8 +128,8 @@
   }
 
   .new-div:hover {
-    transform: scaleY(1.2);
-    border: 1px solid rgb(0, 0, 0);
+    transform: scaleY(1.1);
+    border: 1px solid rgb(0, 0, 0,0.3);
   }
 }
 
@@ -181,11 +137,11 @@
   font-size: 1.5rem;
      }
 .active-track {
-  transform: scaleY(1.2);
-  border: 1px solid rgb(0, 0, 0);
+  transform: scaleY(1.1);
+  border: 1px solid rgba(0, 0, 0,0.5);
    }
 .btn-ctn i:hover {
-    transform: scale(1.2);
+    transform: scale(0.8);
       }
 
 .controls-container {
@@ -274,9 +230,21 @@
     }
   }
 }
+
 .inactive{
   display: none;
 }
+.rotate {
+      animation: rotation 2s infinite linear;
+    }
+    @keyframes rotation {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
 
  </style>
 
@@ -311,6 +279,7 @@
         </div>
         <div class="replace-details">
           <div class="song-header"></div>
+          <div class="song-singer"></div>
           <div class="writer-header"></div>
           <a href="#" class="album-url"><div class="album-header"></div></a>
           <a href="#" class="band-url"><div class="band-header"></div></a>
@@ -428,7 +397,7 @@
               }
             };
 
-function createTrackItem(index, name, writer) {
+function createTrackItem(index, name, singer) {
 
       var newDiv = document.createElement("div");
       newDiv.setAttribute("class", "new-div product");
@@ -454,12 +423,12 @@ function createTrackItem(index, name, writer) {
         document.querySelector('#bb-'+index).appendChild(barImg)
 
       var playBtnItem = document.createElement("div");
-      playBtnItem.setAttribute("class", "playlist-btn-play");
+      playBtnItem.setAttribute("class", "playlist-btn-play ");
       playBtnItem.setAttribute("id", "pbp-" + index);
       document.querySelector("#ptc-" + index).appendChild(playBtnItem);
 
       var btnImg = document.createElement("i");
-      btnImg.setAttribute("class", "fas fa-play play-icon");
+      btnImg.setAttribute("class", "fas fa-compact-disc inactive rotate");
       btnImg.setAttribute("height", "40");
       btnImg.setAttribute("width", "40");
       btnImg.setAttribute("id", "p-img-" + index);
@@ -484,12 +453,12 @@ function createTrackItem(index, name, writer) {
       document.querySelector("#ptc-" + index).appendChild(trackInfoItem);
 
       var trackDurationItem = document.createElement("div");
-      trackDurationItem.setAttribute("class", "playlist-writer inactive");
-      trackDurationItem.innerHTML = writer;
+      trackDurationItem.setAttribute("class", "playlist-singer ");
+      trackDurationItem.innerHTML = singer;
       document.querySelector("#ptc-" + index).appendChild(trackDurationItem);
 
       var h6 = document.createElement("h6");
-      h6.innerHTML = `${name}${writer}`;
+      h6.innerHTML = `${name}${singer}`;
       document.querySelector("#ptc-" + index).appendChild(h6);
 }
 
@@ -497,7 +466,7 @@ function createTrackItem(index, name, writer) {
       {
     name: "ဒွေါဝ်ꩻ",
     file: "assets/musics/happytime/music14.mp3",
-    singer: "အစွိုꩻ",
+    singer: "ကာတွန်းစွိုꩻ",
     profile:"assets/images/mimgs/popular1.jpg",
     writer:"Composer - အစွိုꩻ",
     album:"Album - အပျော်ႏသွတ်ꩻအခိန်ႏ အပျော်ႏသွတ်ꩻဖꩻဝ",
@@ -545,7 +514,7 @@ function createTrackItem(index, name, writer) {
   {
     name: "အပဲစ်ကင်ꩻလိုꩻပေႏဖꩻဝ",
     file: "assets/musics/happytime/music7.mp3",
-    singer: "အစွိုꩻ",
+    singer: "ကာတွန်းစွိုꩻ",
     profile:"assets/images/mimgs/popular5.jpg",
     writer:"Composer - အစွိုꩻ",
     album:"Album - အပျော်ႏသွတ်ꩻအခိန်ႏ အပျော်ႏသွတ်ꩻဖꩻဝ",
@@ -557,7 +526,7 @@ function createTrackItem(index, name, writer) {
   {
     name: "ကတွူဆွော့မွုန်းဒွုမ်နင်",
     file: "assets/musics/katochock/music7.mp3",
-    singer: "Group",
+    singer: "ကာတွန်းစွိုꩻ",
     profile:"assets/images/mimgs/popular6.jpg",
     writer:"Composer - ခွန်ရှိန်း+ခွန်ကော်လီ",
     album:"Album - ကတွူဆွော့မွုန်းဒွုမ်နင်",
@@ -570,7 +539,7 @@ function createTrackItem(index, name, writer) {
   ]
 
       for (var i = 0; i < listAudio.length; i++) {
-        createTrackItem(i, listAudio[i].name, listAudio[i].writer);
+        createTrackItem(i, listAudio[i].name, listAudio[i].singer);
       }
       var indexAudio = 0;
 
@@ -600,7 +569,12 @@ function createTrackItem(index, name, writer) {
           if (playListItems[i] == event.target) {
             var clickedIndex = event.target.getAttribute("data-index");
             var barBtns = document.querySelectorAll('.bar-box')
-            barBtns[i].classList.remove('inactive')
+                barBtns[i].classList.remove('inactive')
+            var circle = document.querySelectorAll('.fa-compact-disc');
+                circle[i].classList.remove('inactive')
+            var songNum = document.querySelectorAll('.song-num');
+                songNum[i].classList.add('inactive')    
+       
             if (clickedIndex == this.indexAudio) {
               // alert('Same audio');
               this.toggleAudio();
@@ -622,6 +596,7 @@ function createTrackItem(index, name, writer) {
             document.querySelector('.repeat-box').classList.remove('inactive')
 
             document.querySelector('.song-header').innerHTML = listAudio[i].name;
+            document.querySelector('.song-singer').innerHTML = listAudio[i].singer;
             document.querySelector('.writer-header').innerHTML = listAudio[i].writer;
             document.querySelector('.album-header').innerHTML = listAudio[i].album;
             document.querySelector('.album-url').href = listAudio[i].albuml_url;
@@ -643,7 +618,7 @@ function createTrackItem(index, name, writer) {
       })
 
       document.querySelector("#source-audio").src = listAudio[indexAudio].file;
-      document.querySelector(".title").innerHTML = listAudio[indexAudio].name 
+      document.querySelector(".title").innerHTML = listAudio[indexAudio].name + listAudio[indexAudio].singer;
 
       var currentAudio = document.getElementById("myAudio");
 
@@ -784,6 +759,10 @@ function createTrackItem(index, name, writer) {
       function updateStylePlaylist(oldIndex, newIndex) {
         document.querySelector("#bb-" + oldIndex).classList.add("inactive");
         document.querySelector("#bb-" + newIndex).classList.remove("inactive");
+        document.querySelector("#p-img-" + oldIndex).classList.add('inactive');
+        document.querySelector("#p-img-" + newIndex).classList.remove('inactive');
+        document.querySelector("#s-num-" + oldIndex).classList.remove('inactive');
+        document.querySelector("#s-num-" + newIndex).classList.add('inactive');
         document
           .querySelector("#nd-" + oldIndex)
           .classList.remove("active-track");
@@ -795,17 +774,12 @@ function createTrackItem(index, name, writer) {
       }
 
       function playToPause(index) {
-        var ele = document.querySelector("#p-img-" + index);
-        var songNum = document.querySelector("#s-num-" + index);
-        ele.style.display = 'block'
-        songNum.style.display = 'none'
+        document.querySelector("#p-img-" + index).classList.add('rotate');
       }
-
+      
       function pauseToPlay(index) {
-        var ele = document.querySelector("#p-img-" + index);
-        var songNum = document.querySelector("#s-num-" + index);
-        ele.style.display = 'none'
-        songNum.style.display = 'block'
+        document.querySelector("#p-img-" + index).classList.remove('rotate');
+
       }
 
       function toggleMute() {
