@@ -38,9 +38,12 @@ tab.addEventListener("click", () => {
     content.classList.remove("active");
   });
   allContents[index].classList.add("active");
-});
-});
 
+});
+});
+document.querySelector('#search-icon').addEventListener('click',()=>{
+  document.querySelector('#search-item').focus()
+})
 var swiper = new Swiper(".slide-container", {
   slidesPerView: 4,
   spaceBetween: 20,

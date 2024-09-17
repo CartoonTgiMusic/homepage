@@ -24,9 +24,12 @@
       padding: 0;
       box-sizing: border-box;
     }
+    :root{
+      --bgColor:black;
+    }
     body {
-      background: linear-gradient(-90deg,rgb(7, 100, 231),rgb(255, 255, 255));
-      color: #000000;
+      background: var(--bgColor);
+      color: #ffffff;
       font-family: "Roboto", sans-serif;
       display: flex;
       flex-direction: column;
@@ -36,7 +39,7 @@
     .fixed{
       position: fixed;
       top: 0px;
-      background: linear-gradient(-90deg,rgb(7, 100, 231),rgb(255, 255, 255));
+      background: var(--bgColor);
       z-index: 1;
     }
 
@@ -46,7 +49,7 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 100px;
-  background: linear-gradient(-90deg,rgb(7, 100, 231),rgb(255, 255, 255));
+  background: var(--bgColor);
     .search-box{
       position: fixed;
       width: 100%;
@@ -57,6 +60,7 @@
       z-index: 2;
       input{
         width: 100%;
+        padding-left: 10px;
         background: none;
         border: none;
         outline: none;
@@ -71,13 +75,12 @@
       }
     }
       .img-box{
-        width: 100%;
-        height: 230px;
-        top: 0;
+        width: 325px;
+        height: 325px;
         background-image: url(assets/images/mimgs/kp.jpg);
         background-position: center;
         background-size: cover;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
       }
         .name-box{
            user-select: none;
@@ -121,11 +124,11 @@
          .playlist-btn-play {
                pointer-events: none;
                padding-right:10px;
-               color: #656565;
+               color: #ffffff;
              }
            .playlist-info-track
             {
-                 color: #000000;
+                 color: #ffffff;
                  font-size: 1rem;
                  pointer-events: none;
                  user-select: none;
@@ -141,7 +144,7 @@
 
   .new-div:hover {
     transform: scaleY(1.2);
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid rgb(255, 255, 255);
   }
 }
 
@@ -150,7 +153,7 @@
      }
 .active-track {
   transform: scaleY(1.2);
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid rgb(255, 255, 255);
    }
 .btn-ctn i:hover {
     transform: scale(1.2);
@@ -164,10 +167,12 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: linear-gradient(-90deg,rgb(7, 100, 231),rgb(255, 255, 255));
-  padding-bottom: 10px;
+  background: var(--bgColor);
+  padding-bottom: 5px;
   z-index: 1;
-  
+  i{
+    font-size: 1rem;
+  }
   #myProgress {
     width: 80%;
     background-color: silver;
@@ -218,6 +223,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
     i{
       font-size: 1.2rem;
       margin: 0px 5px;
@@ -225,18 +231,20 @@
     }
   }
   .replace-imagebox{
-        width: 100%;
-        height: 300px;
+        width: 325px;
+        height: 325px;
         background-position: center;
         background-size: cover;
-        position: absolute;
         z-index:-1;
   }
   .replace-details{
-    margin-top: 310px;
+    margin:10px 0 100px;
     width: 100%;
     text-align: center;
     font-size: small;
+    a{
+      color: white;
+    }
     .song-header{
       font-size: large;
     }
@@ -322,7 +330,7 @@
       </div>
       <div class="btn-ctn">
         <div class="btn-action shullfe-box inactive" onclick="shullfe() ">
-          <div id="btn-shuffle">
+          <div id="btn-shuffle" style="color: white;" >
             <i class="fa-solid fa-shuffle" ></i>
           </div>
         </div>
@@ -358,11 +366,11 @@
             <i class="fa-solid fa-repeat re-icon"></i>
             <i class="once-icon" style="display: none"
                 ><svg
-                  width="30"
-                  height="30"
+                  width="22"
+                  height="22"
                   viewBox="-2 -2 24 24"
-                  stroke-width="2.3"
-                  stroke="black"
+                  stroke-width="2"
+                  stroke="white"
                   fill="none"
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -401,6 +409,10 @@
           nameBOx.classList.remove('fixed')
         }
       }
+
+      document.querySelector('.glass').addEventListener('click',()=>{
+        document.querySelector('#search-item').focus()
+      });
 
       const search = () => {
               const searchBox = document.getElementById("search-item").value.toUpperCase();
@@ -742,7 +754,7 @@ var listAudio = [
       }
       function pauseRandom() {
         isRandom = false;
-        document.querySelector('#btn-shuffle').style.color = 'black'
+        document.querySelector('#btn-shuffle').style.color = 'white'
       }
       
       let isLoop = false;

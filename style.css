@@ -84,6 +84,7 @@ img:hover{
               font-size: 1.5rem;
               position: absolute;
               right: 10px;
+              cursor: pointer;
           }
           
       }
@@ -402,7 +403,7 @@ img:hover{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top:4rem;
+  padding:4rem 0;
   .arrow-home{
     position: fixed;
     .replace-arrow{
@@ -445,6 +446,10 @@ img:hover{
     padding-left: 6rem;
     display: flex;
     flex-direction: row;
+    .replace-imagebox{
+      width: 50%;
+      height: 100vh;
+    }
   }
   .main-ctn{
     background: var();

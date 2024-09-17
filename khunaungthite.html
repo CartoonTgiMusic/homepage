@@ -50,29 +50,33 @@
     .search-box{
       position: fixed;
       width: 100%;
-      height: 30px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       z-index: 2;
+      .glass{
+        cursor: pointer;
+      }
       input{
         width: 100%;
         background: none;
         border: none;
         outline: none;
-        height: 25px;
+        height: 30px;
         font-size: 1rem;
+        padding-left: 10px;
       }
       i{
         font-size: 1.2rem;
-        margin:0px 5px;
+        padding: 5px;
+        border-radius: 50%;
         color: black;
+        background-color: white;
       }
     }
       .img-box{
-        width: 100%;
-        height: 230px;
-        top: 0;
+        width: 325px;
+        height: 325px;
         background-image: url(assets/images/mimgs/kat.jpg);
         background-position: center;
         background-size: cover;
@@ -102,49 +106,6 @@
               }
             }      
   
-  /* @media screen and (min-width:800px) {
-    .hader-div{
-      width: 95%;
-      display: flex;
-      justify-content: space-around;
-      margin: 5px 0px;
-      .img-box{
-        width: 200px;
-        height: 200px;
-      }
-      img{
-        width: 100%;
-        height: 100%;
-      }
-      .details-box{
-        margin-left: 10px;
-        width: 150px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-         .name-box{
-           user-select: none;
-            .title-text{
-                 font-size: 1.2rem;
-              }
-              .totalsongs-text{
-                font-size: 12px;
-              }
-            }
-            .social-box{
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              i{
-                font-size: 1.5rem;
-                cursor: pointer;
-              }
-
-            }      
-        
-      }
-    }
-  } */
  
   .songslist-ctn {
     width: 95%;
@@ -208,9 +169,11 @@
   align-items: center;
   flex-direction: column;
   background: linear-gradient(-90deg,rgb(7, 100, 231),rgb(255, 255, 255));
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   z-index: 1;
-  
+  i{
+    font-size: 1rem;
+  }
   #myProgress {
     width: 80%;
     background-color: silver;
@@ -261,22 +224,26 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .replace-arrow{
+      cursor: pointer;
+    }
     i{
       font-size: 1.2rem;
-      margin: 0px 5px;
       color: black;
+      background-color: white;
+      padding: 5px;
+      border-radius: 50%;
     }
   }
   .replace-imagebox{
-        width: 100%;
-        height: 300px;
+        width: 325px;
+        height: 325px;
         background-position: center;
         background-size: cover;
-        position: absolute;
         z-index:-1;
   }
   .replace-details{
-    margin-top: 310px;
+    margin: 10px 0 100px;
     width: 100%;
     text-align: center;
     font-size: small;
@@ -401,10 +368,10 @@
             <i class="fa-solid fa-repeat re-icon"></i>
             <i class="once-icon" style="display: none"
                 ><svg
-                  width="30"
-                  height="30"
+                  width="22"
+                  height="22"
                   viewBox="-2 -2 24 24"
-                  stroke-width="2.3"
+                  stroke-width="2"
                   stroke="black"
                   fill="none"
                   stroke-linecap="round"
@@ -443,7 +410,11 @@
         }else{
           nameBOx.classList.remove('fixed')
         }
-      }
+      };
+
+      document.querySelector('.glass').addEventListener('click',()=>{
+        document.querySelector('#search-item').focus()
+      });
 
       const search = () => {
               const searchBox = document.getElementById("search-item").value.toUpperCase();
