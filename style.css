@@ -439,17 +439,17 @@ img:hover{
     }
   }
 }
-@media screen and (min-width:768px){
+@media screen and (min-width:700px){
   .replace-ctn{
     padding-top: 2rem;
-    padding-left: 7rem;
+    padding-left: 6rem;
     display: flex;
     flex-direction: row;
   }
   .main-ctn{
     background: var();
   .tabs-ctn{
-    width: 7rem;
+    width: 6rem;
     .tabsbtn-ctn{
       height: 200px;
         display: flex;
@@ -491,7 +491,7 @@ img:hover{
     .all-ctn, .artists-ctn, 
     .albums-ctn,.songs-ctn{
       margin-top: 2rem;
-      padding: 0 0 8rem 7rem;
+      padding: 0 0 8rem 6rem;
     }
     .albums-ctn{
      display: grid;
