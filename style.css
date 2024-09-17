@@ -1,6 +1,9 @@
 /* Google Fonts - Poppins */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
+:root{
+  --bgColor:linear-gradient(-90deg,rgb(3, 30, 30),rgb(89, 89, 89));
+}
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +18,9 @@ body {
   justify-content: center;
   background:linear-gradient(-90deg,rgb(3, 30, 30),rgb(89, 89, 89));
 }
+img{
+  user-select: none;
+}
 img:hover{
   transform: scale(0.8);
 }
@@ -22,12 +28,13 @@ img:hover{
 .main-ctn{
     width: 100%;
     height: 100vh;
-    margin: 63px 0px 120px;
+    margin: 0px 0px 100px;
     h3{
       color: white;
       margin: 0 10px;
     }
     .content{
+      scroll-margin-top: 200px;
       display: none;
       animation: fade .5s ease;
     }
@@ -80,35 +87,46 @@ img:hover{
           }
           
       }
-        .tabs-ctn{
-            display: flex;
-            justify-content: space-between;
-            padding: 5px 10px;
-            background-color:rgb(30,30,30);
-            border-bottom: 1px solid white;
-            .tab-btn{
-                border: none;
-                background: none;
-                cursor: pointer;
-                user-select: none;
-                color:white;
-            }
-            .active{
-                color: rgb(255, 255, 255);
-                border-bottom: 3px solid rgb(255, 255, 255);
-                font-weight: bold;
-            }
-        }
     }
-    
+    .tabs-ctn{
+      top: 30px;
+      position: fixed;
+      width: 100%;
+      z-index: 3;
+      .tabsbtn-ctn{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          padding: 5px 10px;
+          background-color:rgb(30,30,30);
+          border-bottom: 1px solid white;
+          .tab-btn{
+              border: none;
+              background: none;
+              cursor: pointer;
+              user-select: none;
+              color:white;
+          }
+          .active{
+              color: rgb(255, 255, 255);
+              border-bottom: 3px solid rgb(255, 255, 255);
+              font-weight: bold;
+          }
+      }
+      
+    }
 }
 @keyframes fade{
-  from{transform: translateY(-70px);opacity: 0;}
+  from{transform: translateY(70px);opacity: 0;}
   to{transform: translate(0px);opacity: 1;}
+}
+.all-ctn{
+  margin-top: 4rem;
 }
 .container {
     width: 100%;
-    padding: 10px 0px 30px;
+    padding: 0px 0px 10px;
     .slide-container{
       margin: 0 10px;
       overflow: hidden;
@@ -151,11 +169,7 @@ img:hover{
     .swiper-pagination-bullet {
       background-color: #ffffff;
     }
-    @media screen and (max-width: 768px) {
-      .swiper-navBtn {
-        display: none;
-      }
-    }
+
 .container2 {
     width: 100%;
     padding: 10px 0px 10px;
@@ -218,35 +232,35 @@ img:hover{
   }
 
 .albums-ctn{
-    margin: 0px 10px;
-    padding-bottom: 130px;
+    margin: 0 0.5rem;
+    padding:4rem 0 8rem;
     a{
       text-decoration: none;
-    }
-    .product{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+      .product{
         width: 100%;
-        padding: 5px;
-        margin: 5px 0px;
-        border: 1px solid white;
-        h6{
-          display: none;
-        }
-        img{
-            width: 110px;
-        }
-        .texts{
-            width: 50%;
-            color: rgb(255, 255, 255);
-            font-size: small;
-        }
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 5px;
+          margin: 0.5rem 0;
+          border: 1px solid white;
+          h6{
+            display: none;
+          }
+          img{
+              width: 110px;
+          }
+          .texts{
+              width: 50%;
+              color: rgb(255, 255, 255);
+              font-size: small;
+          }
+      }
     }
 }
 .artists-ctn{
-  margin:0px 10px;
-  padding-bottom: 130px;
+  margin: 0 0.5rem;
+  padding: 4rem 0 8rem;
   a{
     text-decoration: none;
   }
@@ -254,15 +268,16 @@ img:hover{
       display: flex;
       align-items: center;
       justify-content: space-between;
-      width: 100%;
+      height: 110px;
       padding: 5px;
-      margin: 5px 0px;
+      margin: .5rem 0;
       border: 1px solid white;
       h6{
         display: none;
       }
       img{
-          width: 80px;
+          width: 100px;
+          padding: 5px;
           border-radius: 50%;
       }
       .texts{
@@ -271,10 +286,6 @@ img:hover{
           font-size: small;
       }
   }
-}
-
-.songs-ctn{
-  padding-bottom: 100px;
 }
 
 .none-block{
@@ -288,7 +299,6 @@ img:hover{
     align-items: center;
     width: 100%;
     margin: auto;
-    padding-bottom: 10px;
     background:linear-gradient(-90deg,rgb(3, 30, 30),rgb(89, 89, 89));
     z-index: 1;
     .infos-ctn{
@@ -332,8 +342,8 @@ img:hover{
 }
 
 .songs-ctn{
-  width: 100%;
-  margin-bottom: 150px;
+  margin: 0 0.5rem;
+  padding: 4rem 0 8rem;
   .player-ctn{
     .playlist-ctn{
         width: 100%;
@@ -342,7 +352,7 @@ img:hover{
         justify-content: center;
         align-items: center;
       .new-div{
-        width: 95%;
+        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -389,19 +399,13 @@ img:hover{
   }
 }
 .replace-ctn{
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: fixed;
+  padding-top:4rem;
   .arrow-home{
-    width: 100%;
-    height: 30px;
-    display: flex;
     position: fixed;
-    justify-content: space-between;
-    align-items: center;
-    .replace-arrow,.replace-home{
+    .replace-arrow{
       display: flex;
       justify-content: center;
       align-items: center;
@@ -416,16 +420,14 @@ img:hover{
     }
   }
   .replace-imagebox{
-        width: 100%;
+        min-width: 300px;
         height: 300px;
         background-position: center;
         background-size: cover;
-        position: absolute;
-        z-index:-1;
   }
   .replace-details{
-    margin-top: 310px;
     width: 100%;
+    padding: 1rem;
     text-align: center;
     font-size: small;
     color: white;
@@ -437,18 +439,96 @@ img:hover{
     }
   }
 }
+@media screen and (min-width:768px){
+  .replace-ctn{
+    padding-top: 2rem;
+    padding-left: 7rem;
+    display: flex;
+    flex-direction: row;
+  }
+  .main-ctn{
+    background: var();
+  .tabs-ctn{
+    width: 7rem;
+    .tabsbtn-ctn{
+      height: 200px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0.5rem 10px;
+        border-bottom: none;
+        background-color:rgba(30, 30, 30, 0);
+        .tab-btn{
+          background:white;
+          color: black;
+          padding: 0.3rem 1rem;
+          border-radius: 20px;
+        }
+        .active{
+          color: rgb(255, 255, 255);
+          font-weight: bold;
+          background-color: rgb(8, 109, 211)
+      }
+          
+  }
+   };
+  .albums-ctn{
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(2,1fr);
+      .product{
+        margin: 0;
+      }
+    };
+  .artists-ctn{
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(3,1fr);
+      .product{
+        height: 120px;
+      }
+    };
+    .all-ctn, .artists-ctn, 
+    .albums-ctn,.songs-ctn{
+      margin-top: 2rem;
+      padding: 0 0 8rem 7rem;
+    }
+    .albums-ctn{
+     display: grid;
+     gap: 0.5rem;
+     grid-template-columns: repeat(2,1fr);
+     .product{
+       height: 120px;
+       margin: 0;
+     }
+   };
+   .artists-ctn{
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    .product{
+      height: 120px;
+      margin: 0;
+      }
+     };
+   .swiper-navBtn {
+         display: none;
+       };  
+   .controls-container{
+         padding-left: 3rem;
+       };
+  };
+}
 .inactive{
   display: none;
 }
 
 .new-div:hover{
-  transform: scaleY(1.2);
-  border: 1px solid rgb(255, 255, 255);
+  background-color: rgb(29, 101, 195);
 }
 
 .active-track{
-  transform: scaleY(1.2);
-  border: 1px solid rgb(255, 255, 255);
+  background-color: rgb(29, 101, 195);
 }
 .fas{
   font-size: 1.5rem;
@@ -464,15 +544,3 @@ img:hover{
     transform: rotate(360deg);
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-    

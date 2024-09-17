@@ -4,7 +4,7 @@ const search = () => {
   const H3 = document.querySelectorAll(".h3");
   const pname = document.getElementsByTagName("h6");
 
-  for (var i = 0; i < pname.length; i++) {
+  for (let i = 0; i < pname.length; i++) {
     let match = product[i].getElementsByTagName("h6")[0];
     if (match) {
       let textvalue = match.textContent || match.innerHTML;
@@ -34,7 +34,6 @@ tab.addEventListener("click", () => {
     tab.classList.remove("active");
   });
   tab.classList.add("active");
-
   allContents.forEach((content) => {
     content.classList.remove("active");
   });
