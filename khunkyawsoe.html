@@ -24,9 +24,12 @@
       padding: 0;
       box-sizing: border-box;
     }
+    :root{
+      --bgColor:rgb(0, 0, 0);
+    }
     body {
-      background: linear-gradient(-90deg,rgb(7, 100, 231),rgb(255, 255, 255));
-      color: #000000;
+      background: var(--bgColor);
+      color: #ffffff;
       font-family: "Roboto", sans-serif;
       display: flex;
       flex-direction: column;
@@ -36,7 +39,7 @@
     .fixed{
       position: fixed;
       top: 0px;
-      background: linear-gradient(-90deg,rgb(7, 100, 231),rgb(255, 255, 255));
+      background: var(--bgColor);
       z-index: 1;
     }
 
@@ -46,7 +49,7 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 100px;
-  background: linear-gradient(-90deg,rgb(7, 100, 231),rgb(255, 255, 255));
+  background: var(--bgColor);
     .search-box{
       position: fixed;
       width: 100%;
@@ -63,17 +66,17 @@
         height: 100%;
         font-size: 1rem;
         color: white;
+        padding-left: 10px;
       }
       i{
         font-size: 1.2rem;
-        margin:0px 5px;
+        padding: 5px;
         color: rgb(255, 255, 255);
       }
     }
       .img-box{
-        width: 100%;
-        height: 230px;
-        top: 0;
+        width: 325px;
+        height: 325px;
         background-image: url(assets/images/mimgs/kks.jpg);
         background-position: center;
         background-size: cover;
@@ -101,50 +104,6 @@
                 cursor: pointer;
               }
             }      
-  
-  /* @media screen and (min-width:800px) {
-    .hader-div{
-      width: 95%;
-      display: flex;
-      justify-content: space-around;
-      margin: 5px 0px;
-      .img-box{
-        width: 200px;
-        height: 200px;
-      }
-      img{
-        width: 100%;
-        height: 100%;
-      }
-      .details-box{
-        margin-left: 10px;
-        width: 150px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-         .name-box{
-           user-select: none;
-            .title-text{
-                 font-size: 1.2rem;
-              }
-              .totalsongs-text{
-                font-size: 12px;
-              }
-            }
-            .social-box{
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              i{
-                font-size: 1.5rem;
-                cursor: pointer;
-              }
-
-            }      
-        
-      }
-    }
-  } */
  
   .songslist-ctn {
     width: 95%;
@@ -164,11 +123,11 @@
          .playlist-btn-play {
                pointer-events: none;
                padding-right:10px;
-               color: #656565;
+               color: #ffffff;
              }
            .playlist-info-track
             {
-                 color: #000000;
+                 color: #ffffff;
                  font-size: 1rem;
                  pointer-events: none;
                  user-select: none;
@@ -184,7 +143,7 @@
 
   .new-div:hover {
     transform: scaleY(1.2);
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid rgb(255, 255, 255);
   }
 }
 
@@ -193,7 +152,7 @@
      }
 .active-track {
   transform: scaleY(1.2);
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid rgb(255, 255, 255);
    }
 .btn-ctn i:hover {
     transform: scale(1.2);
@@ -207,7 +166,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: linear-gradient(-90deg,rgb(7, 100, 231),rgb(255, 255, 255));
+  background: var(--bgColor);
   padding-bottom: 10px;
   z-index: 1;
   
@@ -224,14 +183,16 @@
                 border-radius: 10px;
               }
         }
-
+        i{
+          font-size: 1rem;
+        }
         .btn-ctn, .timer-duration {
           width: 80%;
           display: flex;
           justify-content: space-between;
           align-items: center;
                   user-select: none;
-                  padding: 5px 0px;
+                  margin: 3px 0px;
                   text-align: center;
                   .timer,.duration{
                     font-size: small;
@@ -262,24 +223,27 @@
     justify-content: space-between;
     align-items: center;
     i{
+      cursor: pointer;
       font-size: 1.2rem;
       margin: 0px 5px;
       color: white;
     }
   }
   .replace-imagebox{
-        width: 100%;
-        height: 300px;
+        width: 325px;
+        height: 325px;
         background-position: center;
         background-size: cover;
-        position: absolute;
         z-index:-1;
   }
   .replace-details{
-    margin-top: 310px;
+    margin: 10px 0 100px;
     width: 100%;
     text-align: center;
     font-size: small;
+    a{
+      color: #ffffff;
+    }
     .song-header{
       font-size: large;
     }
@@ -330,7 +294,7 @@
                   <i class="fa-brands fa-instagram" style="color: rgb(243, 58, 58);"></i>
                 </div>
                 <div class="tiktok">
-                  <i class="fa-brands fa-tiktok" style="color: rgb(1, 1, 1);"></i>
+                  <i class="fa-brands fa-tiktok" style="color: rgb(255, 255, 255);"></i>
                 </div>
             </div>
       <div class="songslist-ctn section ">
@@ -365,7 +329,7 @@
       </div>
       <div class="btn-ctn">
         <div class="btn-action shullfe-box inactive" onclick="shullfe() ">
-          <div id="btn-shuffle">
+          <div id="btn-shuffle" style="color: #ffffff;"> 
             <i class="fa-solid fa-shuffle" ></i>
           </div>
         </div>
@@ -401,11 +365,11 @@
             <i class="fa-solid fa-repeat re-icon"></i>
             <i class="once-icon" style="display: none"
                 ><svg
-                  width="30"
-                  height="30"
+                  width="22"
+                  height="22"
                   viewBox="-2 -2 24 24"
-                  stroke-width="2.3"
-                  stroke="black"
+                  stroke-width="2"
+                  stroke="white"
                   fill="none"
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -444,7 +408,9 @@
           nameBOx.classList.remove('fixed')
         }
       }
-
+      document.querySelector('.glass').addEventListener('click',()=>{
+        document.querySelector('#search-item').focus()
+      })
       const search = () => {
               const searchBox = document.getElementById("search-item").value.toUpperCase();
               const product = document.querySelectorAll(".product");
@@ -761,7 +727,7 @@ var listAudio = [
       }
       function pauseRandom() {
         isRandom = false;
-        document.querySelector('#btn-shuffle').style.color = 'black'
+        document.querySelector('#btn-shuffle').style.color = 'white'
       }
       
       let isLoop = false;
