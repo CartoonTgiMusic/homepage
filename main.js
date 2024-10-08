@@ -194,7 +194,7 @@ function createTrackItem(index, name, duration) {
 var listAudio = [
   {
     name: "မင်္ဂလာႏဒျာႏဗွေႏဩ",
-    file: "assets/musics/aoaudios/music1.mp3",
+    file: "assets/musics/aoaudios/မင်္ဂလာႏဒျာႏဗွေႏဩ.mp3",
     singer: "ကာတွန်းစွိုꩻ",
     profile:"assets/images/mimgs/logo.jpg",
     writer:"Composer - ခွန်ခွန်ကျော်ဦး ",
@@ -1143,6 +1143,8 @@ for(let i=0; i<barsBtn.length; i++){
       document.querySelector('.album-url').href = listAudio[i].albuml_url;
       document.querySelector(' .band-header').innerHTML = listAudio[i].band
       document.querySelector('.band-url').href = listAudio[i].band_url;
+      document.querySelector('.download').href = listAudio[i].file;
+      document.querySelector('.download').download = listAudio[i].name;
       document.querySelector('.date-header').innerHTML = listAudio[i].date
       document.querySelector('.replace-imagebox').style.backgroundImage = "url("+listAudio[i].profile+")"
     })
