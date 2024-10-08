@@ -610,6 +610,7 @@ function createTrackItem(index, name, writer) {
             document.querySelector('.album-header').innerHTML = listAudio[i].album;
             document.querySelector('.album-url').href = listAudio[i].albuml_url;
             document.querySelector('.download').href = listAudio[i].file;
+            document.querySelector('.download').download = listAudio[i].name;
             document.querySelector(' .band-header').innerHTML = listAudio[i].band
             document.querySelector('.band-url').href = listAudio[i].band_url;
             document.querySelector('.date-header').innerHTML = listAudio[i].date
