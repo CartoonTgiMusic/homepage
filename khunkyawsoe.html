@@ -315,6 +315,7 @@
           <a href="#" class="album-url"><div class="album-header"></div></a>
           <a href="#" class="band-url"><div class="band-header"></div></a>
           <div class="date-header"></div>
+          <a href="" download="" class="download">Download</a>
         </div>
       </div>
           
@@ -498,7 +499,7 @@ function createTrackItem(index, name, writer) {
 var listAudio = [
 {
     name: "မွိုက်လွေꩻဟိုင်း",
-    file: "assets/musics/aoaudios/music10.mp3",
+    file: "assets/musics/aoaudios/မွိုက်လွေꩻဟိုင်း.mp3",
     singer: "ခွန်ကျော်စိုး",
     profile:"assets/images/mimgs/kks.jpg",
     writer:"Composer - ခွန်ကျော်စိုး ",
@@ -510,7 +511,7 @@ var listAudio = [
   },
   {
     name: "ထွူလဲဥ်း",
-    file: "assets/musics/hlhaudios/music3.mp3",
+    file: "assets/musics/hlhaudios/ထွူလဲဥ်း.mp3",
     singer: "ခွန်ကျော်စိုး",
     profile:"assets/images/mimgs/kks.jpg",
     writer:"Composer - ခွန်ကျော်စိုး",
@@ -522,7 +523,7 @@ var listAudio = [
   },
   {
     name: "နာꩻဖေႏကသေ",
-    file: "assets/musics/hlhaudios/music8.mp3",
+    file: "assets/musics/hlhaudios/နာꩻဖေႏကသေ.mp3",
     singer: "ခွန်ကျော်စိုး",
     profile:"assets/images/mimgs/kks.jpg",
     writer:"Composer - ခွန်ပဒဲကော",
@@ -534,7 +535,7 @@ var listAudio = [
   },
   {
     name: "အပဲစ်ꩻကင်ꩻထာꩻရက်ꩻ",
-    file: "assets/musics/hnrtaudios/music12.mp3",
+    file: "assets/musics/hnrtaudios/အပဲစ်ꩻကင်ꩻထာꩻရက်ꩻ.mp3",
     singer: "ခွန်ကျော်စိုး",
     profile:"assets/images/mimgs/kks.jpg",
     writer:"Composer - ခွန်ကျော်စိုး",
@@ -608,6 +609,8 @@ var listAudio = [
             document.querySelector('.album-url').href = listAudio[i].albuml_url;
             document.querySelector(' .band-header').innerHTML = listAudio[i].band
             document.querySelector('.band-url').href = listAudio[i].band_url;
+            document.querySelector('.download').href = listAudio[i].file;
+            document.querySelector('.download').download = listAudio[i].name;
             document.querySelector('.date-header').innerHTML = listAudio[i].date
             document.querySelector('.replace-imagebox').style.backgroundImage = "url("+listAudio[i].profile+")"
           })

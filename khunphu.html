@@ -175,14 +175,14 @@
   }
   #myProgress {
     width: 80%;
-    background-color: silver;
+    background-color: gray;
     cursor: pointer;
     border-radius: 10px;
     margin: auto;
               #myBar {
                 width: 0;
                 height: 5px;
-                background-color: rgb(56, 56, 56);
+                background-color: rgb(255, 255, 255);
                 border-radius: 10px;
               }
         }
@@ -316,6 +316,7 @@
           <a href="#" class="album-url"><div class="album-header"></div></a>
           <a href="#" class="band-url"><div class="band-header"></div></a>
           <div class="date-header"></div>
+          <a href="" download="" class="download">Download</a>
         </div>
       </div>
           
@@ -502,7 +503,7 @@ function createTrackItem(index, name, writer) {
 var listAudio = [
 {
     name: "အောဝ်ႏကော့ꩻမွောင်ꩻ",
-    file: "assets/musics/aoaudios/music4.mp3",
+    file: "assets/musics/aoaudios/အောဝ်ႏကော့ꩻမွောင်ꩻ.mp3",
     singer: "ခွန်ပျူ",
     profile:"assets/images/mimgs/kp.jpg",
     writer:"Composer - ခွန်ခွန်ကျော်ဦး ",
@@ -514,7 +515,7 @@ var listAudio = [
   },
   {
     name: "ထွားနုဲင်းရုဲင်းတဝ်း",
-    file: "assets/musics/hnrtaudios/music2.mp3",
+    file: "assets/musics/hnrtaudios/ထွားနုဲင်းရုဲင်းတဝ်း.mp3",
     singer: "ခွန်ပျူ",
     profile:"assets/images/mimgs/kp.jpg",
     writer:"Composer - ခွန်တင်ဦး",
@@ -526,7 +527,7 @@ var listAudio = [
   },
   {
     name: "အွဥ်ဝင်ꩻစွီꩻစူ",
-    file: "assets/musics/hnrtaudios/music7.mp3",
+    file: "assets/musics/hnrtaudios/အွဥ်ဝင်ꩻစွီꩻစူ.mp3",
     singer: "ခွန်ပျူ+နန်းမိုခမ်း",
     profile:"assets/images/mimgs/cover1.jpg",
     writer:"Composer - ခွန်ခွန်ကျော်ဦး",
@@ -538,7 +539,7 @@ var listAudio = [
   },
   {
     name: "ဆာႏပေႏ",
-    file: "assets/musics/tdaudios/music3.mp3",
+    file: "assets/musics/tdaudios/ဆာႏပေႏ.mp3",
     singer: "ခွန်ပျူ",
     profile:"assets/images/mimgs/kp.jpg",
     writer:"Composer - ခွန်ပဒဲကော",
@@ -550,7 +551,7 @@ var listAudio = [
   },
   {
     name: "ဝါးပေꩻဗွါ",
-    file: "assets/musics/tdaudios/music6.mp3",
+    file: "assets/musics/tdaudios/ဝါးပေꩻဗွါ.mp3",
     singer: "ခွန်ပျူ",
     profile:"assets/images/mimgs/kp.jpg",
     writer:"Composer - ခွန်တင်ဦး ",
@@ -562,7 +563,7 @@ var listAudio = [
   },
   {
     name: "ဝေးမူႏ",
-    file: "assets/musics/tdaudios/music12.mp3",
+    file: "assets/musics/tdaudios/ဝေးမူႏ.mp3",
     singer: "ခွန်ပျူ",
     profile:"assets/images/mimgs/kp.jpg",
     writer:"Composer - ခွန်ခွန်ကျော်ဦး ",
@@ -636,6 +637,8 @@ var listAudio = [
             document.querySelector('.album-url').href = listAudio[i].albuml_url;
             document.querySelector(' .band-header').innerHTML = listAudio[i].band
             document.querySelector('.band-url').href = listAudio[i].band_url;
+            document.querySelector('.download').href = listAudio[i].file;
+            document.querySelector('.download').download = listAudio[i].name;
             document.querySelector('.date-header').innerHTML = listAudio[i].date
             document.querySelector('.replace-imagebox').style.backgroundImage = "url("+listAudio[i].profile+")"
           })

@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 :root{
-  --bgColor:linear-gradient(-90deg,rgb(3, 30, 30),rgb(89, 89, 89));
+  --bgColor:rgb(0,0,0);
 }
 * {
   margin: 0;
@@ -16,7 +16,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background:linear-gradient(-90deg,rgb(3, 30, 30),rgb(89, 89, 89));
+  background:var(--bgColor)
 }
 img{
   user-select: none;
@@ -300,13 +300,14 @@ img:hover{
     align-items: center;
     width: 100%;
     margin: auto;
-    background:linear-gradient(-90deg,rgb(3, 30, 30),rgb(89, 89, 89));
+    background:var(--bgColor);
     z-index: 1;
     .infos-ctn{
-      font-size: small;
+      font-size: 10px;
       .titles{
         width: 100%;
         text-align: center;
+        font-size: 14px;
       }
     }
 
@@ -319,7 +320,7 @@ img:hover{
       margin: 5px 0px;
       color: #ffffff;
       i{
-        font-size: 1.3rem;
+        font-size: 1rem;
       }
     }
     
@@ -403,31 +404,32 @@ img:hover{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding:4rem 0;
+  padding-bottom: 6rem;
   .arrow-home{
     position: fixed;
+    left: 0;
     .replace-arrow{
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 30px;
-      height: 30px;
+      width: 2rem;
+      height: 2rem;
       background-color: white;
       border-radius: 50%;
     }
     i{
-      font-size: 1.3rem;
+      font-size: 1rem;
       color: rgb(0, 0, 0);
     }
   }
   .replace-imagebox{
-        min-width: 300px;
-        height: 300px;
+        min-width: 325px;
+        height: 325px;
         background-position: center;
         background-size: cover;
   }
   .replace-details{
-    width: 100%;
+    /* width: 100%; */
     padding: 1rem;
     text-align: center;
     font-size: small;
@@ -442,17 +444,13 @@ img:hover{
 }
 @media screen and (min-width:700px){
   .replace-ctn{
-    padding-top: 2rem;
-    padding-left: 6rem;
     display: flex;
     flex-direction: row;
-    .replace-imagebox{
-      width: 50%;
-      height: 100vh;
-    }
+    justify-content: space-around;
+    align-items: center;
   }
   .main-ctn{
-    background: var();
+    background: var(--bgColor);
   .tabs-ctn{
     width: 6rem;
     .tabsbtn-ctn{

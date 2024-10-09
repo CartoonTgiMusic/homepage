@@ -69,8 +69,10 @@
         color: #ffffff;
       }
       i{
-        font-size: 1.2rem;
-        margin:0px 5px;
+        font-size: 1rem;
+        padding: 5px;
+        background-color: black;
+        border-radius: 50%;
         color: rgb(255, 255, 255);
       }
     }
@@ -171,17 +173,18 @@
   padding-bottom: 5px;
   z-index: 1;
   i{
-  font-size: 1rem;}
+  font-size: 1rem;
+}
   #myProgress {
     width: 80%;
-    background-color: silver;
+    background-color: gray;
     cursor: pointer;
     border-radius: 10px;
     margin: auto;
               #myBar {
                 width: 0;
                 height: 5px;
-                background-color: rgb(56, 56, 56);
+                background-color: rgb(255, 255, 255);
                 border-radius: 10px;
               }
         }
@@ -223,9 +226,11 @@
     justify-content: space-between;
     align-items: center;
     i{
-      font-size: 1.2rem;
-      margin: 0px 5px;
-      color: black;
+      font-size: 1rem;
+      padding: 5px;
+      border-radius: 50%;
+      background-color: black;
+      color: rgb(255, 255, 255);
     }
   }
   .replace-imagebox{
@@ -314,6 +319,7 @@
           <a href="#" class="album-url"><div class="album-header"></div></a>
           <a href="#" class="band-url"><div class="band-header"></div></a>
           <div class="date-header"></div>
+          <a href="" download="" class="download">Download</a>
         </div>
       </div>
           
@@ -499,7 +505,7 @@ function createTrackItem(index, name, writer) {
 var listAudio = [
 {
     name: "ဆုတောင်ꩻနော",
-    file: "assets/musics/aoaudios/music2.mp3",
+    file: "assets/musics/aoaudios/ဆုတောင်ꩻနော.mp3",
     singer: "ခွန်ချို",
     profile:"assets/images/mimgs/kc.jpg",
     writer:"Composer - ခွန်ခွန်ကျော်ဦး ",
@@ -511,7 +517,7 @@ var listAudio = [
   },
   {
     name: "အွဥ်ႏဖိင်ꩻခန်း ",
-    file: "assets/musics/aoaudios/music9.mp3",
+    file: "assets/musics/aoaudios/အွဥ်ႏဖိင်ꩻခန်း.mp3",
     singer: "ခွန်ချိူ",
     profile:"assets/images/mimgs/kc.jpg",
     writer:"Composer - ခွန်ပဒဲကော ",
@@ -523,7 +529,7 @@ var listAudio = [
   },
   {
     name: "မွိုးသောက",
-    file: "assets/musics/tdaudios/music2.mp3",
+    file: "assets/musics/tdaudios/မွိုးသောက.mp3",
     singer: "ခွန်ချို",
     profile:"assets/images/mimgs/kc.jpg",
     writer:"Composer - ခွန်တင်ဦး ",
@@ -535,7 +541,7 @@ var listAudio = [
   },
   {
     name: "ယူႏငါႏမွုန်းဒွုမ်",
-    file: "assets/musics/tdaudios/music5.mp3",
+    file: "assets/musics/tdaudios/ယူႏငါႏမွုန်းဒွုမ်.mp3",
     singer: "ခွန်ချို",
     profile:"assets/images/mimgs/kc.jpg",
     writer:"Composer - ခွန်ခွန်ကျော်ဦး ",
@@ -547,7 +553,7 @@ var listAudio = [
   },
   {
     name: "သွꩻမူႏ",
-    file: "assets/musics/tdaudios/music9.mp3",
+    file: "assets/musics/tdaudios/သွꩻမူႏ.mp3",
     singer: "ခွန်ချိူ",
     profile:"assets/images/mimgs/kc.jpg",
     writer:"Composer - ခွန်ပျူ ",
@@ -621,6 +627,8 @@ var listAudio = [
             document.querySelector('.album-url').href = listAudio[i].albuml_url;
             document.querySelector(' .band-header').innerHTML = listAudio[i].band
             document.querySelector('.band-url').href = listAudio[i].band_url;
+            document.querySelector('.download').href = listAudio[i].file;
+            document.querySelector('.download').download = listAudio[i].name;
             document.querySelector('.date-header').innerHTML = listAudio[i].date
             document.querySelector('.replace-imagebox').style.backgroundImage = "url("+listAudio[i].profile+")"
           })

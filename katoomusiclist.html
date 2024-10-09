@@ -187,7 +187,7 @@
           <a href="index.html"><div><i class="fa-solid fa-arrow-left"></i></div></a>
           <input type="text" placeholder="Search...." id="search-item" onkeyup="search()" >
           <div class="glass"><i class="fa-solid fa-magnifying-glass"></i></div>
-          <a href="katoo.html"><div><i class="fa-solid fa-arrow-right"></i></div></a>
+          <!-- <a href="katoo.html"><div><i class="fa-solid fa-arrow-right"></i></div></a> -->
         </div>
         
         <div class="hader-div">
@@ -259,7 +259,10 @@
       <div class="playlist-ctn"></div>
     </div>
     <script>
-
+      document.querySelector('.glass').addEventListener('click',()=>{
+            document.querySelector('input').focus()
+      });
+      
       const search = () => {
               const searchBox = document.getElementById("search-item").value.toUpperCase();
               const product = document.querySelectorAll(".product");
@@ -316,42 +319,42 @@
       var listAudio = [
         {
           name: "ကာတွန်းစွိုꩻ",
-          file: "assets/musics/katochock/music1.mp3",
+          file: "assets/musics/katochock/ကာတွန်းစွိုꩻ.mp3",
           duration: "ကာတွန်းစွိုꩻ",
         },
         {
-          name: "Track-2",
-          file: "assets/musics/katochock/music2.mp3",
+          name: "မဲဉ်သေꩻငါႏ",
+          file: "assets/musics/katochock/မဲဉ်သေꩻငါႏ.mp3",
           duration: "ခွန်ကော်လီ",
         },
         {
           name: "လွꩻထီႏငါႏလဲဉ်းနာꩻ",
-          file: "assets/musics/katochock/music3.mp3",
+          file: "assets/musics/katochock/လွꩻထီႏငါႏလဲဉ်းနာꩻ.mp3",
           duration: "ခွန်ဂျိမ်း",
         },
         {
           name: "မဲဉ်လꩻချာꩻငါႏ",
-          file: "assets/musics/katochock/music4.mp3",
+          file: "assets/musics/katochock/မဲဉ်လꩻချာꩻငါႏ.mp3",
           duration: "ခွန်ထင်အောင်လင်း+ခွန်ရှိန်း",
         },
         {
           name: "ကတွူဆွော့မွုန်းဒွုမ်နင်",
-          file: "assets/musics/katochock/music7.mp3",
+          file: "assets/musics/katochock/ကတွူဆွော့မွုန်းဒွုမ်နင်.mp3",
           duration: "ကာတွန်းစွိုꩻ",
         },
         {
-          name: "ထာရုပ်ကော်",
-          file: "assets/musics/katochock/music8.mp3",
+          name: "ထာရုပ်ကော်ႏ",
+          file: "assets/musics/katochock/ထာရုပ်ကော်.mp3",
           duration: "ကာတွန်းစွိုꩻ",
         },
         {
           name: "စွယ်ငါလဲဉ်းနာ",
-          file: "assets/musics/katochock/music9.mp3",
+          file: "assets/musics/katochock/စွယ်ငါလဲဉ်းနာ.mp3",
           duration: "ခွန်ရှိန်း",
         },
         {
-          name: "Track-8",
-          file: "assets/musics/katochock/music13.mp3",
+          name: "အခိန်ႏအဝ်ႏနေဒွုန်းက",
+          file: "assets/musics/katochock/အခိန်ႏအဝ်ႏနေဒွုန်းက.mp3",
           duration: "ခွန်ခွန်ကျော်ဦး",
         },
       ];

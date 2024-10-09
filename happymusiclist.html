@@ -187,7 +187,7 @@
           <a href="index.html"><div><i class="fa-solid fa-arrow-left"></i></div></a>
           <input type="text" placeholder="Search...." id="search-item" onkeyup="search()" >
           <div class="glass"><i class="fa-solid fa-magnifying-glass"></i></div>
-          <a href="happytime.html"><div><i class="fa-solid fa-arrow-right"></i></div></a>
+          <!-- <a href="index.html"><div><i class="fa-solid fa-arrow-right"></i></div></a> -->
         </div>
         
         <div class="hader-div">
@@ -260,7 +260,10 @@
       <div class="playlist-ctn"></div>
     </div>
     <script>
-
+      document.querySelector('.glass').addEventListener('click',()=>{
+            document.querySelector('input').focus()
+      });
+      
       const search = () => {
               const searchBox = document.getElementById("search-item").value.toUpperCase();
               const product = document.querySelectorAll(".product");
@@ -317,72 +320,72 @@
       var listAudio = [
         {
           name: "စာႏနာႏဖေႏ လာမဲင်းပေꩻ",
-          file: "assets/musics/happytime/music1.mp3",
+          file: "assets/musics/happytime/စာႏနာႏဖေႏ လာမဲင်းပေꩻ.mp3",
           duration: "ခွန်ရှိန်း+ခွန်ဆန်းလေး",
         },
         {
           name: "အပျော်ႏသွတ်ꩻအခိန်ႏ အပျော်ႏသွတ်ꩻဖꩻဝ",
-          file: "assets/musics/happytime/music2.mp3",
+          file: "assets/musics/happytime/အပျော်ႏသွတ်ꩻအခိန်ႏ အပျော်ႏသွတ်ꩻဖꩻဝ.mp3",
           duration: "ခွန်ကျော်သိန်း(ABC)+ခွန်သိန်းဟန်",
         },
         {
           name: "ဗွိုးဟိုင်း",
-          file: "assets/musics/happytime/music3.mp3",
+          file: "assets/musics/happytime/ဗွိုးဟိုင်း.mp3",
           duration: "ခွန်တကီးတဘဲ+ခွန်ထင်အောင်လင်း",
         },
         {
           name: "လွေꩻညာꩻဆောင်းတဆင်ႏလွုမ်",
-          file: "assets/musics/happytime/music4.mp3",
+          file: "assets/musics/happytime/လွေꩻညာꩻဆောင်းတဆင်ႏလွုမ်.mp3",
           duration: "ခွန်ကော်လီ",
         },
         {
           name: "အုံပွေါႏနာꩻ",
-          file: "assets/musics/happytime/music5.mp3",
+          file: "assets/musics/happytime/အုံပွေါႏနာꩻ.mp3",
           duration: "ခွန်မောဝ်ႏတန်+ခွန်ရှိန်း+ခွန်သိန်းဟန်",
         },
         {
           name: "မွိုး",
-          file: "assets/musics/happytime/music6.mp3",
+          file: "assets/musics/happytime/မွိုး.mp3",
           duration: "ခွန်ပျူ",
         },
         {
-          name: "မဲဉ်လꩻချာꩻငါႏ",
-          file: "assets/musics/happytime/music7.mp3",
+          name: "မဲဉ်လꩻချာꩻငါႏ အပဲစ်ကင်လိုပေဖဝ",
+          file: "assets/musics/happytime/မဲဉ်လꩻချာꩻငါႏ အပဲစ်ကင်လိုပေဖဝ.mp3",
           duration: "အစွိုꩻ",
         },
         {
           name: "ခွေꩻယူႏတဖြောင်ꩻတဝ်း",
-          file: "assets/musics/happytime/music8.mp3",
+          file: "assets/musics/happytime/ခွေꩻယူႏတဖြောင်ꩻတဝ်း.mp3",
           duration: "အစွိုꩻ",
         },
         {
           name: "ရက်ꩻချာꩻဗဲင်းခွေꩻမွိုင်ꩻနင်ႏ",
-          file: "assets/musics/happytime/music9.mp3",
+          file: "assets/musics/happytime/ရက်ꩻချာꩻဗဲင်းခွေꩻမွိုင်ꩻနင်ႏ.mp3",
           duration: "ခွန်ရှိန်း",
         },
         {
           name: "၁၈နိန်ႏလိုႏရွဲ",
-          file: "assets/musics/happytime/music10.mp3",
+          file: "assets/musics/happytime/၁၈နိန်ႏလိုႏရွဲ.mp3",
           duration: "ခွန်ခွန်ကျော်ဦး",
         },
         {
           name: "မူနမ်တန်",
-          file: "assets/musics/happytime/music11.mp3",
+          file: "assets/musics/happytime/မူနမ်တန်.mp3",
           duration: "ခွန်နေအောင်",
         },
         {
           name: "နာꩻ ထိုꩻမား",
-          file: "assets/musics/happytime/music12.mp3",
+          file: "assets/musics/happytime/နာꩻ ထိုꩻမား.mp3",
           duration: "ခွန်မောဝ်ႏတန်",
         },
         {
           name: "မို့ဦးရာသီႏ",
-          file: "assets/musics/happytime/music13.mp3",
+          file: "assets/musics/happytime/မို့ဦးရာသီႏ.mp3",
           duration: "ခွန်ဘစိန်",
         },
         {
           name: "ဒွေါဝ်ꩻ",
-          file: "assets/musics/happytime/music14.mp3",
+          file: "assets/musics/happytime/ဒွေါဝ်ꩻ.mp3",
           duration: "အစွိုꩻ",
         },
       ];

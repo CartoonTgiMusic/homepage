@@ -24,7 +24,9 @@ const search = () => {
     }
   }
 };
-
+document.querySelector('.glass').addEventListener('click',()=>{
+  document.querySelector('input').focus()
+});
 const tabs = document.querySelectorAll(".tab-btn");
 const allContents = document.querySelectorAll(".content");
 
@@ -206,7 +208,7 @@ var listAudio = [
   },
   {
     name: "ဆုတောင်ꩻနော",
-    file: "assets/musics/aoaudios/music2.mp3",
+    file: "assets/musics/aoaudios/ဆုတောင်ꩻနော.mp3",
     singer: "ခွန်ချို",
     profile:"assets/images/mimgs/kc.jpg",
     writer:"Composer - ခွန်ခွန်ကျော်ဦး ",
@@ -218,7 +220,7 @@ var listAudio = [
   },
   {
     name: "တဖြာꩻတွမ်ႏတဖြာꩻ",
-    file: "assets/musics/aoaudios/music3.mp3",
+    file: "assets/musics/aoaudios/တဖြာꩻတွမ်ႏတဖြာꩻ.mp3",
     singer: "ခွန်ခွန်ကျော်ဦး",
     profile:"assets/images/mimgs/kko.jpg",
     writer:"Composer - ခွန်ခွန်ကျော်ဦး ",
@@ -230,7 +232,7 @@ var listAudio = [
   },
   {
     name: "အောဝ်ႏကော့ꩻမွောင်ꩻ",
-    file: "assets/musics/aoaudios/music4.mp3",
+    file: "assets/musics/aoaudios/အောဝ်ႏကော့ꩻမွောင်ꩻ.mp3",
     singer: "ခွန်ပျူ",
     profile:"assets/images/mimgs/kp.jpg",
     writer:"Composer - ခွန်ခွန်ကျော်ဦး ",
@@ -242,7 +244,7 @@ var listAudio = [
   },
   {
     name: "သေနာႏလဲဥ်း",
-    file: "assets/musics/aoaudios/music5.mp3",
+    file: "assets/musics/aoaudios/သေနာႏလဲဥ်း.mp3",
     singer: "ခွန်ပဒဲကော",
     profile:"assets/images/mimgs/kpd.jpg",
     writer:"Composer - ခွန်ခွန်ကျော်ဦး ",
@@ -254,7 +256,7 @@ var listAudio = [
   },
   {
     name: "အောဝ်ႏ",
-    file: "assets/musics/aoaudios/music6.mp3",
+    file: "assets/musics/aoaudios/အောဝ်ႏ.mp3",
     singer: "ခွန်ခွန်ကျော်ဦး",
     profile:"assets/images/mimgs/kko.jpg",
     writer:"Composer - ခွန်ခွန်ကျော်ဦး ",
@@ -266,7 +268,7 @@ var listAudio = [
   },
   {
     name: "လဲဥ်ꩻထိုႏမွန်းခွေꩻ",
-    file: "assets/musics/aoaudios/music7.mp3",
+    file: "assets/musics/aoaudios/လဲဥ်ꩻထိုႏမွန်းခွေꩻ.mp3",
     singer: "ခွန်ကော်လီ",
     profile:"assets/images/mimgs/kkl.jpg",
     writer:"Composer - ခွန်ခွန်ကျော်ဦး ",
@@ -278,7 +280,7 @@ var listAudio = [
   },
   {
     name: "တဥ်ႏခွေါင်ဒျာႏနော်",
-    file: "assets/musics/aoaudios/music8.mp3",
+    file: "assets/musics/aoaudios/တဥ်ႏခွေါင်ဒျာႏနော်.mp3",
     singer: "ခွန်ဝဒုတ်",
     profile:"assets/images/mimgs/kwd.jpg",
     writer:"Composer - ခွန်ခွန်ကျော်ဦး ",
@@ -290,7 +292,7 @@ var listAudio = [
   },
   {
     name: "အွဥ်ႏဖိင်ꩻခန်း ",
-    file: "assets/musics/aoaudios/music9.mp3",
+    file: "assets/musics/aoaudios/အွဥ်ႏဖိင်ꩻခန်း.mp3",
     singer: "ခွန်ချိူ",
     profile:"assets/images/mimgs/kc.jpg",
     writer:"Composer - ခွန်ပဒဲကော ",
@@ -302,7 +304,7 @@ var listAudio = [
   },
   {
     name: "မွိုက်လွေꩻဟိုင်း",
-    file: "assets/musics/aoaudios/music10.mp3",
+    file: "assets/musics/aoaudios/မွိုက်လွေꩻဟိုင်း.mp3",
     singer: "ခွန်ကျော်စိုး",
     profile:"assets/images/mimgs/kks.jpg",
     writer:"Composer - ခွန်ကျော်စိုး ",
@@ -314,7 +316,7 @@ var listAudio = [
   },
   {
     name: "ကမ်းဒျာႏနာꩻသꩻ",
-    file: "assets/musics/aoaudios/music11.mp3",
+    file: "assets/musics/aoaudios/ကမ်းဒျာႏနာꩻသꩻ.mp3",
     singer: "ခွန်ခွန်ကျော်ဦး",
     profile:"assets/images/mimgs/kko.jpg",
     writer:"Composer - ခွန်ခွန်ကျော်ဦး ",
@@ -326,7 +328,7 @@ var listAudio = [
   },
   {
     name: "မဲ့ꩻခွေꩻလွဥ်ꩻယန်း",
-    file: "assets/musics/aoaudios/music12.mp3",
+    file: "assets/musics/aoaudios/မဲ့ꩻခွေꩻလွဥ်ꩻယန်း.mp3",
     singer: "ခွန်ပဒဲကော",
     profile:"assets/images/mimgs/kpd.jpg",
     writer:"Composer - ခွန်ပဒဲကော",
@@ -338,7 +340,7 @@ var listAudio = [
   },
   {
     name: "နာꩻထန်ႏထိုꩻ",
-    file: "assets/musics/aoaudios/music13.mp3",
+    file: "assets/musics/aoaudios/နာꩻထန်ႏထိုꩻ.mp3",
     singer: "ခွန်ဇော်ခက်",
     profile:"assets/images/mimgs/kzk.jpg",
     writer:"Composer - ခွန်ခွန်ကျော်ဦး ",
@@ -351,7 +353,7 @@ var listAudio = [
 
   {
     name: "စာႏနာႏဖေႏ လာမဲင်းပေꩻ",
-    file: "assets/musics/happytime/music1.mp3",
+    file: "assets/musics/happytime/စာႏနာႏဖေႏ လာမဲင်းပေꩻ.mp3",
     singer: "ခွန်ရှိန်း+ခွန်ဆန်းလေး",
     profile:"assets/images/mimgs/kck.jpg",
     writer:"Composer - ခွန်ရှိန်း",
@@ -363,7 +365,7 @@ var listAudio = [
   },
   {
     name: "အပျော်ႏသွတ်ꩻအခိန်ႏ အပျော်ႏသွတ်ꩻဖꩻဝ",
-    file: "assets/musics/happytime/music2.mp3",
+    file: "assets/musics/happytime/အပျော်ႏသွတ်ꩻအခိန်ႏ အပျော်ႏသွတ်ꩻဖꩻဝ.mp3",
     singer: "ခွန်ကျော်သိန်း(ABC)+ခွန်သိန်းဟန်",
     profile:"assets/images/mimgs/logo.jpg",
     writer:"Composer - ခွန်ရှိန်း",
@@ -375,7 +377,7 @@ var listAudio = [
   },
   {
     name: "ဗွိုးဟိုင်း",
-    file: "assets/musics/happytime/music3.mp3",
+    file: "assets/musics/happytime/ဗွိုးဟိုင်း.mp3",
     singer: "ခွန်တကီးတဘဲ+ခွန်ထင်အောင်လင်း",
     profile:"assets/images/mimgs/khal.jpg",
     writer:"Composer - ခွန်တကီးတဘဲ",
@@ -387,7 +389,7 @@ var listAudio = [
   },
   {
     name: "လွေꩻညာꩻဆောင်းတဆင်ႏလွုမ်",
-    file: "assets/musics/happytime/music4.mp3",
+    file: "assets/musics/happytime/လွေꩻညာꩻဆောင်းတဆင်ႏလွုမ်.mp3",
     singer: "ခွန်ကော်လီ",
     profile:"assets/images/mimgs/kkl.jpg",
     writer:"Composer - ခွန်ကော်လီ",
@@ -399,7 +401,7 @@ var listAudio = [
   },
   {
     name: "အုံပွေါႏနာꩻ",
-    file: "assets/musics/happytime/music5.mp3",
+    file: "assets/musics/happytime/အုံပွေါႏနာꩻ.mp3",
     singer: "ခွန်မောဝ်ႏတန်+ခွန်ရှိန်း+ခွန်သိန်းဟန်",
     profile:"assets/images/mimgs/logo.jpg",
     writer:"Composer - ခွန်ကော်လီ",
@@ -411,7 +413,7 @@ var listAudio = [
   },
   {
     name: "မွိုး",
-    file: "assets/musics/happytime/music6.mp3",
+    file: "assets/musics/happytime/မွိုး.mp3",
     singer: "ခွန်ပျူ",
     profile:"assets/images/mimgs/kp.jpg",
     writer:"Composer - ခွန်ရှိန်း",
@@ -423,7 +425,7 @@ var listAudio = [
   },
   {
     name: "မဲဉ်လꩻချာꩻငါႏ အပဲစ်ကင်လိုပေဖဝ",
-    file: "assets/musics/happytime/music7.mp3",
+    file: "assets/musics/happytime/မဲဉ်လꩻချာꩻငါႏ အပဲစ်ကင်လိုပေဖဝ.mp3",
     singer: "အစွိုꩻ",
     profile:"assets/images/mimgs/logo.jpg",
     writer:"Composer - အစွိုꩻ",
@@ -435,7 +437,7 @@ var listAudio = [
   },
   {
     name: "ခွေꩻယူႏတဖြောင်ꩻတဝ်း",
-    file: "assets/musics/happytime/music8.mp3",
+    file: "assets/musics/happytime/ခွေꩻယူႏတဖြောင်ꩻတဝ်း.mp3",
     singer: "အစွိုꩻ",
     profile:"assets/images/mimgs/logo.jpg",
     writer:"Composer - အစွိုꩻ",
@@ -447,7 +449,7 @@ var listAudio = [
   },
   {
     name: "ရက်ꩻချာꩻဗဲင်းခွေꩻမွိုင်ꩻနင်ႏ",
-    file: "assets/musics/happytime/music9.mp3",
+    file: "assets/musics/happytime/ရက်ꩻချာꩻဗဲင်းခွေꩻမွိုင်ꩻနင်ႏ.mp3",
     singer: "ခွန်ရှိန်း",
     profile:"assets/images/mimgs/kck.jpg",
     writer:"Composer - ခွန်ရှိန်း",
@@ -459,7 +461,7 @@ var listAudio = [
   },
   {
     name: "၁၈နိန်ႏလိုႏရွဲ",
-    file: "assets/musics/happytime/music10.mp3",
+    file: "assets/musics/happytime/၁၈နိန်ႏလိုႏရွဲ.mp3",
     singer: "ခွန်ခွန်ကျော်ဦး",
     profile:"assets/images/mimgs/kko.jpg",
     writer:"Composer - ခွန်ခွန်ကျော်ဦး",
@@ -471,7 +473,7 @@ var listAudio = [
   },
   {
     name: "မူနမ်တန်",
-    file: "assets/musics/happytime/music11.mp3",
+    file: "assets/musics/happytime/မူနမ်တန်.mp3",
     singer: "ခွန်နေအောင်",
     profile:"assets/images/mimgs/logo.jpg",
     writer:"Composer - ခွန်ရှိန်း",
@@ -483,7 +485,7 @@ var listAudio = [
   },
   {
     name: "နာꩻ ထိုꩻမား",
-    file: "assets/musics/happytime/music12.mp3",
+    file: "assets/musics/happytime/နာꩻ ထိုꩻမား.mp3",
     singer: "ခွန်မောဝ်ႏတန်",
     profile:"assets/images/mimgs/logo.jpg",
     writer:"Composer - ခွန်ကော်လီ",
@@ -495,7 +497,7 @@ var listAudio = [
   },
   {
     name: "မို့ဦးရာသီႏ",
-    file: "assets/musics/happytime/music13.mp3",
+    file: "assets/musics/happytime/မို့ဦးရာသီႏ.mp3",
     singer: "ခွန်ဘစိန်",
     profile:"assets/images/mimgs/logo.jpg",
     writer:"Composer - ခွန်တကီးတဘဲ",
@@ -507,7 +509,7 @@ var listAudio = [
   },
   {
     name: "ဒွေါဝ်ꩻ",
-    file: "assets/musics/happytime/music14.mp3",
+    file: "assets/musics/happytime/ဒွေါဝ်ꩻ.mp3",
     singer: "အစွိုꩻ",
     profile:"assets/images/mimgs/logo.jpg",
     writer:"Composer - အစွိုꩻ",
@@ -520,7 +522,7 @@ var listAudio = [
 
   {
     name: "အွဥ်ႏဖိင်ꩻတꩻလꩻတဝ်း",
-    file: "assets/musics/hlhaudios/music1.mp3",
+    file: "assets/musics/hlhaudios/အွဥ်ႏဖိင်ꩻတꩻလꩻတဝ်း.mp3",
     singer: "ခွန်ပဒဲကော",
     profile:"assets/images/mimgs/kpd.jpg",
     writer:"Composer - ခွန်ပဒဲကော",
@@ -532,7 +534,7 @@ var listAudio = [
   },
   {
     name: "သဲင်ꩻလွဥ်ချာခမ်းမွိုင်",
-    file: "assets/musics/hlhaudios/music2.mp3",
+    file: "assets/musics/hlhaudios/သဲင်ꩻလွဥ်ချာခမ်းမွိုင်.mp3",
     singer: "ခွန်ခွန်ကျော်ဦး",
     profile:"assets/images/mimgs/kko.jpg",
     writer:"Composer - ခွန်ပဒဲကော",
@@ -544,7 +546,7 @@ var listAudio = [
   },
   {
     name: "ထွူလဲဥ်း",
-    file: "assets/musics/hlhaudios/music3.mp3",
+    file: "assets/musics/hlhaudios/ထွူလဲဥ်း.mp3",
     singer: "ခွန်ကျော်စိုး",
     profile:"assets/images/mimgs/kks.jpg",
     writer:"Composer - ခွန်ကျော်စိုး",
@@ -556,7 +558,7 @@ var listAudio = [
   },
   {
     name:"ခံႏလွို့အသွုမ်",
-    file:"assets/musics/hlhaudios/music4.mp3",
+    file:"assets/musics/hlhaudios/ခံႏလွို့အသွုမ်.mp3",
     singer:"ခွန်အောင်သိုက်",
     profile:"assets/images/mimgs/kat.jpg",
     writer:"Composer - ခွန်အောင်သိုက်",
@@ -568,7 +570,7 @@ var listAudio = [
   },
   {
     name: "ထောင်လွေꩻထဲင်း",
-    file: "assets/musics/hlhaudios/music5.mp3",
+    file: "assets/musics/hlhaudios/ထောင်လွေꩻထဲင်း.mp3",
     singer: "ခွန်တကီးတဘဲ",
     profile:"assets/images/mimgs/logo.jpg",
     writer:"Composer - ခွန်တကီးတဘဲ",
@@ -580,7 +582,7 @@ var listAudio = [
   },
   {
     name: "ဆွိုးခန်းမွိုင်",
-    file: "assets/musics/hlhaudios/music6.mp3",
+    file: "assets/musics/hlhaudios/ဆွိုးခန်းမွိုင်.mp3",
     singer: "ကာတွန်းစွိုꩻ",
     profile:"assets/images/mimgs/logo.jpg",
     writer:"Composer - ခွန်တကီးတဘဲ",
@@ -592,7 +594,7 @@ var listAudio = [
   },
   {
     name: "ယူးတွမ်ႏညော်ႏ",
-    file: "assets/musics/hlhaudios/music7.mp3",
+    file: "assets/musics/hlhaudios/ယူးတွမ်ႏညော်ႏ.mp3",
     singer: "ခွန်ပဒဲကော",
     profile:"assets/images/mimgs/kpd.jpg",
     writer:"Composer - ခွန်ပဒဲကော",
@@ -604,7 +606,7 @@ var listAudio = [
   },
   {
     name: "နာꩻဖေႏကသေ",
-    file: "assets/musics/hlhaudios/music8.mp3",
+    file: "assets/musics/hlhaudios/နာꩻဖေႏကသေ.mp3",
     singer: "ခွန်ကျော်စိုး",
     profile:"assets/images/mimgs/kks.jpg",
     writer:"Composer - ခွန်ပဒဲကော",
@@ -616,7 +618,7 @@ var listAudio = [
   },
   {
     name: "အွဥ်ႏဖိင်ꩻ",
-    file: "assets/musics/hlhaudios/music9.mp3",
+    file: "assets/musics/hlhaudios/အွဥ်ႏဖိင်ꩻ.mp3",
     singer: "ခွန်အောင်သိုက်",
     profile:"assets/images/mimgs/kat.jpg",
     writer:"Composer - ခွန်အောင်သိုက်",
@@ -628,7 +630,7 @@ var listAudio = [
   },
   {
     name: "နီမွိုးပနမ်",
-    file: "assets/musics/hlhaudios/music10.mp3",
+    file: "assets/musics/hlhaudios/နီမွိုးပနမ်.mp3",
     singer: "ခွန်ခွန်ကျော်ဦး",
     profile:"assets/images/mimgs/kko.jpg",
     writer:"Composer - ခွန်ခွန်ကျော်ဦး",
@@ -640,7 +642,7 @@ var listAudio = [
   },
   {
     name: "အတ္တ",
-    file: "assets/musics/hlhaudios/music11.mp3",
+    file: "assets/musics/hlhaudios/အတ္တ.mp3",
     singer: "ခွန်တကီးတဘဲ",
     profile:"assets/images/mimgs/logo.jpg",
     writer:"Composer - ခွန်တကီးတဘဲ",
@@ -652,7 +654,7 @@ var listAudio = [
   },
   {
     name: "လောကတရာꩻ",
-    file: "assets/musics/hlhaudios/music12.mp3",
+    file: "assets/musics/hlhaudios/လောကတရာꩻ.mp3",
     singer: "ခွန်ခွန်ကျော်ဦး",
     profile:"assets/images/mimgs/kko.jpg",
     writer:"Composer - ခွန်ကျော်ခမ်း",
@@ -665,7 +667,7 @@ var listAudio = [
 
   {
     name: "ဗါး",
-    file: "assets/musics/hnrtaudios/music1.mp3",
+    file: "assets/musics/hnrtaudios/ဗါး.mp3",
     singer: "ခွန်ခွန်ကျော်ဦး",
     profile:"assets/images/mimgs/kko.jpg",
     writer:"Composer - ခွန်ခွန်ကျော်ဦး",
@@ -677,7 +679,7 @@ var listAudio = [
   },
   {
     name: "ထွားနုဲင်းရုဲင်းတဝ်း",
-    file: "assets/musics/hnrtaudios/music2.mp3",
+    file: "assets/musics/hnrtaudios/ထွားနုဲင်းရုဲင်းတဝ်း.mp3",
     singer: "ခွန်ပျူ",
     profile:"assets/images/mimgs/kp.jpg",
     writer:"Composer - ခွန်တင်ဦး",
@@ -689,7 +691,7 @@ var listAudio = [
   },
   {
     name: "စွꩻခွင်ꩻဗဲင်းမွိုင်",
-    file: "assets/musics/hnrtaudios/music3.mp3",
+    file: "assets/musics/hnrtaudios/စွꩻခွင်ꩻဗဲင်းမွိုင်.mp3",
     singer: "ခွန်အောင်သိုက်",
     profile:"assets/images/mimgs/kat.jpg",
     writer:"Composer - ခွန်ဇိုလ်",
@@ -701,7 +703,7 @@ var listAudio = [
   },
   {
     name: "အုံဟဝ်နေႏမွိုး",
-    file: "assets/musics/hnrtaudios/music4.mp3",
+    file: "assets/musics/hnrtaudios/အုံဟဝ်နေႏမွိုး.mp3",
     singer: "ခွန်ပဒဲကော",
     profile:"assets/images/mimgs/kpd.jpg",
     writer:"Composer - ခွန်ပဒဲကော",
@@ -713,7 +715,7 @@ var listAudio = [
   },
   {
     name: "နားဟွိုန်ꩻ",
-    file: "assets/musics/hnrtaudios/music5.mp3",
+    file: "assets/musics/hnrtaudios/နားဟွိုန်ꩻ.mp3",
     singer: "ခွန်တကီးတဘဲ",
     profile:"assets/images/mimgs/logo.jpg",
     writer:"Composer - ခွန်တကီးတဘဲ",
@@ -725,7 +727,7 @@ var listAudio = [
   },
   {
     name: "နာꩻဒေါ့ꩻ",
-    file: "assets/musics/hnrtaudios/music6.mp3",
+    file: "assets/musics/hnrtaudios/နာꩻဒေါ့ꩻ.mp3",
     singer: "ခွန်စောနိုင်",
     profile:"assets/images/mimgs/logo.jpg",
     writer:"Composer - ခွန်ပဒဲကော",
@@ -737,7 +739,7 @@ var listAudio = [
   },
   {
     name: "အွဥ်ဝင်ꩻစွီꩻစူ",
-    file: "assets/musics/hnrtaudios/music7.mp3",
+    file: "assets/musics/hnrtaudios/အွဥ်ဝင်ꩻစွီꩻစူ.mp3",
     singer: "ခွန်ပျူ+နန်းမိုခမ်း",
     profile:"assets/images/mimgs/logo.jpg",
     writer:"Composer - ခွန်ခွန်ကျော်ဦး",
@@ -749,7 +751,7 @@ var listAudio = [
   },
   {
     name: "အရက်ꩻသွတ်ꩻခွေꩻအလောင်း",
-    file: "assets/musics/hnrtaudios/music8.mp3",
+    file: "assets/musics/hnrtaudios/အရက်ꩻသွတ်ꩻခွေꩻအလောင်း.mp3",
     singer: "ခွန်အောင်သိုက်",
     profile:"assets/images/mimgs/kat.jpg",
     writer:"Composer - ခွန်အောင်သိုက်",
@@ -761,7 +763,7 @@ var listAudio = [
   },
   {
     name: "နွန်ႏ",
-    file: "assets/musics/hnrtaudios/music9.mp3",
+    file: "assets/musics/hnrtaudios/နွန်ႏ.mp3",
     singer: "ခွန်ခွန်ကျော်ဦး",
     profile:"assets/images/mimgs/kko.jpg",
     writer:"Composer - ခွန်ခွန်ကျော်ဦး",
@@ -773,7 +775,7 @@ var listAudio = [
   },
   {
     name: "ရက်ꩻမွေးမွေးလဲဥ်းနာꩻ",
-    file: "assets/musics/hnrtaudios/music10.mp3",
+    file: "assets/musics/hnrtaudios/ရက်ꩻမွေးမွေးလဲဥ်းနာꩻ.mp3",
     singer: "ခွန်စောနိုင်",
     profile:"assets/images/mimgs/logo.jpg",
     writer:"Composer - ခွန်ဇေလတ်",
@@ -785,7 +787,7 @@ var listAudio = [
   },
   {
     name: "တူနယ်တဲနယ်",
-    file: "assets/musics/hnrtaudios/music11.mp3",
+    file: "assets/musics/hnrtaudios/တူနယ်တဲနယ်.mp3",
     singer: "ခွန်ခွန်ကျော်ဦး",
     profile:"assets/images/mimgs/kko.jpg",
     writer:"Composer - ခွန်ခွန်ကျော်ဦး",
@@ -797,7 +799,7 @@ var listAudio = [
   },
   {
     name: "အပဲစ်ꩻကင်ꩻထာꩻရက်ꩻ",
-    file: "assets/musics/hnrtaudios/music12.mp3",
+    file: "assets/musics/hnrtaudios/အပဲစ်ꩻကင်ꩻထာꩻရက်ꩻ.mp3",
     singer: "ခွန်ကျော်စိုး",
     profile:"assets/images/mimgs/kks.jpg",
     writer:"Composer - ခွန်ကျော်စိုး",
@@ -809,7 +811,7 @@ var listAudio = [
   },
   {
     name: "နီဖာဗွေႏ",
-    file: "assets/musics/hnrtaudios/music13.mp3",
+    file: "assets/musics/hnrtaudios/နီဖာဗွေႏ.mp3",
     singer: "ခွန်ခွန်ကျော်ဦး",
     profile:"assets/images/mimgs/kko.jpg",
     writer:"Composer - ခွန်ခွန်ကျော်ဦး ",
@@ -821,7 +823,7 @@ var listAudio = [
   },
   {
     name: "နာꩻထန်ႏထိုႏ",
-    file: "assets/musics/hnrtaudios/music14.mp3",
+    file: "assets/musics/hnrtaudios/နာꩻထန်ႏထိုႏ.mp3",
     singer: "ခွန်ဇော်ခက်",
     profile:"assets/images/mimgs/kzk.jpg",
     writer:"Composer - ခွန်ခွန်ကျော်ဦး ",
@@ -834,7 +836,7 @@ var listAudio = [
 
   {
     name: "အရက်ꩻသွတ်ꩻ",
-    file: "assets/musics/tdaudios/music1.mp3",
+    file: "assets/musics/tdaudios/အရက်ꩻသွတ်ꩻ.mp3",
     singer: "ခွန်ပဒဲကော",
     profile:"assets/images/mimgs/kpd.jpg",
     writer:"Composer - ခွန်ခွန်ကျော်ဦး ",
@@ -846,7 +848,7 @@ var listAudio = [
   },
   {
     name: "မွိုးသောက",
-    file: "assets/musics/tdaudios/music2.mp3",
+    file: "assets/musics/tdaudios/မွိုးသောက.mp3",
     singer: "ခွန်ချို",
     profile:"assets/images/mimgs/kc.jpg",
     writer:"Composer - ခွန်တင်ဦး ",
@@ -858,7 +860,7 @@ var listAudio = [
   },
   {
     name: "ဆာႏပေႏ",
-    file: "assets/musics/tdaudios/music3.mp3",
+    file: "assets/musics/tdaudios/ဆာႏပေႏ.mp3",
     singer: "ခွန်ပျူ",
     profile:"assets/images/mimgs/kp.jpg",
     writer:"Composer - ခွန်ပဒဲကော",
@@ -870,7 +872,7 @@ var listAudio = [
   },
   {
     name: "နင်ႏလိင်ႏလဲဥ်",
-    file: "assets/musics/tdaudios/music4.mp3",
+    file: "assets/musics/tdaudios/နင်ႏလိင်ႏလဲဥ်.mp3",
     singer: "ခွန်ခွန်ကျော်ဦး",
     profile:"assets/images/mimgs/kko.jpg",
     writer:"Composer - ခွန်ပဒဲကော",
@@ -882,7 +884,7 @@ var listAudio = [
   },
   {
     name: "ယူႏငါႏမွုန်းဒွုမ်",
-    file: "assets/musics/tdaudios/music5.mp3",
+    file: "assets/musics/tdaudios/ယူႏငါႏမွုန်းဒွုမ်.mp3",
     singer: "ခွန်ချို",
     profile:"assets/images/mimgs/kc.jpg",
     writer:"Composer - ခွန်ခွန်ကျော်ဦး ",
@@ -894,7 +896,7 @@ var listAudio = [
   },
   {
     name: "ဝါးပေꩻဗွါ",
-    file: "assets/musics/tdaudios/music6.mp3",
+    file: "assets/musics/tdaudios/ဝါးပေꩻဗွါ.mp3",
     singer: "ခွန်ပျူ",
     profile:"assets/images/mimgs/kp.jpg",
     writer:"Composer - ခွန်တင်ဦး ",
@@ -906,7 +908,7 @@ var listAudio = [
   },
   {
     name: "တဒွီ",
-    file: "assets/musics/tdaudios/music7.mp3",
+    file: "assets/musics/tdaudios/တဒွီ.mp3",
     singer: "ခွန်ခွန်ကျော်ဦး",
     profile:"assets/images/mimgs/kko.jpg",
     writer:"Composer - ခွန်တင်ဦး ",
@@ -918,7 +920,7 @@ var listAudio = [
   },
   {
     name: "သꩻရာႏတꩻခါꩻ",
-    file: "assets/musics/tdaudios/music8.mp3",
+    file: "assets/musics/tdaudios/သꩻရာႏတꩻခါꩻ.mp3",
     singer: "ခွန်ပဒဲကော",
     profile:"assets/images/mimgs/kpd.jpg",
     writer:"Composer - ခွန်ခွန်ကျော်ဦး ",
@@ -930,7 +932,7 @@ var listAudio = [
   },
   {
     name: "သွꩻမူႏ",
-    file: "assets/musics/tdaudios/music9.mp3",
+    file: "assets/musics/tdaudios/သွꩻမူႏ.mp3",
     singer: "ခွန်ချိူ",
     profile:"assets/images/mimgs/kc.jpg",
     writer:"Composer - ခွန်ပျူ ",
@@ -942,7 +944,7 @@ var listAudio = [
   },
   {
     name: "ဒေါ့ꩻနွောဝ်ꩻမွုန်းခွေꩻ",
-    file: "assets/musics/tdaudios/music10.mp3",
+    file: "assets/musics/tdaudios/ဒေါ့ꩻနွောဝ်ꩻမွုန်းခွေꩻ.mp3",
     singer: "ခွန်ခွန်ကျော်ဦး",
     profile:"assets/images/mimgs/kko.jpg",
     writer:"Composer - ခွန်ခွန်ကျော်ဦး ",
@@ -954,7 +956,7 @@ var listAudio = [
   },
   {
     name: "ယူႏလꩻခွင်ꩻ",
-    file: "assets/musics/tdaudios/music11.mp3",
+    file: "assets/musics/tdaudios/ယူႏလꩻခွင်ꩻ.mp3",
     singer: "ခွန်ပဒဲကော",
     profile:"assets/images/mimgs/kpd.jpg",
     writer:"Composer - ခွန်တင်ဦး ",
@@ -966,7 +968,7 @@ var listAudio = [
   },
   {
     name: "ဝေးမူႏ",
-    file: "assets/musics/tdaudios/music12.mp3",
+    file: "assets/musics/tdaudios/ဝေးမူႏ.mp3",
     singer: "ခွန်ပျူ",
     profile:"assets/images/mimgs/kp.jpg",
     writer:"Composer - ခွန်ခွန်ကျော်ဦး ",
@@ -978,7 +980,7 @@ var listAudio = [
   },
   {
     name: "ဖေႏမွုန်းအသွုမ်ꩻ",
-    file: "assets/musics/tdaudios/music13.mp3",
+    file: "assets/musics/tdaudios/ဖေႏမွုန်းအသွုမ်ꩻ.mp3",
     singer: "ကာတွန်းစွိုꩻ",
     profile:"assets/images/mimgs/kc.jpg",
     writer:"Composer - ခွန်ခွန်ကျော်ဦး ",
@@ -991,7 +993,7 @@ var listAudio = [
 
   {
     name: "ကာတွန်းစွိုꩻ",
-    file: "assets/musics/katochock/music1.mp3",
+    file: "assets/musics/katochock/ကာတွန်းစွိုꩻ.mp3",
     singer: "Group",
     profile:"assets/images/mimgs/cover6.jpg",
     writer:"Composer - ကာတွန်းစွိုꩻ",
@@ -1002,8 +1004,8 @@ var listAudio = [
     date:"Released - 2005",
   },
   {
-    name: "Track-2",
-    file: "assets/musics/katochock/music2.mp3",
+    name: "မဲဉ်သေꩻငါႏ",
+    file: "assets/musics/katochock/မဲဉ်သေꩻငါႏ.mp3",
     singer: "ခွန်ကော်လီ",
     profile:"assets/images/mimgs/kkl.jpg",
     writer:"Composer - ခွန်ကော်လီ",
@@ -1015,7 +1017,7 @@ var listAudio = [
   },
   {
     name: "လွꩻထီႏငါႏလဲဉ်းနာꩻ",
-    file: "assets/musics/katochock/music3.mp3",
+    file: "assets/musics/katochock/လွꩻထီႏငါႏလဲဉ်းနာꩻ.mp3",
     singer: "ခွန်ဂျိမ်း",
     profile:"assets/images/mimgs/kj.jpg",
     writer:"Composer - ခွန်ရှိန်း",
@@ -1027,7 +1029,7 @@ var listAudio = [
   },
   {
     name: "မဲဉ်လꩻချာꩻငါႏ",
-    file: "assets/musics/katochock/music4.mp3",
+    file: "assets/musics/katochock/မဲဉ်လꩻချာꩻငါႏ.mp3",
     singer: "ခွန်ထင်အောင်လင်း+ခွန်ရှိန်း",
     profile:"assets/images/mimgs/khal.jpg",
     writer:"Composer - ခွန်ရှိန်း+ခွန်ကော်လီ",
@@ -1039,7 +1041,7 @@ var listAudio = [
   },
   {
     name: "ကတွူဆွော့မွုန်းဒွုမ်နင်",
-    file: "assets/musics/katochock/music7.mp3",
+    file: "assets/musics/katochock/ကတွူဆွော့မွုန်းဒွုမ်နင်.mp3",
     singer: "Group",
     profile:"assets/images/mimgs/cover6.jpg",
     writer:"Composer - ခွန်ရှိန်း+ခွန်ကော်လီ",
@@ -1050,8 +1052,8 @@ var listAudio = [
     date:"Released - 2005",
   },
   {
-    name: "ထာရုပ်ကော်",
-    file: "assets/musics/katochock/music8.mp3",
+    name: "ထာရုပ်ကော်ႏ",
+    file: "assets/musics/katochock/ထာရုပ်ကော်.mp3",
     singer: "Group",
     profile:"assets/images/mimgs/cover6.jpg",
     writer:"Composer - ခွန်ရှိန်း+ခွန်ကော်လီ",
@@ -1063,7 +1065,7 @@ var listAudio = [
   },
   {
     name: "စွယ်ငါလဲဉ်းနာ",
-    file: "assets/musics/katochock/music9.mp3",
+    file: "assets/musics/katochock/စွယ်ငါလဲဉ်းနာ.mp3",
     singer: "ခွန်ရှိန်း",
     profile:"assets/images/mimgs/kck.jpg",
     writer:"Composer - ခွန်ရှိန်း",
@@ -1074,8 +1076,8 @@ var listAudio = [
     date:"Released - 2005",
   },
   {
-    name: "Track-8",
-    file: "assets/musics/katochock/music13.mp3",
+    name: "အခိန်ႏအဝ်ႏနေဒွုန်းက",
+    file: "assets/musics/katochock/အခိန်ႏအဝ်ႏနေဒွုန်းက.mp3",
     singer: "ခွန်ခွန်ကျော်ဦး",
     profile:"assets/images/mimgs/kko.jpg",
     writer:"Composer - ခွန်ခွန်ကျော်ဦး",
@@ -1094,9 +1096,9 @@ var indexAudio = 0;
 
 function loadNewTrack(index) {
   var player = document.querySelector("#source-audio");
+  var Index = Math.floor(index)+ 1 + '.  '
   player.src = listAudio[index].file;
-  document.querySelector(".titles").innerHTML =
-  listAudio[index].name;
+  document.querySelector(".titles").textContent = Index + listAudio[index].name;
   this.currentAudio = document.getElementById("myAudio");
   this.currentAudio.load();
   this.toggleAudio();
@@ -1136,6 +1138,8 @@ for(let i=0; i<barsBtn.length; i++){
       document.querySelector('.next-box').classList.add('inactive')
       document.querySelector('.shullfe-box').classList.remove('inactive')
       document.querySelector('.repeat-box').classList.remove('inactive')
+      document.querySelector('.search-tabs').classList.add('inactive')
+      document.querySelector('.tabs-ctn').classList.add('inactive')
 
       document.querySelector('.song-header').innerHTML = listAudio[i].name;
       document.querySelector('.writer-header').innerHTML = listAudio[i].writer;
@@ -1151,7 +1155,8 @@ for(let i=0; i<barsBtn.length; i++){
 }
 
 document.querySelector('.replace-arrow').addEventListener('click',()=>{
-
+  document.querySelector('.search-tabs').classList.remove('inactive')
+  document.querySelector('.tabs-ctn').classList.remove('inactive')
     document.querySelector('.replace-ctn').classList.add('inactive')
     document.querySelector('.songs-mainctn').classList.remove('inactive')
     document.querySelector('.shullfe-box').classList.add('inactive')
@@ -1300,11 +1305,11 @@ let isRandom = false
       }
       function playRandom() {
         isRandom = true;
-        document.querySelector('#btn-shuffle').style.color = 'red'
+        document.querySelector('.fa-shuffle').style.color = 'red'
       }
       function pauseRandom() {
         isRandom = false;
-        document.querySelector('#btn-shuffle').style.color = 'black'
+        document.querySelector('.fa-shuffle').style.color = 'white'
       }
       
       let isLoop = false;

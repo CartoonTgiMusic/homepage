@@ -25,8 +25,8 @@
       box-sizing: border-box;
     }
     body {
-      background: linear-gradient(-90deg,rgb(7, 100, 231),rgb(255, 255, 255));
-      color: #000000;
+      background: black;
+      color: #ffffff;
       font-family: "Roboto", sans-serif;
       display: flex;
       flex-direction: column;
@@ -36,7 +36,6 @@
     .fixed{
       position: fixed;
       top: 0px;
-      background: linear-gradient(-90deg,rgb(7, 100, 231),rgb(255, 255, 255));
       z-index: 1;
     }
 
@@ -46,7 +45,6 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 100px;
-  background: linear-gradient(-90deg,rgb(7, 100, 231),rgb(255, 255, 255));
     .search-box{
       position: fixed;
       width: 100%;
@@ -65,14 +63,16 @@
         font-size: 1rem;
       }
       i{
-        font-size: 1.2rem;
+        font-size: 1rem;
         color: rgb(255, 255, 255);
-        padding: 0px 5px;
+        padding:5px;
+        background-color: #000000;
+        border-radius: 50%;
       }
     }
       .img-box{
-        width: 100%;
-        height: 230px;
+        width: 325px;
+        height: 325px;
         top: 0;
         background-image: url(assets/images/mimgs/khal.jpg);
         background-position: center;
@@ -121,11 +121,11 @@
          .playlist-btn-play {
                pointer-events: none;
                padding-right:10px;
-               color: #656565;
+               color: #ffffff;
              }
            .playlist-info-track
             {
-                 color: #000000;
+                 color: #ffffff;
                  font-size: 1rem;
                  pointer-events: none;
                  user-select: none;
@@ -141,7 +141,7 @@
 
   .new-div:hover {
     transform: scaleY(1.2);
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid rgb(255, 255, 255);
   }
 }
 
@@ -150,7 +150,7 @@
      }
 .active-track {
   transform: scaleY(1.2);
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid rgb(255, 255, 255);
    }
 .btn-ctn i:hover {
     transform: scale(1.2);
@@ -164,20 +164,22 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: linear-gradient(-90deg,rgb(7, 100, 231),rgb(255, 255, 255));
+  background: black;
   padding-bottom: 10px;
   z-index: 1;
-  
+  i{
+    font-size: 1rem;
+  }
   #myProgress {
     width: 80%;
-    background-color: silver;
+    background-color: gary;
     cursor: pointer;
     border-radius: 10px;
     margin: auto;
               #myBar {
                 width: 0;
                 height: 5px;
-                background-color: rgb(56, 56, 56);
+                background-color: rgb(255, 255, 255);
                 border-radius: 10px;
               }
         }
@@ -219,21 +221,22 @@
     justify-content: space-between;
     align-items: center;
     i{
-      font-size: 1.2rem;
-      padding: 0px 5px;
+      font-size: 1rem;
+      padding:5px;
+      background-color: #000000;
+      border-radius: 50%;
       color: rgb(255, 255, 255);
     }
   }
   .replace-imagebox{
-        width: 100%;
-        height: 300px;
+        width: 325px;
+        height: 325px;
         background-position: center;
         background-size: cover;
-        position: absolute;
         z-index:-1;
   }
   .replace-details{
-    margin-top: 310px;
+    margin-top: 10px;
     width: 100%;
     text-align: center;
     font-size: small;
@@ -241,6 +244,9 @@
       font-size: large;
     }
   }
+}
+a{
+  color: white;
 }
 .inactive{
   display: none;
@@ -287,7 +293,7 @@
                   <i class="fa-brands fa-instagram" style="color: rgb(243, 58, 58);"></i>
                 </div>
                 <div class="tiktok">
-                  <i class="fa-brands fa-tiktok" style="color: rgb(1, 1, 1);"></i>
+                  <i class="fa-brands fa-tiktok" style="color: rgb(255, 255, 255);"></i>
                 </div>
             </div>
       <div class="songslist-ctn section ">
@@ -308,6 +314,7 @@
           <a href="#" class="album-url"><div class="album-header"></div></a>
           <a href="#" class="band-url"><div class="band-header"></div></a>
           <div class="date-header"></div>
+          <a href="" download="" class="download">Download</a>
         </div>
       </div>
           
@@ -323,7 +330,7 @@
       <div class="btn-ctn">
         <div class="btn-action shullfe-box inactive" onclick="shullfe() ">
           <div id="btn-shuffle">
-            <i class="fa-solid fa-shuffle" ></i>
+            <i class="fa-solid fa-shuffle" style="color: white;" ></i>
           </div>
         </div>
         <div class="btn-action prev-box" onclick="previous()">
@@ -358,11 +365,11 @@
             <i class="fa-solid fa-repeat re-icon"></i>
             <i class="once-icon" style="display: none"
                 ><svg
-                  width="30"
-                  height="30"
+                  width="22"
+                  height="22"
                   viewBox="-2 -2 24 24"
                   stroke-width="2.3"
-                  stroke="black"
+                  stroke="white"
                   fill="none"
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -489,7 +496,7 @@ function createTrackItem(index, name, writer) {
 var listAudio = [
   {
     name: "ဗွိုးဟိုင်း",
-    file: "assets/musics/happytime/music3.mp3",
+    file: "assets/musics/happytime/ဗွိုးဟိုင်း.mp3",
     singer: "ခွန်တကီးတဘဲ+ခွန်ထင်အောင်လင်း",
     profile:"assets/images/mimgs/khal.jpg",
     writer:"Composer - ခွန်တကီးတဘဲ",
@@ -501,7 +508,7 @@ var listAudio = [
   },
   {
     name: "မဲဉ်လꩻချာꩻငါႏ",
-    file: "assets/musics/katochock/music4.mp3",
+    file: "assets/musics/katochock/မဲဉ်လꩻချာꩻငါႏ.mp3",
     singer: "ခွန်ထင်အောင်လင်း+ခွန်ရှိန်း",
     profile:"assets/images/mimgs/khal.jpg",
     writer:"Composer - ",
@@ -513,7 +520,7 @@ var listAudio = [
   },
   {
     name: "ရက်ꩻချာꩻဗဲင်းခွေꩻမွိုင်ꩻနင်ႏ",
-    file: "assets/musics/happytime/music9.mp3",
+    file: "assets/musics/happytime/ရက်ꩻချာꩻဗဲင်းခွေꩻမွိုင်ꩻနင်ႏ.mp3",
     singer: "ခွန်ရှိန်း",
     profile:"assets/images/mimgs/khal.jpg",
     writer:"Composer - ခွန်ရှိန်း",
@@ -587,6 +594,8 @@ var listAudio = [
             document.querySelector('.album-url').href = listAudio[i].albuml_url;
             document.querySelector(' .band-header').innerHTML = listAudio[i].band
             document.querySelector('.band-url').href = listAudio[i].band_url;
+            document.querySelector('.download').href = listAudio[i].file;
+            document.querySelector('.download').download = listAudio[i].name;
             document.querySelector('.date-header').innerHTML = listAudio[i].date
             document.querySelector('.replace-imagebox').style.backgroundImage = "url("+listAudio[i].profile+")"
           })
@@ -702,11 +711,11 @@ var listAudio = [
       }
       function playRandom() {
         isRandom = true;
-        document.querySelector('#btn-shuffle').style.color = 'red'
+        document.querySelector('.fa-shuffle').style.color = 'red'
       }
       function pauseRandom() {
         isRandom = false;
-        document.querySelector('#btn-shuffle').style.color = 'black'
+        document.querySelector('.fa-shuffle').style.color = 'white'
       }
       
       let isLoop = false;

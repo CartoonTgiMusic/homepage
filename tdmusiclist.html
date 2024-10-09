@@ -189,7 +189,7 @@
           <a href="index.html"><div><i class="fa-solid fa-arrow-left"></i></div></a>
           <input type="text" placeholder="Search...." id="search-item" onkeyup="search()" >
           <div class="glass"><i class="fa-solid fa-magnifying-glass"></i></div>
-          <a href="td.html"><div><i class="fa-solid fa-arrow-right"></i></div></a>
+          <!-- <a href="td.html"><div><i class="fa-solid fa-arrow-right"></i></div></a> -->
         </div>
         
         <div class="hader-div">
@@ -261,7 +261,10 @@
       <div class="playlist-ctn"></div>
     </div>
     <script>
-
+      document.querySelector('.glass').addEventListener('click',()=>{
+            document.querySelector('input').focus()
+      });
+      
       const search = () => {
               const searchBox = document.getElementById("search-item").value.toUpperCase();
               const product = document.querySelectorAll(".product");
@@ -316,19 +319,19 @@
       }
 
       var listAudio = [
-    {name:"အရက်ꩻသွတ်ꩻ",file:"assets/musics/tdaudios/music1.mp3",duration:"ခွန်ပဒဲကော"},
-    {name:'မွိုးသောက',file:"assets/musics/tdaudios/music2.mp3",duration:"ခွန်ချို" },
-    {name:'ဆာႏပေႏ',file:"assets/musics/tdaudios/music3.mp3",duration:"ခွန်ပျူ"},
-    {name:'နင်ႏလိင်ႏလဲဥ်',file:"assets/musics/tdaudios/music4.mp3",duration:"ခွန်ခွန်ကျော်ဦး" },
-    {name:'ယူႏငါႏမွုန်းဒွုမ်',file:"assets/musics/tdaudios/music5.mp3",duration:"ခွန်ချို"},
-    {name:'ဝါးပေꩻဗွါ',file:"assets/musics/tdaudios/music6.mp3",duration:"ခွန်ပျူ"},
-    {name:'တဒွီ',file:"assets/musics/tdaudios/music7.mp3",duration:"ခွန်ခွန်ကျော်ဦး"},
-    {name:'သꩻရာႏတꩻခါꩻ',file:"assets/musics/tdaudios/music8.mp3",duration:"ခွန်ပဒဲကော"},
-    {name:'သွꩻမူႏ',file:"assets/musics/tdaudios/music9.mp3",duration:"ခွန်ချိူ"},
-    {name:'ဒေါ့ꩻနွောဝ်ꩻမွုန်းခွေꩻ',file:"assets/musics/tdaudios/music10.mp3",duration:"ခွန်ခွန်ကျော်ဦး"},
-    {name:'ယူႏလꩻခွင်ꩻ',file:"assets/musics/tdaudios/music11.mp3",duration:"ခွန်ပဒဲကော"},
-    {name:'ဝေးမူႏ',file:"assets/musics/tdaudios/music12.mp3",duration:"ခွန်ပျူ"},
-    {name:'ဖေႏမွုန်းအသွုမ်ꩻ',file:"assets/musics/tdaudios/music13.mp3",duration:"ကာတွန်းစွိုꩻ"},
+    {name:"အရက်ꩻသွတ်ꩻ",file:"assets/musics/tdaudios/အရက်ꩻသွတ်ꩻ.mp3",duration:"ခွန်ပဒဲကော"},
+    {name:'မွိုးသောက',file:"assets/musics/tdaudios/မွိုးသောက.mp3",duration:"ခွန်ချို" },
+    {name:'ဆာႏပေႏ',file:"assets/musics/tdaudios/ဆာႏပေႏ.mp3",duration:"ခွန်ပျူ"},
+    {name:'နင်ႏလိင်ႏလဲဥ်',file:"assets/musics/tdaudios/နင်ႏလိင်ႏလဲဥ်.mp3",duration:"ခွန်ခွန်ကျော်ဦး" },
+    {name:'ယူႏငါႏမွုန်းဒွုမ်',file:"assets/musics/tdaudios/ယူႏငါႏမွုန်းဒွုမ်.mp3",duration:"ခွန်ချို"},
+    {name:'ဝါးပေꩻဗွါ',file:"assets/musics/tdaudios/ဝါးပေꩻဗွါ.mp3",duration:"ခွန်ပျူ"},
+    {name:'တဒွီ',file:"assets/musics/tdaudios/တဒွီ.mp3",duration:"ခွန်ခွန်ကျော်ဦး"},
+    {name:'သꩻရာႏတꩻခါꩻ',file:"assets/musics/tdaudios/သꩻရာႏတꩻခါꩻ.mp3",duration:"ခွန်ပဒဲကော"},
+    {name:'သွꩻမူႏ',file:"assets/musics/tdaudios/သွꩻမူႏ.mp3",duration:"ခွန်ချိူ"},
+    {name:'ဒေါ့ꩻနွောဝ်ꩻမွုန်းခွေꩻ',file:"assets/musics/tdaudios/ဒေါ့ꩻနွောဝ်ꩻမွုန်းခွေꩻ.mp3",duration:"ခွန်ခွန်ကျော်ဦး"},
+    {name:'ယူႏလꩻခွင်ꩻ',file:"assets/musics/tdaudios/ယူႏလꩻခွင်ꩻ.mp3",duration:"ခွန်ပဒဲကော"},
+    {name:'ဝေးမူႏ',file:"assets/musics/tdaudios/ဝေးမူႏ.mp3",duration:"ခွန်ပျူ"},
+    {name:'ဖေႏမွုန်းအသွုမ်ꩻ',file:"assets/musics/tdaudios/ဖေႏမွုန်းအသွုမ်ꩻ.mp3",duration:"ကာတွန်းစွိုꩻ"},
     
   ]
 

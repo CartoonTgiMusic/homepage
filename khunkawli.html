@@ -68,7 +68,7 @@
         padding-left: 10px;
       }
       i{
-        font-size: 1.2rem;
+        font-size: 1rem;
         padding: 5px;
         color: rgb(255, 255, 255);
       }
@@ -224,7 +224,7 @@
     justify-content: space-between;
     align-items: center;
     i{
-      font-size: 1.2rem;
+      font-size: 1rem;
       margin: 0px 5px;
       color: rgb(255, 255, 255);
     }
@@ -314,6 +314,7 @@
           <a href="#" class="album-url"><div class="album-header"></div></a>
           <a href="#" class="band-url"><div class="band-header"></div></a>
           <div class="date-header"></div>
+          <a href="" download="" class="download">Download</a>
         </div>
       </div>
           
@@ -497,7 +498,7 @@ function createTrackItem(index, name, writer) {
 var listAudio = [
 {
     name: "လဲဥ်ꩻထိုႏမွန်းခွေꩻ",
-    file: "assets/musics/aoaudios/music7.mp3",
+    file: "assets/musics/aoaudios/လဲဥ်ꩻထိုႏမွန်းခွေꩻ.mp3",
     singer: "ခွန်ကော်လီ",
     profile:"assets/images/mimgs/kkl.jpg",
     writer:"Composer - ခွန်ခွန်ကျော်ဦး ",
@@ -509,7 +510,7 @@ var listAudio = [
   },
   {
     name: "လွေꩻညာꩻဆောင်းတဆင်ႏလွုမ်",
-    file: "assets/musics/happytime/music4.mp3",
+    file: "assets/musics/happytime/လွေꩻညာꩻဆောင်းတဆင်ႏလွုမ်.mp3",
     singer: "ခွန်ကော်လီ",
     profile:"assets/images/mimgs/kkl.jpg",
     writer:"Composer - ခွန်ကော်လီ",
@@ -521,7 +522,7 @@ var listAudio = [
   },
   {
     name: "မဲဉ်လꩻချာꩻငါႏ အပဲစ်ကင်လိုပေဖဝ",
-    file: "assets/musics/happytime/music7.mp3",
+    file: "assets/musics/happytime/မဲဉ်လꩻချာꩻငါႏ အပဲစ်ကင်လိုပေဖဝ.mp3",
     singer: "အစွိုꩻ",
     profile:"assets/images/mimgs/logo.jpg",
     writer:"Composer - အစွိုꩻ",
@@ -532,8 +533,8 @@ var listAudio = [
     date:"Released - 2009",
   },
   {
-    name: "Track-2",
-    file: "assets/musics/katochock/music2.mp3",
+    name: "မဲဉ်သေꩻငါႏ",
+    file: "assets/musics/katochock/မဲဉ်သေꩻငါႏ.mp3",
     singer: "ခွန်ကော်လီ",
     profile:"assets/images/mimgs/kkl.jpg",
     writer:"Composer - ",
@@ -607,6 +608,8 @@ var listAudio = [
             document.querySelector('.album-url').href = listAudio[i].albuml_url;
             document.querySelector(' .band-header').innerHTML = listAudio[i].band
             document.querySelector('.band-url').href = listAudio[i].band_url;
+            document.querySelector('.download').href = listAudio[i].file;
+            document.querySelector('.download').download = listAudio[i].name;
             document.querySelector('.date-header').innerHTML = listAudio[i].date
             document.querySelector('.replace-imagebox').style.backgroundImage = "url("+listAudio[i].profile+")"
           })

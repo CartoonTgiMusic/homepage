@@ -189,7 +189,7 @@
           <a href="index.html"><div><i class="fa-solid fa-arrow-left"></i></div></a>
           <input type="text" placeholder="Search...." id="search-item" onkeyup="search()" >
           <div class="glass"><i class="fa-solid fa-magnifying-glass"></i></div>
-          <a href="ao.html"><div><i class="fa-solid fa-arrow-right"></i></div></a>
+          <!-- <a href="index.html"><div><i class="fa-solid fa-arrow-right"></i></div></a> -->
         </div>
         
         <div class="hader-div">
@@ -261,7 +261,9 @@
       <div class="playlist-ctn"></div>
     </div>
     <script>
-
+      document.querySelector('.glass').addEventListener('click',()=>{
+            document.querySelector('input').focus()
+      })
       const search = () => {
               const searchBox = document.getElementById("search-item").value.toUpperCase();
               const product = document.querySelectorAll(".product");
@@ -316,19 +318,19 @@
       }
 
       var listAudio = [
-        {name: "မင်္ဂလာႏဒျာႏဗွေႏဩ",file: "assets/musics/aoaudios/music1.mp3",duration: "ကာတွန်းစွိုꩻ",},
-        {name: "ဆုတောင်ꩻနော",file: "assets/musics/aoaudios/music2.mp3",duration: "ခွန်ချို",},
-        {name: "တဖြာꩻတွမ်ႏတဖြာꩻ",file: "assets/musics/aoaudios/music3.mp3",duration: "ခွန်ခွန်ကျော်ဦး",},
-        {name: "အောဝ်ႏကော့ꩻမွောင်ꩻ",file: "assets/musics/aoaudios/music4.mp3",duration: "ခွန်ပျူ",},
-        {name: "သေနာႏလဲဥ်း", file: "assets/musics/aoaudios/music5.mp3",duration: "ခွန်ပဒဲကော",},
-        {name: "အောဝ်ႏ", file: "assets/musics/aoaudios/music6.mp3",duration: "ခွန်ခွန်ကျော်ဦး",},
-        {name: "လဲဥ်ꩻထိုႏမွန်းခွေꩻ", file: "assets/musics/aoaudios/music7.mp3",duration: "ခွန်ကော်လီ",},
-        {name: "တဥ်ႏခွေါင်ဒျာႏနော်", file: "assets/musics/aoaudios/music8.mp3",duration: "ခွန်ဝဒုတ်",},
-        {name: "အွဥ်ႏဖိင်ꩻခန်း ", file: "assets/musics/aoaudios/music9.mp3",duration: "ခွန်ချိူ",},
-        {name: "မွိုက်လွေꩻဟိုင်း", file: "assets/musics/aoaudios/music10.mp3",duration: "ခွန်ကျော်စိုး",},
-        {name: "ကမ်းဒျာႏနာꩻသꩻ", file: "assets/musics/aoaudios/music11.mp3",duration: "ခွန်ခွန်ကျော်ဦး",},
-        {name: "မဲ့ꩻခွေꩻလွဥ်ꩻယန်း", file: "assets/musics/aoaudios/music12.mp3",duration: "ခွန်ပဒဲကော",},
-        {name: "နာꩻထန်ႏထိုꩻ", file: "assets/musics/aoaudios/music13.mp3",duration: "ခွန်ဇော်ခက်",},
+        {name: "မင်္ဂလာႏဒျာႏဗွေႏဩ",file: "assets/musics/aoaudios/မင်္ဂလာႏဒျာႏဗွေႏဩ.mp3",duration: "ကာတွန်းစွိုꩻ",},
+        {name: "ဆုတောင်ꩻနော",file: "assets/musics/aoaudios/ဆုတောင်ꩻနော.mp3",duration: "ခွန်ချို",},
+        {name: "တဖြာꩻတွမ်ႏတဖြာꩻ",file: "assets/musics/aoaudios/တဖြာꩻတွမ်ႏတဖြာꩻ.mp3",duration: "ခွန်ခွန်ကျော်ဦး",},
+        {name: "အောဝ်ႏကော့ꩻမွောင်ꩻ",file: "assets/musics/aoaudios/အောဝ်ႏကော့ꩻမွောင်ꩻ.mp3",duration: "ခွန်ပျူ",},
+        {name: "သေနာႏလဲဥ်း", file: "assets/musics/aoaudios/သေနာႏလဲဥ်း.mp3",duration: "ခွန်ပဒဲကော",},
+        {name: "အောဝ်ႏ", file: "assets/musics/aoaudios/အောဝ်ႏ.mp3",duration: "ခွန်ခွန်ကျော်ဦး",},
+        {name: "လဲဥ်ꩻထိုႏမွန်းခွေꩻ", file: "assets/musics/aoaudios/လဲဥ်ꩻထိုႏမွန်းခွေꩻ.mp3",duration: "ခွန်ကော်လီ",},
+        {name: "တဥ်ႏခွေါင်ဒျာႏနော်", file: "assets/musics/aoaudios/တဥ်ႏခွေါင်ဒျာႏနော်.mp3",duration: "ခွန်ဝဒုတ်",},
+        {name: "အွဥ်ႏဖိင်ꩻခန်း ", file: "assets/musics/aoaudios/အွဥ်ႏဖိင်ꩻခန်း.mp3",duration: "ခွန်ချိူ",},
+        {name: "မွိုက်လွေꩻဟိုင်း", file: "assets/musics/aoaudios/မွိုက်လွေꩻဟိုင်း.mp3",duration: "ခွန်ကျော်စိုး",},
+        {name: "ကမ်းဒျာႏနာꩻသꩻ", file: "assets/musics/aoaudios/ကမ်းဒျာႏနာꩻသꩻ.mp3",duration: "ခွန်ခွန်ကျော်ဦး",},
+        {name: "မဲ့ꩻခွေꩻလွဥ်ꩻယန်း", file: "assets/musics/aoaudios/မဲ့ꩻခွေꩻလွဥ်ꩻယန်း.mp3",duration: "ခွန်ပဒဲကော",},
+        {name: "နာꩻထန်ႏထိုꩻ", file: "assets/musics/aoaudios/နာꩻထန်ႏထိုꩻ.mp3",duration: "ခွန်ဇော်ခက်",},
       ];
 
       for (var i = 0; i < listAudio.length; i++) {
