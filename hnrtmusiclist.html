@@ -34,64 +34,57 @@
       position: fixed;
       width: 100%;
       background-color: black;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       z-index: 1;
       .search-box{
-        width: 100%;
-        padding-left: 1rem;
-        height: 30px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding:0 5px;
         input{
           width: 100%;
-          margin-left: 10px;
+          margin:0 10px;
           color: #ffffff;
+          padding: 5px;
           background: none;
           border: none;
           outline: none;
         }
-        .glass{
-          margin: 0px 10px;
-        }
         i{
-          font-size: 1.2rem;
+          font-size: 1rem;
         }
       }
-      .hader-div{
+    }
+    .header-div{
+      width: 100%;
+      display: flex;
+      padding: 20px 5px;
+      user-select: none;
+      .img-box{
+        width: 150px;
+        height: 150px;
+      }
+      img{
         width: 100%;
+        height: 100%;
+      }
+      .details-box{
+        margin-left: 10px;
+        width: 200px;
         display: flex;
-        padding-left: 1rem;
-        .img-box{
-          width: 150px;
-          height: 150px;
+        flex-direction: column;
+        justify-content: space-between;
+        .title-text{
+          font-size: 16px;
         }
-        img{
-          width: 100%;
-          height: 100%;
-        }
-        .details-box{
-          margin-left: 10px;
-          width: 200px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          .title-text{
-            font-size: 16px;
-          }
-          .bandname-text,
-          .date-box{
-            font-size: 12px;
-          }
+        .bandname-text,
+        .date-box{
+          font-size: 12px;
         }
       }
     }
     .player-ctn {
       width: 100%;
-      margin: 200px 0px 100px;
+      padding-bottom: 6rem;
         .playlist-track-ctn {
           display: flex;
           margin: 5px 0px;
@@ -181,6 +174,41 @@
   a{
     color: inherit;
   }
+  .fixed{
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%,50%);
+    color: rgb(0, 0, 0);
+    padding: 0 5px;
+    border-radius: 0 10px 0 10px;
+    background-color: rgb(0, 242, 255);
+    z-index: 10;
+  }
+  .inactive{
+    display: none;
+  }
+  @media screen and (min-width:700px){
+    .header-div{
+      top: 0;
+      left: 0;
+      position: fixed;
+      width: 150px;
+      background-color: #000000;
+      display: flex;
+      flex-direction: column;
+      .details-box{
+        margin-left: 0;
+        margin-top: 5px;
+        width: 150px;
+        text-align: center;
+      }
+    }
+    .player-ctn{
+      padding-top: 20px;
+      padding-left: 300px;
+    }
+  }
   </style>
 
   <body>
@@ -194,24 +222,23 @@
           <a href="index.html"><div><i class="fa-solid fa-arrow-left"></i></div></a>
           <input type="text" placeholder="Search...." id="search-item" onkeyup="search()" >
           <div class="glass"><i class="fa-solid fa-magnifying-glass"></i></div>
-          <!-- <a href="index.html"><div><i class="fa-solid fa-arrow-right"></i></div></a> -->
         </div>
+      </div>
         
-        <div class="hader-div">
-          <div class="img-box">
-            <img src="assets/images/mimgs/cover1.jpg" alt="">
-          </div>
-          <div class="details-box">
-            <div>
-              <div class="title-text">ထွားနုဲင်းရုဲင်းတဝ်း</div>
-              <div class="bandname-text">ကာတွန်းစွိုꩻ</div>
-              <div class="bandname-text">14 songs</div>
-
-            </div>
-            <div class="date-box">
-              <div>Released - 2022</div>
-            </div>
+      <div class="header-div">
+        <div class="img-box">
+          <img src="assets/images/mimgs/cover1.jpg" alt="">
         </div>
+        <div class="details-box">
+          <div>
+            <div class="title-text">ထွားနုဲင်းရုဲင်းတဝ်း</div>
+            <div class="bandname-text">ကာတွန်းစွိုꩻ</div>
+            <div class="bandname-text">14 songs</div>
+
+          </div>
+          <div class="date-box">
+            <div>Released - 2022</div>
+          </div>
       </div>
     </div>
 
@@ -290,7 +317,14 @@
                 }
               }
             };
-
+      window.onscroll = ()=>{
+        let scrolly = window.scrollY
+        scrolly > 160 ? document.querySelector('.title-text').classList.add('fixed') :
+                         document.querySelector('.title-text').classList.remove('fixed')
+        let innWidth = window.innerWidth
+        innWidth > 700 ? document.querySelector('.title-text').classList.remove('fixed') :
+        document.querySelector('.title-text').classList.add('fixed')
+      }
       function createTrackItem(index, name, duration) {
         var trackItem = document.createElement("div");
         trackItem.setAttribute("class", "playlist-track-ctn product");
