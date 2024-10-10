@@ -1299,7 +1299,7 @@ function rewind() {
   this.currentAudio.currentTime = this.currentAudio.currentTime - 5;
   this.setBarProgress();
 }
-let isRandom = false
+      let isRandom = false
       function shullfe() {
         isRandom ? pauseRandom() : playRandom();
       }

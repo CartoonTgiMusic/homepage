@@ -19,10 +19,21 @@
     <link rel="stylesheet" media="all" />
   </head>
   <style>
-    body {
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body{
       background: black;
       color: #ffffff;
       font-family: "Roboto", sans-serif;
+      a{
+        color: white;
+      }
+    }
+
+    .main-ctn {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -34,12 +45,12 @@
       position: fixed;
       width: 100%;
       background-color: black;
-      z-index: 1;
+      z-index: 2;
       .search-box{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding:0 5px;
+        padding:0px 5px;
         input{
           width: 100%;
           margin:0 10px;
@@ -50,14 +61,14 @@
           outline: none;
         }
         i{
-          font-size: 1rem;
+          font-size: 1.2rem;
         }
       }
     }
     .header-div{
       width: 100%;
       display: flex;
-      padding: 20px 5px 10px;
+      padding: 34px 5px 10px;
       user-select: none;
       .img-box{
         width: 150px;
@@ -84,7 +95,7 @@
     }
     .player-ctn {
       width: 100%;
-      padding-bottom: 6rem;
+      padding:0 5px 100px;
         .playlist-track-ctn {
           display: flex;
           margin: 5px 0px;
@@ -121,17 +132,17 @@
     .active-track {
       background-color: blue;
     }
-
-    .controls-container {
-          bottom: 0;
-          position: fixed;
-          width: 100%;
+    
+   .controls-container {
+        bottom: 0;
+        position: fixed;
+        width: 100%;
           display: flex;
           justify-content: center;
           align-items: center;
           flex-direction: column;
           background-color: black;
-          padding-bottom: 5px;
+          padding: 5px;
           z-index: 1;
           #myProgress {
               width: 80%;
@@ -158,36 +169,87 @@
                       text-align: center;
                       font-size: 10px;
                       .title{
-                        font-size: 1rem;
+                        font-size: 14px;
                       }
                       .btn-action {
                               cursor: pointer;
                             }
-                      .fas {
+                      i {
                              font-size: 1rem;
                        }
                   }
         }
+  
+    
     .btn-ctn i:hover {
           transform: scale(1.2);
         }
-  a{
-    color: inherit;
-  }
 
-  .inactive{
-    display: none;
-  }
-  @media screen and (min-width:700px){
-    .header-div{
-      top: 0px;
-      left: 0;
+  .sub-ctn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px;
+    i{
+      font-size: 1.2rem;
+    }
+    .sub-title{
+      width: 100%;
       position: fixed;
-      width: 150px;
-      height: 100vh;
+      display: flex;
       background-color: black;
+      justify-content: space-between;
+      align-items: center;
+      padding:3px 5px;
+      z-index: 2;
+    }
+    .sub-imgbox{
+        box-shadow: 0px 0px 30px rgb(255, 0, 0);
+        width: 250px;
+        height: 250px;
+        padding: 30px;
+        margin: 50px 0 10px;
+        background: url(assets/images/mimgs/cover1.jpg) center/cover no-repeat;
+        .sub-img{
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+          background-repeat: no-repeat;
+          border: 3px solid rgb(195, 168, 15);
+          border-radius: 50%;
+          box-shadow: 0px 4px 3px rgb(0, 0, 0);
+      }
+    }
+    .sub-writer,.download{
+      font-size: 12px;
+    }
+  }
+  .rotate {
+      animation: rotation 8s infinite linear;
+    }
+    @keyframes rotation {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+  @media screen and (min-width:700px){
+    .nav{
+      padding-left: 155px;
+    }
+    .header-div{
+      top: 0;
+      left: 0;
+      padding: 5px;
+      position: fixed;
+      width: 160px;
+      height: 100vh;
+      background-color: rgb(0, 0, 0);
       display: flex;
       flex-direction: column;
+      z-index: 4;
       .details-box{
         margin-left: 0;
         margin-top: 5px;
@@ -196,11 +258,19 @@
       }
     }
     .player-ctn{
-      padding-top: 15px;
+      padding-top: 25px;
       .playlist-track-ctn{
-        padding-left: 150px;
+        padding-left: 155px;
       }
     }
+
+      .controls-container{
+        background-color: black;
+        padding: 0 150px 5px;
+      }
+  }
+  .inactive{
+    display: none;
   }
   </style>
 
@@ -210,83 +280,119 @@
       <source id="source-audio" src="" type="audio/mpeg" />
       Your browser does not support the audio element.
     </audio>
-    <div class="nav">
-        <div class="search-box">
-          <a href="index.html"><div><i class="fa-solid fa-arrow-left"></i></div></a>
-          <input type="text" placeholder="Search...." id="search-item" onkeyup="search()" >
-          <div class="glass"><i class="fa-solid fa-magnifying-glass"></i></div>
-        </div>
-      </div>
-        
-      <div class="header-div">
-        <div class="img-box">
-          <img src="assets/images/mimgs/cover1.jpg" alt="">
-        </div>
-        <div class="details-box">
-          <div>
-            <div class="title-text">ထွားနုဲင်းရုဲင်းတဝ်း</div>
-            <div class="bandname-text">ကာတွန်းစွိုꩻ</div>
-            <div class="bandname-text">14 songs</div>
-
+    <div class="main-ctn">
+        <div class="nav">
+            <div class="search-box">
+              <a href="index.html"><div><i class="fa-solid fa-arrow-left"></i></div></a>
+              <input type="text" placeholder="Search...." id="search-item" onkeyup="search()" >
+              <div class="glass"><i class="fa-solid fa-magnifying-glass"></i></div>
+            </div>
           </div>
-          <div class="date-box">
-            <div>Released - 2022</div>
+            
+          <div class="header-div">
+            <div class="img-box">
+              <img src="assets/images/mimgs/cover1.jpg" alt="">
+            </div>
+            <div class="details-box">
+              <div>
+                <div class="title-text">ထွားနုဲင်းရုဲင်းတဝ်း</div>
+                <div class="bandname-text">ကာတွန်းစွိုꩻ</div>
+                <div class="bandname-text">14 songs</div>
+    
+              </div>
+              <div class="date-box">
+                <div>Released - 2022</div>
+              </div>
           </div>
+        </div>
+    
+        <div class="player-ctn">
+          <div class="playlist-ctn"></div>
+        </div>
+    </div>
+    <div class="sub-ctn inactive">
+      <div class="sub-title">
+        <a href="hnrtmusiclist.html"><div><i class="fa-solid fa-arrow-left"></i></div></a>
+        <div class="song-name">Hello</div>
+        <a href="index.html"><div><i class="fa-solid fa-house"></i></div></a>
       </div>
+      <div class="sub-imgbox">
+        <div class="sub-img"></div>
+      </div>
+        <div class="sub-singer"></div>
+        <div class="sub-writer"></div>
+        <a href="" download="" class="download">Download</a>
     </div>
 
-    <div class="controls-container">
-      <div class="infos-ctn">
-        <div class="timer">00:00</div>
-        <div class="title"></div>
-        <div class="duration">00:00</div>
-      </div>
-      <div id="myProgress">
-        <div id="myBar"></div>
-      </div>
-      <div class="btn-ctn">
-        <div class="btn-action first-btn" onclick="previous()">
-          <div id="btn-faws-back">
-            <i class="fas fa-step-backward"></i>
-          </div>
+      <div class="controls-container">
+        <div class="infos-ctn">
+          <div class="timer">00:00</div>
+          <div class="title"></div>
+          <div class="duration">00:00</div>
         </div>
-        <div class="btn-action" onclick="rewind()">
-          <div id="btn-faws-rewind">
-            <i class="fas fa-backward"></i>
-          </div>
+        <div id="myProgress">
+          <div id="myBar"></div>
         </div>
-        <div class="btn-action" onclick="toggleAudio()">
-          <div id="btn-faws-play-pause">
-            <i class="fas fa-play" id="icon-play"></i>
-            <i class="fas fa-pause" id="icon-pause" style="display: none"></i>
+        <div class="btn-ctn ">
+          <div class="btn-action shullfe inactive " onclick="shullfe() ">
+            <div id="btn-shuffle">
+              <i class="fa-solid fa-shuffle"></i>
+            </div>
           </div>
-        </div>
-        <div class="btn-action" onclick="forward()">
-          <div id="btn-faws-forward">
-            <i class="fas fa-forward"></i>
-          </div>
-        </div>
-        <div class="btn-action" onclick="next()">
-          <div id="btn-faws-next">
-            <i class="fas fa-step-forward"></i>
-          </div>
-        </div>
-        <div class="btn-mute btn-action" id="toggleMute" onclick="toggleMute()">
-          <div id="btn-faws-volume">
-            <i id="icon-vol-up" class="fas fa-volume-up"></i>
-            <i
-              id="icon-vol-mute"
-              class="fas fa-volume-mute"
-              style="display: none"
-            ></i>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="player-ctn">
-      <div class="playlist-ctn"></div>
-    </div>
+          <div class="btn-action" onclick="previous()">
+            <div id="btn-faws-back">
+              <i class="fas fa-step-backward"></i>
+            </div>
+          </div>
+
+          <div class="btn-action" onclick="toggleAudio()">
+            <div id="btn-faws-play-pause">
+              <i class="fas fa-play" id="icon-play"></i>
+              <i class="fas fa-pause" id="icon-pause" style="display: none"></i>
+            </div>
+          </div>
+          
+          <div class="btn-action" onclick="next()">
+            <div id="btn-faws-next">
+              <i class="fas fa-step-forward"></i>
+            </div>
+          </div>
+
+          <div class="btn-action repeat-box inactive " onclick="repeat() ">
+            <div id="btn-faws-repeat">
+              <i class="fa-solid fa-repeat re-icon"></i>
+              <i class="once-icon" style="display: none"
+                  ><svg
+                    width="22"
+                    height="22"
+                    viewBox="-2 -2 24 24"
+                    stroke-width="2.3"
+                    stroke="white"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M4 12v-3a3 0 0 0 0 3 -3h13m-3 -3l3 3l-3 3" />
+                    <path d="M20 12v3a3 0 0 0 0 -3 3h-13m3 3l-3 -3l3 -3" />
+                    <path d="M11 11l1 -1v4" /></svg></i>
+            </div>
+          </div>
+
+          <div class="btn-mute btn-action" id="toggleMute" onclick="toggleMute()">
+            <div id="btn-faws-volume">
+              <i id="icon-vol-up" class="fas fa-volume-up"></i>
+              <i id="icon-vol-mute" class="fas fa-volume-mute" style="display: none"
+              ></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+    
+
     <script>
       document.querySelector('.glass').addEventListener('click',()=>{
             document.querySelector('input').focus()
@@ -311,7 +417,7 @@
               }
             };
 
-      function createTrackItem(index, name, duration) {
+      function createTrackItem(index, name, singer) {
         var trackItem = document.createElement("div");
         trackItem.setAttribute("class", "playlist-track-ctn product");
         trackItem.setAttribute("id", "ptc-" + index);
@@ -325,8 +431,6 @@
 
         var btnImg = document.createElement("i");
         btnImg.setAttribute("class", "fas fa-play");
-        // btnImg.setAttribute("height", "40");
-        // btnImg.setAttribute("width", "40");
         btnImg.setAttribute("id", "p-img-" + index);
         document.querySelector("#pbp-" + index).appendChild(btnImg);
 
@@ -337,102 +441,134 @@
 
         var trackDurationItem = document.createElement("div");
         trackDurationItem.setAttribute("class", "playlist-duration");
-        trackDurationItem.innerHTML = duration;
+        trackDurationItem.innerHTML = singer;
         document.querySelector("#ptc-" + index).appendChild(trackDurationItem);
 
         var h6 = document.createElement("h6");
-        h6.innerHTML = `${name}${duration}`;
+        h6.innerHTML = `${name}${singer}`;
         document.querySelector("#ptc-" + index).appendChild(h6);
       }
 
-      var listAudio = [
+      let listAudio = [
         {
           name: "ဗါး",
           file: "assets/musics/hnrtaudios/ဗါး.mp3",
-          duration: "ခွန်ခွန်ကျော်ဦး",
+          singer: "ခွန်ခွန်ကျော်ဦး",
+          writer:"ခွန်ခွန်ကျော်ဦး",
+          profile:"assets/images/mimgs/kko.jpg",
         },
         {
           name: "ထွားနုဲင်းရုဲင်းတဝ်း",
           file: "assets/musics/hnrtaudios/ထွားနုဲင်းရုဲင်းတဝ်း.mp3",
-          duration: "ခွန်ပျူ",
+          singer: "ခွန်ပျူ",
+          writer:"ခွန်တင်ဦး",
+          profile:"assets/images/mimgs/kp.jpg"
         },
         {
           name: "စွꩻခွင်ꩻဗဲင်းမွိုင်",
           file: "assets/musics/hnrtaudios/စွꩻခွင်ꩻဗဲင်းမွိုင်.mp3",
-          duration: "ခွန်အောင်သိုက်",
+          singer: "ခွန်အောင်သိုက်",
+          writer:"ခွန်ဇိုလ်",
+          profile:"assets/images/mimgs/kat.jpg"
         },
         {
           name: "အုံဟဝ်နေႏမွိုး",
           file: "assets/musics/hnrtaudios/အုံဟဝ်နေႏမွိုး.mp3",
-          duration: "ခွန်ပဒဲကော",
+          singer: "ခွန်ပဒဲကော",
+          writer:"ခွန်ပဒဲကော",
+          profile:"assets/images/mimgs/kpd.jpg"
         },
         {
           name: "နားဟွိုန်ꩻ",
           file: "assets/musics/hnrtaudios/နားဟွိုန်ꩻ.mp3",
-          duration: "ခွန်တကီးတဘဲ",
+          singer: "ခွန်တကီးတဘဲ",
+          writer:"ခွန်တကီးတဘဲ",
+          profile:"assets/images/mimgs/logo.jpg"
         },
         {
           name: "နာꩻဒေါ့ꩻ",
           file: "assets/musics/hnrtaudios/နာꩻဒေါ့ꩻ.mp3",
-          duration: "ခွန်စောနိုင်",
+          singer: "ခွန်စောနိုင်",
+          writer:"ခွန်ပဒဲကော",
+          profile:"assets/images/mimgs/logo.jpg"
         },
         {
           name: "အွဥ်ဝင်ꩻစွီꩻစူ",
           file: "assets/musics/hnrtaudios/အွဥ်ဝင်ꩻစွီꩻစူ.mp3",
-          duration: "ခွန်ပျူ+နန်းမိုခမ်း",
+          singer: "ခွန်ပျူ + နန်းမိုခမ်း",
+          writer:"ခွန်ခွန်ကျော်ဦး",
+          profile:"assets/images/mimgs/kp.jpg"
         },
         {
           name: "အရက်ꩻသွတ်ꩻခွေꩻအလောင်း",
           file: "assets/musics/hnrtaudios/အရက်ꩻသွတ်ꩻခွေꩻအလောင်း.mp3",
-          duration: "ခွန်အောင်သိုက်",
+          singer: "ခွန်အောင်သိုက်",
+          writer:"ခွန်အောင်သိုက်",
+          profile:"assets/images/mimgs/kat.jpg"
         },
         {
           name: "နွန်ႏ",
           file: "assets/musics/hnrtaudios/နွန်ႏ.mp3",
-          duration: "ခွန်ခွန်ကျော်ဦး",
+          singer: "ခွန်ခွန်ကျော်ဦး",
+          writer:"ခွန်ခွန်ကျော်ဦး",
+          profile:"assets/images/mimgs/kko.jpg"
         },
         {
           name: "ရက်ꩻမွေးမွေးလဲဥ်းနာꩻ",
           file: "assets/musics/hnrtaudios/ရက်ꩻမွေးမွေးလဲဥ်းနာꩻ.mp3",
-          duration: "ခွန်စောနိုင်",
+          singer: "ခွန်စောနိုင်",
+          writer:"ခွန်ဇေလတ်",
+          profile:"assets/images/mimgs/logo.jpg"
         },
         {
           name: "တူနယ်တဲနယ်",
           file: "assets/musics/hnrtaudios/တူနယ်တဲနယ်.mp3",
-          duration: "ခွန်ခွန်ကျော်ဦး",
+          singer: "ခွန်ခွန်ကျော်ဦး",
+          writer:"ခွန်ခွန်ကျော်ဦး",
+          profile:"assets/images/mimgs/kko.jpg"
         },
         {
           name: "အပဲစ်ꩻကင်ꩻထာꩻရက်ꩻ",
           file: "assets/musics/hnrtaudios/အပဲစ်ꩻကင်ꩻထာꩻရက်ꩻ.mp3",
-          duration: "ခွန်ကျော်စိုး",
+          singer: "ခွန်ကျော်စိုး",
+          writer:"ခွန်ကျော်စိုး",
+          profile:"assets/images/mimgs/kks.jpg"
         },
         {
           name: "နီဖာဗွေႏ",
           file: "assets/musics/hnrtaudios/နီဖာဗွေႏ.mp3",
-          duration: "ခွန်ခွန်ကျော်ဦး",
+          singer: "ခွန်ခွန်ကျော်ဦး",
+          writer:"ခွန်ခွန်ကျော်ဦး",
+          profile:"assets/images/mimgs/kko.jpg"
         },
         {
           name: "နာꩻထန်ႏထိုႏ",
           file: "assets/musics/hnrtaudios/နာꩻထန်ႏထိုႏ.mp3",
-          duration: "ခွန်ဇော်ခက်",
+          singer: "ခွန်ဇော်ခက်",
+          writer:"ခွန်ခွန်ကျော်ဦး",
+          profile:"assets/images/mimgs/kzk.jpg"
         },
       ];
 
       for (var i = 0; i < listAudio.length; i++) {
-        createTrackItem(i, listAudio[i].name, listAudio[i].duration);
+        createTrackItem(i, listAudio[i].name, listAudio[i].singer);
       }
       var indexAudio = 0;
 
       function loadNewTrack(index) {
         var player = document.querySelector("#source-audio");
         player.src = listAudio[index].file;
-        document.querySelector(".title").innerHTML =
-          listAudio[index].name + " - " + listAudio[index].duration;
+        document.querySelector(".title").innerHTML =listAudio[index].name ;
         this.currentAudio = document.getElementById("myAudio");
         this.currentAudio.load();
         this.toggleAudio();
         this.updateStylePlaylist(this.indexAudio, index);
         this.indexAudio = index;
+        subDisplay()
+        if(this.indexAudio < listAudio.length -1 && isRandom === true){
+              let randomIndex = Number.parseInt(Math.random()*listAudio.length)
+              this.indexAudio = randomIndex;
+        }
       }
 
       var playListItems = document.querySelectorAll(".playlist-track-ctn");
@@ -460,8 +596,7 @@
       }
 
       document.querySelector("#source-audio").src = listAudio[indexAudio].file;
-      document.querySelector(".title").innerHTML =
-        listAudio[indexAudio].name + " - " + listAudio[indexAudio].duration;
+      document.querySelector(".title").innerHTML = listAudio[indexAudio].name ;
 
       var currentAudio = document.getElementById("myAudio");
 
@@ -473,6 +608,23 @@
       }.bind(this);
 
       var interval1;
+
+      const subDisplay = () => {
+          document.querySelector('.song-name').textContent = listAudio[indexAudio].name;
+          document.querySelector('.sub-img').style.backgroundImage = "url("+listAudio[indexAudio].profile+")";
+          document.querySelector('.sub-singer').textContent = listAudio[indexAudio].singer;
+          document.querySelector('.sub-writer').textContent = listAudio[indexAudio].writer;
+          document.querySelector('.download').href = listAudio[indexAudio].file;
+          document.querySelector('.download').download = listAudio[indexAudio].name;
+      }
+
+      document.querySelector('.infos-ctn').addEventListener('click',()=>{
+        document.querySelector('.main-ctn').classList.add('inactive')
+        document.querySelector('.sub-ctn').classList.remove('inactive')
+        document.querySelector('.shullfe').classList.remove('inactive')
+        document.querySelector('.repeat-box').classList.remove('inactive')
+        subDisplay()
+      });
 
       function toggleAudio() {
         if (this.currentAudio.paused) {
@@ -544,23 +696,37 @@
         barProgress.style.width = percent * 100 + "%";
       }
 
-      function forward() {
-        this.currentAudio.currentTime = this.currentAudio.currentTime + 5;
-        this.setBarProgress();
+      let isRandom = false;
+      function shullfe() {
+        isRandom ? pauseRandom() : playRandom();
       }
-
-      function rewind() {
-        this.currentAudio.currentTime = this.currentAudio.currentTime - 5;
-        this.setBarProgress();
+      function playRandom() {
+        isRandom = true;
+        document.querySelector('.fa-shuffle').style.color = 'red'
+      }
+      function pauseRandom() {
+        isRandom = false;
+        document.querySelector('.fa-shuffle').style.color = 'white'
       }
 
       function next() {
-        if (this.indexAudio < listAudio.length - 1) {
-          var oldIndex = this.indexAudio;
+        if (this.indexAudio < listAudio.length - 1 && isRandom === false ) {
+          let oldIndex = this.indexAudio;
           this.indexAudio++;
           updateStylePlaylist(oldIndex, this.indexAudio);
           this.loadNewTrack(this.indexAudio);
+          subDisplay()
+        }else if(this.indexAudio < listAudio.length - 1 && isRandom === true){
+          let newIndex = this.indexAudio
+            let randomIndex = Number.parseInt(Math.random()*listAudio.length)
+            this.indexAudio = randomIndex;
+            updateStylePlaylist(newIndex, this.indexAudio);
+            this.loadNewTrack(this.indexAudio);
+            console.log(randomIndex)
+        }else{
+          this.indexAudio = 0;
         }
+          
       }
 
       function previous() {
@@ -569,6 +735,7 @@
           this.indexAudio--;
           updateStylePlaylist(oldIndex, this.indexAudio);
           this.loadNewTrack(this.indexAudio);
+          subDisplay()
         }
       }
 
@@ -587,12 +754,14 @@
         var ele = document.querySelector("#p-img-" + index);
         ele.classList.remove("fa-play");
         ele.classList.add("fa-pause");
+        document.querySelector('.sub-img').classList.add('rotate')
       }
-
+      
       function pauseToPlay(index) {
         var ele = document.querySelector("#p-img-" + index);
         ele.classList.remove("fa-pause");
         ele.classList.add("fa-play");
+        document.querySelector('.sub-img').classList.remove('rotate')
       }
 
       function toggleMute() {
@@ -607,6 +776,21 @@
           this.currentAudio.muted = false;
           volMute.style.display = "none";
           volUp.style.display = "block";
+        }
+      }
+
+      let isLoop = false;
+      function repeat() {
+        pauseRandom();
+        if (this.currentAudio.loop != true && this.currentAudio.play()) {
+          this.currentAudio.loop = true;
+          this.currentAudio.play();
+          document.querySelector(".re-icon").style.display = "none";
+          document.querySelector(".once-icon").style.display = "block";
+        } else {
+          this.currentAudio.loop = false;
+          document.querySelector(".re-icon").style.display = "block";
+          document.querySelector(".once-icon").style.display = "none";
         }
       }
     </script>
