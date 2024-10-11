@@ -242,8 +242,18 @@
           box-shadow: 0px 4px 3px rgb(0, 0, 0);
       }
     }
-    .sub-writer,.download{
+    .sub-writer{
       font-size: 12px;
+    }
+    .download{
+      button{
+        margin: 5px;
+        padding: 3px;
+        font-size: 12px;
+      }
+      i{
+        font-size: 14px;
+      }
     }
   }
   .rotate {
@@ -336,8 +346,11 @@
                   </a>
                   <i class="fa-solid fa-xmark" style="color: rgb(255, 255, 255);"></i>
                 </div>
-                <i class="fa-solid fa-share"></i>
-                <i class="fa-solid fa-heart"></i>
+                <button class="share-btn">
+                  <i class="fa-solid fa-share"></i> Share
+                </button>
+
+                <!-- <i class="fa-solid fa-heart"></i> -->
 
               </div>
           </div>
@@ -350,7 +363,7 @@
     <div class="sub-ctn inactive">
       <div class="sub-title">
         <a href="hnrtmusiclist.html"><div><i class="fa-solid fa-arrow-left"></i></div></a>
-        <div class="song-name">Hello</div>
+        <div class="song-name"></div>
         <a href="index.html"><div><i class="fa-solid fa-house"></i></div></a>
       </div>
       <div class="sub-imgbox">
@@ -358,7 +371,7 @@
       </div>
         <div class="sub-singer"></div>
         <div class="sub-writer"></div>
-        <a href="" download="" class="download">Download</a>
+        <a href="" download="" class="download"><button><i class="fa-solid fa-download"></i>  Download</button></a>
     </div>
 
       <div class="controls-container">
@@ -430,21 +443,20 @@
       
     
 
-    <script>
+<script>
       document.querySelector('.glass').addEventListener('click',()=>{
             document.querySelector('input').focus()
       });
 
-      const search = () => {
-              const searchBox = document.getElementById("search-item").value.toUpperCase();
-              const product = document.querySelectorAll(".product");
-              const pname = document.getElementsByTagName("h6");
+  const search = () => {
+      const searchBox = document.getElementById("search-item").value.toUpperCase();
+      const product = document.querySelectorAll(".product");
+      const pname = document.getElementsByTagName("h6");
 
-              for (var i = 0; i < pname.length; i++) {
-                let match = product[i].getElementsByTagName("h6")[0];
-                if (match) {
-                  let textvalue = match.textContent || match.innerHTML;
-
+      for (var i = 0; i < pname.length; i++) {
+            let match = product[i].getElementsByTagName("h6")[0];
+            if (match) {
+                let textvalue = match.textContent || match.innerHTML;
                   if (textvalue.toUpperCase().indexOf(searchBox) > -1) {
                     product[i].style.display = "";
                   } else {
@@ -454,18 +466,22 @@
               }
             };
 
-      document.querySelector('.fa-share').addEventListener('click',()=>{
+      document.querySelector('.share-btn').addEventListener('click',()=>{
         document.querySelector('.socials-box').classList.remove('inactive')
+        document.querySelector('.share-btn').classList.add('inactive')
       });
       document.querySelector('.fa-xmark').addEventListener('click',()=>{
         document.querySelector('.socials-box').classList.add('inactive')
+        document.querySelector('.share-btn').classList.remove('inactive')
       });
       
+      // for album sharing
       const url = encodeURIComponent('https://cartoontgimusic.github.io/homepage/hnrtmusiclist.html');
       const title = encodeURIComponent(document.title);
       document.querySelector('.facebook-btn').href = `https://www.facebook.com/sharer.php?u=${url}`;
       document.querySelector('.twitter-btn').href = `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
       document.querySelector('.telegram-btn').href = `https://t.me/share/url?url=${url}&text=${title}`;
+      
 
       function createTrackItem(index, name, singer) {
         var trackItem = document.createElement("div");
@@ -603,8 +619,8 @@
       for (var i = 0; i < listAudio.length; i++) {
         createTrackItem(i, listAudio[i].name, listAudio[i].singer);
       }
+      
       var indexAudio = 0;
-
       function loadNewTrack(index) {
         var player = document.querySelector("#source-audio");
         player.src = listAudio[index].file;
@@ -622,11 +638,8 @@
       }
 
       var playListItems = document.querySelectorAll(".playlist-track-ctn");
-
       for (let i = 0; i < playListItems.length; i++) {
-        playListItems[i].addEventListener(
-          "click",
-          getClickedElement.bind(this)
+        playListItems[i].addEventListener("click",getClickedElement.bind(this)
         );
       }
 
