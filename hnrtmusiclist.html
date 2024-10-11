@@ -15,7 +15,7 @@
       src="https://kit.fontawesome.com/a062562745.js"
       crossorigin="anonymous"
     ></script>
-    <title>HnrtSongsList</title>
+    <title>ထွားနုဲင်းရုဲင်းတဝ်း</title>
     <link rel="stylesheet" media="all" />
   </head>
   <style>
@@ -90,6 +90,26 @@
         .bandname-text,
         .date-box{
           font-size: 12px;
+        }
+      }
+      .socials-box{
+        position: relative;
+        background-color: #ffffff;
+        margin-top: 5px;
+        a{
+          text-decoration: none;
+        }
+        i{
+          font-size: 1.5rem;
+          padding: 5px;
+        }
+        .fa-xmark{
+          position: absolute;
+          background-color: red;
+          top: 0;
+          right: 0;
+          padding: 0;
+          font-size: 1rem;
         }
       }
     }
@@ -298,10 +318,28 @@
                 <div class="title-text">ထွားနုဲင်းရုဲင်းတဝ်း</div>
                 <div class="bandname-text">ကာတွန်းစွိုꩻ</div>
                 <div class="bandname-text">14 songs</div>
-    
+                <div class="bandname-text">Released - 2022</div>
               </div>
-              <div class="date-box">
-                <div>Released - 2022</div>
+              
+              <div class="share-box">
+                <i class="fa-solid fa-share"></i>
+                <i class="fa-solid fa-heart"></i>
+                <div class="socials-box inactive">
+                  <a href="#" class="facebook-btn" target="_blank">
+                    <i class="fa-brands fa-facebook" style="color: rgb(24, 119, 242)"></i>
+                  </a>
+                  <a href="#" class="twitter-btn" target="_blank">
+                    <i class="fa-brands fa-x-twitter" style="color: #000000;"></i>
+                  </a>
+                  <a href="#" class="telegram-btn" target="_blank">
+                    <i class="fa-brands fa-telegram" style="color: #0088cc;"></i>
+                  </a>
+                  <a href="#" class="messenger-btn" target="_blank">
+                    <i class="fa-brands fa-facebook-messenger" style="color: #168AFF;"></i>
+                  </a>
+                  <i class="fa-solid fa-xmark" style="color: black;"></i>
+                </div>
+
               </div>
           </div>
         </div>
@@ -417,6 +455,20 @@
               }
             };
 
+      document.querySelector('.fa-share').addEventListener('click',()=>{
+        document.querySelector('.socials-box').classList.remove('inactive')
+      });
+      document.querySelector('.fa-xmark').addEventListener('click',()=>{
+        document.querySelector('.socials-box').classList.add('inactive')
+      });
+      
+      const url = encodeURIComponent('https://cartoontgimusic.github.io/homepage/hnrtmusiclist.html');
+      const title = encodeURIComponent(document.title);
+      document.querySelector('.facebook-btn').href = `https://www.facebook.com/sharer.php?u=${url}`;
+      document.querySelector('.twitter-btn').href = `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
+      document.querySelector('.telegram-btn').href = `https://t.me/share/url?url=${url}&text=${title}`;
+      document.querySelector('.messenger-btn').href = `http://m.me/${url}`;
+
       function createTrackItem(index, name, singer) {
         var trackItem = document.createElement("div");
         trackItem.setAttribute("class", "playlist-track-ctn product");
@@ -469,7 +521,7 @@
           file: "assets/musics/hnrtaudios/စွꩻခွင်ꩻဗဲင်းမွိုင်.mp3",
           singer: "ခွန်အောင်သိုက်",
           writer:"ခွန်ဇိုလ်",
-          profile:"assets/images/mimgs/kat.jpg"
+          profile:"assets/images/mimgs/kat.JPG"
         },
         {
           name: "အုံဟဝ်နေႏမွိုး",
@@ -504,7 +556,7 @@
           file: "assets/musics/hnrtaudios/အရက်ꩻသွတ်ꩻခွေꩻအလောင်း.mp3",
           singer: "ခွန်အောင်သိုက်",
           writer:"ခွန်အောင်သိုက်",
-          profile:"assets/images/mimgs/kat.jpg"
+          profile:"assets/images/mimgs/kat.JPG"
         },
         {
           name: "နွန်ႏ",
