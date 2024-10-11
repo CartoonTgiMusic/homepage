@@ -15,14 +15,25 @@
       src="https://kit.fontawesome.com/a062562745.js"
       crossorigin="anonymous"
     ></script>
-    <title>katooSonglist</title>
+    <title>ကတွူဆွော့ꩻမွုန်းဒွုမ်နင်ꩻ</title>
     <link rel="stylesheet" media="all" />
   </head>
   <style>
-    body {
-      background: linear-gradient(-90deg,rgb(7, 100, 231),rgb(255, 255, 255));
-      color: #000000;
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body{
+      background: black;
+      color: #ffffff;
       font-family: "Roboto", sans-serif;
+      a{
+        color: white;
+      }
+    }
+
+    .main-ctn {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -33,64 +44,81 @@
       top: 0;
       position: fixed;
       width: 100%;
-      background: linear-gradient(-90deg,rgb(7, 100, 231),rgb(255, 255, 255));
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      z-index: 1;
+      background-color: black;
+      z-index: 2;
       .search-box{
-        width: 95%;
-        height: 30px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding:0px 5px;
         input{
           width: 100%;
-          margin-left: 10px;
+          margin:0 10px;
+          color: #ffffff;
+          padding: 5px;
           background: none;
           border: none;
           outline: none;
-        }
-        .glass{
-          margin: 0px 10px;
         }
         i{
           font-size: 1.2rem;
         }
       }
-      .hader-div{
-        width: 95%;
+    }
+    .header-div{
+      width: 100%;
+      display: flex;
+      padding: 34px 5px 10px;
+      user-select: none;
+      .img-box{
+        width: 150px;
+        height: 150px;
+        border: 1px solid white;
+      }
+      img{
+        width: 100%;
+        height: 100%;
+      }
+      .details-box{
+        margin-left: 10px;
+        width: 150px ;
         display: flex;
-        margin: 5px 0px;
-        .img-box{
-          width: 150px;
-          height: 150px;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        .title-text{
+          font-size: 14px;
         }
-        img{
-          width: 100%;
-          height: 100%;
+        .bandname-text,
+        .date-box{
+          font-size: 12px;
         }
-        .details-box{
-          margin-left: 10px;
-          width: 200px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          .title-text{
-            font-size: 14px;
-          }
-          .bandname-text,
-          .text-box{
-            font-size: 12px;
-          }
+      }
+      .socials-box{
+        position: relative;
+        margin-bottom: 5px;
+        a{
+          text-decoration: none;
+        }
+        i{
+          font-size: 1.5rem;
+          background-color: #ffffff;
+          border-radius: 10%;
+          padding: 2px;
+        }
+        .fa-xmark{
+          position: absolute;
+          background-color: red;
+          top: 0;
+          right: 0;
+          padding: 0;
+          font-size: 1rem;
         }
       }
     }
-  
     .player-ctn {
-      width: 95%;
-      margin: 200px 0px 100px;
+      width: 100%;
+      padding:0 5px 100px;
         .playlist-track-ctn {
           display: flex;
           margin: 5px 0px;
@@ -100,14 +128,21 @@
                     display: none;
                   }
           .playlist-btn-play {
+                background: url(assets/images/mimgs/cover6.jpg) center/cover no-repeat;
                 pointer-events: none;
-                padding: 7px 10px;
-                color: #656565;
+                width: 50px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 10px;
+                color: #000000;
+                border: 1px solid white;
               }
             .playlist-info-track,
             .playlist-duration {
-                  color: #000000;
-                  font-size: 0.9rem;
+                  color: #ffffff;
+                  font-size: 12px;
                   pointer-events: none;
                   user-select: none;
                   width: 50%;
@@ -116,64 +151,161 @@
     }
     
     .playlist-track-ctn:hover {
-      transform: scaleY(1.2);
-      border: 1px solid rgb(0, 0, 0);
+      background-color: blue;
     }
     .active-track {
-      transform: scaleY(1.2);
-      border: 1px solid rgb(0, 0, 0);
-      font-weight: bold;
+      background-color: blue;
     }
-
-    .controls-container {
-          bottom: 0;
-          position: fixed;
-          width: 100%;
+    
+   .controls-container {
+        bottom: 0;
+        position: fixed;
+        width: 100%;
           display: flex;
           justify-content: center;
           align-items: center;
           flex-direction: column;
-          background: linear-gradient(-90deg,rgb(7, 100, 231),rgb(255, 255, 255));
-          padding-bottom: 5px;
+          background-color: black;
+          padding: 5px;
           z-index: 1;
-
           #myProgress {
               width: 80%;
-              background-color: silver;
+              background-color: gray;
               cursor: pointer;
               border-radius: 10px;
               margin: auto;
                   #myBar {
                     width: 0%;
                     height: 5px;
-                    background-color: rgb(56, 56, 56);
+                    background-color: rgb(255, 255, 255);
                     border-radius: 10px;
                   }
             }
-
+             .btn-ctn{
+              padding-top: 7px;
+             }
             .btn-ctn, .infos-ctn {
                       width: 80%;
                       display: flex;
                       justify-content: space-between;
                       align-items: center;
                       user-select: none;
-                      padding: 5px 0px;
                       text-align: center;
-                      font-size: small;
+                      font-size: 10px;
+                      .title{
+                        font-size: 14px;
+                      }
                       .btn-action {
                               cursor: pointer;
                             }
-                      .fas {
-                             font-size: 1.5rem;
+                      i {
+                             font-size: 1rem;
                        }
                   }
         }
+  
+    
     .btn-ctn i:hover {
           transform: scale(1.2);
         }
-    a{
-      color: inherit;
+
+  .sub-ctn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px;
+    i{
+      font-size: 1.2rem;
     }
+    .sub-title{
+      width: 100%;
+      position: fixed;
+      display: flex;
+      background-color: black;
+      justify-content: space-between;
+      align-items: center;
+      padding:3px 5px;
+      z-index: 2;
+    }
+    .sub-imgbox{
+        box-shadow: 0px 0px 30px rgb(255, 0, 0);
+        width: 250px;
+        height: 250px;
+        padding: 30px;
+        margin: 50px 0 10px;
+        background: url(assets/images/mimgs/cover6.jpg) center/cover no-repeat;
+        .sub-img{
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+          background-repeat: no-repeat;
+          border: 3px solid rgb(195, 168, 15);
+          border-radius: 50%;
+          box-shadow: 0px 4px 3px rgb(0, 0, 0);
+      }
+    }
+    .sub-writer{
+      font-size: 12px;
+    }
+    .download{
+      button{
+        margin: 5px;
+        padding: 3px;
+        font-size: 12px;
+      }
+      i{
+        font-size: 14px;
+      }
+    }
+  }
+  .rotate {
+      animation: rotation 8s infinite linear;
+    }
+    @keyframes rotation {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+  @media screen and (min-width:700px){
+    .nav{
+      padding-left: 155px;
+    }
+    .header-div{
+      top: 0;
+      left: 0;
+      padding: 5px;
+      position: fixed;
+      width: 160px;
+      height: 100vh;
+      background-color: rgb(0, 0, 0);
+      display: flex;
+      flex-direction: column;
+      z-index: 4;
+      .details-box{
+        margin-left: 0;
+        margin-top: 5px;
+        width: 150px;
+        text-align: center;
+      }
+    }
+    .player-ctn{
+      padding-top: 25px;
+      .playlist-track-ctn{
+        padding-left: 155px;
+      }
+    }
+
+      .controls-container{
+        background-color: black;
+        padding: 0 150px 5px;
+      }
+  }
+  .inactive{
+    display: none;
+  }
   </style>
 
   <body>
@@ -182,97 +314,151 @@
       <source id="source-audio" src="" type="audio/mpeg" />
       Your browser does not support the audio element.
     </audio>
-    <div class="nav">
-        <div class="search-box">
-          <a href="index.html"><div><i class="fa-solid fa-arrow-left"></i></div></a>
-          <input type="text" placeholder="Search...." id="search-item" onkeyup="search()" >
-          <div class="glass"><i class="fa-solid fa-magnifying-glass"></i></div>
-          <!-- <a href="katoo.html"><div><i class="fa-solid fa-arrow-right"></i></div></a> -->
-        </div>
-        
-        <div class="hader-div">
-          <div class="img-box">
-            <img src="assets/images/mimgs/cover6.jpg" alt="">
-          </div>
-          <div class="details-box">
-            <div>
-              <div class="title-text">ကတွူႏဆွော့ꩻမွုန်းဒွုမ်ꩻနင်ꩻ</div>
-              <div class="bandname-text">ကာတွန်းစွိုꩻ</div>
-              <div class="bandname-text">8 songs</div>
+    <div class="main-ctn">
+        <div class="nav">
+            <div class="search-box">
+              <a href="index.html"><div><i class="fa-solid fa-arrow-left"></i></div></a>
+              <input type="text" placeholder="Search...." id="search-item" onkeyup="search()" >
+              <div class="glass"><i class="fa-solid fa-magnifying-glass"></i></div>
             </div>
-            <div class="text-box">Released - 2005</div>
+          </div>
+            
+          <div class="header-div">
+            <div class="img-box">
+              <img src="assets/images/mimgs/cover6.jpg" alt="">
+            </div>
+            <div class="details-box">
+              <div>
+                <div class="title-text">ကတွူဆွော့ꩻမွုန်းဒွုမ်နင်ꩻ</div>
+                <div class="bandname-text">ကာတွန်းစွိုꩻ</div>
+                <div class="bandname-text">8 songs</div>
+                <div class="bandname-text">Released - 2005</div>
+              </div>
+              
+              <div class="share-box">
+                <div class="socials-box inactive">
+                  <a href="#" class="facebook-btn" target="_blank">
+                    <i class="fa-brands fa-facebook" style="color: rgb(24, 119, 242)"></i>
+                  </a>
+                  <a href="#" class="twitter-btn" target="_blank">
+                    <i class="fa-brands fa-x-twitter" style="color: #000000;"></i>
+                  </a>
+                  <a href="#" class="telegram-btn" target="_blank">
+                    <i class="fa-brands fa-telegram" style="color: #0088cc;"></i>
+                  </a>
+                  <i class="fa-solid fa-xmark" style="color: rgb(255, 255, 255);"></i>
+                </div>
+                <button class="share-btn">
+                  <i class="fa-solid fa-share"></i> Share
+                </button>
 
+                <!-- <i class="fa-solid fa-heart"></i> -->
+
+              </div>
+          </div>
         </div>
+    
+        <div class="player-ctn">
+          <div class="playlist-ctn"></div>
+        </div>
+    </div>
+    <div class="sub-ctn inactive">
+      <div class="sub-title">
+        <a href="katoomusiclist.html"><div><i class="fa-solid fa-arrow-left"></i></div></a>
+        <div class="song-name"></div>
+        <a href="index.html"><div><i class="fa-solid fa-house"></i></div></a>
       </div>
+      <div class="sub-imgbox">
+        <div class="sub-img"></div>
+      </div>
+        <div class="sub-singer"></div>
+        <div class="sub-writer"></div>
+        <a href="" download="" class="download"><button><i class="fa-solid fa-download"></i>  Download</button></a>
     </div>
 
-    <div class="controls-container">
-      <div class="infos-ctn">
-        <div class="timer">00:00</div>
-        <div class="title"></div>
-        <div class="duration">00:00</div>
-      </div>
-      <div id="myProgress">
-        <div id="myBar"></div>
-      </div>
-      <div class="btn-ctn">
-        <div class="btn-action first-btn" onclick="previous()">
-          <div id="btn-faws-back">
-            <i class="fas fa-step-backward"></i>
-          </div>
+      <div class="controls-container">
+        <div class="infos-ctn">
+          <div class="timer">00:00</div>
+          <div class="title"></div>
+          <div class="duration">00:00</div>
         </div>
-        <div class="btn-action" onclick="rewind()">
-          <div id="btn-faws-rewind">
-            <i class="fas fa-backward"></i>
-          </div>
+        <div id="myProgress">
+          <div id="myBar"></div>
         </div>
-        <div class="btn-action" onclick="toggleAudio()">
-          <div id="btn-faws-play-pause">
-            <i class="fas fa-play" id="icon-play"></i>
-            <i class="fas fa-pause" id="icon-pause" style="display: none"></i>
+        <div class="btn-ctn ">
+          <div class="btn-action shullfe inactive " onclick="shullfe() ">
+            <div id="btn-shuffle">
+              <i class="fa-solid fa-shuffle"></i>
+            </div>
           </div>
-        </div>
-        <div class="btn-action" onclick="forward()">
-          <div id="btn-faws-forward">
-            <i class="fas fa-forward"></i>
-          </div>
-        </div>
-        <div class="btn-action" onclick="next()">
-          <div id="btn-faws-next">
-            <i class="fas fa-step-forward"></i>
-          </div>
-        </div>
-        <div class="btn-mute btn-action" id="toggleMute" onclick="toggleMute()">
-          <div id="btn-faws-volume">
-            <i id="icon-vol-up" class="fas fa-volume-up"></i>
-            <i
-              id="icon-vol-mute"
-              class="fas fa-volume-mute"
-              style="display: none"
-            ></i>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="player-ctn">
-      <div class="playlist-ctn"></div>
-    </div>
-    <script>
+          <div class="btn-action" onclick="previous()">
+            <div id="btn-faws-back">
+              <i class="fas fa-step-backward"></i>
+            </div>
+          </div>
+
+          <div class="btn-action" onclick="toggleAudio()">
+            <div id="btn-faws-play-pause">
+              <i class="fas fa-play" id="icon-play"></i>
+              <i class="fas fa-pause" id="icon-pause" style="display: none"></i>
+            </div>
+          </div>
+          
+          <div class="btn-action" onclick="next()">
+            <div id="btn-faws-next">
+              <i class="fas fa-step-forward"></i>
+            </div>
+          </div>
+
+          <div class="btn-action repeat-box inactive " onclick="repeat() ">
+            <div id="btn-faws-repeat">
+              <i class="fa-solid fa-repeat re-icon"></i>
+              <i class="once-icon" style="display: none"
+                  ><svg
+                    width="22"
+                    height="22"
+                    viewBox="-2 -2 24 24"
+                    stroke-width="2.3"
+                    stroke="white"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M4 12v-3a3 0 0 0 0 3 -3h13m-3 -3l3 3l-3 3" />
+                    <path d="M20 12v3a3 0 0 0 0 -3 3h-13m3 3l-3 -3l3 -3" />
+                    <path d="M11 11l1 -1v4" /></svg></i>
+            </div>
+          </div>
+
+          <div class="btn-mute btn-action" id="toggleMute" onclick="toggleMute()">
+            <div id="btn-faws-volume">
+              <i id="icon-vol-up" class="fas fa-volume-up"></i>
+              <i id="icon-vol-mute" class="fas fa-volume-mute" style="display: none"
+              ></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+    
+
+<script>
       document.querySelector('.glass').addEventListener('click',()=>{
             document.querySelector('input').focus()
       });
-      
-      const search = () => {
-              const searchBox = document.getElementById("search-item").value.toUpperCase();
-              const product = document.querySelectorAll(".product");
-              const pname = document.getElementsByTagName("h6");
 
-              for (var i = 0; i < pname.length; i++) {
-                let match = product[i].getElementsByTagName("h6")[0];
-                if (match) {
-                  let textvalue = match.textContent || match.innerHTML;
+  const search = () => {
+      const searchBox = document.getElementById("search-item").value.toUpperCase();
+      const product = document.querySelectorAll(".product");
+      const pname = document.getElementsByTagName("h6");
 
+      for (var i = 0; i < pname.length; i++) {
+            let match = product[i].getElementsByTagName("h6")[0];
+            if (match) {
+                let textvalue = match.textContent || match.innerHTML;
                   if (textvalue.toUpperCase().indexOf(searchBox) > -1) {
                     product[i].style.display = "";
                   } else {
@@ -282,7 +468,24 @@
               }
             };
 
-      function createTrackItem(index, name, duration) {
+      document.querySelector('.share-btn').addEventListener('click',()=>{
+        document.querySelector('.socials-box').classList.remove('inactive')
+        document.querySelector('.share-btn').classList.add('inactive')
+      });
+      document.querySelector('.fa-xmark').addEventListener('click',()=>{
+        document.querySelector('.socials-box').classList.add('inactive')
+        document.querySelector('.share-btn').classList.remove('inactive')
+      });
+      
+      // for album sharing
+      const url = encodeURIComponent('https://cartoontgimusic.github.io/homepage/katoomusiclist.html');
+      const title = encodeURIComponent(document.title);
+      document.querySelector('.facebook-btn').href = `https://www.facebook.com/sharer.php?u=${url}`;
+      document.querySelector('.twitter-btn').href = `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
+      document.querySelector('.telegram-btn').href = `https://t.me/share/url?url=${url}&text=${title}`;
+      
+
+      function createTrackItem(index, name, singer) {
         var trackItem = document.createElement("div");
         trackItem.setAttribute("class", "playlist-track-ctn product");
         trackItem.setAttribute("id", "ptc-" + index);
@@ -296,8 +499,6 @@
 
         var btnImg = document.createElement("i");
         btnImg.setAttribute("class", "fas fa-play");
-        btnImg.setAttribute("height", "40");
-        btnImg.setAttribute("width", "40");
         btnImg.setAttribute("id", "p-img-" + index);
         document.querySelector("#pbp-" + index).appendChild(btnImg);
 
@@ -308,80 +509,137 @@
 
         var trackDurationItem = document.createElement("div");
         trackDurationItem.setAttribute("class", "playlist-duration");
-        trackDurationItem.innerHTML = duration;
+        trackDurationItem.innerHTML = singer;
         document.querySelector("#ptc-" + index).appendChild(trackDurationItem);
 
         var h6 = document.createElement("h6");
-        h6.innerHTML = `${name}${duration}`;
+        h6.innerHTML = `${name}${singer}`;
         document.querySelector("#ptc-" + index).appendChild(h6);
       }
 
-      var listAudio = [
-        {
-          name: "ကာတွန်းစွိုꩻ",
-          file: "assets/musics/katochock/ကာတွန်းစွိုꩻ.mp3",
-          duration: "ကာတွန်းစွိုꩻ",
-        },
-        {
-          name: "မဲဉ်သေꩻငါႏ",
-          file: "assets/musics/katochock/မဲဉ်သေꩻငါႏ.mp3",
-          duration: "ခွန်ကော်လီ",
-        },
-        {
-          name: "လွꩻထီႏငါႏလဲဉ်းနာꩻ",
-          file: "assets/musics/katochock/လွꩻထီႏငါႏလဲဉ်းနာꩻ.mp3",
-          duration: "ခွန်ဂျိမ်း",
-        },
-        {
-          name: "မဲဉ်လꩻချာꩻငါႏ",
-          file: "assets/musics/katochock/မဲဉ်လꩻချာꩻငါႏ.mp3",
-          duration: "ခွန်ထင်အောင်လင်း+ခွန်ရှိန်း",
-        },
-        {
-          name: "ကတွူဆွော့မွုန်းဒွုမ်နင်",
-          file: "assets/musics/katochock/ကတွူဆွော့မွုန်းဒွုမ်နင်.mp3",
-          duration: "ကာတွန်းစွိုꩻ",
-        },
-        {
-          name: "ထာရုပ်ကော်ႏ",
-          file: "assets/musics/katochock/ထာရုပ်ကော်.mp3",
-          duration: "ကာတွန်းစွိုꩻ",
-        },
-        {
-          name: "စွယ်ငါလဲဉ်းနာ",
-          file: "assets/musics/katochock/စွယ်ငါလဲဉ်းနာ.mp3",
-          duration: "ခွန်ရှိန်း",
-        },
-        {
-          name: "အခိန်ႏအဝ်ႏနေဒွုန်းက",
-          file: "assets/musics/katochock/အခိန်ႏအဝ်ႏနေဒွုန်းက.mp3",
-          duration: "ခွန်ခွန်ကျော်ဦး",
-        },
+      let listAudio = [
+      {
+    name: "ကာတွန်းစွိုꩻ",
+    file: "assets/musics/katochock/ကာတွန်းစွိုꩻ.mp3",
+    singer: "Group",
+    profile:"assets/images/mimgs/cover6.jpg",
+    writer:"Composer - ကာတွန်းစွိုꩻ",
+    album:"Album - ကတွူဆွော့မွုန်းဒွုမ်နင်",
+    albuml_url:"katoo.html",
+    band:"Band - ကာတွန်းစွိုꩻ",
+    band_url:"cartoonTgi.html",
+    date:"Released - 2005",
+  },
+  {
+    name: "မဲဉ်သေꩻငါႏ",
+    file: "assets/musics/katochock/မဲဉ်သေꩻငါႏ.mp3",
+    singer: "ခွန်ကော်လီ",
+    profile:"assets/images/mimgs/kkl.jpg",
+    writer:"Composer - ခွန်ကော်လီ",
+    album:"Album - ကတွူဆွော့မွုန်းဒွုမ်နင်",
+    albuml_url:"katoo.html",
+    band:"Band - ကာတွန်းစွိုꩻ",
+    band_url:"cartoonTgi.html",
+    date:"Released - 2005",
+  },
+  {
+    name: "လွꩻထီႏငါႏလဲဉ်းနာꩻ",
+    file: "assets/musics/katochock/လွꩻထီႏငါႏလဲဉ်းနာꩻ.mp3",
+    singer: "ခွန်ဂျိမ်း",
+    profile:"assets/images/mimgs/kj.jpg",
+    writer:"Composer - ခွန်ရှိန်း",
+    album:"Album - ကတွူဆွော့မွုန်းဒွုမ်နင်",
+    albuml_url:"katoo.html",
+    band:"Band - ကာတွန်းစွိုꩻ",
+    band_url:"cartoonTgi.html",
+    date:"Released - 2005",
+  },
+  {
+    name: "မဲဉ်လꩻချာꩻငါႏ",
+    file: "assets/musics/katochock/မဲဉ်လꩻချာꩻငါႏ.mp3",
+    singer: "ခွန်ထင်အောင်လင်း+ခွန်ရှိန်း",
+    profile:"assets/images/mimgs/khal.jpg",
+    writer:"Composer - ခွန်ရှိန်း+ခွန်ကော်လီ",
+    album:"Album - ကတွူဆွော့မွုန်းဒွုမ်နင်",
+    albuml_url:"katoo.html",
+    band:"Band - ကာတွန်းစွိုꩻ",
+    band_url:"cartoonTgi.html",
+    date:"Released - 2005",
+  },
+  {
+    name: "ကတွူဆွော့မွုန်းဒွုမ်နင်",
+    file: "assets/musics/katochock/ကတွူဆွော့မွုန်းဒွုမ်နင်.mp3",
+    singer: "Group",
+    profile:"assets/images/mimgs/cover6.jpg",
+    writer:"Composer - ခွန်ရှိန်း+ခွန်ကော်လီ",
+    album:"Album - ကတွူဆွော့မွုန်းဒွုမ်နင်",
+    albuml_url:"katoo.html",
+    band:"Band - ကာတွန်းစွိုꩻ",
+    band_url:"cartoonTgi.html",
+    date:"Released - 2005",
+  },
+  {
+    name: "ထာရုပ်ကော်ႏ",
+    file: "assets/musics/katochock/ထာရုပ်ကော်.mp3",
+    singer: "Group",
+    profile:"assets/images/mimgs/cover6.jpg",
+    writer:"Composer - ခွန်ရှိန်း+ခွန်ကော်လီ",
+    album:"Album - ကတွူဆွော့မွုန်းဒွုမ်နင်",
+    albuml_url:"katoo.html",
+    band:"Band - ကာတွန်းစွိုꩻ",
+    band_url:"cartoonTgi.html",
+    date:"Released - 2005",
+  },
+  {
+    name: "စွယ်ငါလဲဉ်းနာ",
+    file: "assets/musics/katochock/စွယ်ငါလဲဉ်းနာ.mp3",
+    singer: "ခွန်ရှိန်း",
+    profile:"assets/images/mimgs/kck.jpg",
+    writer:"Composer - ခွန်ရှိန်း",
+    album:"Album - ကတွူဆွော့မွုန်းဒွုမ်နင်",
+    albuml_url:"katoo.html",
+    band:"Band - ကာတွန်းစွိုꩻ",
+    band_url:"cartoonTgi.html",
+    date:"Released - 2005",
+  },
+  {
+    name: "အခိန်ႏအဝ်ႏနေဒွုန်းက",
+    file: "assets/musics/katochock/အခိန်ႏအဝ်ႏနေဒွုန်းက.mp3",
+    singer: "ခွန်ခွန်ကျော်ဦး",
+    profile:"assets/images/mimgs/kko.jpg",
+    writer:"Composer - ခွန်ခွန်ကျော်ဦး",
+    album:"Album - ကတွူဆွော့မွုန်းဒွုမ်နင်",
+    albuml_url:"katoo.html",
+    band:"Band - ကာတွန်းစွိုꩻ",
+    band_url:"cartoonTgi.html",
+    date:"Released - 2005",
+  },
       ];
 
       for (var i = 0; i < listAudio.length; i++) {
-        createTrackItem(i, listAudio[i].name, listAudio[i].duration);
+        createTrackItem(i, listAudio[i].name, listAudio[i].singer);
       }
+      
       var indexAudio = 0;
-
       function loadNewTrack(index) {
         var player = document.querySelector("#source-audio");
         player.src = listAudio[index].file;
-        document.querySelector(".title").innerHTML =
-          listAudio[index].name + " - " + listAudio[index].duration;
+        document.querySelector(".title").innerHTML =listAudio[index].name ;
         this.currentAudio = document.getElementById("myAudio");
         this.currentAudio.load();
         this.toggleAudio();
         this.updateStylePlaylist(this.indexAudio, index);
         this.indexAudio = index;
+        subDisplay()
+        if(this.indexAudio < listAudio.length -1 && isRandom === true){
+              let randomIndex = Number.parseInt(Math.random()*listAudio.length)
+              this.indexAudio = randomIndex;
+        }
       }
 
       var playListItems = document.querySelectorAll(".playlist-track-ctn");
-
       for (let i = 0; i < playListItems.length; i++) {
-        playListItems[i].addEventListener(
-          "click",
-          getClickedElement.bind(this)
+        playListItems[i].addEventListener("click",getClickedElement.bind(this)
         );
       }
 
@@ -401,8 +659,7 @@
       }
 
       document.querySelector("#source-audio").src = listAudio[indexAudio].file;
-      document.querySelector(".title").innerHTML =
-        listAudio[indexAudio].name + " - " + listAudio[indexAudio].duration;
+      document.querySelector(".title").innerHTML = listAudio[indexAudio].name ;
 
       var currentAudio = document.getElementById("myAudio");
 
@@ -414,6 +671,23 @@
       }.bind(this);
 
       var interval1;
+
+      const subDisplay = () => {
+          document.querySelector('.song-name').textContent = listAudio[indexAudio].name;
+          document.querySelector('.sub-img').style.backgroundImage = "url("+listAudio[indexAudio].profile+")";
+          document.querySelector('.sub-singer').textContent = listAudio[indexAudio].singer;
+          document.querySelector('.sub-writer').textContent = listAudio[indexAudio].writer;
+          document.querySelector('.download').href = listAudio[indexAudio].file;
+          document.querySelector('.download').download = listAudio[indexAudio].name;
+      }
+
+      document.querySelector('.infos-ctn').addEventListener('click',()=>{
+        document.querySelector('.main-ctn').classList.add('inactive')
+        document.querySelector('.sub-ctn').classList.remove('inactive')
+        document.querySelector('.shullfe').classList.remove('inactive')
+        document.querySelector('.repeat-box').classList.remove('inactive')
+        subDisplay()
+      });
 
       function toggleAudio() {
         if (this.currentAudio.paused) {
@@ -485,23 +759,37 @@
         barProgress.style.width = percent * 100 + "%";
       }
 
-      function forward() {
-        this.currentAudio.currentTime = this.currentAudio.currentTime + 5;
-        this.setBarProgress();
+      let isRandom = false;
+      function shullfe() {
+        isRandom ? pauseRandom() : playRandom();
       }
-
-      function rewind() {
-        this.currentAudio.currentTime = this.currentAudio.currentTime - 5;
-        this.setBarProgress();
+      function playRandom() {
+        isRandom = true;
+        document.querySelector('.fa-shuffle').style.color = 'red'
+      }
+      function pauseRandom() {
+        isRandom = false;
+        document.querySelector('.fa-shuffle').style.color = 'white'
       }
 
       function next() {
-        if (this.indexAudio < listAudio.length - 1) {
-          var oldIndex = this.indexAudio;
+        if (this.indexAudio < listAudio.length - 1 && isRandom === false ) {
+          let oldIndex = this.indexAudio;
           this.indexAudio++;
           updateStylePlaylist(oldIndex, this.indexAudio);
           this.loadNewTrack(this.indexAudio);
+          subDisplay()
+        }else if(this.indexAudio < listAudio.length - 1 && isRandom === true){
+          let newIndex = this.indexAudio
+            let randomIndex = Number.parseInt(Math.random()*listAudio.length)
+            this.indexAudio = randomIndex;
+            updateStylePlaylist(newIndex, this.indexAudio);
+            this.loadNewTrack(this.indexAudio);
+            console.log(randomIndex)
+        }else{
+          this.indexAudio = 0;
         }
+          
       }
 
       function previous() {
@@ -510,6 +798,7 @@
           this.indexAudio--;
           updateStylePlaylist(oldIndex, this.indexAudio);
           this.loadNewTrack(this.indexAudio);
+          subDisplay()
         }
       }
 
@@ -528,12 +817,14 @@
         var ele = document.querySelector("#p-img-" + index);
         ele.classList.remove("fa-play");
         ele.classList.add("fa-pause");
+        document.querySelector('.sub-img').classList.add('rotate')
       }
-
+      
       function pauseToPlay(index) {
         var ele = document.querySelector("#p-img-" + index);
         ele.classList.remove("fa-pause");
         ele.classList.add("fa-play");
+        document.querySelector('.sub-img').classList.remove('rotate')
       }
 
       function toggleMute() {
@@ -548,6 +839,21 @@
           this.currentAudio.muted = false;
           volMute.style.display = "none";
           volUp.style.display = "block";
+        }
+      }
+
+      let isLoop = false;
+      function repeat() {
+        pauseRandom();
+        if (this.currentAudio.loop != true && this.currentAudio.play()) {
+          this.currentAudio.loop = true;
+          this.currentAudio.play();
+          document.querySelector(".re-icon").style.display = "none";
+          document.querySelector(".once-icon").style.display = "block";
+        } else {
+          this.currentAudio.loop = false;
+          document.querySelector(".re-icon").style.display = "block";
+          document.querySelector(".once-icon").style.display = "none";
         }
       }
     </script>
