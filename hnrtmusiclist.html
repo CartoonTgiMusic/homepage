@@ -80,12 +80,13 @@
       }
       .details-box{
         margin-left: 10px;
-        width: 200px;
+        width: 150px ;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        text-align: center;
         .title-text{
-          font-size: 16px;
+          font-size: 14px;
         }
         .bandname-text,
         .date-box{
@@ -94,14 +95,15 @@
       }
       .socials-box{
         position: relative;
-        background-color: #ffffff;
-        margin-top: 5px;
+        margin-bottom: 5px;
         a{
           text-decoration: none;
         }
         i{
           font-size: 1.5rem;
-          padding: 5px;
+          background-color: #ffffff;
+          border-radius: 10%;
+          padding: 2px;
         }
         .fa-xmark{
           position: absolute;
@@ -322,8 +324,6 @@
               </div>
               
               <div class="share-box">
-                <i class="fa-solid fa-share"></i>
-                <i class="fa-solid fa-heart"></i>
                 <div class="socials-box inactive">
                   <a href="#" class="facebook-btn" target="_blank">
                     <i class="fa-brands fa-facebook" style="color: rgb(24, 119, 242)"></i>
@@ -334,11 +334,10 @@
                   <a href="#" class="telegram-btn" target="_blank">
                     <i class="fa-brands fa-telegram" style="color: #0088cc;"></i>
                   </a>
-                  <a href="#" class="messenger-btn" target="_blank">
-                    <i class="fa-brands fa-facebook-messenger" style="color: #168AFF;"></i>
-                  </a>
-                  <i class="fa-solid fa-xmark" style="color: black;"></i>
+                  <i class="fa-solid fa-xmark" style="color: rgb(255, 255, 255);"></i>
                 </div>
+                <i class="fa-solid fa-share"></i>
+                <i class="fa-solid fa-heart"></i>
 
               </div>
           </div>
@@ -467,7 +466,6 @@
       document.querySelector('.facebook-btn').href = `https://www.facebook.com/sharer.php?u=${url}`;
       document.querySelector('.twitter-btn').href = `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
       document.querySelector('.telegram-btn').href = `https://t.me/share/url?url=${url}&text=${title}`;
-      document.querySelector('.messenger-btn').href = `fb-messenger://share/?link=http://${url}`;
 
       function createTrackItem(index, name, singer) {
         var trackItem = document.createElement("div");
