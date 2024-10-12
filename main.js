@@ -66,16 +66,16 @@ var swiper = new Swiper(".slide-container", {
 
   breakpoints: {
     0: {
-      slidesPerView: 2,
+      slidesPerView: 1,
     },
     520: {
-      slidesPerView: 3,
+      slidesPerView: 2,
     },
     768: {
-      slidesPerView: 4,
+      slidesPerView: 3,
     },
     1000: {
-      slidesPerView: 6,
+      slidesPerView: 4,
     },
   },
 });
@@ -102,10 +102,10 @@ var swiper = new Swiper(".slide-container2", {
       slidesPerView: 5,
     },
     768: {
-      slidesPerView: 7,
+      slidesPerView: 6,
     },
     1000: {
-      slidesPerView: 10,
+      slidesPerView: 9,
     },
   },
 });
@@ -1104,6 +1104,7 @@ function loadNewTrack(index) {
   this.toggleAudio();
   this.updateStylePlaylist(this.indexAudio, index);
   this.indexAudio = index;
+  subDetails()
 }
 var playListItems = document.querySelectorAll(".playlist-track-ctn");
 
@@ -1130,27 +1131,27 @@ function getClickedElement(event) {
 }
 
 var barsBtn = document.querySelectorAll('.bar-box');
+const subDetails = ()=>{
+      document.querySelector('.song-header').innerHTML = listAudio[indexAudio].name;
+      document.querySelector('.writer-header').innerHTML = listAudio[indexAudio].writer;
+      document.querySelector('.album-header').innerHTML = listAudio[indexAudio].album;
+      document.querySelector('.album-url').href = listAudio[indexAudio].albuml_url;
+      document.querySelector(' .band-header').innerHTML = listAudio[indexAudio].band
+      document.querySelector('.band-url').href = listAudio[indexAudio].band_url;
+      document.querySelector('.download').href = listAudio[indexAudio].file;
+      document.querySelector('.download').download = listAudio[indexAudio].name;
+      document.querySelector('.date-header').innerHTML = listAudio[indexAudio].date
+      document.querySelector('.replace-imagebox').style.backgroundImage = "url("+listAudio[indexAudio].profile+")"
+}
 for(let i=0; i<barsBtn.length; i++){
     barsBtn[i].addEventListener('click',()=>{
       document.querySelector('.songs-mainctn').classList.add('inactive')
       document.querySelector('.replace-ctn').classList.remove('inactive')
-      document.querySelector('.prev-box').classList.add('inactive')
-      document.querySelector('.next-box').classList.add('inactive')
-      document.querySelector('.shullfe-box').classList.remove('inactive')
+      document.querySelector('.shullfe-box').classList.add('inactive')
       document.querySelector('.repeat-box').classList.remove('inactive')
       document.querySelector('.search-tabs').classList.add('inactive')
       document.querySelector('.tabs-ctn').classList.add('inactive')
-
-      document.querySelector('.song-header').innerHTML = listAudio[i].name;
-      document.querySelector('.writer-header').innerHTML = listAudio[i].writer;
-      document.querySelector('.album-header').innerHTML = listAudio[i].album;
-      document.querySelector('.album-url').href = listAudio[i].albuml_url;
-      document.querySelector(' .band-header').innerHTML = listAudio[i].band
-      document.querySelector('.band-url').href = listAudio[i].band_url;
-      document.querySelector('.download').href = listAudio[i].file;
-      document.querySelector('.download').download = listAudio[i].name;
-      document.querySelector('.date-header').innerHTML = listAudio[i].date
-      document.querySelector('.replace-imagebox').style.backgroundImage = "url("+listAudio[i].profile+")"
+      subDetails()
     })
 }
 
@@ -1159,10 +1160,8 @@ document.querySelector('.replace-arrow').addEventListener('click',()=>{
   document.querySelector('.tabs-ctn').classList.remove('inactive')
     document.querySelector('.replace-ctn').classList.add('inactive')
     document.querySelector('.songs-mainctn').classList.remove('inactive')
-    document.querySelector('.shullfe-box').classList.add('inactive')
+    document.querySelector('.shullfe-box').classList.remove('inactive')
         document.querySelector('.repeat-box').classList.add('inactive')
-        document.querySelector('.prev-box').classList.remove('inactive')
-        document.querySelector('.next-box').classList.remove('inactive')
 })
 
 document.querySelector("#source-audio").src = listAudio[indexAudio].file;
@@ -1250,12 +1249,33 @@ function seek(event) {
   barProgress.style.width = percent * 100 + "%";
 }
 
+let isRandom = false
+      function shullfe() {
+        isRandom ? pauseRandom() : playRandom();
+      }
+      function playRandom() {
+        isRandom = true;
+        document.querySelector('.fa-shuffle').style.color = 'red'
+      }
+      function pauseRandom() {
+        isRandom = false;
+        document.querySelector('.fa-shuffle').style.color = 'white'
+      }
+
 function next() {
-  if (this.indexAudio < listAudio.length - 1) {
+  if (this.indexAudio < listAudio.length - 1 && isRandom == false ) {
     var oldIndex = this.indexAudio;
     this.indexAudio++;
     updateStylePlaylist(oldIndex, this.indexAudio);
     this.loadNewTrack(this.indexAudio);
+  }else if(this.indexAudio < listAudio.length - 1 && isRandom == true){
+    let newIndex = this.indexAudio;
+    let randomIndex = Number.parseInt(Math.random()*listAudio.length)
+    this.indexAudio = randomIndex;
+    updateStylePlaylist(newIndex,this.indexAudio)
+    this.loadNewTrack(this.indexAudio);
+  }else{
+    this.indexAudio = 0;
   }
 }
 
@@ -1299,18 +1319,6 @@ function rewind() {
   this.currentAudio.currentTime = this.currentAudio.currentTime - 5;
   this.setBarProgress();
 }
-      let isRandom = false
-      function shullfe() {
-        isRandom ? pauseRandom() : playRandom();
-      }
-      function playRandom() {
-        isRandom = true;
-        document.querySelector('.fa-shuffle').style.color = 'red'
-      }
-      function pauseRandom() {
-        isRandom = false;
-        document.querySelector('.fa-shuffle').style.color = 'white'
-      }
       
       let isLoop = false;
       function repeat() {
