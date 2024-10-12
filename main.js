@@ -135,7 +135,7 @@ var swiper = new Swiper(".slide-container3", {
 });
 
 
-function createTrackItem(index, name, duration) {
+function createTrackItem(index, name, writer) {
 
   var newDiv = document.createElement("div");
   newDiv.setAttribute("class", "new-div product");
@@ -185,11 +185,11 @@ function createTrackItem(index, name, duration) {
 
   var trackDurationItem = document.createElement("div");
   trackDurationItem.setAttribute("class", "playlist-duration");
-  trackDurationItem.innerHTML = duration;
+  trackDurationItem.innerHTML = writer;
   document.querySelector("#ptc-" + index).appendChild(trackDurationItem);
   
   var h6 = document.createElement("h6");
-  h6.innerHTML = `${name}${duration}`;
+  h6.innerHTML = `${name}${writer}`;
   document.querySelector("#ptc-" + index).appendChild(h6);
 }
 

@@ -15,7 +15,7 @@
       src="https://kit.fontawesome.com/a062562745.js"
       crossorigin="anonymous"
     ></script>
-    <title>khunphu</title>
+    <title>ခွန်ပျူ</title>
     <link rel="stylesheet" media="all" />
   </head>
   <style>
@@ -25,10 +25,10 @@
       box-sizing: border-box;
     }
     :root{
-      --bgColor:black;
+      --bgColor:rgb(0, 0, 0);
     }
     body {
-      background: var(--bgColor);
+      background:var(--bgColor);
       color: #ffffff;
       font-family: "Roboto", sans-serif;
       display: flex;
@@ -39,7 +39,7 @@
     .fixed{
       position: fixed;
       top: 0px;
-      background: var(--bgColor);
+      background:var(--bgColor);
       z-index: 1;
     }
 
@@ -60,18 +60,20 @@
       z-index: 2;
       input{
         width: 100%;
-        padding-left: 10px;
         background: none;
         border: none;
         outline: none;
         height: 100%;
-        color: white;
+        padding-left: 10px;
+        color: rgb(255, 255, 255);
         font-size: 1rem;
       }
       i{
-        font-size: 1.2rem;
-        margin:0px 5px;
-        color: white;
+        font-size: 1rem;
+        padding: 5px;
+        border-radius: 50%;
+        color: rgb(0, 0, 0);
+        background-color: white;
       }
     }
       .img-box{
@@ -80,7 +82,7 @@
         background-image: url(assets/images/mimgs/kp.jpg);
         background-position: center;
         background-size: cover;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
       }
         .name-box{
            user-select: none;
@@ -104,7 +106,6 @@
                 cursor: pointer;
               }
             }      
-  
  
   .songslist-ctn {
     width: 95%;
@@ -125,35 +126,36 @@
                pointer-events: none;
                padding-right:10px;
                color: #ffffff;
+               .fas{
+                font-size: 2rem;
+               }
              }
            .playlist-info-track
             {
                  color: #ffffff;
-                 font-size: 1rem;
+                 font-size: 14px;
                  pointer-events: none;
                  user-select: none;
                  width: 100%;
                }
        }
        .bar-box{
-        margin-right: 10px;
+        margin:0 10px;
         cursor: pointer;
+        i{
+          font-size: 1.2rem;
+        }
        }
     }
   }
 
-  .new-div:hover {
-    transform: scaleY(1.2);
-    border: 1px solid rgb(255, 255, 255);
-  }
+}
+.new-div:hover {
+  background-color: rgb(58, 58, 58);
 }
 
-.btn-action i{
-  font-size: 1.5rem;
-     }
 .active-track {
-  transform: scaleY(1.2);
-  border: 1px solid rgb(255, 255, 255);
+  background-color: rgb(58, 58, 58);
    }
 .btn-ctn i:hover {
     transform: scale(1.2);
@@ -169,10 +171,13 @@
   flex-direction: column;
   background: var(--bgColor);
   padding-bottom: 5px;
-  z-index: 1;
+  .backward-btn,.forward-btn{
+    display: none;
+  }
   i{
     font-size: 1rem;
   }
+  z-index: 1;
   #myProgress {
     width: 80%;
     background-color: gray;
@@ -196,20 +201,19 @@
                   padding: 5px 0px;
                   text-align: center;
                   .timer,.duration{
-                    font-size: small;
+                    font-size: 10px;
                   }
                   .btn-action {
                           cursor: pointer;
                         }
                       }
                     }
-                    
-
-.play-icon{
-  display: none;
-}
-.fas{
-  font-size: 1.5rem;
+ @media screen and (min-width:700px) {
+    .controls-container{
+      .backward-btn, .forward-btn{
+        display: block;
+      }
+    }
 }
 .replace-ctn{
   width: 100%;
@@ -223,11 +227,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    cursor: pointer;
     i{
-      font-size: 1.2rem;
-      margin: 0px 5px;
-      color: white;
+      font-size: 1rem;
+      background-color: white;
+      color: rgb(0, 0, 0);
+      padding: 5px;
+      border-radius: 50%;
     }
   }
   .replace-imagebox{
@@ -243,10 +249,14 @@
     text-align: center;
     font-size: small;
     a{
-      color: white;
+      color: rgb(255, 255, 255);
     }
     .song-header{
       font-size: large;
+    }
+    button{
+      margin: 5px;
+      padding:0 3px;
     }
   }
 }
@@ -297,6 +307,7 @@
                 <div class="tiktok">
                   <i class="fa-brands fa-tiktok" style="color: rgb(255, 255, 255);"></i>
                 </div>
+                <a href="#" class="share" target="_blank"><i class="fa-solid fa-share"></i></a>
             </div>
       <div class="songslist-ctn section ">
         <div class="playlist-ctn"></div>
@@ -305,7 +316,8 @@
           
     <div class="replace-ctn inactive">
         <div class="arrow-home">
-          <div class="replace-arrow"><i class="fa-solid fa-arrow-left"></i></div>
+          <a href="khunphu.html"><div class="replace-arrow"><i class="fa-solid fa-arrow-left"></i></div></a>
+          
           <a href="index.html"><div class="replace-home"><i class="fa-solid fa-house"></i></div></a>
         </div>
         <div class="replace-imagebox">
@@ -316,7 +328,7 @@
           <a href="#" class="album-url"><div class="album-header"></div></a>
           <a href="#" class="band-url"><div class="band-header"></div></a>
           <div class="date-header"></div>
-          <a href="" download="" class="download">Download</a>
+          <a href="" download="" class="download"><button><i class="fa-solid fa-download"></i>  Download</button></a>
         </div>
       </div>
           
@@ -330,36 +342,9 @@
         <div id="myBar"></div>
       </div>
       <div class="btn-ctn">
-        <div class="btn-action shullfe-box inactive" onclick="shullfe() ">
-          <div id="btn-shuffle" style="color: white;" >
+        <div class="btn-action shullfe-box " onclick="shullfe() ">
+          <div id="btn-shuffle" style="color:white">
             <i class="fa-solid fa-shuffle" ></i>
-          </div>
-        </div>
-        <div class="btn-action prev-box" onclick="previous()">
-          <div id="btn-faws-back">
-            <i class="fas fa-step-backward"></i>
-          </div>
-        </div>
-
-        <div class="btn-action  " onclick="rewind()">
-          <div id="btn-faws-rewind">
-            <i class="fas fa-backward "></i>
-          </div>
-        </div>
-        <div class="btn-action" onclick="toggleAudio()">
-          <div id="btn-faws-play-pause">
-            <i class="fas fa-play" id="icon-play"></i>
-            <i class="fas fa-pause" id="icon-pause" style="display: none"></i>
-          </div>
-        </div>
-        <div class="btn-action  " onclick="forward()">
-          <div id="btn-faws-forward">
-            <i class="fas fa-forward "></i>
-          </div>
-        </div>
-        <div class="btn-action next-box" onclick="next()">
-          <div id="btn-faws-next">
-            <i class="fas fa-step-forward"></i>
           </div>
         </div>
         <div class="btn-action repeat-box inactive" onclick="repeat() ">
@@ -382,6 +367,35 @@
                   <path d="M11 11l1 -1v4" /></svg></i>
           </div>
         </div>
+        <div class="btn-action prev-box" onclick="previous()">
+          <div id="btn-faws-back">
+            <i class="fas fa-step-backward"></i>
+          </div>
+        </div>
+        <div class="btn-action backward-btn " onclick="rewind()">
+          <div id="btn-faws-rewind">
+            <i class="fas fa-backward "></i>
+          </div>
+        </div>
+        <div class="btn-action" onclick="toggleAudio()">
+          <div id="btn-faws-play-pause">
+            <i class="fas fa-play" id="icon-play"></i>
+            <i class="fas fa-pause" id="icon-pause" style="display: none"></i>
+          </div>
+        </div>
+
+        <div class="btn-action forward-btn "  onclick="forward()">
+          <div id="btn-faws-forward">
+            <i class="fas fa-forward "></i>
+          </div>
+        </div>
+
+        <div class="btn-action next-box" onclick="next()">
+          <div id="btn-faws-next">
+            <i class="fas fa-step-forward"></i>
+          </div>
+        </div>
+        
         <div class=" btn-action" id="toggleMute" onclick="toggleMute()">
           <div id="btn-faws-volume">
             <i id="icon-vol-up" class="fas fa-volume-up"></i>
@@ -401,7 +415,6 @@
     <script>
       const nameBOx = document.querySelector('.name-box')
       const imageBox = document.querySelector('.img-box')
-      const socialBOx = document.querySelector('.social-box')
 
       window.onscroll = () => {
         let top = window.scrollY 
@@ -410,39 +423,40 @@
         }else{
           nameBOx.classList.remove('fixed')
         }
-      }
+      };
 
       document.querySelector('.glass').addEventListener('click',()=>{
         document.querySelector('#search-item').focus()
       });
 
       const search = () => {
-              const searchBox = document.getElementById("search-item").value.toUpperCase();
-              const product = document.querySelectorAll(".product");
-              const pname = document.getElementsByTagName("h6");
+              let searchBox = document.getElementById("search-item").value.toUpperCase();
+              let products = document.querySelectorAll(".product");
+              let pname = document.getElementsByTagName("h6");
 
-              for (var i = 0; i < pname.length; i++) {
-                let match = product[i].getElementsByTagName("h6")[0];
-                if (match) {
+              products.forEach((product)=>{
+                let match = product.getElementsByTagName('h6')[0];
+                if(match){
                   let textvalue = match.textContent || match.innerHTML;
-
-                  if (textvalue.toUpperCase().indexOf(searchBox) > -1) {
-                    product[i].style.display = "";
-                  } else {
-                    product[i].style.display = "none";
+                  if(textvalue.toUpperCase().indexOf(searchBox) > -1){
+                    product.style.display = "";
+                  }else{
+                    product.style.display = "none"
                   }
                 }
-              }
+              })
             };
 
-function createTrackItem(index, name, writer) {
-
-      var newDiv = document.createElement("div");
+      const url = encodeURIComponent('https://cartoontgimusic.github.io/homepage/khunphu.html')
+      document.querySelector('.share').href = `https://www.facebook.com/sharer.php?u=${url}`;
+      
+      function createTrackItem(index, name, writer) {
+      let newDiv = document.createElement("div");
       newDiv.setAttribute("class", "new-div product");
       newDiv.setAttribute("id", "nd-" + index);
       document.querySelector(".playlist-ctn").appendChild(newDiv);
 
-      var trackItem = document.createElement("div");
+      let trackItem = document.createElement("div");
       trackItem.setAttribute("class", "playlist-track-ctn ");
       trackItem.setAttribute("id", "ptc-" + index);
       trackItem.setAttribute("data-index", index);
@@ -460,24 +474,24 @@ function createTrackItem(index, name, writer) {
         barImg.setAttribute('id', 'bi-'+index)
         document.querySelector('#bb-'+index).appendChild(barImg)
 
-      var playBtnItem = document.createElement("div");
+      let playBtnItem = document.createElement("div");
       playBtnItem.setAttribute("class", "playlist-btn-play");
       playBtnItem.setAttribute("id", "pbp-" + index);
       document.querySelector("#ptc-" + index).appendChild(playBtnItem);
 
-      var btnImg = document.createElement("i");
+      let btnImg = document.createElement("i");
       btnImg.setAttribute("class", "fas fa-compact-disc inactive rotate");
       btnImg.setAttribute("height", "40");
       btnImg.setAttribute("width", "40");
       btnImg.setAttribute("id", "p-img-" + index);
       document.querySelector("#pbp-" + index).appendChild(btnImg);
 
-      var numBox = document.createElement("div");
+      let numBox = document.createElement("div");
       numBox.setAttribute("class", "num-box");
       numBox.setAttribute("id", "nb-" + index);
       document.querySelector("#ptc-" + index).appendChild(numBox);
 
-      var songNum = document.createElement("i");
+      let songNum = document.createElement("i");
       songNum.setAttribute("class", "song-num");
       songNum.setAttribute("height", "40");
       songNum.setAttribute("width", "40");
@@ -485,17 +499,17 @@ function createTrackItem(index, name, writer) {
       songNum.innerHTML = (index + 1)+ '.'
       document.querySelector("#pbp-" + index).appendChild(songNum);
 
-      var trackInfoItem = document.createElement("div");
+      let trackInfoItem = document.createElement("div");
       trackInfoItem.setAttribute("class", "playlist-info-track");
       trackInfoItem.innerHTML = name;
       document.querySelector("#ptc-" + index).appendChild(trackInfoItem);
 
-      var trackDurationItem = document.createElement("div");
+      let trackDurationItem = document.createElement("div");
       trackDurationItem.setAttribute("class", "playlist-writer inactive");
       trackDurationItem.innerHTML = writer;
       document.querySelector("#ptc-" + index).appendChild(trackDurationItem);
 
-      var h6 = document.createElement("h6");
+      let h6 = document.createElement("h6");
       h6.innerHTML = `${name}${writer}`;
       document.querySelector("#ptc-" + index).appendChild(h6);
 }
@@ -575,11 +589,11 @@ var listAudio = [
   },
       ];
 
-      for (var i = 0; i < listAudio.length; i++) {
+      for (let i = 0; i < listAudio.length; i++) {
         createTrackItem(i, listAudio[i].name, listAudio[i].writer);
       }
+      
       var indexAudio = 0;
-
       function loadNewTrack(index) {
         var player = document.querySelector("#source-audio");
         player.src = listAudio[index].file;
@@ -589,6 +603,7 @@ var listAudio = [
         this.toggleAudio();
         this.updateStylePlaylist(this.indexAudio, index);
         this.indexAudio = index;
+        repeatDitals()
       }
 
       var playListItems = document.querySelectorAll(".playlist-track-ctn");
@@ -606,7 +621,7 @@ var listAudio = [
           if (playListItems[i] == event.target) {
             var clickedIndex = event.target.getAttribute("data-index");
             var barBoxs = document.querySelectorAll('.bar-box')
-                barBoxs[i].classList.remove('inactive')
+            barBoxs[i].classList.remove('inactive')
             var circle = document.querySelectorAll('.fa-compact-disc');
                 circle[i].classList.remove('inactive')
             var songNum = document.querySelectorAll('.song-num');
@@ -622,37 +637,28 @@ var listAudio = [
       }
 
       var barsBtn = document.querySelectorAll('.bar-box');
+      const repeatDitals = ()=>{
+        document.querySelector('.song-header').innerHTML = listAudio[indexAudio].name;
+            document.querySelector('.writer-header').innerHTML = listAudio[indexAudio].writer;
+            document.querySelector('.album-header').innerHTML = listAudio[indexAudio].album;
+            document.querySelector('.album-url').href = listAudio[indexAudio].albuml_url;
+            document.querySelector(' .band-header').innerHTML = listAudio[indexAudio].band
+            document.querySelector('.band-url').href = listAudio[indexAudio].band_url;
+            document.querySelector('.download').href = listAudio[indexAudio].file;
+            document.querySelector('.download').download = listAudio[indexAudio].name;
+            document.querySelector('.date-header').innerHTML = listAudio[indexAudio].date
+            document.querySelector('.replace-imagebox').style.backgroundImage = "url("+listAudio[indexAudio].profile+")"
+      }
+      
       for(let i=0; i<barsBtn.length; i++){
-          barsBtn[i].addEventListener('click',()=>{
+          barsBtn[i].addEventListener('click',(index)=>{
             document.querySelector('.main-ctn').classList.add('inactive')
             document.querySelector('.replace-ctn').classList.remove('inactive')
-            document.querySelector('.prev-box').classList.add('inactive')
-            document.querySelector('.next-box').classList.add('inactive')
-            document.querySelector('.shullfe-box').classList.remove('inactive')
+            document.querySelector('.shullfe-box').classList.add('inactive')
             document.querySelector('.repeat-box').classList.remove('inactive')
-
-            document.querySelector('.song-header').innerHTML = listAudio[i].name;
-            document.querySelector('.writer-header').innerHTML = listAudio[i].writer;
-            document.querySelector('.album-header').innerHTML = listAudio[i].album;
-            document.querySelector('.album-url').href = listAudio[i].albuml_url;
-            document.querySelector(' .band-header').innerHTML = listAudio[i].band
-            document.querySelector('.band-url').href = listAudio[i].band_url;
-            document.querySelector('.download').href = listAudio[i].file;
-            document.querySelector('.download').download = listAudio[i].name;
-            document.querySelector('.date-header').innerHTML = listAudio[i].date
-            document.querySelector('.replace-imagebox').style.backgroundImage = "url("+listAudio[i].profile+")"
+            repeatDitals()
           })
       }
-
-      document.querySelector('.replace-arrow').addEventListener('click',()=>{
-
-          document.querySelector('.replace-ctn').classList.add('inactive')
-          document.querySelector('.main-ctn').classList.remove('inactive')
-          document.querySelector('.shullfe-box').classList.add('inactive')
-              document.querySelector('.repeat-box').classList.add('inactive')
-              document.querySelector('.prev-box').classList.remove('inactive')
-              document.querySelector('.next-box').classList.remove('inactive')
-      })
 
       document.querySelector("#source-audio").src = listAudio[indexAudio].file;
       document.querySelector(".title").innerHTML = listAudio[indexAudio].name 
@@ -777,11 +783,21 @@ var listAudio = [
       }
 
       function next() {
-        if (this.indexAudio < listAudio.length - 1) {
+        if (this.indexAudio < listAudio.length - 1 && isRandom == false) {
           var oldIndex = this.indexAudio;
           this.indexAudio++;
           updateStylePlaylist(oldIndex, this.indexAudio);
           this.loadNewTrack(this.indexAudio);
+          repeatDitals()
+        }else if(this.indexAudio < listAudio.length - 1 && isRandom == true){
+          let newIndex = this.indexAudio
+          let randomIndex = Number.parseInt(Math.random() * listAudio.length);
+          this.indexAudio = randomIndex;
+          updateStylePlaylist(newIndex,this.indexAudio)
+          this.loadNewTrack(this.indexAudio);
+          repeatDitals()
+        }else{
+          this.indexAudio = 0;
         }
       }
 
@@ -795,16 +811,17 @@ var listAudio = [
       }
 
       function updateStylePlaylist(oldIndex, newIndex) {
-        document.querySelector("#p-img-" + oldIndex).classList.add('inactive');
-        document.querySelector("#p-img-" + newIndex).classList.remove('inactive');
-        document.querySelector("#s-num-" + oldIndex).classList.remove('inactive');
-        document.querySelector("#s-num-" + newIndex).classList.add('inactive');
-        document.querySelector("#bb-" + oldIndex).classList.add("inactive");
-        document.querySelector("#bb-" + newIndex).classList.remove("inactive");
         document.querySelector("#nd-" + oldIndex).classList.remove("active-track");
+        document.querySelector("#bb-" + oldIndex).classList.add("inactive");
+        document.querySelector("#p-img-" + oldIndex).classList.add('inactive');
+        document.querySelector("#s-num-" + oldIndex).classList.remove('inactive');
         this.pauseToPlay(oldIndex);
         document.querySelector("#nd-" + newIndex).classList.add("active-track");
+        document.querySelector("#bb-" + newIndex).classList.remove("inactive");
+        document.querySelector("#p-img-" + newIndex).classList.remove("inactive");
+        document.querySelector("#s-num-" + newIndex).classList.add('inactive');
         this.playToPause(newIndex);
+        
       }
 
       function playToPause(index) {
@@ -813,7 +830,6 @@ var listAudio = [
       
       function pauseToPlay(index) {
         document.querySelector("#p-img-" + index).classList.remove('rotate');
-
       }
 
       function toggleMute() {

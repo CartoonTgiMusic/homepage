@@ -152,10 +152,10 @@
     }
     
     .playlist-track-ctn:hover {
-      background-color: blue;
+      background-color:rgb(58,58, 58);
     }
     .active-track {
-      background-color: blue;
+      background-color:rgb(58,58, 58);
     }
     
    .controls-container {
@@ -169,6 +169,7 @@
           background-color: black;
           padding: 5px;
           z-index: 1;
+          
           #myProgress {
               width: 80%;
               background-color: gray;
@@ -184,6 +185,9 @@
             }
              .btn-ctn{
               padding-top: 7px;
+              .forward-btn,.backward-btn{
+                       display: none;
+              }
              }
             .btn-ctn, .infos-ctn {
                       width: 80%;
@@ -302,6 +306,11 @@
       .controls-container{
         background-color: black;
         padding: 0 150px 5px;
+        .btn-ctn{
+          .forward-btn,.backward-btn{
+            display: block;
+          }
+        }
       }
   }
   .inactive{
@@ -386,32 +395,8 @@
         <div id="myProgress">
           <div id="myBar"></div>
         </div>
+
         <div class="btn-ctn ">
-          <div class="btn-action shullfe inactive " onclick="shullfe() ">
-            <div id="btn-shuffle">
-              <i class="fa-solid fa-shuffle"></i>
-            </div>
-          </div>
-
-          <div class="btn-action" onclick="previous()">
-            <div id="btn-faws-back">
-              <i class="fas fa-step-backward"></i>
-            </div>
-          </div>
-
-          <div class="btn-action" onclick="toggleAudio()">
-            <div id="btn-faws-play-pause">
-              <i class="fas fa-play" id="icon-play"></i>
-              <i class="fas fa-pause" id="icon-pause" style="display: none"></i>
-            </div>
-          </div>
-          
-          <div class="btn-action" onclick="next()">
-            <div id="btn-faws-next">
-              <i class="fas fa-step-forward"></i>
-            </div>
-          </div>
-
           <div class="btn-action repeat-box inactive " onclick="repeat() ">
             <div id="btn-faws-repeat">
               <i class="fa-solid fa-repeat re-icon"></i>
@@ -430,6 +415,43 @@
                     <path d="M4 12v-3a3 0 0 0 0 3 -3h13m-3 -3l3 3l-3 3" />
                     <path d="M20 12v3a3 0 0 0 0 -3 3h-13m3 3l-3 -3l3 -3" />
                     <path d="M11 11l1 -1v4" /></svg></i>
+            </div>
+          </div>
+
+          <div class="btn-action shullfe" onclick="shullfe() ">
+            <div id="btn-shuffle">
+              <i class="fa-solid fa-shuffle"></i>
+            </div>
+          </div>
+
+          <div class="btn-action" onclick="previous()">
+            <div id="btn-faws-back">
+              <i class="fas fa-step-backward"></i>
+            </div>
+          </div>
+
+          <div class="btn-action backward-btn " onclick="rewind()">
+            <div id="btn-faws-rewind">
+              <i class="fas fa-backward "></i>
+            </div>
+          </div>
+
+          <div class="btn-action" onclick="toggleAudio()">
+            <div id="btn-faws-play-pause">
+              <i class="fas fa-play" id="icon-play"></i>
+              <i class="fas fa-pause" id="icon-pause" style="display: none"></i>
+            </div>
+          </div>
+          
+          <div class="btn-action forward-btn "  onclick="forward()">
+            <div id="btn-faws-forward">
+              <i class="fas fa-forward "></i>
+            </div>
+          </div>
+
+          <div class="btn-action" onclick="next()">
+            <div id="btn-faws-next">
+              <i class="fas fa-step-forward"></i>
             </div>
           </div>
 
@@ -704,10 +726,6 @@
         this.updateStylePlaylist(this.indexAudio, index);
         this.indexAudio = index;
         subDisplay()
-        if(this.indexAudio < listAudio.length -1 && isRandom === true){
-              let randomIndex = Number.parseInt(Math.random()*listAudio.length)
-              this.indexAudio = randomIndex;
-        }
       }
 
       var playListItems = document.querySelectorAll(".playlist-track-ctn");
@@ -757,7 +775,7 @@
       document.querySelector('.infos-ctn').addEventListener('click',()=>{
         document.querySelector('.main-ctn').classList.add('inactive')
         document.querySelector('.sub-ctn').classList.remove('inactive')
-        document.querySelector('.shullfe').classList.remove('inactive')
+        document.querySelector('.shullfe').classList.add('inactive')
         document.querySelector('.repeat-box').classList.remove('inactive')
         subDisplay()
       });
@@ -832,6 +850,16 @@
         barProgress.style.width = percent * 100 + "%";
       }
 
+      function forward() {
+        this.currentAudio.currentTime = this.currentAudio.currentTime + 5;
+        this.setBarProgress();
+      }
+
+      function rewind() {
+        this.currentAudio.currentTime = this.currentAudio.currentTime - 5;
+        this.setBarProgress();
+      }
+
       let isRandom = false;
       function shullfe() {
         isRandom ? pauseRandom() : playRandom();
@@ -858,7 +886,6 @@
             this.indexAudio = randomIndex;
             updateStylePlaylist(newIndex, this.indexAudio);
             this.loadNewTrack(this.indexAudio);
-            console.log(randomIndex)
         }else{
           this.indexAudio = 0;
         }
