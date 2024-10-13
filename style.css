@@ -414,6 +414,7 @@ img:hover{
   align-items: center;
   padding-bottom: 6rem;
   .arrow-home{
+    padding-left: 5px;
     position: fixed;
     left: 0;
     .replace-arrow{
@@ -442,6 +443,9 @@ img:hover{
     text-align: center;
     font-size: small;
     color: white;
+    button{
+      padding: 0 10px;
+    }
     a{
       color: white;
     }
@@ -541,11 +545,11 @@ img:hover{
 }
 
 .new-div:hover{
-  background-color: rgb(29, 101, 195);
+  background-color: rgb(58,58,58);
 }
 
 .active-track{
-  background-color: rgb(29, 101, 195);
+  background-color: rgb(58,58,58);
 }
 .fas{
   font-size: 1.5rem;
