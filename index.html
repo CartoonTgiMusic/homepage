@@ -28,6 +28,7 @@
               <button class="tab-btn">Albums</button>
               <button class="tab-btn">Artists</button>
               <button class="tab-btn ">Songs</button>
+              <button class="tab-btn ">Your Playlists</button>
             </div>
             
           </div>
@@ -623,15 +624,49 @@
                 <a href="#" class="band-url"><div class="band-header"></div></a>
                 <div class="date-header"></div>
                 <a href="" download="" class="download"><button><i class="fa-solid fa-download"></i>  Download</button></a>
+                <button onclick="addToLibrary()">Add to Playlists</button>
               </div>
             </div>
           </div>
-            
+          
+          <div class="content library-mctn">
+             <div class="library-ctn">
+              <div class="img-controls">
+                <div class="lbimg-box">
+                </div>
+                <div class="lb-none" style="display: none;">
+                  <div class="lbtitle-controls">
+                    <div class="cover-box"></div>
+                    <div class="lb-title">
+                      Your Playlists
+                    </div>
+                    <div class="lb-controls" >
+                      <div class="lbplay-btn" onclick="lbToggle()">
+                        <i class="fa-regular fa-circle-play" id="lb-play" ></i>
+                        <i class="fas fa-circle-pause" id="lb-pause" style="display: none"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                      
+            </div>
+               <div class="library-div">
+   
+               </div>
+
+             </div>
+          </div>
               
+          <div></div>
 
           <audio id="myAudio" ontimeupdate="onTimeUpdate()">
             <!-- <source src="audio.ogg" type="audio/ogg"> -->
             <source id="source-audio" src="" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+          <audio id="myAudio1">
+            <!-- <source src="audio.ogg" type="audio/ogg"> -->
+            <source id="source-audio1" src="" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
         

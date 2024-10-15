@@ -454,6 +454,94 @@ img:hover{
     }
   }
 }
+.library-mctn{
+  padding: 5rem 0.5rem;
+  .library-ctn{
+    .lb-none{
+      width: 200px;
+      height: 200px;
+    }
+    .img-controls{
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px;
+      .lbimg-box{
+        width: 200px;
+        height: 100%;
+        margin-right: 10px;
+        background: url('assets/images/mimgs/popular1.jpg') center/cover no-repeat;
+      }
+      .lbtitle-controls{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        padding: 0.5rem;
+        height: 200px;
+        width: 200px;
+        color: #ffffff;
+        .cover-box{
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          background-position: center;
+          background-size: cover;
+        }
+        .lb-title{
+          position: absolute;
+          top: 0;
+          text-align: center;
+        };
+        .lb-controls{
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%,-50%);
+          i{
+            font-size: 1.2rem;
+          }
+          .lbplay-btn{
+            i{
+              font-size: 3rem;
+            }
+          }
+        };
+      }
+    }
+    .library-div{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .library-songbox{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 2px 0;
+        .library-details{
+          color: white;
+          font-size: 12px;
+          display: flex;
+          width: 100%;
+          div{
+            width: 50%;
+          }
+        }
+        .btns-box{
+          button{
+            width: 30px;
+            font-size: 1rem;
+          }
+        }
+      }
+  
+    }
+  }
+}
 @media screen and (min-width:700px){
   .replace-ctn{
     display: flex;

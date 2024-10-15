@@ -205,6 +205,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2013",
+    cover:"assets/images/mimgs/cover3.jpg",
   },
   {
     name: "ဆုတောင်ꩻနော",
@@ -217,6 +218,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2013",
+    cover:"assets/images/mimgs/cover3.jpg",
   },
   {
     name: "တဖြာꩻတွမ်ႏတဖြာꩻ",
@@ -229,6 +231,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2013",
+    cover:"assets/images/mimgs/cover3.jpg",
   },
   {
     name: "အောဝ်ႏကော့ꩻမွောင်ꩻ",
@@ -241,6 +244,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2013",
+    cover:"assets/images/mimgs/cover3.jpg",
   },
   {
     name: "သေနာႏလဲဥ်း",
@@ -253,6 +257,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2013",
+    cover:"assets/images/mimgs/cover3.jpg",
   },
   {
     name: "အောဝ်ႏ",
@@ -265,6 +270,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2013",
+    cover:"assets/images/mimgs/cover3.jpg",
   },
   {
     name: "လဲဥ်ꩻထိုႏမွန်းခွေꩻ",
@@ -277,6 +283,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2013",
+    cover:"assets/images/mimgs/cover3.jpg",
   },
   {
     name: "တဥ်ႏခွေါင်ဒျာႏနော်",
@@ -289,6 +296,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2013",
+    cover:"assets/images/mimgs/cover3.jpg",
   },
   {
     name: "အွဥ်ႏဖိင်ꩻခန်း ",
@@ -301,6 +309,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2013",
+    cover:"assets/images/mimgs/cover3.jpg",
   },
   {
     name: "မွိုက်လွေꩻဟိုင်း",
@@ -313,6 +322,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2013",
+    cover:"assets/images/mimgs/cover3.jpg",
   },
   {
     name: "ကမ်းဒျာႏနာꩻသꩻ",
@@ -325,6 +335,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2013",
+    cover:"assets/images/mimgs/cover3.jpg",
   },
   {
     name: "မဲ့ꩻခွေꩻလွဥ်ꩻယန်း",
@@ -337,6 +348,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2013",
+    cover:"assets/images/mimgs/cover3.jpg",
   },
   {
     name: "နာꩻထန်ႏထိုꩻ",
@@ -349,6 +361,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2013",
+    cover:"assets/images/mimgs/cover3.jpg",
   },
 
   {
@@ -362,6 +375,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2009",
+    cover:"assets/images/mimgs/logo.jpg",
   },
   {
     name: "အပျော်ႏသွတ်ꩻအခိန်ႏ အပျော်ႏသွတ်ꩻဖꩻဝ",
@@ -374,6 +388,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2009",
+    cover:"assets/images/mimgs/logo.jpg",
   },
   {
     name: "ဗွိုးဟိုင်း",
@@ -386,6 +401,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2009",
+    cover:"assets/images/mimgs/logo.jpg",
   },
   {
     name: "လွေꩻညာꩻဆောင်းတဆင်ႏလွုမ်",
@@ -398,6 +414,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2009",
+    cover:"assets/images/mimgs/logo.jpg",
   },
   {
     name: "အုံပွေါႏနာꩻ",
@@ -410,6 +427,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2009",
+    cover:"assets/images/mimgs/logo.jpg",
   },
   {
     name: "မွိုး",
@@ -422,6 +440,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2009",
+    cover:"assets/images/mimgs/logo.jpg",
   },
   {
     name: "မဲဉ်လꩻချာꩻငါႏ အပဲစ်ကင်လိုပေဖဝ",
@@ -434,6 +453,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2009",
+    cover:"assets/images/mimgs/logo.jpg",
   },
   {
     name: "ခွေꩻယူႏတဖြောင်ꩻတဝ်း",
@@ -446,6 +466,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2009",
+    cover:"assets/images/mimgs/logo.jpg",
   },
   {
     name: "ရက်ꩻချာꩻဗဲင်းခွေꩻမွိုင်ꩻနင်ႏ",
@@ -458,6 +479,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2009",
+    cover:"assets/images/mimgs/logo.jpg",
   },
   {
     name: "၁၈နိန်ႏလိုႏရွဲ",
@@ -470,6 +492,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2009",
+    cover:"assets/images/mimgs/logo.jpg",
   },
   {
     name: "မူနမ်တန်",
@@ -482,6 +505,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2009",
+    cover:"assets/images/mimgs/logo.jpg",
   },
   {
     name: "နာꩻ ထိုꩻမား",
@@ -494,6 +518,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2009",
+    cover:"assets/images/mimgs/logo.jpg",
   },
   {
     name: "မို့ဦးရာသီႏ",
@@ -506,6 +531,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2009",
+    cover:"assets/images/mimgs/logo.jpg",
   },
   {
     name: "ဒွေါဝ်ꩻ",
@@ -518,6 +544,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2009",
+    cover:"assets/images/mimgs/logo.jpg",
   },
 
   {
@@ -531,6 +558,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2019",
+    cover:"assets/images/mimgs/cover2.jpg",
   },
   {
     name: "သဲင်ꩻလွဥ်ချာခမ်းမွိုင်",
@@ -543,6 +571,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2019",
+    cover:"assets/images/mimgs/cover2.jpg",
   },
   {
     name: "ထွူလဲဥ်း",
@@ -555,6 +584,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2019",
+    cover:"assets/images/mimgs/cover2.jpg",
   },
   {
     name:"ခံႏလွို့အသွုမ်",
@@ -567,6 +597,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2019",
+    cover:"assets/images/mimgs/cover2.jpg",
   },
   {
     name: "ထောင်လွေꩻထဲင်း",
@@ -579,6 +610,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2019",
+    cover:"assets/images/mimgs/cover2.jpg",
   },
   {
     name: "ဆွိုးခန်းမွိုင်",
@@ -591,6 +623,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2019",
+    cover:"assets/images/mimgs/cover2.jpg",
   },
   {
     name: "ယူးတွမ်ႏညော်ႏ",
@@ -603,6 +636,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2019",
+    cover:"assets/images/mimgs/cover2.jpg",
   },
   {
     name: "နာꩻဖေႏကသေ",
@@ -615,6 +649,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2019",
+    cover:"assets/images/mimgs/cover2.jpg",
   },
   {
     name: "အွဥ်ႏဖိင်ꩻ",
@@ -627,6 +662,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2019",
+    cover:"assets/images/mimgs/cover2.jpg",
   },
   {
     name: "နီမွိုးပနမ်",
@@ -639,6 +675,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2019",
+    cover:"assets/images/mimgs/cover2.jpg",
   },
   {
     name: "အတ္တ",
@@ -651,6 +688,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2019",
+    cover:"assets/images/mimgs/cover2.jpg",
   },
   {
     name: "လောကတရာꩻ",
@@ -663,6 +701,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2019",
+    cover:"assets/images/mimgs/cover2.jpg",
   },
 
   {
@@ -676,6 +715,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2022",
+    cover:"assets/images/mimgs/cover1.jpg",
   },
   {
     name: "ထွားနုဲင်းရုဲင်းတဝ်း",
@@ -688,6 +728,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2022",
+    cover:"assets/images/mimgs/cover1.jpg",
   },
   {
     name: "စွꩻခွင်ꩻဗဲင်းမွိုင်",
@@ -700,6 +741,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2022",
+    cover:"assets/images/mimgs/cover1.jpg",
   },
   {
     name: "အုံဟဝ်နေႏမွိုး",
@@ -712,6 +754,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2022",
+    cover:"assets/images/mimgs/cover1.jpg",
   },
   {
     name: "နားဟွိုန်ꩻ",
@@ -724,6 +767,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2022",
+    cover:"assets/images/mimgs/cover1.jpg",
   },
   {
     name: "နာꩻဒေါ့ꩻ",
@@ -736,6 +780,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2022",
+    cover:"assets/images/mimgs/cover1.jpg",
   },
   {
     name: "အွဥ်ဝင်ꩻစွီꩻစူ",
@@ -748,6 +793,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2022",
+    cover:"assets/images/mimgs/cover1.jpg",
   },
   {
     name: "အရက်ꩻသွတ်ꩻခွေꩻအလောင်း",
@@ -760,6 +806,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2022",
+    cover:"assets/images/mimgs/cover1.jpg",
   },
   {
     name: "နွန်ႏ",
@@ -772,6 +819,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2022",
+    cover:"assets/images/mimgs/cover1.jpg",
   },
   {
     name: "ရက်ꩻမွေးမွေးလဲဥ်းနာꩻ",
@@ -784,6 +832,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2022",
+    cover:"assets/images/mimgs/cover1.jpg",
   },
   {
     name: "တူနယ်တဲနယ်",
@@ -796,6 +845,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2022",
+    cover:"assets/images/mimgs/cover1.jpg",
   },
   {
     name: "အပဲစ်ꩻကင်ꩻထာꩻရက်ꩻ",
@@ -808,6 +858,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2022",
+    cover:"assets/images/mimgs/cover1.jpg",
   },
   {
     name: "နီဖာဗွေႏ",
@@ -820,6 +871,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2022",
+    cover:"assets/images/mimgs/cover1.jpg",
   },
   {
     name: "နာꩻထန်ႏထိုႏ",
@@ -832,6 +884,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2022",
+    cover:"assets/images/mimgs/cover1.jpg",
   },
 
   {
@@ -845,6 +898,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2009",
+    cover:"assets/images/mimgs/cover4.jpg",
   },
   {
     name: "မွိုးသောက",
@@ -857,6 +911,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2009",
+    cover:"assets/images/mimgs/cover4.jpg",
   },
   {
     name: "ဆာႏပေႏ",
@@ -869,6 +924,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2009",
+    cover:"assets/images/mimgs/cover4.jpg",
   },
   {
     name: "နင်ႏလိင်ႏလဲဥ်",
@@ -881,6 +937,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2009",
+    cover:"assets/images/mimgs/cover4.jpg",
   },
   {
     name: "ယူႏငါႏမွုန်းဒွုမ်",
@@ -893,6 +950,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2009",
+    cover:"assets/images/mimgs/cover4.jpg",
   },
   {
     name: "ဝါးပေꩻဗွါ",
@@ -905,6 +963,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2009",
+    cover:"assets/images/mimgs/cover4.jpg",
   },
   {
     name: "တဒွီ",
@@ -917,6 +976,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2009",
+    cover:"assets/images/mimgs/cover4.jpg",
   },
   {
     name: "သꩻရာႏတꩻခါꩻ",
@@ -929,6 +989,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2009",
+    cover:"assets/images/mimgs/cover4.jpg",
   },
   {
     name: "သွꩻမူႏ",
@@ -941,6 +1002,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2009",
+    cover:"assets/images/mimgs/cover4.jpg",
   },
   {
     name: "ဒေါ့ꩻနွောဝ်ꩻမွုန်းခွေꩻ",
@@ -953,6 +1015,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2009",
+    cover:"assets/images/mimgs/cover4.jpg",
   },
   {
     name: "ယူႏလꩻခွင်ꩻ",
@@ -965,6 +1028,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2009",
+    cover:"assets/images/mimgs/cover4.jpg",
   },
   {
     name: "ဝေးမူႏ",
@@ -977,6 +1041,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2009",
+    cover:"assets/images/mimgs/cover4.jpg",
   },
   {
     name: "ဖေႏမွုန်းအသွုမ်ꩻ",
@@ -989,6 +1054,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2009",
+    cover:"assets/images/mimgs/cover4.jpg",
   },
 
   {
@@ -1002,6 +1068,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2005",
+    cover:"assets/images/mimgs/cover6.jpg",
   },
   {
     name: "မဲဉ်သေꩻငါႏ",
@@ -1014,6 +1081,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2005",
+    cover:"assets/images/mimgs/cover6.jpg",
   },
   {
     name: "လွꩻထီႏငါႏလဲဉ်းနာꩻ",
@@ -1026,6 +1094,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2005",
+    cover:"assets/images/mimgs/cover6.jpg",
   },
   {
     name: "မဲဉ်လꩻချာꩻငါႏ",
@@ -1038,6 +1107,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2005",
+    cover:"assets/images/mimgs/cover6.jpg",
   },
   {
     name: "ကတွူဆွော့မွုန်းဒွုမ်နင်",
@@ -1050,6 +1120,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2005",
+    cover:"assets/images/mimgs/cover6.jpg",
   },
   {
     name: "ထာရုပ်ကော်ႏ",
@@ -1062,6 +1133,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2005",
+    cover:"assets/images/mimgs/cover6.jpg",
   },
   {
     name: "စွယ်ငါလဲဉ်းနာ",
@@ -1074,6 +1146,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2005",
+    cover:"assets/images/mimgs/cover6.jpg",
   },
   {
     name: "အခိန်ႏအဝ်ႏနေဒွုန်းက",
@@ -1086,6 +1159,7 @@ var listAudio = [
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2005",
+    cover:"assets/images/mimgs/cover6.jpg",
   },
 ];
 
@@ -1113,6 +1187,7 @@ for (let i = 0; i < playListItems.length; i++) {
 }
 
 function getClickedElement(event) {
+  currentSong.pause()
   document.querySelector('#search-item').value = ''
   for (let i = 0; i < playListItems.length; i++) {
     document.querySelector('.none-block').style.display = 'block'
@@ -1143,6 +1218,7 @@ const subDetails = ()=>{
       document.querySelector('.date-header').innerHTML = listAudio[indexAudio].date
       document.querySelector('.replace-imagebox').style.backgroundImage = "url("+listAudio[indexAudio].profile+")"
 }
+
 for(let i=0; i<barsBtn.length; i++){
     barsBtn[i].addEventListener('click',()=>{
       document.querySelector('.songs-mainctn').classList.add('inactive')
@@ -1153,7 +1229,7 @@ for(let i=0; i<barsBtn.length; i++){
       document.querySelector('.tabs-ctn').classList.add('inactive')
       subDetails()
     })
-}
+  }
 
 document.querySelector('.replace-arrow').addEventListener('click',()=>{
   document.querySelector('.search-tabs').classList.remove('inactive')
@@ -1167,10 +1243,10 @@ document.querySelector('.replace-arrow').addEventListener('click',()=>{
 document.querySelector("#source-audio").src = listAudio[indexAudio].file;
 document.querySelector(".titles").innerHTML =listAudio[indexAudio].singer;
 
+
+
 var currentAudio = document.getElementById("myAudio");
-
 currentAudio.load();
-
 currentAudio.onloadedmetadata = function () {
   document.getElementsByClassName("duration")[0].innerHTML = this.getMinutes(
     this.currentAudio.duration
@@ -1276,7 +1352,7 @@ function next() {
     this.loadNewTrack(this.indexAudio);
   }else{
     this.indexAudio = 0;
-  }
+  };
 }
 
 function previous() {
@@ -1348,3 +1424,115 @@ function toggleMute() {
     volUp.style.display = "block";
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const songsArr = JSON.parse(localStorage.getItem('songs')) || [];
+const displayCtn = document.querySelector('.library-div')
+const showSongs = () => {
+    let html = ''
+    songsArr.forEach((song,index) => {
+        html += "<div class='library-songbox')>"
+        html += `<div class='library-details'onclick="libraryPlaybox(${index})" >
+                  <div>${index+1}. ${song.song_name}</div>
+                  <div>${song.singer_name}</div>
+                 </div>`
+        html +=`<div class='btns-box'>
+                    <button class='remove-btn' onclick="Remove(${index})"><i class="fa-solid fa-trash-can"></i></button>
+                </div>`
+        html += "</div>"
+     });
+      displayCtn.innerHTML = html
+  };
+
+  curIndex = 0;
+  const loadSong = (index)=>{
+    player1.src = songsArr[index].song_file;
+    currentSong.load();
+document.querySelector('.none-block').style.display = 'none'
+document.querySelector('.lb-none').style.display = 'block'
+document.querySelector('.titles').textContent = songsArr[ index].song_name
+document.querySelector('.lb-title').textContent = songsArr[ index].song_name
+document.querySelector('.lbimg-box').style.backgroundImage = "url("+songsArr[index].song_profile+")"
+document.querySelector('.cover-box').style.backgroundImage = "url("+songsArr[index].song_cover+")"
+  }
+
+
+const addToLibrary = ()=>{
+const name = listAudio[indexAudio].name
+const singer = listAudio[indexAudio].singer
+const file = listAudio[indexAudio].file
+const profile = listAudio[indexAudio].profile
+const cover = listAudio[indexAudio].cover
+songsArr.push({
+  song_name: name,
+  singer_name:singer,
+  song_file:file,
+  song_profile:profile,
+  song_cover:cover,
+})
+localStorage.setItem('songs',JSON.stringify(songsArr))
+showSongs()
+};
+
+
+let   currentSong = document.getElementById("myAudio1"); 
+let player1 = document.querySelector("#source-audio1");
+
+const libraryPlaybox = (index)=>{
+pauseAudio()
+document.querySelector('.none-block').style.display = 'none'
+document.querySelector('.lb-none').style.display = 'block'
+document.querySelector('.titles').textContent = songsArr[ index].song_name
+document.querySelector('.lb-title').textContent = songsArr[ index].song_name
+document.querySelector('.lbimg-box').style.backgroundImage = "url("+songsArr[index].song_profile+")"
+document.querySelector('.cover-box').style.backgroundImage = "url("+songsArr[index].song_cover+")"
+
+      player1.src = songsArr[index].song_file;
+      currentSong.load();
+      currentSong.addEventListener('ended',()=>{
+        document.querySelector('.cover-box').classList.remove('rotate')
+      })
+  lbToggle();
+}
+const  Remove = ( index) =>{
+  songsArr.splice( index,1)
+  localStorage.setItem('songs',JSON.stringify(songsArr))
+  showSongs()
+}
+function pauseCurrentSong(){
+  this.currentSong.pause()
+}
+
+function lbToggle() {
+  pauseAudio()
+  if (currentSong.paused) {
+    document.querySelector("#lb-play").style.display = "none";
+    document.querySelector("#lb-pause").style.display = "block";
+    document.querySelector('.cover-box').classList.add('rotate')
+    currentSong.play()
+  } else {
+    document.querySelector("#lb-play").style.display = "block";
+    document.querySelector("#lb-pause").style.display = "none";
+    document.querySelector('.cover-box').classList.remove('rotate')
+    currentSong.pause()
+  }
+}
+
+window.onload = showSongs()
