@@ -489,11 +489,14 @@ img:hover{
           border-radius: 50%;
           background-position: center;
           background-size: cover;
+          border: 2px solid gold;
         }
         .lb-title{
           position: absolute;
           top: 0;
           text-align: center;
+          z-index: 1;
+          text-shadow: 2px 2px black
         };
         .lb-controls{
           position: absolute;
@@ -509,6 +512,11 @@ img:hover{
             }
           }
         };
+        .lb-repeat{
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
       }
     }
     .library-div{
@@ -532,8 +540,12 @@ img:hover{
           }
         }
         .btns-box{
+          display: flex;
           button{
-            width: 30px;
+            padding: 5px;
+            background: none;
+            border: none;
+            color: #fff;
             font-size: 1rem;
           }
         }
@@ -548,6 +560,9 @@ img:hover{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+  }
+  .library-mctn{
+    padding-left: 6rem;
   }
   .main-ctn{
     background: var(--bgColor);
@@ -651,5 +666,28 @@ img:hover{
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.updown{
+  animation: updown 4s infinite ease ;
+}
+
+@keyframes updown {
+  0%{
+    top:0;
+    transform: scaleX(0);
+    }
+  50%{
+    top:50%;
+    transform: scaleX(2);
+  }
+  90%{
+    top:100%;
+    transform: scaleX(0);
+  }
+  100%{
+    top:100%;
+    transform: scaleX(0);
   }
 }

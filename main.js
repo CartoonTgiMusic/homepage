@@ -1188,6 +1188,8 @@ for (let i = 0; i < playListItems.length; i++) {
 
 function getClickedElement(event) {
   currentSong.pause()
+  document.querySelector('.cover-box').classList.remove('rotate')
+  document.querySelector('.lb-title').classList.remove('updown')
   document.querySelector('#search-item').value = ''
   for (let i = 0; i < playListItems.length; i++) {
     document.querySelector('.none-block').style.display = 'block'
@@ -1462,16 +1464,16 @@ const showSongs = () => {
   };
 
   curIndex = 0;
-  const loadSong = (index)=>{
-    player1.src = songsArr[index].song_file;
-    currentSong.load();
-document.querySelector('.none-block').style.display = 'none'
-document.querySelector('.lb-none').style.display = 'block'
-document.querySelector('.titles').textContent = songsArr[ index].song_name
-document.querySelector('.lb-title').textContent = songsArr[ index].song_name
-document.querySelector('.lbimg-box').style.backgroundImage = "url("+songsArr[index].song_profile+")"
-document.querySelector('.cover-box').style.backgroundImage = "url("+songsArr[index].song_cover+")"
-  }
+// const loadSong = (index)=>{
+//     player1.src = songsArr[index].song_file;
+//     currentSong.load();
+// document.querySelector('.none-block').style.display = 'none'
+// document.querySelector('.lb-none').style.display = 'block'
+// document.querySelector('.titles').textContent = songsArr[ index].song_name
+// document.querySelector('.lb-title').textContent = songsArr[ index].song_name
+// document.querySelector('.lbimg-box').style.backgroundImage = "url("+songsArr[index].song_profile+")"
+// document.querySelector('.cover-box').style.backgroundImage = "url("+songsArr[index].song_cover+")"
+//   }
 
 
 const addToLibrary = ()=>{
@@ -1499,17 +1501,29 @@ const libraryPlaybox = (index)=>{
 pauseAudio()
 document.querySelector('.none-block').style.display = 'none'
 document.querySelector('.lb-none').style.display = 'block'
-document.querySelector('.titles').textContent = songsArr[ index].song_name
 document.querySelector('.lb-title').textContent = songsArr[ index].song_name
+document.querySelector('.lb-title').classList.add('updown')
 document.querySelector('.lbimg-box').style.backgroundImage = "url("+songsArr[index].song_profile+")"
 document.querySelector('.cover-box').style.backgroundImage = "url("+songsArr[index].song_cover+")"
 
       player1.src = songsArr[index].song_file;
       currentSong.load();
       currentSong.addEventListener('ended',()=>{
-        document.querySelector('.cover-box').classList.remove('rotate')
+      document.querySelector('.cover-box').classList.remove('rotate')
+      document.querySelector('.lb-title').classList.remove('updown')
       })
   lbToggle();
+}
+
+const Lbrepeat = ()=>{
+  if (currentSong.loop != true && currentSong.play()) {
+    currentSong.loop = true;
+    currentSong.play();
+    document.querySelector(".lb-repeat").style.color = "red";
+  } else {
+    currentSong.loop = false;
+    document.querySelector(".lb-repeat").style.color = "white";
+  }
 }
 const  Remove = ( index) =>{
   songsArr.splice( index,1)
@@ -1526,11 +1540,13 @@ function lbToggle() {
     document.querySelector("#lb-play").style.display = "none";
     document.querySelector("#lb-pause").style.display = "block";
     document.querySelector('.cover-box').classList.add('rotate')
+    document.querySelector('.lb-title').classList.add('updown')
     currentSong.play()
   } else {
     document.querySelector("#lb-play").style.display = "block";
     document.querySelector("#lb-pause").style.display = "none";
     document.querySelector('.cover-box').classList.remove('rotate')
+    document.querySelector('.lb-title').classList.remove('updown')
     currentSong.pause()
   }
 }
