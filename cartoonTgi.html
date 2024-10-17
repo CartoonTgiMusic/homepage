@@ -5,9 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+p{
+    font-size: 12px;
+}
+.main-ctn{
+    height: 100vh;
+    position: relative;
+}
+.header{
+    text-align: center;
+}
+
+.cover{
+    margin-top: 20px;
+    max-width: 400px;
+    height: 250px;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.cast{
+    bottom: 0;
+    position: absolute;
+    padding-bottom: 10px;
+}
+</style>
 <body>
-    <h1>Wellcome!</h1>
-    <h1>from </h1>
-    <h1>CartoonTgi music band</h1>
+    <div class="main-ctn">
+        <div class="header">
+            <h2>Wellcome!</h2>
+            <h4>from </h4>
+            <h2>CartoonTgi music band</h2>
+
+        </div>
+        <div class="cover">
+            <img src="assets/images/mimgs/cartoon.jpg" alt="">
+        </div>
+        <p>Email: cartoontgi.music@gmail.com</p>
+    </div>
+    <div class="cast">
+            <p>App developer: padecholl@gmail.com</p>
+    </div>
+        
+
 </body>
 </html>
