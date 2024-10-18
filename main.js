@@ -1293,7 +1293,6 @@ for (let i = 0; i < playListItems.length; i++) {
 function getClickedElement(event) {
   currentSong.pause()
   document.querySelector('.cover-box').classList.remove('rotate')
-  document.querySelector('.lb-title').classList.remove('updown')
   document.querySelector('#search-item').value = ''
   for (let i = 0; i < playListItems.length; i++) {
     document.querySelector('.none-block').style.display = 'block'
@@ -1567,7 +1566,7 @@ const showSongs = () => {
       displayCtn.innerHTML = html
   };
 
-  curIndex = 0;
+  // curIndex = 0;
 // const loadSong = (index)=>{
 //     player1.src = songsArr[index].song_file;
 //     currentSong.load();
@@ -1614,7 +1613,6 @@ document.querySelector('.cover-box').style.backgroundImage = "url("+songsArr[ind
       currentSong.load();
       currentSong.addEventListener('ended',()=>{
       document.querySelector('.cover-box').classList.remove('rotate')
-      document.querySelector('.lb-title').classList.remove('updown')
       })
   lbToggle();
 }
@@ -1644,13 +1642,11 @@ function lbToggle() {
     document.querySelector("#lb-play").style.display = "none";
     document.querySelector("#lb-pause").style.display = "block";
     document.querySelector('.cover-box').classList.add('rotate')
-    document.querySelector('.lb-title').classList.add('updown')
     currentSong.play()
   } else {
     document.querySelector("#lb-play").style.display = "block";
     document.querySelector("#lb-pause").style.display = "none";
     document.querySelector('.cover-box').classList.remove('rotate')
-    document.querySelector('.lb-title').classList.remove('updown')
     currentSong.pause()
   }
 }
