@@ -1528,25 +1528,7 @@ function toggleMute() {
     volMute.style.display = "none";
     volUp.style.display = "block";
   }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+};
 
 const songsArr = JSON.parse(localStorage.getItem('songs')) || [];
 const displayCtn = document.querySelector('.library-div')
@@ -1555,8 +1537,8 @@ const showSongs = () => {
     songsArr.forEach((song,index) => {
         html += "<div class='library-songbox')>"
         html += `<div class='library-details'onclick="libraryPlaybox(${index})" >
-                  <div>${index+1}. ${song.song_name}</div>
-                  <div>${song.singer_name}</div>
+                  <div>${index+1}. ${song.name}</div>
+                  <div>${song.singer}</div>
                  </div>`
         html +=`<div class='btns-box'>
                     <button class='remove-btn' onclick="Remove(${index})"><i class="fa-solid fa-trash-can"></i></button>
@@ -1568,43 +1550,36 @@ const showSongs = () => {
 
 
 const addToLibrary = ()=>{
-const name = listAudio[indexAudio].name
-const singer = listAudio[indexAudio].singer
-const file = listAudio[indexAudio].file
-const profile = listAudio[indexAudio].profile
-const cover = listAudio[indexAudio].cover
-songsArr.push({
-  song_name: name,
-  singer_name:singer,
-  song_file:file,
-  song_profile:profile,
-  song_cover:cover,
-})
+
+songsArr.push(
+  listAudio[indexAudio]
+)
 localStorage.setItem('songs',JSON.stringify(songsArr))
 showSongs()
 };
 
-
-let   currentSong = document.getElementById("myAudio1"); 
+let lBindexAudio;
+let currentSong = document.getElementById("myAudio1"); 
 let player1 = document.querySelector("#source-audio1");
-
 const libraryPlaybox = (index)=>{
-pauseAudio()
-document.querySelector('.none-block').style.display = 'none'
-document.querySelector('.lb-none').style.display = 'block'
-document.querySelector('.lb-title').textContent = songsArr[ index].song_name
-document.querySelector('.lb-title').classList.add('updown')
-document.querySelector('.lbimg-box').style.backgroundImage = "url("+songsArr[index].song_profile+")"
-document.querySelector('.cover-box').style.backgroundImage = "url("+songsArr[index].song_cover+")"
-
-      player1.src = songsArr[index].song_file;
-      currentSong.load();
-      currentSong.addEventListener('ended',()=>{
-      document.querySelector('.cover-box').classList.remove('rotate')
+  pauseAudio()
+  document.querySelector('.none-block').style.display = 'none'
+  document.querySelector('.lb-none').style.display = 'block'
+  document.querySelector('.lb-title').textContent = songsArr[index].name
+  document.querySelector('.lbimg-box').style.backgroundImage = "url("+songsArr[index].profile+")"
+  document.querySelector('.cover-box').style.backgroundImage = "url("+songsArr[index].cover+")"
+  player1.src = songsArr[index].file;
+  currentSong.load();
+  currentSong.addEventListener('ended',()=>{
+    player1.src = songsArr[index + 1].file;
+    document.querySelector('.lb-title').textContent = songsArr[index + 1].name
+    document.querySelector('.lbimg-box').style.backgroundImage = "url("+songsArr[index + 1].profile+")"
+    document.querySelector('.cover-box').style.backgroundImage = "url("+songsArr[index + 1].cover+")"
+    currentSong.load();
+    currentSong.play()
       })
   lbToggle();
 }
-
 const Lbrepeat = ()=>{
   if (currentSong.loop != true && currentSong.play()) {
     currentSong.loop = true;
@@ -1620,9 +1595,7 @@ const  Remove = ( index) =>{
   localStorage.setItem('songs',JSON.stringify(songsArr))
   showSongs()
 }
-function pauseCurrentSong(){
-  this.currentSong.pause()
-}
+
 
 function lbToggle() {
   pauseAudio()
