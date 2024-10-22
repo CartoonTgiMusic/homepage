@@ -1566,18 +1566,6 @@ const showSongs = () => {
       displayCtn.innerHTML = html
   };
 
-  // curIndex = 0;
-// const loadSong = (index)=>{
-//     player1.src = songsArr[index].song_file;
-//     currentSong.load();
-// document.querySelector('.none-block').style.display = 'none'
-// document.querySelector('.lb-none').style.display = 'block'
-// document.querySelector('.titles').textContent = songsArr[ index].song_name
-// document.querySelector('.lb-title').textContent = songsArr[ index].song_name
-// document.querySelector('.lbimg-box').style.backgroundImage = "url("+songsArr[index].song_profile+")"
-// document.querySelector('.cover-box').style.backgroundImage = "url("+songsArr[index].song_cover+")"
-//   }
-
 
 const addToLibrary = ()=>{
 const name = listAudio[indexAudio].name
