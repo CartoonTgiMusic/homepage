@@ -15,7 +15,7 @@
       src="https://kit.fontawesome.com/a062562745.js"
       crossorigin="anonymous"
     ></script>
-    <title>ခွန်ခွန်ကျော်ဦး</title>
+    <title>ခွန်စောနိုင်</title>
     <link rel="stylesheet" media="all" />
   </head>
   <style>
@@ -176,7 +176,6 @@
   0 0 30px #ff3300,
   0 0 40px #ff0000;
    }
-
 .btn-ctn i:hover {
     transform: scale(1.2);
       }
@@ -311,10 +310,10 @@
           <div class="glass"><i class="fa-solid fa-magnifying-glass"></i></div>
         </div>
         <div class="img-box">
-          <img src="assets/images/mimgs/kko.jpg" alt="ခွန်ခွန်ကျော်ဦး">
+          <img src="assets/images/mimgs/logo.jpg" alt="ခွန်စောနိုင်">
         </div>
           <div class="name-box">
-            <div class="title-text">ခွန်ခွန်ကျော်ဦး</div>
+            <div class="title-text">ခွန်စောနိုင်</div>
             </div>
             <div class="social-box">
                 <div class="spotify">
@@ -329,7 +328,7 @@
                 <div class="instagram">
                   <i class="fa-brands fa-instagram" style="color: rgb(243, 58, 58);"></i>
                 </div>
-                <a href="#" class="share" target="_blank"><i class="fa-solid fa-share" style="color: #ffffff;"></i></a>
+                <a href="#" class="share" target="_blank"><i class="fa-solid fa-share" style="color: white;"></i></a>
             </div>
       <div class="songslist-ctn section ">
         <div class="playlist-ctn"></div>
@@ -338,7 +337,7 @@
           
     <div class="replace-ctn inactive">
         <div class="arrow-home">
-          <a href="kko.html"><div class="replace-arrow"><i class="fa-solid fa-arrow-left"></i></div></a>
+          <a href="khunsawnaing.html"><div class="replace-arrow"><i class="fa-solid fa-arrow-left"></i></div></a>
           
           <a href="index.html"><div class="replace-home"><i class="fa-solid fa-house"></i></div></a>
         </div>
@@ -405,7 +404,7 @@
             <i class="fas fa-pause" id="icon-pause" style="display: none"></i>
           </div>
         </div>
-
+        
         <div class="btn-action forward-btn "  onclick="forward()">
           <div id="btn-faws-forward">
             <i class="fas fa-forward "></i>
@@ -440,7 +439,7 @@
 
       window.onscroll = () => {
         let top = window.scrollY 
-        if(top > 325){
+        if(top > 238){
            nameBOx.classList.add('fixed')
         }else{
           nameBOx.classList.remove('fixed')
@@ -469,7 +468,7 @@
               })
             };
 
-      const url = encodeURIComponent('https://cartoontgimusic.github.io/homepage/kko.html')
+      const url = encodeURIComponent('https://cartoontgimusic.github.io/homepage/khunsawnaing.html')
       document.querySelector('.share').href = `https://www.facebook.com/sharer.php?u=${url}`;
       
       function createTrackItem(index, name, writer) {
@@ -538,187 +537,30 @@
 
 var listAudio = [
 {
-    name: "တဖြာꩻတွမ်ႏတဖြာꩻ",
-    file: "assets/musics/aoaudios/တဖြာꩻတွမ်ႏတဖြာꩻ.mp3",
-    singer: "ခွန်ခွန်ကျော်ဦး",
-    profile:"assets/images/mimgs/kko.jpg",
-    writer:"Composer - ခွန်ခွန်ကျော်ဦး ",
-    album:"Album - အောဝ်ႏ",
-    albuml_url:"aomusiclist.html",
-    band:"Band - ကာတွန်းစွိုꩻ",
-    band_url:"cartoonTgi.html",
-    date:"Released - 2013",
-  },
-  {
-    name: "အောဝ်ႏ",
-    file: "assets/musics/aoaudios/အောဝ်ႏ.mp3",
-    singer: "ခွန်ခွန်ကျော်ဦး",
-    profile:"assets/images/mimgs/kko.jpg",
-    writer:"Composer - ခွန်ခွန်ကျော်ဦး ",
-    album:"Album - အောဝ်ႏ",
-    albuml_url:"aomusiclist.html",
-    band:"Band - ကာတွန်းစွိုꩻ",
-    band_url:"cartoonTgi.html",
-    date:"Released - 2013",
-  },
-  {
-    name: "ကမ်းဒျာႏနာꩻသꩻ",
-    file: "assets/musics/aoaudios/ကမ်းဒျာႏနာꩻသꩻ.mp3",
-    singer: "ခွန်ခွန်ကျော်ဦး",
-    profile:"assets/images/mimgs/kko.jpg",
-    writer:"Composer - ခွန်ခွန်ကျော်ဦး ",
-    album:"Album - အောဝ်ႏ",
-    albuml_url:"aomusiclist.html",
-    band:"Band - ကာတွန်းစွိုꩻ",
-    band_url:"cartoonTgi.html",
-    date:"Released - 2013",
-  },
-  {
-    name: "သဲင်ꩻလွဥ်ချာခမ်းမွိုင်",
-    file: "assets/musics/hlhaudios/သဲင်ꩻလွဥ်ချာခမ်းမွိုင်.mp3",
-    singer: "ခွန်ခွန်ကျော်ဦး",
-    profile:"assets/images/mimgs/kko.jpg",
-    writer:"Composer - ခွန်ပဒဲကော",
-    album:"Album - ထောင်လွေထဲင်း",
-    albuml_url:"hlhmusiclist.html",
-    band:"Band - ကာတွန်းစွိုꩻ",
-    band_url:"cartoonTgi.html",
-    date:"Released - 2019",
-  },
-  {
-    name: "နီမွိုးပနမ်",
-    file: "assets/musics/hlhaudios/နီမွိုးပနမ်.mp3",
-    singer: "ခွန်ခွန်ကျော်ဦး",
-    profile:"assets/images/mimgs/kko.jpg",
-    writer:"Composer - ခွန်ခွန်ကျော်ဦး",
-    album:"Album - ထောင်လွေထဲင်း",
-    albuml_url:"hlhmusiclist.html",
-    band:"Band - ကာတွန်းစွိုꩻ",
-    band_url:"cartoonTgi.html",
-    date:"Released - 2019",
-  },
-  {
-    name: "လောကတရာꩻ",
-    file: "assets/musics/hlhaudios/လောကတရာꩻ.mp3",
-    singer: "ခွန်ခွန်ကျော်ဦး",
-    profile:"assets/images/mimgs/kko.jpg",
-    writer:"Composer - ခွန်ကျော်ခမ်း",
-    album:"Album - ထောင်လွေထဲင်း",
-    albuml_url:"hlhmusiclist.html",
-    band:"Band - ကာတွန်းစွိုꩻ",
-    band_url:"cartoonTgi.html",
-    date:"Released - 2019",
-  },
-  {
-    name: "ဗါး",
-    file: "assets/musics/hnrtaudios/ဗါး.mp3",
-    singer: "ခွန်ခွန်ကျော်ဦး",
-    profile:"assets/images/mimgs/kko.jpg",
-    writer:"Composer - ခွန်ခွန်ကျော်ဦး",
+    name: "နာꩻဒေါ့ꩻ",
+    file: "assets/musics/hnrtaudios/နာꩻဒေါ့ꩻ.mp3",
+    singer: "ခွန်စောနိုင်",
+    profile:"assets/images/mimgs/logo.jpg",
+    writer:"Composer - ခွန်ပဒဲကော ",
     album:"Album - ထွားနုဲင်းရုဲင်းတဝ်း",
     albuml_url:"hnrtmusiclist.html",
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2022",
   },
-  {
-    name: "နွန်ႏ",
-    file: "assets/musics/hnrtaudios/နွန်ႏ.mp3",
-    singer: "ခွန်ခွန်ကျော်ဦး",
-    profile:"assets/images/mimgs/kko.jpg",
-    writer:"Composer - ခွန်ခွန်ကျော်ဦး",
+{
+    name: "ရက်ꩻမွေးမွေးလဲဥ်းနာꩻ",
+    file:  "assets/musics/hnrtaudios/ရက်ꩻမွေးမွေးလဲဥ်းနာꩻ.mp3",
+    singer: "ခွန်စောနိုင်",
+    profile:"assets/images/mimgs/logo.jpg",
+    writer:"Composer - ခွန်ဇေလတ်",
     album:"Album - ထွားနုဲင်းရုဲင်းတဝ်း",
     albuml_url:"hnrtmusiclist.html",
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2022",
-  },
-  {
-    name: "တူနယ်တဲနယ်",
-    file: "assets/musics/hnrtaudios/တူနယ်တဲနယ်.mp3",
-    singer: "ခွန်ခွန်ကျော်ဦး",
-    profile:"assets/images/mimgs/kko.jpg",
-    writer:"Composer - ခွန်ခွန်ကျော်ဦး",
-    album:"Album - ထွားနုဲင်းရုဲင်းတဝ်း",
-    albuml_url:"hnrtmusiclist.html",
-    band:"Band - ကာတွန်းစွိုꩻ",
-    band_url:"cartoonTgi.html",
-    date:"Released - 2022",
-  },
-  {
-    name: "နီဖာဗွေႏ",
-    file: "assets/musics/hnrtaudios/နီဖာဗွေႏ.mp3",
-    singer: "ခွန်ခွန်ကျော်ဦး",
-    profile:"assets/images/mimgs/kko.jpg",
-    writer:"Composer - ခွန်ခွန်ကျော်ဦး ",
-    album:"Album - ထွားနုဲင်းရုဲင်းတဝ်း",
-    albuml_url:"hnrtmusiclist.html",
-    band:"Band - ကာတွန်းစွိုꩻ",
-    band_url:"cartoonTgi.html",
-    date:"Released - 2022",
-  },
-  {
-    name: "နင်ႏလိင်ႏလဲဥ်",
-    file: "assets/musics/tdaudios/နင်ႏလိင်ႏလဲဥ်.mp3",
-    singer: "ခွန်ခွန်ကျော်ဦး",
-    profile:"assets/images/mimgs/kko.jpg",
-    writer:"Composer - ခွန်ပဒဲကော",
-    album:"Album - တဒွီ",
-    albuml_url:"tdmusiclist.html",
-    band:"Band - ကာတွန်းစွိုꩻ",
-    band_url:"cartoonTgi.html",
-    date:"Released - 2009",
-  },
-  {
-    name: "တဒွီ",
-    file: "assets/musics/tdaudios/တဒွီ.mp3",
-    singer: "ခွန်ခွန်ကျော်ဦး",
-    profile:"assets/images/mimgs/kko.jpg",
-    writer:"Composer - ခွန်တင်ဦး ",
-    album:"Album - တဒွီ",
-    albuml_url:"tdmusiclist.html",
-    band:"Band - ကာတွန်းစွိုꩻ",
-    band_url:"cartoonTgi.html",
-    date:"Released - 2009",
-  },
-  {
-    name: "ဒေါ့ꩻနွောဝ်ꩻမွုန်းခွေꩻ",
-    file: "assets/musics/tdaudios/ဒေါ့ꩻနွောဝ်ꩻမွုန်းခွေꩻ.mp3",
-    singer: "ခွန်ခွန်ကျော်ဦး",
-    profile:"assets/images/mimgs/kko.jpg",
-    writer:"Composer - ခွန်ခွန်ကျော်ဦး ",
-    album:"Album - တဒွီ",
-    albuml_url:"tdmusiclist.html",
-    band:"Band - ကာတွန်းစွိုꩻ",
-    band_url:"cartoonTgi.html",
-    date:"Released - 2009",
-  },
-  {
-    name: "၁၆နိန်ႏလိုႏရွဲ",
-    file: "assets/musics/happytime/၁၈နိန်ႏလိုႏရွဲ.mp3",
-    singer: "ခွန်ခွန်ကျော်ဦး",
-    profile:"assets/images/mimgs/kko.jpg",
-    writer:"Composer - ခွန်ခွန်ကျော်ဦး",
-    album:"Album - အပျော်ႏသွတ်ꩻအခိန်ႏ အပျော်ႏသွတ်ꩻဖꩻဝ",
-    albuml_url:"happymusiclist.html",
-    band:"Band - ကာတွန်းစွိုꩻ",
-    band_url:"cartoonTgi.html",
-    date:"Released - 2009",
-  },
-  {
-    name: "အခိန်ႏအဝ်ႏနေဒွုန်းက",
-    file: "assets/musics/katochock/အခိန်ႏအဝ်ႏနေဒွုန်းက.mp3",
-    singer: "ခွန်ခွန်ကျော်ဦး",
-    profile:"assets/images/mimgs/kko.jpg",
-    writer:"Composer - ",
-    album:"Album - ကတွူဆွော့မွုန်းဒွုမ်နင်",
-    albuml_url:"katoomusiclist.html",
-    band:"Band - ကာတွန်းစွိုꩻ",
-    band_url:"cartoonTgi.html",
-    date:"Released - 2005",
   },
       ];
-
 
       for (let i = 0; i < listAudio.length; i++) {
         createTrackItem(i, listAudio[i].name, listAudio[i].writer);

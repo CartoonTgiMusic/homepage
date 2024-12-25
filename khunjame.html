@@ -90,8 +90,14 @@
            user-select: none;
            width: 100%;
            text-align: center;
-            .title-text{
+           .title-text{
                  font-size: 1.2rem;
+                 background-image: url('assets/fire-51.gif');
+                 background-position: center;
+                 background-size: cover;
+                 color: transparent;
+                 background-clip: text;
+                 -webkit-background-clip: text;
               }
               .totalsongs-text{
                 font-size: 12px;
@@ -154,10 +160,21 @@
 }
 .new-div:hover {
   background-color: rgb(58, 58, 58);
+  text-shadow: 
+  0 0 10px #ff9900,
+  0 0 20px #ff6600,
+  0 0 30px #ff3300,
+  0 0 40px #ff0000;
 }
 
 .active-track {
   background-color: rgb(58, 58, 58);
+  /* color: black; */
+  text-shadow: 
+  0 0 10px #ff9900,
+  0 0 20px #ff6600,
+  0 0 30px #ff3300,
+  0 0 40px #ff0000;
    }
 .btn-ctn i:hover {
     transform: scale(1.2);
@@ -526,7 +543,7 @@ var listAudio = [
     profile:"assets/images/mimgs/kj.jpg",
     writer:"Composer - ခွန်ရှိန်း",
     album:"Album - ကတွူဆွော့မွုန်းဒွုမ်နင်",
-    albuml_url:"katoo.html",
+    albuml_url:"katoomusiclist.html",
     band:"Band - ကာတွန်းစွိုꩻ",
     band_url:"cartoonTgi.html",
     date:"Released - 2005",

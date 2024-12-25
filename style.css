@@ -554,6 +554,7 @@ img:hover{
     }
   }
 }
+
 @media screen and (min-width:700px){
   .replace-ctn{
     display: flex;
